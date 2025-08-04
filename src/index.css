@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Force Chrome to use Google Fonts for better compatibility */
+@font-face {
+  font-family: 'UthmanicHafs';
+  src: url('https://fonts.gstatic.com/earlyaccess/amiri.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+/* Arabic text optimization */
+.arabic-text {
+  font-family: 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
+  direction: rtl;
+  text-align: right;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+  font-feature-settings: 'liga' 1, 'calt' 1, 'kern' 1;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  word-spacing: 0.15em;
+}
+
+/* Mobile-specific optimizations */
+@media (max-width: 640px) {
+  .arabic-text {
+    line-height: 2.0;
+    letter-spacing: 0.4px;
+    word-spacing: 0.2em;
+  }
+}
+
+/* Touch-friendly interactions */
+.touch-manipulation {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
