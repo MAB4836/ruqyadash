@@ -1,13 +1,50 @@
-# React + Vite
+# ffcard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React application for Islamic ruqyah (spiritual healing) and protection from supernatural threats, built with Vite and Tailwind CSS. This project provides an interactive interface for accessing Quranic verses, prophetic supplications, and traditional Islamic protection routines.
 
-Currently, two official plugins are available:
+## Features
+- **Interactive Protection Menus**: 
+  - Ruqyah verses and practices
+  - Evil Eye prevention and remedies
+  - Jinn attack protection and knowledge
+  - Personal and family protection routines
+  - Travel and home protection guidance
+- **Structured Data**: 
+  - Quranic protection verses (`src/data/quranicProtection.js`)
+  - Prophetic supplications (`src/data/propheticDuas.js`)
+  - Spiritual remedies (`src/data/spiritualRemedies.js`)
+  - Ruqyah performance guidance (`src/data/performingRuqyah.js`)
+- **Modular Architecture**: 
+  - Reusable components in `src/components/`
+  - Data files organized by category in `src/data/`
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies
+- React 18 with JSX syntax
+- Vite build tool for development and bundling
+- Tailwind CSS for utility-first styling
+- PostCSS and Autoprefixer for CSS processing
+- ESLint for code quality checks
 
-## Expanding the ESLint configuration
+## Development Scripts
+```bash
+npm run dev       # Start development server
+npm run build     # Build production version
+npm run lint      # Run ESLint checks
+npm run deploy    # Deploy to GitHub Pages
+```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# ruqyadash
+## Deployment
+The app is configured for GitHub Pages deployment via the `gh-pages` package. After building with `npm run build`, use `npm run deploy` to publish to GitHub Pages.
+
+## Project Structure
+```
+├── public/               # Static assets
+├── src/
+│   ├── components/       # UI components
+│   ├── data/             # JSON-like JS data files
+│   └── App.css           # Main CSS file
+└── README.md             # Project documentation
+```
+
+## License
+MIT License - see LICENSE file for details
