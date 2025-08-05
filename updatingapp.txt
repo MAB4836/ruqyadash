@@ -1,0 +1,103 @@
+QUICK UPDATE WORKFLOW:
+# 1. Make your changes to the React code
+
+# (edit files in src/ folder)
+
+# 2. Build the React app (creates new dist/ files)
+npm run build
+
+# 3. Copy the new build to Android project
+npx cap copy android
+
+# 4. Build the new APK
+cd android
+./gradlew assembleDebug
+
+# 5. Install on your phone
+adb install app/build/outputs/apk/debug/app-debug.apk
+
+
+#---------------------------------------------------------
+
+EVEN FASTER - ONE COMMAND INSTALL:
+bash# After making changes, you can use:
+cd android
+./gradlew installDebug
+
+
+#------------------------------------------------------
+FOR QUICK TESTING, CREATE A SCRIPT:
+bash# Create update.sh in your project root
+cat > update.sh << 'EOF'
+#!/bin/bash
+echo "Building React app..."
+npm run build
+echo "Copying to Android..."
+npx cap copy android
+echo "Building and installing APK..."
+cd android
+./gradlew installDebug
+echo "Done! Check your phone."
+EOF
+
+chmod +x update.sh
+
+# Then just run:
+./update.sh
+	
+#------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# Ruqyah App Update Workflow
+
+## Quick Update Steps:
+1. Make changes to React code (src/ folder)
+2. npm run build
+3. npx cap copy android  
+4. cd android
+5. ./gradlew installDebug
+
+## One-liner for faster updates:
+npm run build && npx cap copy android && cd android && ./gradlew installDebug
+
+## Create update script (optional):
+#!/bin/bash
+echo "Building React app..."
+npm run build
+echo "Copying to Android..."
+npx cap copy android
+echo "Building and installing APK..."
+cd android
+./gradlew installDebug
+echo "Done! Check your phone."
+
+## Timing:
+- Build: ~5-10 seconds
+- Copy: ~1-2 seconds
+- Install: ~10-30 seconds
+- Total: ~20-45 seconds
+
+## Notes:
+- No need to uninstall old version
+- Device must be connected via USB
+- USB debugging must be enabled
+- Run 'adb devices' to verify connection

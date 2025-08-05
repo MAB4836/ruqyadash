@@ -8,6 +8,12 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
   const [isAtTop, setIsAtTop] = useState(false)
   const [isFullPageVisible, setIsFullPageVisible] = useState(false)
   const cardContentRef = useRef(null)
+  const cardContainerRef = useRef(null)
+  
+  // Swipe gesture state
+  const [touchStart, setTouchStart] = useState(null)
+  const [touchEnd, setTouchEnd] = useState(null)
+  const [isSwipping, setIsSwipping] = useState(false)
 
   // Auto-scroll to bottom on component mount to show navigation buttons
   useEffect(() => {
@@ -71,6 +77,39 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
 
   const getCurrentCount = () => {
     return repetitionCounts[currentCard] || 0
+  }
+
+  // Swipe gesture handlers
+  const minSwipeDistance = 50
+
+  const handleTouchStart = (e) => {
+    setTouchEnd(null)
+    setTouchStart(e.targetTouches[0].clientX)
+    setIsSwipping(true)
+  }
+
+  const handleTouchMove = (e) => {
+    setTouchEnd(e.targetTouches[0].clientX)
+  }
+
+  const handleTouchEnd = () => {
+    if (!touchStart || !touchEnd) {
+      setIsSwipping(false)
+      return
+    }
+    
+    const distance = touchStart - touchEnd
+    const isLeftSwipe = distance > minSwipeDistance
+    const isRightSwipe = distance < -minSwipeDistance
+
+    if (isLeftSwipe && currentCard < cards.length) {
+      nextCard()
+    }
+    if (isRightSwipe && currentCard > 1) {
+      prevCard()
+    }
+    
+    setIsSwipping(false)
   }
 
   // Situation-based quick access buttons for different categories
@@ -328,11 +367,33 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
         )}
 
         {/* Card display */}
-        <div className="relative w-full h-[80vh] sm:h-96 md:h-[500px] bg-white rounded-lg shadow-xl flex items-center justify-center">
+        <div 
+          ref={cardContainerRef}
+          className={`relative w-full h-[80vh] sm:h-96 md:h-[500px] bg-white rounded-lg shadow-xl flex items-center justify-center transition-transform duration-200 select-none ${
+            isSwipping ? 'cursor-grabbing' : 'cursor-grab'
+          }`}
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+          style={{ touchAction: 'pan-y' }}
+        >
           {/* Card counter badge */}
           <div className="absolute top-3 right-3 bg-gray-800/20 text-white text-xs px-2 py-1 rounded-full font-medium z-10">
             {currentCard} / {cards.length}
           </div>
+          
+          {/* Swipe indicators */}
+          {currentCard > 1 && (
+            <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
+              ←
+            </div>
+          )}
+          {currentCard < cards.length && (
+            <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
+              →
+            </div>
+          )}
+          
           {renderCardContent(currentCardData)}
         </div>
         

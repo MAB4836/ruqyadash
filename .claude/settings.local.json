@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "permissions": {
     "allow": [
       "Bash(unzip:*)",
@@ -10,9 +11,9 @@
       "Bash(npm start)",
       "Bash(npm run:*)",
       "Bash(npm install)",
-      "Bash(mv:*)"
+      "Bash(mv:*)",
+      "Bash(npx eslint:*)"
     ],
     "deny": []
-  },
-  "$schema": "https://json.schemastore.org/claude-code-settings.json"
+  }
 }
