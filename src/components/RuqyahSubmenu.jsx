@@ -13,6 +13,11 @@ const RuqyahSubmenu = ({ onSelectOption, onBack }) => {
       description: 'Essential verses for quick spiritual protection'
     },
     {
+      id: 'manzil',
+      title: 'Manzil',
+      description: 'The Manzil is a well-known collection of proven Quranic verses for protection and healing'
+    },
+    {
       id: 'completeRuqyah',
       title: 'Complete Ruqyah Verses',
       description: 'All 34 ruqyah verses for comprehensive protection'

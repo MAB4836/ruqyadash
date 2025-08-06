@@ -310,7 +310,7 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
   const currentCardData = cards[currentCard - 1]
 
   // Determine if counting should be shown (only for ruqyah verse decks)
-  const shouldShowCounting = categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses'
+  const shouldShowCounting = categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'Manzil'
 
   return (
     <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">

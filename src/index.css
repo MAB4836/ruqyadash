@@ -5,6 +5,14 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Local Arabic font */
+@font-face {
+  font-family: 'KSARegular_B';
+  src: url('/KSARegular_B.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
 /* Force Chrome to use Google Fonts for better compatibility */
 @font-face {
   font-family: 'UthmanicHafs';
@@ -15,7 +23,7 @@
 
 /* Arabic text optimization */
 .arabic-text {
-  font-family: 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
+  font-family: 'KSARegular_B', 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
   direction: rtl;
   text-align: right;
   line-height: 1.8;

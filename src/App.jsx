@@ -24,6 +24,7 @@ import { jinnExpelled } from './data/jinnExpelled'
 import { jinnKnowledge } from './data/jinnKnowledge'
 import { sihrTypes } from './data/sihrTypes'
 import { spiritualRemedies } from './data/spiritualRemedies'
+import { manzilVerses } from './data/manzilVerses'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('menu')
@@ -41,6 +42,10 @@ function App() {
     shortRuqyah: {
       title: 'Short Ruqyah',
       cards: shortRuqyah
+    },
+    manzil: {
+      title: 'Manzil',
+      cards: manzilVerses
     },
     completeRuqyah: {
       title: 'Complete Ruqyah Verses',
