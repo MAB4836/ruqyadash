@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 import MenuScreen from './components/MenuScreen'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
@@ -33,6 +33,99 @@ function App() {
   const [selectedEvilEyeOption, setSelectedEvilEyeOption] = useState(null)
   const [selectedPersonalProtectionOption, setSelectedPersonalProtectionOption] = useState(null)
   const [selectedJinnAttacksOption, setSelectedJinnAttacksOption] = useState(null)
+  const [showExitDialog, setShowExitDialog] = useState(false)
+
+  const handleBackToMenu = useCallback(() => {
+    setCurrentScreen('menu');
+    setSelectedCategory(null);
+    setSelectedRuqyahOption(null);
+    setSelectedEvilEyeOption(null);
+    setSelectedPersonalProtectionOption(null);
+    setSelectedJinnAttacksOption(null);
+  }, [])
+
+  const handleBackToRuqyahSubmenu = useCallback(() => {
+    setCurrentScreen('ruqyahSubmenu')
+    setSelectedCategory(null)
+    setSelectedRuqyahOption(null)
+  }, [])
+
+  const handleBackToEvilEyeSubmenu = useCallback(() => {
+    setCurrentScreen('evilEyeSubmenu')
+    setSelectedCategory(null)
+    setSelectedEvilEyeOption(null)
+  }, [])
+
+  const handleBackToPersonalProtectionSubmenu = useCallback(() => {
+    setCurrentScreen('personalProtectionSubmenu')
+    setSelectedCategory(null)
+    setSelectedPersonalProtectionOption(null)
+  }, [])
+
+  const handleBackToJinnAttacksSubmenu = useCallback(() => {
+    setCurrentScreen('jinnAttacksSubmenu')
+    setSelectedCategory(null)
+    setSelectedJinnAttacksOption(null)
+  }, [])
+
+  useEffect(() => {
+    const handleBackButton = () => {
+      if (currentScreen === 'menu') {
+        setShowExitDialog(true);
+        return;
+      }
+
+      // Handle back navigation for other screens
+      if (currentScreen === 'ruqyahSubmenu' || 
+          currentScreen === 'evilEyeSubmenu' || 
+          currentScreen === 'personalProtectionSubmenu' || 
+          currentScreen === 'jinnAttacksSubmenu') {
+        handleBackToMenu();
+      } 
+      else if (currentScreen === 'cards') {
+        if (selectedRuqyahOption) {
+          handleBackToRuqyahSubmenu();
+        } else if (selectedEvilEyeOption) {
+          handleBackToEvilEyeSubmenu();
+        } else if (selectedPersonalProtectionOption) {
+          handleBackToPersonalProtectionSubmenu();
+        } else if (selectedJinnAttacksOption) {
+          handleBackToJinnAttacksSubmenu();
+        } else {
+          handleBackToMenu();
+        }
+      }
+    };
+
+    // For Capacitor (mobile)
+    if (window.Capacitor?.Plugins?.App) {
+      console.log('Setting up Capacitor back button listener');
+      const backButtonListener = window.Capacitor.Plugins.App.addListener('backButton', ({ canGoBack }) => {
+        console.log('Back button pressed, canGoBack:', canGoBack);
+        handleBackButton();
+      });
+
+      return () => {
+        backButtonListener.remove();
+      };
+    }
+    // For web (development/testing)
+    else {
+      console.log('Setting up window.backButton for testing');
+      window.handleBackButton = handleBackButton;
+    }
+  }, [
+    currentScreen,
+    handleBackToMenu,
+    handleBackToRuqyahSubmenu,
+    handleBackToEvilEyeSubmenu,
+    handleBackToPersonalProtectionSubmenu,
+    handleBackToJinnAttacksSubmenu,
+    selectedRuqyahOption,
+    selectedEvilEyeOption,
+    selectedPersonalProtectionOption,
+    selectedJinnAttacksOption
+  ])
 
   const categoryData = {
     whatIsRuqyah: {
@@ -168,41 +261,50 @@ function App() {
     setCurrentScreen('cards')
   }
 
-  const handleBackToMenu = () => {
-    setCurrentScreen('menu')
-    setSelectedCategory(null)
-    setSelectedRuqyahOption(null)
-    setSelectedEvilEyeOption(null)
-    setSelectedPersonalProtectionOption(null)
-    setSelectedJinnAttacksOption(null)
+  const handleExitApp = () => {
+    const CapacitorApp = window.Capacitor?.Plugins?.App;
+    if (CapacitorApp) {
+      CapacitorApp.exitApp()
+    } else {
+      // For web, just close the window (if possible)
+      window.close()
+    }
   }
 
-  const handleBackToRuqyahSubmenu = () => {
-    setCurrentScreen('ruqyahSubmenu')
-    setSelectedCategory(null)
-    setSelectedRuqyahOption(null)
+  const handleCancelExit = () => {
+    setShowExitDialog(false)
   }
 
-  const handleBackToEvilEyeSubmenu = () => {
-    setCurrentScreen('evilEyeSubmenu')
-    setSelectedCategory(null)
-    setSelectedEvilEyeOption(null)
-  }
-
-  const handleBackToPersonalProtectionSubmenu = () => {
-    setCurrentScreen('personalProtectionSubmenu')
-    setSelectedCategory(null)
-    setSelectedPersonalProtectionOption(null)
-  }
-
-  const handleBackToJinnAttacksSubmenu = () => {
-    setCurrentScreen('jinnAttacksSubmenu')
-    setSelectedCategory(null)
-    setSelectedJinnAttacksOption(null)
-  }
+  const ExitDialog = () => (
+    <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+      <div className="bg-white rounded-lg p-6 w-full max-w-sm">
+        <h3 className="text-lg font-bold text-gray-900 text-center mb-4">Quit?</h3>
+        <p className="text-gray-600 text-center mb-6">Are you sure you want to exit the app?</p>
+        <div className="flex space-x-4">
+          <button
+            onClick={handleCancelExit}
+            className="flex-1 bg-gray-200 hover:bg-gray-300 text-gray-800 font-medium py-2 px-4 rounded transition-colors"
+          >
+            Cancel
+          </button>
+          <button
+            onClick={handleExitApp}
+            className="flex-1 bg-red-500 hover:bg-red-600 text-white font-medium py-2 px-4 rounded transition-colors"
+          >
+            Exit
+          </button>
+        </div>
+      </div>
+    </div>
+  )
 
   if (currentScreen === 'menu') {
-    return <MenuScreen onSelectCategory={handleSelectCategory} />
+    return (
+      <>
+        <MenuScreen onSelectCategory={handleSelectCategory} />
+        {showExitDialog && <ExitDialog />}
+      </>
+    )
   }
 
   if (currentScreen === 'ruqyahSubmenu') {

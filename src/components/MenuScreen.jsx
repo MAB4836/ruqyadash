@@ -37,9 +37,15 @@ const MenuScreen = ({ onSelectCategory }) => {
   return (
     <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">
       <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl">
-        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-8">
+        <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-2">
           Islamic Protection App
         </h1>
+        
+        <div className="text-center mb-4">
+          <p className="text-white text-sm opacity-75">
+            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+          </p>
+        </div>
         
         <div className="space-y-4">
           {menuOptions.map((option) => (
@@ -54,12 +60,6 @@ const MenuScreen = ({ onSelectCategory }) => {
               </div>
             </button>
           ))}
-        </div>
-        
-        <div className="text-center mt-8">
-          <p className="text-white text-sm opacity-75">
-            بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-          </p>
         </div>
       </div>
     </div>
