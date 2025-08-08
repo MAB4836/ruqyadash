@@ -5,6 +5,7 @@ import EvilEyeSubmenu from './components/EvilEyeSubmenu'
 import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
 import CardViewer from './components/CardViewer'
+import SettingsPopup from './components/SettingsPopup'
 import { ruqyahVerses } from './data/ruqyahVerses'
 import { shortRuqyah } from './data/shortRuqyah'
 import { whatIsRuqyah } from './data/whatIsRuqyah'
@@ -34,6 +35,10 @@ function App() {
   const [selectedPersonalProtectionOption, setSelectedPersonalProtectionOption] = useState(null)
   const [selectedJinnAttacksOption, setSelectedJinnAttacksOption] = useState(null)
   const [showExitDialog, setShowExitDialog] = useState(false)
+  const [showSettingsPopup, setShowSettingsPopup] = useState(false)
+  const [selectedFont, setSelectedFont] = useState(() => {
+    return localStorage.getItem('arabicFont') || 'KSARegular_B'
+  })
 
   const handleBackToMenu = useCallback(() => {
     setCurrentScreen('menu');
@@ -275,6 +280,25 @@ function App() {
     setShowExitDialog(false)
   }
 
+  const handleOpenSettings = () => {
+    setShowSettingsPopup(true)
+  }
+
+  const handleCloseSettings = () => {
+    setShowSettingsPopup(false)
+  }
+
+  const handleFontChange = (fontId) => {
+    setSelectedFont(fontId)
+    localStorage.setItem('arabicFont', fontId)
+    document.documentElement.style.setProperty('--arabic-font-family', `'${fontId}'`)
+  }
+
+  // Set initial font on app load
+  useEffect(() => {
+    document.documentElement.style.setProperty('--arabic-font-family', `'${selectedFont}'`)
+  }, [])
+
   const ExitDialog = () => (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
       <div className="bg-white rounded-lg p-6 w-full max-w-sm">
@@ -301,8 +325,14 @@ function App() {
   if (currentScreen === 'menu') {
     return (
       <>
-        <MenuScreen onSelectCategory={handleSelectCategory} />
+        <MenuScreen onSelectCategory={handleSelectCategory} onOpenSettings={handleOpenSettings} />
         {showExitDialog && <ExitDialog />}
+        <SettingsPopup 
+          isOpen={showSettingsPopup}
+          onClose={handleCloseSettings}
+          selectedFont={selectedFont}
+          onFontChange={handleFontChange}
+        />
       </>
     )
   }

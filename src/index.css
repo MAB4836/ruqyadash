@@ -5,10 +5,38 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Local Arabic font */
+/* Local Arabic fonts */
 @font-face {
   font-family: 'KSARegular_B';
   src: url('/KSARegular_B.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'MUHAMMADIBold';
+  src: url('/MUHAMMADIBold.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Naskh-Nastaleeq';
+  src: url('/Naskh-Nastaleeq-IndoPak-QWBW.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'PDMS_SALEEM';
+  src: url('/PDMS_SALEEM_QURANFONTQESHIP_0.ttf') format('truetype');
+  font-display: swap;
+  unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+}
+
+@font-face {
+  font-family: 'Quraniconstwo';
+  src: url('/Quraniconstwo.ttf') format('truetype');
   font-display: swap;
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
@@ -21,9 +49,14 @@
   unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
 }
 
+/* CSS Custom Properties for dynamic font switching */
+:root {
+  --arabic-font-family: 'KSARegular_B';
+}
+
 /* Arabic text optimization */
 .arabic-text {
-  font-family: 'KSARegular_B', 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
+  font-family: var(--arabic-font-family), 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
   direction: rtl;
   text-align: right;
   line-height: 1.8;
