@@ -27,6 +27,7 @@ import { jinnKnowledge } from './data/jinnKnowledge'
 import { sihrTypes } from './data/sihrTypes'
 import { spiritualRemedies } from './data/spiritualRemedies'
 import { manzilVerses } from './data/manzilVerses'
+import { selfDiagnosis } from './data/selfDiagnosis'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('menu')
@@ -241,9 +242,7 @@ function App() {
     },
     diagnosisHelp: {
       title: 'Diagnosis and Help',
-      cards: [
-        { id: 1, title: 'Coming Soon', content: '<div class="text-lg text-center text-gray-900">Self-diagnosis guide coming soon</div>' }
-      ]
+      cards: selfDiagnosis
     },
     raqi: {
       title: 'Raqi - Visiting Ruqyah Practitioners',

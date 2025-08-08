@@ -50,25 +50,25 @@ export const selfDiagnosis = [
     content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
       <p>Some people affected by sihr, jinn, or evil eye may experience sudden or extreme changes in mood. These are sometimes spiritual in origin, especially when they:</p>
       
-      <ul class="space-y-1 ml-4 text-gray-700">
-        <li>• Intensify during Qur'anic recitation</li>
-        <li>• Occur in the presence of certain people (e.g., spouse, family, strangers)</li>
-        <li>• Are triggered in specific places (e.g., home, bedroom, certain house/area)</li>
-        <li>• Happen at particular times (e.g., after sunset, at night, during adhan)</li>
-        <li>• Have no clear medical explanation</li>
+      <ul class="space-y-1 text-gray-700 list-none">
+        <li class="flex"><span class="mr-2">•</span><span>Intensify during Qur'anic recitation</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Occur in the presence of certain people (e.g., spouse, family, strangers)</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Are triggered in specific places (e.g., home, bedroom, certain house/area)</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Happen at particular times (e.g., after sunset, at night, during adhan)</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Have no clear medical explanation</span></li>
       </ul>
       
       <div class="bg-purple-50 p-4 rounded-lg">
         <h4 class="font-bold text-purple-800 mb-3">Possible Emotional Symptoms:</h4>
-        <ul class="space-y-2 text-purple-700">
-          <li>• Sudden waves of depression or hopelessness</li>
-          <li>• Irritability, anger, or aggression toward loved ones or Islamic reminders</li>
-          <li>• Feeling numb, disconnected, or empty</li>
-          <li>• Episodes of crying without cause</li>
-          <li>• Extreme anxiety or panic attacks, especially during ruqyah</li>
-          <li>• Unnatural feelings of hatred or suspicion toward certain people</li>
-          <li>• Mood shifts that feel "out of your control"</li>
-          <li>• Feeling like "your emotions are being manipulated"</li>
+        <ul class="space-y-2 text-purple-700 list-none">
+          <li class="flex"><span class="mr-2">•</span><span>Sudden waves of depression or hopelessness</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Irritability, anger, or aggression toward loved ones or Islamic reminders</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Feeling numb, disconnected, or empty</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Episodes of crying without cause</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Extreme anxiety or panic attacks, especially during ruqyah</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Unnatural feelings of hatred or suspicion toward certain people</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Mood shifts that feel "out of your control"</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Feeling like "your emotions are being manipulated"</span></li>
         </ul>
       </div>
       
@@ -88,20 +88,20 @@ export const selfDiagnosis = [
     content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
       <p>Some people affected by sihr, jinn, or evil eye experience unusual sleep issues. These may be spiritual when they:</p>
       
-      <ul class="space-y-1 ml-4 text-gray-700">
-        <li>• Involve repeated disturbing dreams (snakes, scorpions, dark figures, graves, falling)</li>
-        <li>• Occur at the same time every night</li>
-        <li>• Intensify after Qur'anic recitation or playing ruqyah audio</li>
+      <ul class="space-y-1 text-gray-700 list-none">
+        <li class="flex"><span class="mr-2">•</span><span>Involve repeated disturbing dreams (snakes, scorpions, dark figures, graves, falling)</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Occur at the same time every night</span></li>
+        <li class="flex"><span class="mr-2">•</span><span>Intensify after Qur'anic recitation or playing ruqyah audio</span></li>
       </ul>
       
       <div class="bg-indigo-50 p-4 rounded-lg">
         <h4 class="font-bold text-indigo-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-indigo-700">
-          <li>• Persistent nightmares or night terrors</li>
-          <li>• Sleep paralysis with frightening visions or sensations</li>
-          <li>• Waking suddenly in fear or panic</li>
-          <li>• Talking, shouting, or crying in sleep</li>
-          <li>• Insomnia or restless, broken sleep</li>
+        <ul class="space-y-2 text-indigo-700 list-none">
+          <li class="flex"><span class="mr-2">•</span><span>Persistent nightmares or night terrors</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Sleep paralysis with frightening visions or sensations</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Waking suddenly in fear or panic</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Talking, shouting, or crying in sleep</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Insomnia or restless, broken sleep</span></li>
         </ul>
       </div>
       
@@ -122,13 +122,13 @@ export const selfDiagnosis = [
       
       <div class="bg-green-50 p-4 rounded-lg">
         <h4 class="font-bold text-green-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-green-700">
-          <li>• Moving or shifting pains in the body</li>
-          <li>• Chronic headaches or migraines without medical cause</li>
-          <li>• Stomach pain, bloating, or nausea — especially during ruqyah</li>
-          <li>• Sensation of something "moving" inside the body</li>
-          <li>• Sudden weakness, dizziness, or collapse without reason</li>
-          <li>• Unexplained rashes, itching, or skin irritation</li>
+        <ul class="space-y-2 text-green-700 list-none">
+          <li class="flex"><span class="mr-2">•</span><span>Moving or shifting pains in the body</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Chronic headaches or migraines without medical cause</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Stomach pain, bloating, or nausea — especially during ruqyah</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Sensation of something "moving" inside the body</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Sudden weakness, dizziness, or collapse without reason</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Unexplained rashes, itching, or skin irritation</span></li>
         </ul>
       </div>
       
@@ -149,13 +149,13 @@ export const selfDiagnosis = [
       
       <div class="bg-orange-50 p-4 rounded-lg">
         <h4 class="font-bold text-orange-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-orange-700">
-          <li>• Sudden, unexplained memory loss or confusion</li>
-          <li>• Forgetting Qur'anic verses you usually know well</li>
-          <li>• Hearing whispers, footsteps, or voices when alone</li>
-          <li>• Seeing shadows, dark figures, or unexplained movement</li>
-          <li>• Smelling foul odours (rotting, burning) with no source</li>
-          <li>• Feeling watched when no one is there</li>
+        <ul class="space-y-2 text-orange-700 list-none">
+          <li class="flex"><span class="mr-2">•</span><span>Sudden, unexplained memory loss or confusion</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Forgetting Qur'anic verses you usually know well</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Hearing whispers, footsteps, or voices when alone</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Seeing shadows, dark figures, or unexplained movement</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Smelling foul odours (rotting, burning) with no source</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Feeling watched when no one is there</span></li>
         </ul>
       </div>
       
@@ -176,12 +176,12 @@ export const selfDiagnosis = [
       
       <div class="bg-pink-50 p-4 rounded-lg">
         <h4 class="font-bold text-pink-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-pink-700">
-          <li>• Sudden hatred or tension between spouses or family</li>
-          <li>• Frequent arguments over small matters</li>
-          <li>• Avoidance of certain people without reason</li>
-          <li>• Engagements or marriages repeatedly breaking down</li>
-          <li>• Feeling isolated from loved ones</li>
+        <ul class="space-y-2 text-pink-700 list-none">
+          <li class="flex"><span class="mr-2">•</span><span>Sudden hatred or tension between spouses or family</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Frequent arguments over small matters</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Avoidance of certain people without reason</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Engagements or marriages repeatedly breaking down</span></li>
+          <li class="flex"><span class="mr-2">•</span><span>Feeling isolated from loved ones</span></li>
         </ul>
       </div>
       
@@ -216,21 +216,22 @@ export const selfDiagnosis = [
               <div class="text-green-700 space-y-2">
                 <p>• Sit in a clean place, make wudu if possible, face the qiblah.</p>
                 <p><strong>Read aloud with focus:</strong></p>
-                <ul class="ml-4 space-y-1">
-                  <li>- Surah Al-Fatiha (1)</li>
-                  <li>- Ayat al-Kursi (2:255)</li>
-                  <li>- The last three Quls:</li>
-                  <li class="ml-4">• Surah Al-Ikhlas (112)</li>
-                  <li class="ml-4">• Surah Al-Falaq (113)</li>
-                  <li class="ml-4">• Surah An-Nas (114) (each recited 3 times)</li>
+                <ul class="space-y-1 list-none">
+                  <li class="flex"><span class="mr-2">-</span><span>Surah Al-Fatiha (1)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Ayat al-Kursi (2:255)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>The last three Quls (each recited 3 times):</span></li>
+                  <li class="flex ml-4"><span class="mr-2">•</span><span>Surah Al-Ikhlas (112)</span></li>
+                  <li class="flex ml-4"><span class="mr-2">•</span><span>Surah Al-Falaq (113)</span></li>
+                  <li class="flex ml-4"><span class="mr-2">•</span><span>Surah An-Nas (114)</span></li>
                 </ul>
                 <p><strong>Observe for any unusual sensations such as:</strong></p>
-                <ul class="ml-4 space-y-1">
-                  <li>- Headaches, pressure, or tingling in the head</li>
-                  <li>- Emotional surges like crying, fear, anger without cause</li>
-                  <li>- Body jerks, nausea, or urge to stop reading</li>
+                <ul class="space-y-1 list-none">
+                  <li class="flex"><span class="mr-2">-</span><span>Headaches, pressure, or tingling in the head</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Emotional surges like crying, fear, anger without cause</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Body jerks, nausea, or urge to stop reading</span></li>
                 </ul>
                 <p class="italic">No reaction doesn't guarantee absence of affliction.</p>
+                <p class="mt-3 text-green-600 italic">For me this was the key one. I read the Quran on most days, however, at the start of this affliction I stopped reading it every day and for a while stop reading altogether but I didn't think this was due to anything sinister. I thought I have read the Quran so many times I know it all and don't need to read it again and again (this in hindsight was due to the sihr but I did not realise it at the time). But because the Quran is my life I would force myself to read it. This is where the most shocking thing happened. When I read it my mind would argue against it - I can't repeat the thoughts that used to occur. I actually thought "oh well may be I am supposed to go to hell and this my path to it.". Again in hindsight, for me, it could not have been clearer that something sinister was happening to me. But as it is, so many times, one never thinks that - the only thought is, no this is how I feel never what/who is making me feel like this because I am not like that. I never equated my emotional state with sihr, unfortunately, until other more insidious events took place.</p>
               </div>
             </div>
             
@@ -239,25 +240,26 @@ export const selfDiagnosis = [
               <div class="text-blue-700 space-y-2">
                 <p>Play a trusted ruqyah recitation quietly through headphones at a comfortable volume.</p>
                 <p><strong>Suggested choices include:</strong></p>
-                <ul class="ml-4 space-y-1">
-                  <li>- Full Surah Al-Baqarah (2)</li>
-                  <li>- Ayat al-Kursi (2:255) alone</li>
-                  <li>- Last two verses of Surah Al-Baqarah (2:285-286)</li>
-                  <li>- Surah Al-Falaq (113) and Surah An-Nas (114), three times each</li>
-                  <li>- Surah Al-Ikhlas (112)</li>
+                <ul class="space-y-1 list-none">
+                  <li class="flex"><span class="mr-2">-</span><span>Full Surah Al-Baqarah (2)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Ayat al-Kursi (2:255) alone</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Last two verses of Surah Al-Baqarah (2:285-286)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Surah Al-Falaq (113) and Surah An-Nas (114), three times each</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Surah Al-Ikhlas (112)</span></li>
                 </ul>
                 <p>Notice sudden physical or emotional reactions (anxiety, chest tightness, dizziness).</p>
+                <p class="mt-3 text-green-600 italic">Surah Al-Baqarah is the longest in the Quran, however, you don't need to wait till the end to say "Oh did I feel anything?" You'll know very soon. Initially you will feel reluctant to even approach the Quran - so many excuses so much procrastination and iratation and even anger. If you get to the end without feeling irrated, distracted with evil thoughts, or your mind telling you "This is stupid!" or this reciter is rubbish lets find another better one and you never find one and then you have something else to do, then you are good.</p>
               </div>
             </div>
             
             <div class="bg-purple-50 p-4 rounded-lg">
               <h5 class="font-bold text-purple-800 mb-2">Option C: Water Ruqyah Test</h5>
               <div class="text-purple-700 space-y-2">
-                <p>Recite the above verses slowly and clearly over a cup of clean water:</p>
-                <ul class="ml-4 space-y-1">
-                  <li>- Surah Al-Fatiha (1)</li>
-                  <li>- Ayat al-Kursi (2:255)</li>
-                  <li>- Surah Al-Ikhlas (112), Al-Falaq (113), An-Nas (114) (3 times each)</li>
+                <p>Recite these verses slowly and clearly over a cup of clean water. Then blow gently once at the end before giving it to drink or drinking it yourself:</p>
+                <ul class="space-y-1 list-none">
+                  <li class="flex"><span class="mr-2">-</span><span>Surah Al-Fatiha (1)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Ayat al-Kursi (2:255)</span></li>
+                  <li class="flex"><span class="mr-2">-</span><span>Surah Al-Ikhlas (112), Al-Falaq (113), An-Nas (114) (3 times each)</span></li>
                 </ul>
                 <p>Drink some of the water and observe for any unusual nausea, stomach discomfort, or other sensations without medical cause.</p>
               </div>
@@ -284,22 +286,23 @@ export const selfDiagnosis = [
         
         <div>
           <h4 class="font-bold text-gray-800 mb-3 text-lg">2. Immediate Actions if You Notice Strong Reactions</h4>
-          <ul class="space-y-2 text-gray-700 ml-4">
-            <li>• Start a short daily ruqyah routine (refer to the "Short Ruqyah Routine" section).</li>
-            <li>• Increase Qur'an recitation and dhikr regularly.</li>
-            <li>• Maintain physical cleanliness, wudu, and avoid sinful environments.</li>
-            <li>• Make sincere du'a after each prayer, asking Allah for healing and protection.</li>
-            <li>• Seek help from a trusted and knowledgeable raqi if symptoms persist or worsen.</li>
+          <ul class="space-y-2 text-gray-700 list-none">
+            <li class="flex"><span class="mr-2">•</span><span>Start a short daily ruqyah routine (refer to the "Short Ruqyah Routine" section).</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Increase Qur'an recitation and dhikr regularly.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Maintain physical cleanliness, wudu, and avoid sinful environments.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Make sincere du'a after each prayer, asking Allah for healing and protection.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>Seek help from a trusted and knowledgeable raqi if symptoms persist or worsen.</span></li>
           </ul>
         </div>
         
         <div>
           <h4 class="font-bold text-gray-800 mb-3 text-lg">3. When to Seek Professional Help</h4>
-          <ul class="space-y-2 text-gray-700 ml-4">
-            <li>• If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</li>
-            <li>• If you experience thoughts of self-harm or harming others.</li>
-            <li>• If you cannot consistently perform ruqyah or maintain your routine.</li>
-            <li>• If family or relationships are seriously strained.</li>
+          <ul class="space-y-2 text-gray-700 list-none">
+            <li class="flex"><span class="mr-2">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>If you cannot consistently perform ruqyah or maintain your routine.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>If family or relationships are seriously strained.</span></li>
+            <li class="flex"><span class="mr-2">•</span><span>For guidance on choosing a trustworthy and knowledgeable raqi, see the "Raqi" section of this app.</span></li>
           </ul>
           
           <div class="bg-gray-50 p-4 rounded-lg mt-4">
