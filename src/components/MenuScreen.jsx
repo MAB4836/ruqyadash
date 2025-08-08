@@ -4,29 +4,19 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
   
   const menuOptions = [
     {
+      id: 'immediateHelp',
+      title: 'Immediate Help',
+      description: 'A step-by-step self-diagnosis guide to identify spiritual affliction and safe immediate actions.'
+    },
+    {
       id: 'ruqyahVerses',
       title: 'Ruqyah Verses',
       description: 'Essential Quranic verses for spiritual protection'
     },
     {
-      id: 'suspectHouse',
-      title: 'Entering Suspect Places',
-      description: 'Protection when entering potentially harmful places'
-    },
-    {
       id: 'personalProtection',
       title: 'Personal Protection',
-      description: 'Daily protection du\'a and morning/evening adhkar'
-    },
-    {
-      id: 'evilEye',
-      title: 'Against Evil Eye',
-      description: 'Protection from hasad and envious looks'
-    },
-    {
-      id: 'jinnAttacks',
-      title: 'Against Jinn Attacks',
-      description: 'Protection from jinn interference and whispers'
+      description: 'Comprehensive protection guidance for all situations'
     },
     {
       id: 'sihrMagic',

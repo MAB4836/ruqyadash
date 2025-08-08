@@ -1,41 +1,16 @@
 import React from 'react'
 
-const PersonalProtectionSubmenu = ({ onSelectOption, onBack }) => {
+const ImmediateHelpSubmenu = ({ onSelectOption, onBack }) => {
   const submenuOptions = [
     {
-      id: 'personalProtection',
-      title: 'Personal',
-      description: 'Daily protection du\'a and morning/evening adhkar'
+      id: 'diagnosisHelp',
+      title: 'Diagnosis and Help',
+      description: '"The best ruqyah is the ruqyah of the Prophet ﷺ."'
     },
     {
-      id: 'suspectHouse',
-      title: 'Entering Suspect Places',
-      description: 'Protection when entering potentially harmful places'
-    },
-    {
-      id: 'spiritualRemedies',
-      title: 'Preparing Spiritual Remedies',
-      description: 'Ruqyah water, oil, and protective tools from Qur\'an and Sunnah'
-    },
-    {
-      id: 'travelProtection',
-      title: 'Travel & Outdoor',
-      description: 'Du\'a for journeys and wilderness areas'
-    },
-    {
-      id: 'familyProtection',
-      title: 'Family & Home',
-      description: 'Protection for household and loved ones'
-    },
-    {
-      id: 'evilEye',
-      title: 'Against Evil Eye',
-      description: 'Protection from hasad and envious looks'
-    },
-    {
-      id: 'jinnAttacks',
-      title: 'Against Jinn Attacks',
-      description: 'Protection from jinn interference and whispers'
+      id: 'raqi',
+      title: 'Raqi',
+      description: 'Visiting Ruqyah Practitioners'
     }
   ]
 
@@ -44,7 +19,7 @@ const PersonalProtectionSubmenu = ({ onSelectOption, onBack }) => {
       <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl">
         <div className="mb-8">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
-            Personal Protection
+            Immediate Help
           </h1>
           <div className="text-center">
             <p className="text-white text-sm opacity-75">
@@ -81,4 +56,4 @@ const PersonalProtectionSubmenu = ({ onSelectOption, onBack }) => {
   )
 }
 
-export default PersonalProtectionSubmenu
+export default ImmediateHelpSubmenu

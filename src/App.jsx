@@ -4,6 +4,7 @@ import RuqyahSubmenu from './components/RuqyahSubmenu'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
 import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
+import ImmediateHelpSubmenu from './components/ImmediateHelpSubmenu'
 import CardViewer from './components/CardViewer'
 import SettingsPopup from './components/SettingsPopup'
 import { ruqyahVerses } from './data/ruqyahVerses'
@@ -34,6 +35,7 @@ function App() {
   const [selectedEvilEyeOption, setSelectedEvilEyeOption] = useState(null)
   const [selectedPersonalProtectionOption, setSelectedPersonalProtectionOption] = useState(null)
   const [selectedJinnAttacksOption, setSelectedJinnAttacksOption] = useState(null)
+  const [selectedImmediateHelpOption, setSelectedImmediateHelpOption] = useState(null)
   const [showExitDialog, setShowExitDialog] = useState(false)
   const [showSettingsPopup, setShowSettingsPopup] = useState(false)
   const [selectedFont, setSelectedFont] = useState(() => {
@@ -47,6 +49,7 @@ function App() {
     setSelectedEvilEyeOption(null);
     setSelectedPersonalProtectionOption(null);
     setSelectedJinnAttacksOption(null);
+    setSelectedImmediateHelpOption(null);
   }, [])
 
   const handleBackToRuqyahSubmenu = useCallback(() => {
@@ -73,6 +76,12 @@ function App() {
     setSelectedJinnAttacksOption(null)
   }, [])
 
+  const handleBackToImmediateHelpSubmenu = useCallback(() => {
+    setCurrentScreen('immediateHelpSubmenu')
+    setSelectedCategory(null)
+    setSelectedImmediateHelpOption(null)
+  }, [])
+
   useEffect(() => {
     const handleBackButton = () => {
       if (currentScreen === 'menu') {
@@ -84,7 +93,8 @@ function App() {
       if (currentScreen === 'ruqyahSubmenu' || 
           currentScreen === 'evilEyeSubmenu' || 
           currentScreen === 'personalProtectionSubmenu' || 
-          currentScreen === 'jinnAttacksSubmenu') {
+          currentScreen === 'jinnAttacksSubmenu' ||
+          currentScreen === 'immediateHelpSubmenu') {
         handleBackToMenu();
       } 
       else if (currentScreen === 'cards') {
@@ -96,6 +106,8 @@ function App() {
           handleBackToPersonalProtectionSubmenu();
         } else if (selectedJinnAttacksOption) {
           handleBackToJinnAttacksSubmenu();
+        } else if (selectedImmediateHelpOption) {
+          handleBackToImmediateHelpSubmenu();
         } else {
           handleBackToMenu();
         }
@@ -126,10 +138,12 @@ function App() {
     handleBackToEvilEyeSubmenu,
     handleBackToPersonalProtectionSubmenu,
     handleBackToJinnAttacksSubmenu,
+    handleBackToImmediateHelpSubmenu,
     selectedRuqyahOption,
     selectedEvilEyeOption,
     selectedPersonalProtectionOption,
-    selectedJinnAttacksOption
+    selectedJinnAttacksOption,
+    selectedImmediateHelpOption
   ])
 
   const categoryData = {
@@ -224,18 +238,28 @@ function App() {
     spiritualRemedies: {
       title: 'Preparing Spiritual Remedies',
       cards: spiritualRemedies
+    },
+    diagnosisHelp: {
+      title: 'Diagnosis and Help',
+      cards: [
+        { id: 1, title: 'Coming Soon', content: '<div class="text-lg text-center text-gray-900">Self-diagnosis guide coming soon</div>' }
+      ]
+    },
+    raqi: {
+      title: 'Raqi - Visiting Ruqyah Practitioners',
+      cards: [
+        { id: 1, title: 'Coming Soon', content: '<div class="text-lg text-center text-gray-900">Raqi guidance coming soon</div>' }
+      ]
     }
   }
 
   const handleSelectCategory = (categoryId) => {
     if (categoryId === 'ruqyahVerses') {
       setCurrentScreen('ruqyahSubmenu')
-    } else if (categoryId === 'evilEye') {
-      setCurrentScreen('evilEyeSubmenu')
     } else if (categoryId === 'personalProtection') {
       setCurrentScreen('personalProtectionSubmenu')
-    } else if (categoryId === 'jinnAttacks') {
-      setCurrentScreen('jinnAttacksSubmenu')
+    } else if (categoryId === 'immediateHelp') {
+      setCurrentScreen('immediateHelpSubmenu')
     } else {
       setSelectedCategory(categoryId)
       setCurrentScreen('cards')
@@ -255,13 +279,25 @@ function App() {
   }
 
   const handleSelectPersonalProtectionOption = (optionId) => {
-    setSelectedPersonalProtectionOption(optionId)
-    setSelectedCategory(optionId)
-    setCurrentScreen('cards')
+    if (optionId === 'evilEye') {
+      setCurrentScreen('evilEyeSubmenu')
+    } else if (optionId === 'jinnAttacks') {
+      setCurrentScreen('jinnAttacksSubmenu')
+    } else {
+      setSelectedPersonalProtectionOption(optionId)
+      setSelectedCategory(optionId)
+      setCurrentScreen('cards')
+    }
   }
 
   const handleSelectJinnAttacksOption = (optionId) => {
     setSelectedJinnAttacksOption(optionId)
+    setSelectedCategory(optionId)
+    setCurrentScreen('cards')
+  }
+
+  const handleSelectImmediateHelpOption = (optionId) => {
+    setSelectedImmediateHelpOption(optionId)
     setSelectedCategory(optionId)
     setCurrentScreen('cards')
   }
@@ -373,6 +409,15 @@ function App() {
     )
   }
 
+  if (currentScreen === 'immediateHelpSubmenu') {
+    return (
+      <ImmediateHelpSubmenu
+        onSelectOption={handleSelectImmediateHelpOption}
+        onBack={handleBackToMenu}
+      />
+    )
+  }
+
   if (currentScreen === 'cards' && selectedCategory) {
     const category = categoryData[selectedCategory]
     let onBackFunction = handleBackToMenu
@@ -385,6 +430,8 @@ function App() {
       onBackFunction = handleBackToPersonalProtectionSubmenu
     } else if (selectedJinnAttacksOption) {
       onBackFunction = handleBackToJinnAttacksSubmenu
+    } else if (selectedImmediateHelpOption) {
+      onBackFunction = handleBackToImmediateHelpSubmenu
     }
     
     return (
