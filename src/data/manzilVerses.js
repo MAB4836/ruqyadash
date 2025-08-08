@@ -88,6 +88,17 @@ export const manzilVerses = [
     </div>`
   },
   {
+    id: 3,
+    title: 'Al-Baqarah (163)',
+    content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
+      <div class="mb-6">
+        <p class="flex justify-between mb-2"><span>وَإِلَٰهُكُمْ إِلَٰهٌ وَاحِدٌ لَّا إِلَٰهَ إِلَّا هُوَ الرَّحْمَٰنُ الرَّحِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٦٣﴾</span></p>
+        <p class="text-base text-gray-600 italic mb-1">Wa ilahukum ilahun wahid, la ilaha illa huwar-rahmanur-raheem</p>
+        <p class="text-base text-gray-700">And your god is one God. There is no deity [worthy of worship] except Him, the Entirely Merciful, the Especially Merciful.</p>
+      </div>
+    </div>`
+  },
+  {
     id: 6,
     title: 'Ayat Al-Kursi (255)',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
@@ -150,7 +161,7 @@ export const manzilVerses = [
   },
   {
     id: 11,
-    title: 'Ali Imran (18 - 19)',
+    title: 'Ali Imran (18)',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>شَهِدَ اللَّهُ أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَٰهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٨﴾</span></p>
@@ -158,11 +169,7 @@ export const manzilVerses = [
         <p class="text-base text-gray-700">Allah witnesses that there is no deity except Him, and [so do] the angels and those of knowledge - [that He is] maintaining [creation] in justice. There is no deity except Him, the Exalted in Might, the Wise.</p>
       </div>
       
-      <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>إِنَّ الدِّينَ عِندَ اللَّهِ الْإِسْلَامُ وَمَا اخْتَلَفَ الَّذِينَ أُوتُوا الْكِتَابَ إِلَّا مِن بَعْدِ مَا جَاءَهُمُ الْعِلْمُ بَغْيًا بَيْنَهُمْ وَمَن يَكْفُرْ بِآيَاتِ اللَّهِ فَإِنَّ اللَّهَ سَرِيعُ الْحِسَابِ</span><span class="text-sm text-gray-500 ml-4">﴿١٩﴾</span></p>
-        <p class="text-base text-gray-600 italic mb-1">Inna ad-deena 'indal-lahil-islam, wa makhtalafal-lazeena ootul-kitaba illa min ba'di ma ja'ahumul-'ilmu baghyam baynahum, wa man yakfur bi-ayatillahi fa-innallaha saree'ul-hisab</p>
-        <p class="text-base text-gray-700">Indeed, the religion in the sight of Allah is Islam. And those who were given the Scripture did not differ except after knowledge had come to them - out of jealous animosity between themselves. And whoever disbelieves in the verses of Allah, then indeed, Allah is swift in [taking] account.</p>
-      </div>
+      
     </div>`
   },
   {
@@ -329,11 +336,7 @@ export const manzilVerses = [
         <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
       </div>
       
-      <div class="mb-6">
-        <p class="text-center mb-2">يُعْرَفُ الْمُجْرِمُونَ بِسِيمَاهُمْ فَيُؤْخَذُ بِالنَّوَاصِي وَالْأَقْدَامِ ﴿٤٠﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Yu'rafu al-mujrimuna bi-simahum fa yu'khazu bin-nawasi wal-aqdam</p>
-        <p class="text-base text-gray-700 text-center">The criminals will be known by their marks, and they will be seized by the forelocks and the feet</p>
-      </div>
+      
     </div>`
   },
   {
@@ -387,66 +390,7 @@ export const manzilVerses = [
         <p class="text-base text-gray-700 text-center">And [we believe] that exalted is the nobleness of our Lord; He has not taken a wife or a son. And that our foolish one has been saying about Allah an excessive transgression.</p>
       </div>
       
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّا ظَنَنَّا أَن لَّن تَقُولَ الْإِنسُ وَالْجِنُّ عَلَى اللَّهِ كَذِبًا ﴿٥﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa anna thananna an lan taqula al-insu wal-jinnu 'ala Allahi kathiba</p>
-        <p class="text-base text-gray-700 text-center">And we had thought that mankind and the jinn would never speak about Allah a lie.</p>
-      </div>
       
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّهُ كَانَ رِجَالٌ مِّنَ الْإِنسِ يَعُوذُونَ بِرِجَالٍ مِّنَ الْجِنِّ فَزَادُوهُمْ رَهَقًا ﴿٦﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa annahu kana rijalun min al-insi ya'oothoona bi-rijalin min al-jinni fa zadoohum rahaqa</p>
-        <p class="text-base text-gray-700 text-center">And that there were men from mankind who sought refuge in men from the jinn, so they [only] increased them in burden.</p>
-      </div>
-      
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّهُمْ ظَنُّوا كَمَا ظَنَنتُمْ أَن لَّن يَبْعَثَ اللَّهُ أَحَدًا ﴿٧﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa annahum thannu kama thanantum an lan yab'atha Allahu ahadan</p>
-        <p class="text-base text-gray-700 text-center">And they had thought, as you thought, that Allah would never send anyone [as a messenger].</p>
-      </div>
-      
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّا لَمَسْنَا السَّمَاءَ فَوَجَدْنَاهَا مُلِئَتْ حَرَسًا شَدِيدًا وَشُهُبًا ﴿٨﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa anna lamasa as-sama'a fa wajadnaha muli'at harasan shadeedan wa shuhuba</p>
-        <p class="text-base text-gray-700 text-center">And we have sought [to reach] the heaven but found it filled with powerful guards and burning flames.</p>
-      </div>
-      
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّا كُنَّا نَقْعُدُ مِنْهَا مَقَاعِدَ لِلسَّمْعِ فَمَن يَسْتَمِعِ الْآنَ يَجِدْ لَهُ شِهَابًا رَّصَدًا ﴿٩﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa anna kunna naq'udu minha maqa'ida lis-sam'i fa man yastami' al-ana yajid lahu shihaban rasada</p>
-        <p class="text-base text-gray-700 text-center">And we used to sit therein in positions for hearing, but whoever listens now will find a burning flame lying in wait for him.</p>
-      </div>
-    </div>`
-  },
-  {
-    id: 29,
-    title: 'Al-Fil (The Elephant)',
-    content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
-      <div class="mb-6">
-        <p class="text-center mb-2">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ﴿١﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Alam tara kayfa fa'ala rabbuka bi-ashabil-fil</p>
-        <p class="text-base text-gray-700 text-center">Have you not considered how your Lord dealt with the companions of the elephant?</p>
-      </div>
-      <div class="mb-6">
-        <p class="text-center mb-2">أَلَمْ يَجْعَلْ كَيْدَهُمْ فِي تَضْلِيلٍ ﴿٢﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Alam yaj'al kaydahum fi tadlil</p>
-        <p class="text-base text-gray-700 text-center">Did He not make their plan into misguidance?</p>
-      </div>
-      <div class="mb-6">
-        <p class="text-center mb-2">وَأَرْسَلَ عَلَيْهِمْ طَيْرًا أَبَابِيلَ ﴿٣﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Wa arsala 'alayhim tayran ababyl</p>
-        <p class="text-base text-gray-700 text-center">And He sent against them birds in flocks</p>
-      </div>
-      <div class="mb-6">
-        <p class="text-center mb-2">تَرْمِيهِم بِحِجَارَةٍ مِّن سِجِّيلٍ ﴿٤﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Tarmihim bi-hijaratin min sijjyl</p>
-        <p class="text-base text-gray-700 text-center">Striking them with stones of hard clay</p>
-      </div>
-      <div class="mb-6">
-        <p class="text-center mb-2">فَجَعَلَهُمْ كَعَصْفٍ مَّأْكُولٍ ﴿٥﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Fa-ja'alahum ka-'asfin ma'kul</p>
-        <p class="text-base text-gray-700 text-center">And He made them like eaten straw</p>
-      </div>
     </div>`
   },
   {
