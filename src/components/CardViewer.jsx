@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Navigation from './Navigation'
 
-const CardViewer = ({ cards, categoryTitle, onBack }) => {
+const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath }) => {
   const [currentCard, setCurrentCard] = useState(1)
   const [repetitionCounts, setRepetitionCounts] = useState({})
   const [showScrollDown, setShowScrollDown] = useState(false)
@@ -9,6 +9,7 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
   const [isFullPageVisible, setIsFullPageVisible] = useState(false)
   const cardContentRef = useRef(null)
   const cardContainerRef = useRef(null)
+  const bookScrollRef = useRef(null)
   
   // Swipe gesture state
   const [touchStart, setTouchStart] = useState(null)
@@ -19,6 +20,33 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDirection, setSlideDirection] = useState(null) // 'left' or 'right'
   const [nextCardIndex, setNextCardIndex] = useState(currentCard)
+
+  // Check for return card index and scroll position on component mount
+  useEffect(() => {
+    const returnToCard = localStorage.getItem('returnToCardIndex')
+    const returnScrollPosition = localStorage.getItem('returnScrollPosition')
+    
+    if (returnToCard) {
+      setCurrentCard(parseInt(returnToCard))
+      localStorage.removeItem('returnToCardIndex')
+    }
+    
+    if (returnScrollPosition) {
+      // Set scroll position after a short delay to ensure the card content is rendered
+      setTimeout(() => {
+        const cardIndex = returnToCard ? parseInt(returnToCard) : currentCard
+        const isBookFormat = categoryTitle === 'Diagnosis and Help' && cardIndex === 8
+        
+        if (isBookFormat && bookScrollRef.current) {
+          bookScrollRef.current.scrollTop = parseInt(returnScrollPosition)
+        } else if (!isBookFormat && cardContentRef.current) {
+          cardContentRef.current.scrollTop = parseInt(returnScrollPosition)
+        } else {
+        }
+      }, 100)
+      localStorage.removeItem('returnScrollPosition')
+    }
+  }, [])
 
   // Auto-scroll to bottom on component mount to show navigation buttons
   useEffect(() => {
@@ -350,7 +378,7 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
     if (categoryTitle === 'Diagnosis and Help' && currentCard === 8) {
       return (
         <div className="absolute inset-0 bg-white">
-          <div className="h-full overflow-y-auto p-4">
+          <div ref={bookScrollRef} className="h-full overflow-y-auto p-4">
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
                 <div className="mb-6">
@@ -491,7 +519,24 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
                     <div className="border-l-4 border-yellow-500 pl-6 bg-yellow-50 py-4 pr-4 rounded-r-lg">
                       <h2 className="text-lg font-bold text-yellow-900 mb-4">2. Professional Help Guidelines</h2>
                       <ul className="space-y-3 text-yellow-700">
-                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Start a short daily ruqyah routine (refer to the "Short Ruqyah Routine" section).</span></li>
+                        <li className="flex items-start">
+                          <span className="mr-2 font-bold">•</span>
+                          <span>If any of the above tests indicate that sihr is involved, after reading the rest of this page, go to the the Ruqyah Toolkit and click on the Guide icon which will which give instructions on what to do next ( <button 
+                            onClick={() => {
+                              console.log('🔗 Ruqyah Toolkit link clicked from card:', currentCard)
+                              // Capture current scroll position from the book format scroll container
+                              const scrollPosition = bookScrollRef.current ? bookScrollRef.current.scrollTop : 0
+                              console.log('📍 Capturing scroll position from book container:', scrollPosition)
+                              navigateToSection && navigateToSection('ruqyahVerses', { 
+                                category: 'diagnosisHelp', 
+                                screen: 'cards', 
+                                cardIndex: 8,
+                                scrollPosition: scrollPosition
+                              })
+                            }}
+                            className="text-blue-600 hover:text-blue-800 underline font-medium"
+                          >"Ruqyah Toolkit"</button>).</span>
+                        </li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Increase Qur'an recitation and dhikr regularly.</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Maintain physical cleanliness, wudu, and avoid sinful environments.</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Make sincere du'a after each prayer, asking Allah for healing and protection.</span></li>
@@ -513,19 +558,42 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
                     <div className="border-l-4 border-gray-500 pl-6 bg-gray-50 py-4 pr-4 rounded-r-lg">
                       <h2 className="text-lg font-bold text-gray-900 mb-4">4. Cross-references to other app sections</h2>
                       <div className="space-y-3 text-gray-700">
-                        <div className="bg-white p-3 rounded border-l-4 border-blue-400">
-                          <h5 className="font-semibold text-blue-800">Short Ruqyah Routine</h5>
+                        <button
+                          onClick={() => {
+                            const scrollPosition = bookScrollRef.current ? bookScrollRef.current.scrollTop : 0
+                            console.log('📍 Cross-ref button clicked, capturing scroll position from book:', scrollPosition)
+                            navigateToSection && navigateToSection('ruqyahVerses', { 
+                              category: 'diagnosisHelp', 
+                              screen: 'cards', 
+                              cardIndex: 8,
+                              scrollPosition: scrollPosition
+                            })
+                          }}
+                          className="w-full text-left bg-white p-3 rounded border-l-4 border-blue-400 hover:bg-blue-50 transition-colors duration-200"
+                        >
+                          <h5 className="font-semibold text-blue-800">Ruqyah Toolkit</h5>
                           <p className="text-gray-600 text-sm">Essential daily protection verses for regular practice</p>
-                        </div>
-                        <div className="bg-white p-3 rounded border-l-4 border-purple-400">
+                        </button>
+                        <div className="w-full bg-white p-3 rounded border-l-4 border-purple-400">
                           <h5 className="font-semibold text-purple-800">Sihr/Magic</h5>
                           <p className="text-gray-600 text-sm">For a detailed explanation of the different types of sihr and how they are carried out</p>
                         </div>
-                        <div className="bg-white p-3 rounded border-l-4 border-green-400">
+                        <div className="w-full bg-white p-3 rounded border-l-4 border-green-400">
                           <h5 className="font-semibold text-green-800">Raqi</h5>
                           <p className="text-gray-600 text-sm">For guidance on choosing a trustworthy and knowledgeable ruqyah practitioner</p>
                         </div>
                       </div>
+                      
+                      {hasReturnPath && (
+                        <div className="mt-6 pt-4 border-t border-gray-300">
+                          <button
+                            onClick={() => navigateBack && navigateBack()}
+                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                          >
+                            ← Return to Previous Section
+                          </button>
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

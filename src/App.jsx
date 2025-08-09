@@ -42,6 +42,7 @@ function App() {
   const [selectedImmediateHelpOption, setSelectedImmediateHelpOption] = useState(null)
   const [showExitDialog, setShowExitDialog] = useState(false)
   const [showSettingsPopup, setShowSettingsPopup] = useState(false)
+  const [navigationHistory, setNavigationHistory] = useState([])
   const [selectedFont, setSelectedFont] = useState(() => {
     return localStorage.getItem('arabicFont') || 'KSARegular_B'
   })
@@ -332,6 +333,38 @@ function App() {
     setCurrentScreen('ruqyahGuide')
   }
 
+  const navigateToSection = (sectionId, returnLocation) => {
+    setNavigationHistory([...navigationHistory, returnLocation])
+    
+    // Handle special cases that go to submenus instead of cards
+    if (sectionId === 'ruqyahVerses') {
+      setCurrentScreen('ruqyahSubmenu')
+    } else {
+      setSelectedCategory(sectionId)
+      setCurrentScreen('cards')
+    }
+  }
+
+  const navigateBack = () => {
+    if (navigationHistory.length > 0) {
+      const previousLocation = navigationHistory[navigationHistory.length - 1]
+      setNavigationHistory(navigationHistory.slice(0, -1))
+      
+      // Navigate back to previous location
+      setSelectedCategory(previousLocation.category)
+      setCurrentScreen(previousLocation.screen)
+      
+      // Store the card index and scroll position for CardViewer to use
+      if (previousLocation.cardIndex) {
+        localStorage.setItem('returnToCardIndex', previousLocation.cardIndex.toString())
+      }
+      if (previousLocation.scrollPosition !== undefined) {
+        localStorage.setItem('returnScrollPosition', previousLocation.scrollPosition.toString())
+      }
+    } else {
+    }
+  }
+
   const handleExitApp = () => {
     const CapacitorApp = window.Capacitor?.Plugins?.App;
     if (CapacitorApp) {
@@ -407,8 +440,9 @@ function App() {
     return (
       <RuqyahSubmenu
         onSelectOption={handleSelectRuqyahOption}
-        onBack={handleBackToMenu}
+        onBack={navigationHistory.length > 0 ? navigateBack : handleBackToMenu}
         onOpenGuide={handleOpenRuqyahGuide}
+        showReturnButton={navigationHistory.length > 0}
       />
     )
   }
@@ -483,6 +517,9 @@ function App() {
         cards={category.cards}
         categoryTitle={category.title}
         onBack={onBackFunction}
+        navigateToSection={navigateToSection}
+        navigateBack={navigateBack}
+        hasReturnPath={navigationHistory.length > 0}
       />
     )
   }

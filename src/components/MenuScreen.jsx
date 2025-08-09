@@ -10,7 +10,7 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
     },
     {
       id: 'ruqyahVerses',
-      title: 'Ruqyah Verses',
+      title: 'Ruqyah Toolkit',
       description: 'Essential Quranic verses for spiritual protection'
     },
     {

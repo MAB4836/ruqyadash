@@ -13,23 +13,32 @@ const RuqyahGuide = ({ onBack }) => {
           </div>
 
           <div className="prose prose-gray max-w-none">
-            <p className="text-gray-700 leading-relaxed mb-6">
+            <p className="text-gray-700 leading-relaxed mb-4">
               In this app, you'll find three collections of Quranic verses — each with its own purpose and ideal use. All are authentic, rooted in well-known Islamic practice, and can be read aloud for protection and healing.
             </p>
 
+            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6 rounded-r-lg">
+              <h3 className="font-bold text-yellow-800 mb-3">For all of these recitations the following is vital:</h3>
+              <ul className="text-yellow-700 space-y-2">
+                <li>• <strong>Full and complete reliance upon Allah s.w.t.</strong> – very firmly believe Allah s.w.t. will cure you and these verses are means to a cure.</li>
+                <li>• <strong>Intention</strong> – that you are reading these verses to cure yourself of sihr/evil eye/jinn influence.</li>
+                <li>• <strong>Concentration during the recitation</strong> as much as you can. If you are afflicted in the early days every fibre of your body and mind will try to divert you away from this recitation.</li>
+              </ul>
+            </div>
+
             <div className="space-y-8">
               <div className="border-l-4 border-blue-500 pl-6 bg-blue-50 py-4 pr-4 rounded-r-lg">
-                <h2 className="text-xl font-bold text-blue-900 mb-3">
-                  1. Short Ruqyah <span className="text-sm font-normal text-blue-700">(Quick daily protection – 7 verses)</span>
+                <h2 className="text-xl font-bold text-blue-900 mb-4">
+                  1. Short Ruqyah
                 </h2>
                 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-blue-800 mb-2">When to use:</h4>
-                    <ul className="text-gray-700 space-y-1 ml-4">
-                      <li>• As part of your morning and evening adhkar</li>
-                      <li>• Before sleeping</li>
-                      <li>• In urgent situations (fear, sudden anxiety, bad dreams, suspected evil influence)</li>
+                    <ul className="text-gray-700 space-y-1 ml-6">
+                      <li>◦ As part of your morning and evening adhkar.</li>
+                      <li>◦ Before sleeping.</li>
+                      <li>◦ In urgent situations (fear, sudden anxiety, bad dreams, suspected evil influence).</li>
                     </ul>
                   </div>
                   
@@ -46,17 +55,18 @@ const RuqyahGuide = ({ onBack }) => {
               </div>
 
               <div className="border-l-4 border-green-500 pl-6 bg-green-50 py-4 pr-4 rounded-r-lg">
-                <h2 className="text-xl font-bold text-green-900 mb-3">
-                  2. Manzil Verses <span className="text-sm font-normal text-green-700">(Traditional 33-verse protection set)</span>
+                <h2 className="text-xl font-bold text-green-900 mb-4">
+                  2. Manzil Verses
                 </h2>
                 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-green-800 mb-2">When to use:</h4>
-                    <ul className="text-gray-700 space-y-1 ml-4">
-                      <li>• Daily recitation for ongoing protection from sihr (magic), jinn, and evil eye</li>
-                      <li>• When building spiritual resilience, even if no symptoms are present</li>
-                      <li>• Can also be used as a full ruqyah set for treatment — many have done so successfully, including the compiler himself who, by Allah's permission, used these verses to cure himself from affliction</li>
+                    <ul className="text-gray-700 space-y-1 ml-6">
+                      <li>◦ Daily recitation for ongoing protection from sihr (magic), jinn, and evil eye.</li>
+                      <li>◦ When building spiritual resilience, even if no symptoms are present.</li>
+                      <li>◦ Use as full ruqyah for treatment — many have done so successfully, including myself, by Allah's permission, used these verses to cure myself from affliction.</li>
+                      <li>◦ For blowing over water/olive oil for treatment.</li>
                     </ul>
                   </div>
                   
@@ -69,27 +79,21 @@ const RuqyahGuide = ({ onBack }) => {
                     <h4 className="font-semibold text-green-800 mb-2">How:</h4>
                     <p className="text-gray-700">Recite the full set once in the morning and once in the evening. Read with focus, reflection, and firm trust in Allah — knowing with certainty that He alone grants shifa (healing).</p>
                   </div>
-                  
-                  <div className="bg-green-100 p-3 rounded mt-4">
-                    <p className="text-green-800 text-sm">
-                      <strong>Note:</strong> If the Full Ruqyah feels too long or overwhelming, the Manzil can be used instead — it has been effective for many, bi idhnillah.
-                    </p>
-                  </div>
                 </div>
               </div>
 
               <div className="border-l-4 border-purple-500 pl-6 bg-purple-50 py-4 pr-4 rounded-r-lg">
-                <h2 className="text-xl font-bold text-purple-900 mb-3">
+                <h2 className="text-xl font-bold text-purple-900 mb-4">
                   3. Full Ruqyah Verses <span className="text-sm font-normal text-purple-700">(Comprehensive healing set – 32 cards)</span>
                 </h2>
                 
-                <div className="space-y-3">
+                <div className="space-y-4">
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">When to use:</h4>
-                    <ul className="text-gray-700 space-y-1 ml-4">
-                      <li>• If you suspect or have confirmed spiritual affliction (sihr, jinn possession, severe evil eye)</li>
-                      <li>• When symptoms are severe or persistent, or when you wish to "step up" from the Manzil for a more intensive approach</li>
-                      <li>• During self-ruqyah sessions or when reading over water/olive oil for treatment</li>
+                    <ul className="text-gray-700 space-y-1 ml-6">
+                      <li>◦ If you suspect or have confirmed spiritual affliction (sihr, jinn possession, severe evil eye).</li>
+                      <li>◦ When symptoms are severe or persistent, use these verses for a more intensive approach.</li>
+                      <li>◦ As self-ruqyah sessions for a persistent affliction or when reading over water/olive oil for treatment.</li>
                     </ul>
                   </div>
                   
@@ -100,11 +104,11 @@ const RuqyahGuide = ({ onBack }) => {
                   
                   <div>
                     <h4 className="font-semibold text-purple-800 mb-2">How:</h4>
-                    <ul className="text-gray-700 space-y-1 ml-4">
-                      <li>• Sit facing Qiblah, in wudhu</li>
-                      <li>• Recite each verse with strong conviction</li>
-                      <li>• Blow over water, oil, or directly over yourself</li>
-                      <li>• Repeat daily until symptoms improve — ideally combined with supplications, dhikr, and lifestyle purification</li>
+                    <ul className="text-gray-700 space-y-1 ml-6">
+                      <li>◦ Sit facing Qiblah, in wudhu.</li>
+                      <li>◦ Recite each verse with strong conviction.</li>
+                      <li>◦ Blow over water, oil, or directly over yourself.</li>
+                      <li>◦ Repeat daily until symptoms improve — ideally combined with supplications, dhikr, and lifestyle purification.</li>
                     </ul>
                   </div>
                 </div>
@@ -123,11 +127,11 @@ const RuqyahGuide = ({ onBack }) => {
                     <tbody className="space-y-2">
                       <tr className="border-b border-gray-200">
                         <td className="py-3 font-medium text-blue-700">Short Ruqyah</td>
-                        <td className="py-3 text-gray-700">Quick daily protection, emergencies, and regular spiritual upkeep. Ideal as a light daily practice, and a first step for new readers.</td>
+                        <td className="py-3 text-gray-700">Quick daily protection, emergencies, and regular spiritual upkeep. Ideal as a daily practice. Recite these in the self-diagnosis section – aversion to these verses is a major sign of an affliction.</td>
                       </tr>
                       <tr className="border-b border-gray-200">
                         <td className="py-3 font-medium text-green-700">Manzil Verses</td>
-                        <td className="py-3 text-gray-700">Ongoing protection and healing. Suitable for prevention, early symptoms, or as a complete ruqyah for those who prefer a concise but proven set.</td>
+                        <td className="py-3 text-gray-700">Ongoing protection and healing. Suitable for prevention, early symptoms, and as a complete ruqyah. Very powerful – proven on more than one occasion by myself.</td>
                       </tr>
                       <tr>
                         <td className="py-3 font-medium text-purple-700">Full Ruqyah</td>
@@ -137,14 +141,6 @@ const RuqyahGuide = ({ onBack }) => {
                   </table>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div className="mt-8 pt-6 border-t border-gray-200">
-            <div className="bg-red-50 border-l-4 border-red-500 p-4 rounded-r-lg">
-              <p className="text-red-700">
-                <strong>Throughout this guide, you will see repeated reminders to rule out medical causes first.</strong> Spiritual and physical health often overlap — Islam encourages us to seek both spiritual remedies and medical treatment where needed.
-              </p>
             </div>
           </div>
 
