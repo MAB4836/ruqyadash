@@ -304,6 +304,17 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
         { label: 'Sickness', cardId: 17 },
         { label: 'Forgetfulness', cardId: 18 }
       ]
+    } else if (categoryTitle === 'Diagnosis and Help') {
+      return [
+        { label: 'Start Here', cardId: 1 },
+        { label: 'Common Effects', cardId: 2 },
+        { label: 'Mood & Emotions', cardId: 3 },
+        { label: 'Sleep Problems', cardId: 4 },
+        { label: 'Physical Signs', cardId: 5 },
+        { label: 'Mind & Memory', cardId: 6 },
+        { label: 'People Tensions', cardId: 7 },
+        { label: 'Self-Check Guide', cardId: 8 }
+      ]
     }
     return []
   }
@@ -335,6 +346,197 @@ const CardViewer = ({ cards, categoryTitle, onBack }) => {
       return <span className="text-6xl sm:text-7xl md:text-8xl font-bold text-gray-800">{currentCard}</span>
     }
 
+    // Special book page rendering for card 8 of "Diagnosis and Help"
+    if (categoryTitle === 'Diagnosis and Help' && currentCard === 8) {
+      return (
+        <div className="absolute inset-0 bg-white">
+          <div className="h-full overflow-y-auto p-4">
+            <div className="max-w-4xl mx-auto">
+              <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
+                <div className="mb-6">
+                  <h1 className="text-xl sm:text-2xl font-bold text-gray-900 text-center mb-4">
+                    How to Safely Check for Possible Spiritual Affliction and What to Do Next
+                  </h1>
+                  <div className="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
+                </div>
+
+                <div className="prose prose-gray max-w-none space-y-6">
+                  <div className="bg-gray-50 border-l-4 border-gray-400 p-4 rounded-r-lg mb-6">
+                    <h4 className="font-bold text-gray-800 mb-3">Contents of This Guide:</h4>
+                    <div className="text-gray-700">
+                      <ol className="space-y-2 text-sm">
+                        <li className="flex items-start">
+                          <span className="font-bold mr-2 text-gray-800">1.</span>
+                          <span><strong>Before you begin</strong> (medical disclaimer)</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold mr-2 text-gray-800">2.</span>
+                          <div>
+                            <span><strong>Safe Self-Testing Options</strong> (5 color-coded methods)</span>
+                            <ul className="mt-1 ml-4 space-y-1 text-xs text-gray-600">
+                              <li>- Option A: Recitation Test (with personal experience note)</li>
+                              <li>- Option B: Listening Test (with practical tips)</li>
+                              <li>- Option C: Water Ruqyah Test</li>
+                              <li>- Option D: Oil Application Test</li>
+                              <li>- Option E: Dream Observation Test</li>
+                            </ul>
+                          </div>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold mr-2 text-gray-800">3.</span>
+                          <span><strong>Professional Help Guidelines</strong> (immediate actions)</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold mr-2 text-gray-800">4.</span>
+                          <span><strong>When to Seek Professional Help</strong> (warning signs)</span>
+                        </li>
+                        <li className="flex items-start">
+                          <span className="font-bold mr-2 text-gray-800">5.</span>
+                          <span><strong>Cross-references to other app sections</strong> (visual app navigation cards)</span>
+                        </li>
+                      </ol>
+                    </div>
+                  </div>
+
+                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <h4 className="font-bold text-blue-800 mb-3">Before you begin:</h4>
+                    <div className="text-blue-700 space-y-2">
+                      <p>If you haven't already, please consult a qualified doctor or mental health professional to rule out medical causes.</p>
+                      <p>Ruqyah is safe to do whether or not you have spiritual affliction, but it should not replace medical treatment.</p>
+                    </div>
+                  </div>
+
+                  <div className="space-y-8">
+                    <div className="border-l-4 border-green-500 pl-6 bg-green-50 py-4 pr-4 rounded-r-lg">
+                      <h2 className="text-lg font-bold text-green-900 mb-4">1. Safe Self-Testing Options</h2>
+                      
+                      <div className="space-y-6">
+                        <div className="bg-green-100 p-4 rounded-lg">
+                          <h5 className="font-bold text-green-800 mb-3">Option A: Recitation Test</h5>
+                          <div className="text-green-700 space-y-3">
+                            <p>• Sit in a clean place, make wudu if possible, face the qiblah.</p>
+                            <p><strong>Read aloud with focus:</strong></p>
+                            <ul className="space-y-1 ml-4">
+                              <li>- Surah Al-Fatiha (1)</li>
+                              <li>- Ayat al-Kursi (2:255)</li>
+                              <li>- The last three Quls (each recited 3 times):</li>
+                              <li className="ml-4">• Surah Al-Ikhlas (112)</li>
+                              <li className="ml-4">• Surah Al-Falaq (113)</li>
+                              <li className="ml-4">• Surah An-Nas (114)</li>
+                            </ul>
+                            <p><strong>Observe for any unusual sensations such as:</strong></p>
+                            <ul className="space-y-1 ml-4">
+                              <li>- Headaches, pressure, or tingling in the head</li>
+                              <li>- Emotional surges like crying, fear, anger without cause</li>
+                              <li>- Body jerks, nausea, or urge to stop reading</li>
+                            </ul>
+                            <p className="italic">No reaction doesn't guarantee absence of affliction.</p>
+                            <div className="mt-3 p-3 bg-green-200 rounded italic text-green-800 text-sm">
+                              <p><strong>Personal Note:</strong> For me this was the key one. I read the Quran on most days, however, at the start of this affliction I stopped reading it every day and for a while stop reading altogether but I didn't think this was due to anything sinister. When I read it my mind would argue against it - I can't repeat the thoughts that used to occur. Again in hindsight, for me, it could not have been clearer that something sinister was happening to me.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-blue-100 p-4 rounded-lg">
+                          <h5 className="font-bold text-blue-800 mb-3">Option B: Listening Test</h5>
+                          <div className="text-blue-700 space-y-3">
+                            <p>Play a trusted ruqyah recitation quietly through headphones at a comfortable volume.</p>
+                            <p><strong>Suggested choices include:</strong></p>
+                            <ul className="space-y-1 ml-4">
+                              <li>- Full Surah Al-Baqarah (2)</li>
+                              <li>- Ayat al-Kursi (2:255) alone</li>
+                              <li>- Last two verses of Surah Al-Baqarah (2:285-286)</li>
+                              <li>- Surah Al-Falaq (113) and Surah An-Nas (114), three times each</li>
+                              <li>- Surah Al-Ikhlas (112)</li>
+                            </ul>
+                            <p>Notice sudden physical or emotional reactions (anxiety, chest tightness, dizziness).</p>
+                            <div className="mt-3 p-3 bg-blue-200 rounded italic text-blue-800 text-sm">
+                              <p><strong>Note:</strong> Surah Al-Baqarah is the longest in the Quran, however, you don't need to wait till the end to notice reactions. Initially you will feel reluctant to even approach the Quran - so many excuses so much procrastination and irritation and even anger.</p>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-purple-100 p-4 rounded-lg">
+                          <h5 className="font-bold text-purple-800 mb-3">Option C: Water Ruqyah Test</h5>
+                          <div className="text-purple-700 space-y-3">
+                            <p>Recite these verses slowly and clearly over a cup of clean water. Then blow gently once at the end before giving it to drink or drinking it yourself:</p>
+                            <ul className="space-y-1 ml-4">
+                              <li>- Surah Al-Fatiha (1)</li>
+                              <li>- Ayat al-Kursi (2:255)</li>
+                              <li>- Surah Al-Ikhlas (112), Al-Falaq (113), An-Nas (114) (3 times each)</li>
+                            </ul>
+                            <p>Drink some of the water and observe for any unusual nausea, stomach discomfort, or other sensations without medical cause.</p>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-orange-100 p-4 rounded-lg">
+                          <h5 className="font-bold text-orange-800 mb-3">Option D: Oil Application Test</h5>
+                          <div className="text-orange-700 space-y-2">
+                            <p>Recite the same verses listed above over olive oil.</p>
+                            <p>Rub lightly on forehead, chest, and soles of feet before sleeping.</p>
+                            <p>Observe for nightmares, restlessness, or unusual fear.</p>
+                          </div>
+                        </div>
+                        
+                        <div className="bg-teal-100 p-4 rounded-lg">
+                          <h5 className="font-bold text-teal-800 mb-3">Option E: Dream Observation Test</h5>
+                          <div className="text-teal-700 space-y-2">
+                            <p>Increase Qur'an recitation and dhikr before sleeping for a few nights.</p>
+                            <p>Watch for repeated disturbing dreams involving snakes, falling, or dark figures.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    
+                    <div className="border-l-4 border-yellow-500 pl-6 bg-yellow-50 py-4 pr-4 rounded-r-lg">
+                      <h2 className="text-lg font-bold text-yellow-900 mb-4">2. Professional Help Guidelines</h2>
+                      <ul className="space-y-3 text-yellow-700">
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Start a short daily ruqyah routine (refer to the "Short Ruqyah Routine" section).</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Increase Qur'an recitation and dhikr regularly.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Maintain physical cleanliness, wudu, and avoid sinful environments.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Make sincere du'a after each prayer, asking Allah for healing and protection.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>Seek help from a trusted and knowledgeable raqi if symptoms persist or worsen.</span></li>
+                      </ul>
+                    </div>
+                    
+                    <div className="border-l-4 border-red-500 pl-6 bg-red-50 py-4 pr-4 rounded-r-lg">
+                      <h2 className="text-lg font-bold text-red-900 mb-4">3. When to Seek Professional Help</h2>
+                      <ul className="space-y-3 text-red-700">
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you cannot consistently perform ruqyah or maintain your routine.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If family or relationships are seriously strained.</span></li>
+                        <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>For guidance on choosing a trustworthy and knowledgeable raqi, see the "Raqi" section of this app.</span></li>
+                      </ul>
+                    </div>
+                    
+                    <div className="border-l-4 border-gray-500 pl-6 bg-gray-50 py-4 pr-4 rounded-r-lg">
+                      <h2 className="text-lg font-bold text-gray-900 mb-4">4. Cross-references to other app sections</h2>
+                      <div className="space-y-3 text-gray-700">
+                        <div className="bg-white p-3 rounded border-l-4 border-blue-400">
+                          <h5 className="font-semibold text-blue-800">Short Ruqyah Routine</h5>
+                          <p className="text-gray-600 text-sm">Essential daily protection verses for regular practice</p>
+                        </div>
+                        <div className="bg-white p-3 rounded border-l-4 border-purple-400">
+                          <h5 className="font-semibold text-purple-800">Sihr/Magic</h5>
+                          <p className="text-gray-600 text-sm">For a detailed explanation of the different types of sihr and how they are carried out</p>
+                        </div>
+                        <div className="bg-white p-3 rounded border-l-4 border-green-400">
+                          <h5 className="font-semibold text-green-800">Raqi</h5>
+                          <p className="text-gray-600 text-sm">For guidance on choosing a trustworthy and knowledgeable ruqyah practitioner</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )
+    }
+
+    // Regular card rendering for all other cards
     return (
       <div ref={cardContentRef} className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full">
         <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-gray-800"
