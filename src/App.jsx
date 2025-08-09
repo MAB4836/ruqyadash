@@ -1,11 +1,13 @@
 import React, { useState, useEffect, useCallback } from 'react'
 import MenuScreen from './components/MenuScreen'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
+import RuqyahGuide from './components/RuqyahGuide'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
 import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
 import ImmediateHelpSubmenu from './components/ImmediateHelpSubmenu'
 import CardViewer from './components/CardViewer'
+import SpiritualAfflictionsGuide from './components/SpiritualAfflictionsGuide'
 import SettingsPopup from './components/SettingsPopup'
 import { ruqyahVerses } from './data/ruqyahVerses'
 import { shortRuqyah } from './data/shortRuqyah'
@@ -60,6 +62,10 @@ function App() {
     setSelectedRuqyahOption(null)
   }, [])
 
+  const handleBackToRuqyahSubmenuFromGuide = useCallback(() => {
+    setCurrentScreen('ruqyahSubmenu')
+  }, [])
+
   const handleBackToEvilEyeSubmenu = useCallback(() => {
     setCurrentScreen('evilEyeSubmenu')
     setSelectedCategory(null)
@@ -84,6 +90,10 @@ function App() {
     setSelectedImmediateHelpOption(null)
   }, [])
 
+  const handleBackToImmediateHelpSubmenuFromGuide = useCallback(() => {
+    setCurrentScreen('immediateHelpSubmenu')
+  }, [])
+
   useEffect(() => {
     const handleBackButton = () => {
       if (currentScreen === 'menu') {
@@ -99,6 +109,12 @@ function App() {
           currentScreen === 'immediateHelpSubmenu') {
         handleBackToMenu();
       } 
+      else if (currentScreen === 'ruqyahGuide') {
+        handleBackToRuqyahSubmenuFromGuide();
+      }
+      else if (currentScreen === 'spiritualAfflictionsGuide') {
+        handleBackToImmediateHelpSubmenuFromGuide();
+      } 
       else if (currentScreen === 'cards') {
         if (selectedRuqyahOption) {
           handleBackToRuqyahSubmenu();
@@ -110,8 +126,6 @@ function App() {
           handleBackToJinnAttacksSubmenu();
         } else if (selectedImmediateHelpOption) {
           handleBackToImmediateHelpSubmenu();
-        } else if (selectedCategory === 'spiritualAfflictionsGuide') {
-          setCurrentScreen('immediateHelpSubmenu');
         } else {
           handleBackToMenu();
         }
@@ -139,10 +153,12 @@ function App() {
     currentScreen,
     handleBackToMenu,
     handleBackToRuqyahSubmenu,
+    handleBackToRuqyahSubmenuFromGuide,
     handleBackToEvilEyeSubmenu,
     handleBackToPersonalProtectionSubmenu,
     handleBackToJinnAttacksSubmenu,
     handleBackToImmediateHelpSubmenu,
+    handleBackToImmediateHelpSubmenuFromGuide,
     selectedRuqyahOption,
     selectedEvilEyeOption,
     selectedPersonalProtectionOption,
@@ -309,8 +325,11 @@ function App() {
   }
 
   const handleOpenSpiritualAfflictionsGuide = () => {
-    setSelectedCategory('spiritualAfflictionsGuide')
-    setCurrentScreen('cards')
+    setCurrentScreen('spiritualAfflictionsGuide')
+  }
+
+  const handleOpenRuqyahGuide = () => {
+    setCurrentScreen('ruqyahGuide')
   }
 
   const handleExitApp = () => {
@@ -389,7 +408,14 @@ function App() {
       <RuqyahSubmenu
         onSelectOption={handleSelectRuqyahOption}
         onBack={handleBackToMenu}
+        onOpenGuide={handleOpenRuqyahGuide}
       />
+    )
+  }
+
+  if (currentScreen === 'ruqyahGuide') {
+    return (
+      <RuqyahGuide onBack={handleBackToRuqyahSubmenuFromGuide} />
     )
   }
 
@@ -430,6 +456,12 @@ function App() {
     )
   }
 
+  if (currentScreen === 'spiritualAfflictionsGuide') {
+    return (
+      <SpiritualAfflictionsGuide onBack={handleBackToImmediateHelpSubmenuFromGuide} />
+    )
+  }
+
   if (currentScreen === 'cards' && selectedCategory) {
     const category = categoryData[selectedCategory]
     let onBackFunction = handleBackToMenu
@@ -444,8 +476,6 @@ function App() {
       onBackFunction = handleBackToJinnAttacksSubmenu
     } else if (selectedImmediateHelpOption) {
       onBackFunction = handleBackToImmediateHelpSubmenu
-    } else if (selectedCategory === 'spiritualAfflictionsGuide') {
-      onBackFunction = () => setCurrentScreen('immediateHelpSubmenu')
     }
     
     return (
