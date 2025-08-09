@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ImmediateHelpSubmenu = ({ onSelectOption, onBack }) => {
+const ImmediateHelpSubmenu = ({ onSelectOption, onBack, onOpenGuide }) => {
   const submenuOptions = [
     {
       id: 'diagnosisHelp',
@@ -21,10 +21,29 @@ const ImmediateHelpSubmenu = ({ onSelectOption, onBack }) => {
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
             Immediate Help
           </h1>
-          <div className="text-center">
+          <div className="text-center relative">
             <p className="text-white text-sm opacity-75">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
+            <button
+              onClick={onOpenGuide}
+              className="absolute -top-1 right-0 bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
+              aria-label="Spiritual Afflictions Guide"
+            >
+              <svg 
+                className="w-4 h-4 text-white opacity-60" 
+                fill="none" 
+                stroke="currentColor" 
+                viewBox="0 0 24 24"
+              >
+                <path 
+                  strokeLinecap="round" 
+                  strokeLinejoin="round" 
+                  strokeWidth={2} 
+                  d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
+                />
+              </svg>
+            </button>
           </div>
         </div>
         

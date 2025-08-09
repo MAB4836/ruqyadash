@@ -28,6 +28,7 @@ import { sihrTypes } from './data/sihrTypes'
 import { spiritualRemedies } from './data/spiritualRemedies'
 import { manzilVerses } from './data/manzilVerses'
 import { selfDiagnosis } from './data/selfDiagnosis'
+import { spiritualAfflictionsGuide } from './data/spiritualAfflictionsGuide'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('menu')
@@ -109,6 +110,8 @@ function App() {
           handleBackToJinnAttacksSubmenu();
         } else if (selectedImmediateHelpOption) {
           handleBackToImmediateHelpSubmenu();
+        } else if (selectedCategory === 'spiritualAfflictionsGuide') {
+          setCurrentScreen('immediateHelpSubmenu');
         } else {
           handleBackToMenu();
         }
@@ -249,6 +252,10 @@ function App() {
       cards: [
         { id: 1, title: 'Coming Soon', content: '<div class="text-lg text-center text-gray-900">Raqi guidance coming soon</div>' }
       ]
+    },
+    spiritualAfflictionsGuide: {
+      title: 'Spiritual Afflictions Guide',
+      cards: spiritualAfflictionsGuide
     }
   }
 
@@ -298,6 +305,11 @@ function App() {
   const handleSelectImmediateHelpOption = (optionId) => {
     setSelectedImmediateHelpOption(optionId)
     setSelectedCategory(optionId)
+    setCurrentScreen('cards')
+  }
+
+  const handleOpenSpiritualAfflictionsGuide = () => {
+    setSelectedCategory('spiritualAfflictionsGuide')
     setCurrentScreen('cards')
   }
 
@@ -413,6 +425,7 @@ function App() {
       <ImmediateHelpSubmenu
         onSelectOption={handleSelectImmediateHelpOption}
         onBack={handleBackToMenu}
+        onOpenGuide={handleOpenSpiritualAfflictionsGuide}
       />
     )
   }
@@ -431,6 +444,8 @@ function App() {
       onBackFunction = handleBackToJinnAttacksSubmenu
     } else if (selectedImmediateHelpOption) {
       onBackFunction = handleBackToImmediateHelpSubmenu
+    } else if (selectedCategory === 'spiritualAfflictionsGuide') {
+      onBackFunction = () => setCurrentScreen('immediateHelpSubmenu')
     }
     
     return (
