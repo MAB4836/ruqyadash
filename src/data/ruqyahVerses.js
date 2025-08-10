@@ -1,7 +1,33 @@
-// Essential Quranic verses for spiritual protection (32 cards)
+// Essential Quranic verses for spiritual protection (35 cards)
 export const ruqyahVerses = [
   {
     id: 1,
+    title: 'Beginning of Ruqyah',
+    content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">I seek refuge in Allah from the accursed Shaytan.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">In the name of Allah, the Most Merciful, the Most Compassionate.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">In the name of Allah, I perform ruqyah on you from everything that harms you, from the evil of every soul or envious eye. May Allah heal you. In the name of Allah, I perform ruqyah on you.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, Lord of mankind, remove the harm, heal — You are the Healer. There is no healing except Your healing, a healing that leaves no illness behind.</p>
+      </div>
+      
+      <div class="mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+        <h4 class="text-base font-semibold text-blue-900 mb-2">Intention (optional):</h4>
+        <p class="text-base text-gray-700 italic">O Allah, I begin this ruqyah session seeking Your protection and healing. Please remove all harm, and bless this effort for my complete recovery and wellbeing.</p>
+      </div>
+    </div>`
+  },
+  {
+    id: 3,
     title: 'Al-Fatiha (The Opening)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-3 sm:space-y-4 md:space-y-5 text-gray-900">
       <div class="mb-6">
@@ -89,7 +115,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-  id: 3,
+  id: 4,
   title: 'Al-Baqarah (<span style="color: red;">6</span> - <span style="color: red;">10</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -124,7 +150,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 4,
+  id: 5,
   title: 'Al-Baqarah (<span style="color: red;">102</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -135,7 +161,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 5,
+  id: 6,
   title: 'Al-Baqarah (<span style="color: blue;">137</span> & <span style="color: red;">148</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -152,7 +178,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-    id: 6,
+    id: 7,
     title: 'Ayat Al-Kursi (255)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -163,7 +189,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 7,
+    id: 8,
     title: 'Al-Baqarah (256 & 257)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -180,7 +206,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 8,
+    id: 9,
     title: 'Al-Baqarah (284)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -191,7 +217,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 9,
+    id: 10,
     title: 'Al-Baqarah (285)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -202,7 +228,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 10,
+    id: 11,
     title: 'Al-Baqarah (286)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -213,7 +239,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 11,
+    id: 12,
     title: 'Ali Imran (18 - <span style="color: red;">19</span>)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -230,7 +256,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 12,
+    id: 13,
     title: 'Ali Imran (26 - 27)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -247,7 +273,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-  id: 13,
+  id: 14,
   title: 'Al-An\'am (<span style="color: green;">103</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -258,7 +284,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 14,
+  id: 15,
   title: 'Al-A\'raf (54 - 56)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -281,7 +307,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 15,
+  id: 16,
   title: 'Al-A\'raf (<span style="color: green;">117</span> - <span style="color: green;">122</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -322,7 +348,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 16,
+  id: 17,
   title: 'Al-Anfal (<span style="color: green;">17</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -333,7 +359,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 17,
+  id: 18,
   title: 'Yunus (<span style="color: green;">79</span> - <span style="color: green;">82</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -373,7 +399,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 19,
+  id: 20,
   title: 'An-Nahl (<span style="color: green;">26</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -384,7 +410,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 20,
+  id: 21,
   title: 'Taha (<span style="color: green;">65 - 69</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -419,7 +445,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 21,
+  id: 22,
   title: 'Al-Isra (110 - 111)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -436,7 +462,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 22,
+  id: 23,
   title: 'Al-Mu\'minoon (115 - 118)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -465,7 +491,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 23,
+  id: 24,
   title: 'Yasin (<span style="color: green;">9</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -476,7 +502,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 24,
+  id: 25,
   title: 'As-Safaat (1 - 11)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -523,7 +549,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 25,
+  id: 26,
   title: 'Al-Ahqaf (<span style="color: red;">29</span> - <span style="color: red;">32</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -552,7 +578,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 26,
+  id: 27,
   title: 'Ar-Rahman (33 - 40)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B'; text-align: right">
     <div class="mb-6">
@@ -593,7 +619,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 27,
+  id: 28,
   title: 'Al-Hashr (21 - 24)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -622,7 +648,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 28,
+  id: 29,
   title: 'Al-Jinn (1 - 4, <span style="color: red;">5</span> - <span style="color: red;">9</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -675,7 +701,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-  id: 29,
+  id: 30,
   title: 'Al-Fil (The Elephant)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -710,7 +736,7 @@ export const ruqyahVerses = [
   </div>`
 },
 {
-  id: 30,
+  id: 31,
   title: 'Al-Kafiroon (The Disbelievers)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
     <div class="mb-6">
@@ -751,7 +777,7 @@ export const ruqyahVerses = [
   </div>`
 },
   {
-    id: 31,
+    id: 32,
     title: 'Al-Ikhlas (The Sincerity)',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-5 sm:space-y-6 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
@@ -777,7 +803,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 32,
+    id: 33,
     title: 'Al-Falaq (The Daybreak)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
       <div class="mb-6">
@@ -808,7 +834,7 @@ export const ruqyahVerses = [
     </div>`
   },
   {
-    id: 33,
+    id: 34,
     title: 'An-Nas (Mankind)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
       <div class="mb-6">
@@ -840,6 +866,23 @@ export const ruqyahVerses = [
         <p class="text-center mb-2">مِنَ الْجِنَّةِ وَالنَّاسِ ﴿٦﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Minal-jinnati wan-nas</p>
         <p class="text-base text-gray-700 text-center">From among the jinn and mankind</p>
+      </div>
+    </div>`
+  },
+  {
+    id: 35,
+    title: 'End of Ruqyah',
+    content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, make this my ruqyah for You, the cure from every disease in my body and soul.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, You are the Healer. There is no healing except Your healing, a healing that leaves no illness behind.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700">O Allah, send Your peace and blessings upon our Prophet Muhammad.</p>
       </div>
     </div>`
   }

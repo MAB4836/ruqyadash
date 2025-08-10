@@ -1,7 +1,33 @@
-// Essential short ruqyah verses for quick spiritual protection (7 cards)
+// Essential short ruqyah verses for quick spiritual protection (10 cards)
 export const shortRuqyah = [
   {
     id: 1,
+    title: 'Beginning of Ruqyah',
+    content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">I seek refuge in Allah from the accursed Shaytan.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">In the name of Allah, the Most Merciful, the Most Compassionate.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">In the name of Allah, I perform ruqyah on you from everything that harms you, from the evil of every soul or envious eye. May Allah heal you. In the name of Allah, I perform ruqyah on you.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, Lord of mankind, remove the harm, heal — You are the Healer. There is no healing except Your healing, a healing that leaves no illness behind.</p>
+      </div>
+      
+      <div class="mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+        <h4 class="text-base font-semibold text-blue-900 mb-2">Intention (optional):</h4>
+        <p class="text-base text-gray-700 italic">O Allah, I begin this ruqyah session seeking Your protection and healing. Please remove all harm, and bless this effort for my complete recovery and wellbeing.</p>
+      </div>
+    </div>`
+  },
+  {
+    id: 2,
     title: 'Al-Fatiha (The Opening)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-3 sm:space-y-4 md:space-y-5 text-gray-900">
       <div class="mb-6">
@@ -48,7 +74,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 2,
+    id: 3,
     title: 'Ayat Al-Kursi (255)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -59,7 +85,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 3,
+    id: 4,
     title: 'Al-Baqarah (284)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -70,7 +96,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 4,
+    id: 5,
     title: 'Al-Baqarah (285)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -81,7 +107,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 5,
+    id: 6,
     title: 'Al-Baqarah (286)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
@@ -92,7 +118,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 6,
+    id: 7,
     title: 'Al-Ikhlas (The Sincerity)',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-5 sm:space-y-6 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
@@ -118,7 +144,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 7,
+    id: 8,
     title: 'Al-Falaq (The Daybreak)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
       <div class="mb-6">
@@ -149,7 +175,7 @@ export const shortRuqyah = [
     </div>`
   },
   {
-    id: 8,
+    id: 9,
     title: 'An-Nas (Mankind)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
       <div class="mb-6">
@@ -181,6 +207,23 @@ export const shortRuqyah = [
         <p class="text-center mb-2">مِنَ الْجِنَّةِ وَالنَّاسِ ﴿٦﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Minal-jinnati wan-nas</p>
         <p class="text-base text-gray-700 text-center">From among the jinn and mankind</p>
+      </div>
+    </div>`
+  },
+  {
+    id: 10,
+    title: 'End of Ruqyah',
+    content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, make this my ruqyah for You, the cure from every disease in my body and soul.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700 mb-4">O Allah, You are the Healer. There is no healing except Your healing, a healing that leaves no illness behind.</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-base text-gray-700">O Allah, send Your peace and blessings upon our Prophet Muhammad.</p>
       </div>
     </div>`
   }
