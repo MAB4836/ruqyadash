@@ -14,6 +14,7 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
   // Audio state
   const [currentAudio, setCurrentAudio] = useState(null)
   const [isPlaying, setIsPlaying] = useState(false)
+  const [autoPlay, setAutoPlay] = useState(false)
   const audioRef = useRef(null)
   
   // Swipe gesture state
@@ -157,6 +158,13 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     audio.onended = () => {
       setIsPlaying(false)
       setCurrentAudio(null)
+      
+      // Auto-continue logic with delay
+      if (autoPlay) {
+        setTimeout(() => {
+          autoAdvanceToNextCard()
+        }, 500)
+      }
     }
     
     audio.onerror = () => {
@@ -181,14 +189,54 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     }
   }
   
-  // Stop audio when changing cards
+  // Auto-continue helper function
+  const autoAdvanceToNextCard = () => {
+    if (!autoPlay || currentCard >= cards.length) {
+      setAutoPlay(false)
+      return
+    }
+    
+    const nextCardIndex = currentCard + 1
+    const nextCardData = cards[nextCardIndex - 1]
+    
+    // Only advance if next card exists and has audio
+    if (nextCardData && nextCardData.audioFile) {
+      setIsAnimating(true)
+      setSlideDirection('left')
+      setNextCardIndex(nextCardIndex)
+      
+      setTimeout(() => {
+        setCurrentCard(nextCardIndex)
+        setIsAnimating(false)
+        setSlideDirection(null)
+      }, 300)
+    } else {
+      // If we reach the end or next card has no audio, turn off auto-play
+      setAutoPlay(false)
+    }
+  }
+
+  // Handle audio when card changes
   useEffect(() => {
-    if (currentAudio) {
+    if (currentAudio && !isAnimating) {
+      // Stop current audio when changing cards manually
       currentAudio.pause()
       setIsPlaying(false)
       setCurrentAudio(null)
     }
   }, [currentCard])
+  
+  // Auto-play audio for new card in auto-continue mode
+  useEffect(() => {
+    if (autoPlay && !isAnimating && !isPlaying) {
+      const currentCardData = cards[currentCard - 1]
+      if (currentCardData && currentCardData.audioFile) {
+        setTimeout(() => {
+          playAudio(currentCardData.audioFile)
+        }, 200)
+      }
+    }
+  }, [currentCard, autoPlay, isAnimating])
 
   // Swipe gesture handlers
   const minSwipeDistance = 50
@@ -728,15 +776,29 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
           </div>
         )}
 
-        {/* Audio control button - positioned outside card */}
+        {/* Audio controls - positioned outside card */}
         {currentCardData && currentCardData.audioFile && (
-          <div className="flex justify-center mb-2">
+          <div className="flex justify-center items-center gap-3 mb-2">
+            {/* Play/Pause button */}
             <button
               onClick={toggleAudio}
               className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg"
               title={isPlaying ? "Pause audio" : "Play audio"}
             >
               {isPlaying ? '⏸' : '▶'}
+            </button>
+            
+            {/* Auto-continue toggle */}
+            <button
+              onClick={() => setAutoPlay(!autoPlay)}
+              className={`px-3 py-1 text-xs rounded-full transition-colors duration-200 shadow-sm ${
+                autoPlay 
+                  ? 'bg-green-500 hover:bg-green-600 text-white' 
+                  : 'bg-gray-200 hover:bg-gray-300 text-gray-700'
+              }`}
+              title={autoPlay ? "Auto-continue ON" : "Auto-continue OFF"}
+            >
+              {autoPlay ? '🔄 ON' : '🔄 OFF'}
             </button>
           </div>
         )}
