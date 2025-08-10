@@ -12,7 +12,8 @@
       "Bash(npm run:*)",
       "Bash(npm install)",
       "Bash(mv:*)",
-      "Bash(npx eslint:*)"
+      "Bash(npx eslint:*)",
+      "Bash(cp:*)"
     ],
     "deny": []
   }

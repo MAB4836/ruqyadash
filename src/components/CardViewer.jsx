@@ -11,6 +11,11 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
   const cardContainerRef = useRef(null)
   const bookScrollRef = useRef(null)
   
+  // Audio state
+  const [currentAudio, setCurrentAudio] = useState(null)
+  const [isPlaying, setIsPlaying] = useState(false)
+  const audioRef = useRef(null)
+  
   // Swipe gesture state
   const [touchStart, setTouchStart] = useState(null)
   const [touchEnd, setTouchEnd] = useState(null)
@@ -135,6 +140,55 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
   const getCurrentCount = () => {
     return repetitionCounts[currentCard] || 0
   }
+
+  // Audio control functions
+  const playAudio = (audioFile) => {
+    if (currentAudio) {
+      currentAudio.pause()
+    }
+    
+    const audio = new Audio(`/audio/${audioFile}`)
+    audioRef.current = audio
+    setCurrentAudio(audio)
+    
+    audio.play()
+    setIsPlaying(true)
+    
+    audio.onended = () => {
+      setIsPlaying(false)
+      setCurrentAudio(null)
+    }
+    
+    audio.onerror = () => {
+      setIsPlaying(false)
+      setCurrentAudio(null)
+      console.error('Error loading audio file:', audioFile)
+    }
+  }
+  
+  const toggleAudio = () => {
+    const currentCardData = cards[currentCard - 1]
+    if (!currentCardData || !currentCardData.audioFile) return
+    
+    if (isPlaying && currentAudio) {
+      currentAudio.pause()
+      setIsPlaying(false)
+    } else if (currentAudio && currentAudio.paused) {
+      currentAudio.play()
+      setIsPlaying(true)
+    } else {
+      playAudio(currentCardData.audioFile)
+    }
+  }
+  
+  // Stop audio when changing cards
+  useEffect(() => {
+    if (currentAudio) {
+      currentAudio.pause()
+      setIsPlaying(false)
+      setCurrentAudio(null)
+    }
+  }, [currentCard])
 
   // Swipe gesture handlers
   const minSwipeDistance = 50
@@ -671,6 +725,19 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
                 </button>
               ))}
             </div>
+          </div>
+        )}
+
+        {/* Audio control button - positioned outside card */}
+        {currentCardData && currentCardData.audioFile && (
+          <div className="flex justify-center mb-2">
+            <button
+              onClick={toggleAudio}
+              className="bg-blue-500 hover:bg-blue-600 text-white rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg"
+              title={isPlaying ? "Pause audio" : "Play audio"}
+            >
+              {isPlaying ? '⏸' : '▶'}
+            </button>
           </div>
         )}
 

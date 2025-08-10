@@ -2,6 +2,7 @@ export const manzilVerses = [
   {
     id: 1,
     title: 'Beginning of Ruqyah',
+    audioFile: 'Beginning-Ruqyah.mp3',
     content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
         <p class="text-base text-gray-700 mb-4">I seek refuge in Allah from the accursed Shaytan.</p>
@@ -28,6 +29,7 @@ export const manzilVerses = [
   {
     id: 3,
     title: 'Al-Fatiha (The Opening)',
+    audioFile: 'Al-Fatiha.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="mb-2 text-green-800 font-semibold">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
@@ -75,6 +77,7 @@ export const manzilVerses = [
   {
     id: 4,
     title: 'Al-Baqarah (1 to 5)',
+    audioFile: 'Al-Baqarah-1-5.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="mb-2 text-green-800 font-semibold">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
@@ -116,6 +119,7 @@ export const manzilVerses = [
   {
     id: 7,
     title: 'Al-Baqarah (163)',
+    audioFile: 'Al-Baqarah-163.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>وَإِلَٰهُكُمْ إِلَٰهٌ وَاحِدٌ لَّا إِلَٰهَ إِلَّا هُوَ الرَّحْمَٰنُ الرَّحِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٦٣﴾</span></p>
@@ -127,6 +131,7 @@ export const manzilVerses = [
   {
     id: 8,
     title: 'Ayat Al-Kursi (255)',
+    audioFile: 'Ayat-Al-Kursi-255.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٥﴾</span></p>
@@ -138,6 +143,7 @@ export const manzilVerses = [
   {
     id: 9,
     title: 'Al-Baqarah (256 & 257)',
+    audioFile: 'Al-Baqarah-256-257.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>لَا إِكْرَاهَ فِي الدِّينِ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا وَاللَّهُ سَمِيعٌ عَلِيمٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٦﴾</span></p>
@@ -155,6 +161,7 @@ export const manzilVerses = [
   {
     id: 10,
     title: 'Al-Baqarah (284)',
+    audioFile: 'Al-Baqarah-284.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٤﴾</span></p>
@@ -166,6 +173,7 @@ export const manzilVerses = [
   {
     id: 11,
     title: 'Al-Baqarah (285)',
+    audioFile: 'Al-Baqarah-285.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُوا سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٥﴾</span></p>
@@ -177,6 +185,7 @@ export const manzilVerses = [
   {
     id: 12,
     title: 'Al-Baqarah (286)',
+    audioFile: 'Al-Baqarah-286.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٦﴾</span></p>
@@ -188,6 +197,7 @@ export const manzilVerses = [
   {
     id: 13,
     title: 'Ali Imran (18)',
+    audioFile: 'Ali-Imran-18.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>شَهِدَ اللَّهُ أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَٰهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٨﴾</span></p>
@@ -201,6 +211,7 @@ export const manzilVerses = [
   {
     id: 14,
     title: 'Ali Imran (26 - 27)',
+    audioFile: 'Ali-Imran-26-27.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٦﴾</span></p>
@@ -218,6 +229,7 @@ export const manzilVerses = [
   {
     id: 15,
     title: 'Al-A\'raf (54 - 56)',
+    audioFile: 'Al-Araf-54-56.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>إِنَّ رَبَّكُمُ اللَّهُ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ فِي سِتَّةِ أَيَّامٍ ثُمَّ اسْتَوَىٰ عَلَى الْعَرْشِ يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا وَالشَّمْسَ وَالْقَمَرَ وَالنُّجُومَ مُسَخَّرَاتٍ بِأَمْرِهِ أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٤﴾</span></p>
@@ -241,6 +253,7 @@ export const manzilVerses = [
   {
     id: 22,
     title: 'Al-Isra (110 - 111)',
+    audioFile: 'Al-Isra-110-111.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>قُلِ ادْعُوا اللَّهَ أَوِ ادْعُوا الرَّحْمَٰنَ أَيًّا مَا تَدْعُوا فَلَهُ الْأَسْمَاءُ الْحُسْنَىٰ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَابْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًا</span><span class="text-sm text-gray-500 ml-4">﴿١١٠﴾</span></p>
@@ -258,6 +271,7 @@ export const manzilVerses = [
   {
     id: 23,
     title: 'Al-Mu\'minoon (115 - 118)',
+    audioFile: 'Al-Muminoon-115-118.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَاكُمْ عَبَثًا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٥﴾</span></p>
@@ -284,6 +298,7 @@ export const manzilVerses = [
   {
     id: 25,
     title: 'As-Safaat (1 - 11)',
+    audioFile: 'As-Saffat-1-11.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">وَالصَّافَّاتِ صَفًّا ﴿١﴾ فَالزَّاجِرَاتِ زَجْرًا ﴿٢﴾ فَالتَّالِيَاتِ ذِكْرًا ﴿٣﴾</p>
@@ -331,6 +346,7 @@ export const manzilVerses = [
   {
     id: 27,
     title: 'Ar-Rahman (33 - 40)',
+    audioFile: 'Ar-Rahman-33-40.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</p>
@@ -368,6 +384,7 @@ export const manzilVerses = [
   {
     id: 28,
     title: 'Al-Hashr (21 - 24)',
+    audioFile: 'Al-Hashr-21-24.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾</p>
@@ -397,6 +414,7 @@ export const manzilVerses = [
   {
     id: 29,
     title: 'Al-Jinn (1 - 4, 5 - 9)',
+    audioFile: 'Al-Jinn-1-4.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ﴿١﴾</p>
@@ -422,6 +440,7 @@ export const manzilVerses = [
   {
     id: 31,
     title: 'Al-Kafiroon (The Disbelievers)',
+    audioFile: 'Al-Kafirun.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿١﴾</p>
@@ -458,6 +477,7 @@ export const manzilVerses = [
   {
     id: 32,
     title: 'Al-Ikhlas (The Sincerity)',
+    audioFile: 'Al-Ikhlas.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾</p>
@@ -485,6 +505,7 @@ export const manzilVerses = [
   {
     id: 33,
     title: 'Al-Falaq (The Daybreak)',
+    audioFile: 'Al-Falaq.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾</p>
@@ -516,6 +537,7 @@ export const manzilVerses = [
   {
     id: 34,
     title: 'An-Nas (Mankind)',
+    audioFile: 'An-Nas.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿١﴾</p>
@@ -552,6 +574,7 @@ export const manzilVerses = [
   {
     id: 35,
     title: 'End of Ruqyah',
+    audioFile: 'End-of-Ruqyah.mp3',
     content: `<div class="text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
         <p class="text-base text-gray-700 mb-4">O Allah, make this my ruqyah for You, the cure from every disease in my body and soul.</p>
