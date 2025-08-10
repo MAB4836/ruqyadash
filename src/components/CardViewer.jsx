@@ -789,7 +789,7 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
               }`}
               title={isPlaying ? "Pause audio" : "Play audio"}
             >
-              {isPlaying ? '⏸' : '▶'}
+              {isPlaying ? <span style={{fontSize: '0.5em'}}>||</span> : '▶'}
             </button>
             
             {/* Auto-continue toggle */}

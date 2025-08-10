@@ -25,7 +25,7 @@ const Navigation = ({
       <div className="flex items-center justify-center mt-4 sm:mt-6 gap-2 sm:gap-3">
         <button 
           onClick={onBack}
-          className="px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
+          className="w-[40px] h-[40px] sm:w-auto sm:h-auto px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
         >
           <span className="block sm:hidden">⌂</span>
           <span className="hidden sm:block">Menu</span>
@@ -43,7 +43,7 @@ const Navigation = ({
         <button 
           onClick={onPrevious}
           disabled={currentCard === 1}
-          className="px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 disabled:cursor-not-allowed touch-manipulation"
+          className="hidden md:block px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 disabled:cursor-not-allowed touch-manipulation"
         >
           <span className="block sm:hidden">◀</span>
           <span className="hidden sm:block">Previous</span>
@@ -53,19 +53,19 @@ const Navigation = ({
           <>
             <button 
               onClick={onIncrement}
-              className="px-3 py-2 sm:px-8 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
+              className="w-[36px] h-[36px] sm:w-auto sm:h-auto px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
             >
               <span className="block sm:hidden">+</span>
               <span className="hidden sm:block">Count</span>
             </button>
             
-            <span className="px-3 py-2 sm:px-6 sm:py-3 bg-white text-gray-800 rounded-lg shadow-md text-sm sm:text-base font-medium min-w-[50px] flex items-center justify-center">
+            <span className="px-3 py-2 sm:px-6 sm:py-3 bg-white text-gray-800 rounded-lg shadow-md text-sm sm:text-base font-medium w-[37px] flex items-center justify-center">
               {count}
             </span>
             
             <button 
               onClick={onClear}
-              className="px-3 py-2 sm:px-8 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
+              className="px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 touch-manipulation"
             >
               <span className="block sm:hidden">↻</span>
               <span className="hidden sm:block">Clear</span>
@@ -76,7 +76,7 @@ const Navigation = ({
         <button 
           onClick={onNext}
           disabled={currentCard === totalCards}
-          className="px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 disabled:cursor-not-allowed touch-manipulation"
+          className="hidden md:block px-3 py-2 sm:px-6 sm:py-3 text-sm sm:text-base bg-white text-blue-600 rounded-lg shadow-md hover:bg-gray-100 disabled:cursor-not-allowed touch-manipulation"
         >
           <span className="block sm:hidden">▶</span>
           <span className="hidden sm:block">Next</span>
