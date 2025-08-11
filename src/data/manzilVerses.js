@@ -431,7 +431,7 @@ export const manzilVerses = [
   },
   {
     id: 29,
-    title: 'Al-Jinn (1 - 4, 5 - 9)',
+    title: 'Al-Jinn (1 - 4)',
     audioFile: 'Al-Jinn-1-4.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
