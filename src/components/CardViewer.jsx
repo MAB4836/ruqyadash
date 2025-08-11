@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import Navigation from './Navigation'
+import { KeepAwake } from '@capacitor-community/keep-awake'
 
 const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath }) => {
   const [currentCard, setCurrentCard] = useState(1)
@@ -142,6 +143,25 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     return repetitionCounts[currentCard] || 0
   }
 
+  // Screen wake control functions
+  const keepScreenOn = async () => {
+    try {
+      await KeepAwake.keepAwake()
+      console.log('Screen wake lock activated')
+    } catch (error) {
+      console.warn('Could not activate screen wake lock:', error)
+    }
+  }
+  
+  const allowScreenOff = async () => {
+    try {
+      await KeepAwake.allowSleep()
+      console.log('Screen wake lock released')
+    } catch (error) {
+      console.warn('Could not release screen wake lock:', error)
+    }
+  }
+
   // Audio control functions
   const playAudio = (audioFile) => {
     if (currentAudio) {
@@ -154,10 +174,12 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     
     audio.play()
     setIsPlaying(true)
+    keepScreenOn()
     
     audio.onended = () => {
       setIsPlaying(false)
       setCurrentAudio(null)
+      allowScreenOff()
       
       // Auto-continue logic with delay
       if (autoPlay) {
@@ -170,6 +192,7 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     audio.onerror = () => {
       setIsPlaying(false)
       setCurrentAudio(null)
+      allowScreenOff()
       console.error('Error loading audio file:', audioFile)
     }
   }
@@ -181,9 +204,11 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     if (isPlaying && currentAudio) {
       currentAudio.pause()
       setIsPlaying(false)
+      allowScreenOff()
     } else if (currentAudio && currentAudio.paused) {
       currentAudio.play()
       setIsPlaying(true)
+      keepScreenOn()
     } else {
       playAudio(currentCardData.audioFile)
     }
@@ -223,6 +248,7 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
       currentAudio.pause()
       setIsPlaying(false)
       setCurrentAudio(null)
+      allowScreenOff()
     }
   }, [currentCard])
   
