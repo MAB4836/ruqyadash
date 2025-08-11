@@ -467,7 +467,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2 "><span>قُلْ يَا أَيُّهَا الْكَافِرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
+        <p class="text-center mb-2 "><span>قُلْ يَا أَيُّهَا الْكَافِرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul ya ayyuhal-kafirun</p>
         <p class="text-base text-gray-700 text-center">Say: O you disbelievers</p>
       </div>
@@ -510,7 +510,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>قُلْ هُوَ اللَّهُ أَحَدٌ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
+        <p class="text-center mb-2"><span>قُلْ هُوَ اللَّهُ أَحَدٌ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul huwa Allahu ahad</p>
         <p class="text-base text-gray-700 text-center">Say: He is Allah, the One</p>
       </div>
@@ -544,7 +544,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
+        <p class="text-center mb-2"><span>قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul a'udhu bi-rabbil-falaq</p>
         <p class="text-base text-gray-700 text-center">Say: I seek refuge with the Lord of daybreak</p>
       </div>
@@ -582,7 +582,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>قُلْ أَعُوذُ بِرَبِّ النَّاسِ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
+        <p class="text-center mb-2"><span>قُلْ أَعُوذُ بِرَبِّ النَّاسِ</span><span class="text-sm text-gray-500 ml-4">﴿١﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul a'udhu bi-rabbin-nas</p>
         <p class="text-base text-gray-700 text-center">Say: I seek refuge with the Lord of mankind</p>
       </div>
