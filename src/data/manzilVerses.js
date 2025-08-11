@@ -355,25 +355,43 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ ﴿٣٤﴾ فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٥﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Yursalu 'alaykuma shuwazun min narin wa nuhasun fa la tantasiran, fa bi-ayyi ala'i rabbikuma tukadhiban</p>
-        <p class="text-base text-gray-700 text-center">There will be sent upon you a flame of fire and smoke, and you will not defend yourselves. Then which of the favors of your Lord will you deny?</p>
+        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٤﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">فَإِذَا انشَقَّتِ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ ﴿٣٦﴾</p>
+        <p class="text-center mb-2">يُرْسَلُ عَلَيْكُمَا شُوَاظٌۭ مِّن نَّارٍۢ وَنُحَاسٌۭ فَلَا تَنتَصِرَانِ ﴿٣٥﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Yursalu 'alaykuma shuwazun min narin wa nuhasun fa la tantasiran</p>
+        <p class="text-base text-gray-700 text-center">There will be sent upon you a flame of fire and smoke, and you will not defend yourselves</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٦﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَإِذَا انشَقَّتِ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ ﴿٣٧﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Fa idha inshaqqat as-sama'u fa kanat wardatan ka ad-dihan</p>
         <p class="text-base text-gray-700 text-center">And when the heaven is split open and becomes rose-colored like oil</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٧﴾ فَيَوْمَئِذٍ لَّا يُسْأَلُ عَن ذَنبِهِ إِنسٌ وَلَا جَانٌّ ﴿٣٨﴾</p>
-        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban, fa yawma'idhin la yus'alu 'an dhanbihi insun wa la jann</p>
-        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny? So on that Day no man or jinn will be asked about his sin</p>
+        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٨﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٩﴾</p>
+        <p class="text-center mb-2">فَيَوْمَئِذٍۢ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌۭ وَلَا جَآنٌّۭ ﴿٣٩﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa yawma'idhin la yus'alu 'an dhanbihi insun wa la jann</p>
+        <p class="text-base text-gray-700 text-center">So on that Day no man or jinn will be asked about his sin</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٤٠﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
         <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
       </div>

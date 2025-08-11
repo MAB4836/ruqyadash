@@ -580,43 +580,56 @@ export const ruqyahVerses = [
   {
   id: 27,
   title: 'Ar-Rahman (33 - 40)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B'; text-align: right">
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</span><span class="text-sm text-gray-500 ml-4">﴿٣٣﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Ya ma'sharal-jinni wal-ins, ini istata'tum an tanfudhu min aqtaris-samawati wal-ardi fanfudhu, la tanfudhuna illa bi-sultan</p>
-      <p class="text-base text-gray-700">O company of jinn and mankind, if you are able to pass beyond the regions of the heavens and the earth, then pass. You will not pass except by authority [from Allah].</p>
-    </div>
-    
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>يُرْسَلُ عَلَيْكُمَا شُوَاظٌ مِّن نَّارٍ وَنُحَاسٌ فَلَا تَنتَصِرَانِ ﴿٣٤﴾ فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٥﴾</span><span class="text-sm text-gray-500 ml-4">﴿٣٤-٣٥﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Yursalu 'alaykuma shuwazun min narin wa nuhasun fa la tantasiran, fa bi-ayyi ala'i rabbikuma tukadhiban</p>
-      <p class="text-base text-gray-700">There will be sent upon you a flame of fire and smoke, and you will not defend yourselves. Then which of the favors of your Lord will you deny?</p>
-    </div>
-    
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>فَإِذَا انشَقَّتِ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ ﴿٣٦﴾</span><span class="text-sm text-gray-500 ml-4">﴿٣٦﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Fa idhanshaqqatis-sama'u fa kanat wardatan kad-dihan</p>
-      <p class="text-base text-gray-700">And when the heaven is split open and becomes rose-colored like oil</p>
-    </div>
-    
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٧﴾ فَيَوْمَئِذٍ لَا يُسْأَلُ عَن ذَنبِهِ إِنسٌ وَلَا جَانٌّ ﴿٣٨﴾</span><span class="text-sm text-gray-500 ml-4">﴿٣٧-٣٨﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Fa bi-ayyi ala'i rabbikuma tukadhiban, fa yawma'idhin la yus'alu 'an dhanbihi insun wa la jann</p>
-      <p class="text-base text-gray-700">Then which of the favors of your Lord will you deny? So on that Day none will be asked about his sin among men or jinn.</p>
-    </div>
-    
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٩﴾</span><span class="text-sm text-gray-500 ml-4">﴿٣٩﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
-      <p class="text-base text-gray-700">Then which of the favors of your Lord will you deny?</p>
-    </div>
-    
-    <div class="mb-6">
-      <p class="flex justify-between mb-2"><span>يُعْرَفُ الْمُجْرِمُونَ بِسِيمَاهُمْ فَيُؤْخَذُ بِالنَّوَاصِي وَالْأَقْدَامِ ﴿٤٠﴾</span><span class="text-sm text-gray-500 ml-4">﴿٤٠﴾</span></p>
-      <p class="text-base text-gray-600 italic mb-1">Yu'rafal-mujrimoona bi-simahum fa yu'khadhu bin-nawasi wal-aqdam</p>
-      <p class="text-base text-gray-700">The criminals will be known by their marks, and they will be seized by the forelocks and the feet.</p>
-    </div>
-  </div>`
+  audioFile: 'Ar-Rahman-33-40.mp3',
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+      <div class="mb-6">
+        <p class="text-center mb-2">يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Ya ma'shar al-jinni wal-ins, ini istata'tum an tanfudhu min aqtar as-samawati wal-ardi fanfudhu, la tanfudhuna illa bi-sultan</p>
+        <p class="text-base text-gray-700 text-center">O company of jinn and mankind, if you are able to pass beyond the regions of the heavens and the earth, then pass. You will not pass except by authority [from Allah]</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٤﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">يُرْسَلُ عَلَيْكُمَا شُوَاظٌۭ مِّن نَّارٍۢ وَنُحَاسٌۭ فَلَا تَنتَصِرَانِ ﴿٣٥﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Yursalu 'alaykuma shuwazun min narin wa nuhasun fa la tantasiran</p>
+        <p class="text-base text-gray-700 text-center">There will be sent upon you a flame of fire and smoke, and you will not defend yourselves</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٦﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَإِذَا انشَقَّتِ السَّمَاءُ فَكَانَتْ وَرْدَةً كَالدِّهَانِ ﴿٣٧﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa idha inshaqqat as-sama'u fa kanat wardatan ka ad-dihan</p>
+        <p class="text-base text-gray-700 text-center">And when the heaven is split open and becomes rose-colored like oil</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَيِّ آلَاءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٣٨﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَيَوْمَئِذٍۢ لَّا يُسْـَٔلُ عَن ذَنۢبِهِۦٓ إِنسٌۭ وَلَا جَآنٌّۭ ﴿٣٩﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa yawma'idhin la yus'alu 'an dhanbihi insun wa la jann</p>
+        <p class="text-base text-gray-700 text-center">So on that Day no man or jinn will be asked about his sin</p>
+      </div>
+      
+      <div class="mb-6">
+        <p class="text-center mb-2">فَبِأَىِّ ءَالَآءِ رَبِّكُمَا تُكَذِّبَانِ ﴿٤٠﴾</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Fa bi-ayyi ala'i rabbikuma tukadhiban</p>
+        <p class="text-base text-gray-700 text-center">Then which of the favors of your Lord will you deny?</p>
+      </div>
+    </div>`
 },
 {
   id: 28,
