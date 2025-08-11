@@ -1,8 +1,8 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
 import Navigation from './Navigation'
 import { KeepAwake } from '@capacitor-community/keep-awake'
 
-const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath }) => {
+const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath }, ref) => {
   const [currentCard, setCurrentCard] = useState(1)
   const [repetitionCounts, setRepetitionCounts] = useState({})
   const [showScrollDown, setShowScrollDown] = useState(false)
@@ -27,6 +27,19 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDirection, setSlideDirection] = useState(null) // 'left' or 'right'
   const [nextCardIndex, setNextCardIndex] = useState(currentCard)
+
+  // Expose stopAudio function to parent component via ref
+  useImperativeHandle(ref, () => ({
+    stopAudio: () => {
+      if (currentAudio) {
+        currentAudio.pause()
+        setIsPlaying(false)
+        setCurrentAudio(null)
+        allowScreenOff()
+      }
+      setAutoPlay(false)
+    }
+  }), [currentAudio])
 
   // Check for return card index and scroll position on component mount
   useEffect(() => {
@@ -123,6 +136,20 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
     if (isAnimating) return
     setCurrentCard(1)
     setNextCardIndex(1)
+  }
+
+  const handleBackWithAudioStop = () => {
+    // Stop any currently playing audio before navigating back
+    if (currentAudio) {
+      currentAudio.pause()
+      setIsPlaying(false)
+      setCurrentAudio(null)
+      allowScreenOff()
+    }
+    // Turn off auto-play if it was enabled
+    setAutoPlay(false)
+    // Call the original onBack function
+    onBack()
   }
 
   const incrementCount = () => {
@@ -921,7 +948,7 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
           onPrevious={prevCard}
           onNext={nextCard}
           onHome={goHome}
-          onBack={onBack}
+          onBack={handleBackWithAudioStop}
           count={getCurrentCount()}
           onIncrement={incrementCount}
           onClear={clearCount}
@@ -933,6 +960,6 @@ const CardViewer = ({ cards, categoryTitle, onBack, navigateToSection, navigateB
       </div>
     </div>
   )
-}
+})
 
 export default CardViewer

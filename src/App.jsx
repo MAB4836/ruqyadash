@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react'
+import React, { useState, useEffect, useCallback, useRef } from 'react'
 import MenuScreen from './components/MenuScreen'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
 import RuqyahGuide from './components/RuqyahGuide'
@@ -46,6 +46,9 @@ function App() {
   const [selectedFont, setSelectedFont] = useState(() => {
     return localStorage.getItem('arabicFont') || 'KSARegular_B'
   })
+  
+  // Ref to access CardViewer audio control functions
+  const cardViewerRef = useRef(null)
 
   const handleBackToMenu = useCallback(() => {
     setCurrentScreen('menu');
@@ -117,6 +120,11 @@ function App() {
         handleBackToImmediateHelpSubmenuFromGuide();
       } 
       else if (currentScreen === 'cards') {
+        // Stop any playing audio before navigating back
+        if (cardViewerRef.current && cardViewerRef.current.stopAudio) {
+          cardViewerRef.current.stopAudio();
+        }
+        
         if (selectedRuqyahOption) {
           handleBackToRuqyahSubmenu();
         } else if (selectedEvilEyeOption) {
@@ -514,6 +522,7 @@ function App() {
     
     return (
       <CardViewer
+        ref={cardViewerRef}
         cards={category.cards}
         categoryTitle={category.title}
         onBack={onBackFunction}
