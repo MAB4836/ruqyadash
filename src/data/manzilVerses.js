@@ -98,13 +98,13 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٣﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>الَّذِينَ يُؤْمِنُونَ بِالْغَيْبِ وَيُقِيمُونَ الصَّلَاةَ وَمِمَّا رَزَقْنَاهُمْ يُنفِقُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٣﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Allazeena yu'minoona bil-ghaybi wa yuqeemoonas-salata wa mimma razaqnahum yunfiqoon</p>
         <p class="text-base text-gray-700">Who believe in the unseen, establish prayer, and spend out of what We have provided for them</p>
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٤﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>وَالَّذِينَ يُؤْمِنُونَ بِمَا أُنزِلَ إِلَيْكَ وَمَا أُنزِلَ مِن قَبْلِكَ وَبِالْآخِرَةِ هُمْ يُوقِنُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٤﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Wallazeena yu'minoona bima unzila ilayka wa ma unzila min qablika wa bil-akhirati hum yooqinoon</p>
         <p class="text-base text-gray-700">And who believe in what has been revealed to you, [O Muhammad], and what was revealed before you, and of the Hereafter they are certain [in faith]</p>
       </div>
@@ -134,7 +134,7 @@ export const manzilVerses = [
     audioFile: 'Ayat-Al-Kursi-255.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٥﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٥﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Allahu la ilaha illa huwa al-hayyul-qayyum, la ta'khuzuhu sinatun wa la nawm, lahu ma fis-samawati wa ma fil-ard, man zal-lazi yashfa'u 'indahu illa bi-iznih, ya'lamu ma bayna aydihim wa ma khalfahum, wa la yuhituna bi shay'in min 'ilmihi illa bima sha', wasi'a kursiyyuhus-samawati wal-ard, wa la ya'uduhu hifzuhuma wa huwal-'aliyyul-'azeem</p>
         <p class="text-base text-gray-700">Allah - there is no deity except Him, the Ever-Living, the Sustainer of existence. Neither drowsiness overtakes Him nor sleep. To Him belongs whatever is in the heavens and whatever is on the earth. Who is it that can intercede with Him except by His permission? He knows what is before them and what will be after them, and they encompass not a thing of His knowledge except for what He wills. His Kursi extends over the heavens and the earth, and their preservation tires Him not. And He is the Most High, the Most Great.</p>
       </div>
@@ -146,13 +146,13 @@ export const manzilVerses = [
     audioFile: 'Al-Baqarah-256-257.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>لَا إِكْرَاهَ فِي الدِّينِ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا وَاللَّهُ سَمِيعٌ عَلِيمٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٦﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>لَا إِكْرَاهَ فِي الدِّينِ قَد تَّبَيَّنَ الرُّشْدُ مِنَ الْغَيِّ فَمَن يَكْفُرْ بِالطَّاغُوتِ وَيُؤْمِن بِاللَّهِ فَقَدِ اسْتَمْسَكَ بِالْعُرْوَةِ الْوُثْقَىٰ لَا انفِصَامَ لَهَا وَاللَّهُ سَمِيعٌ عَلِيمٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٦﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">La ikraha fid-deeni qad tabayyanar-rushdu minal-ghayy, faman yakfur bit-taghooti wa yu'mim billahi faqad istamsaka bil-'urwatil-wuthqa lanfisama laha, wallahu samee'un 'aleem</p>
         <p class="text-base text-gray-700">There shall be no compulsion in [acceptance of] the religion. The right course has become clear from the wrong. So whoever disbelieves in Taghut and believes in Allah has grasped the most trustworthy handhold with no break in it. And Allah is Hearing and Knowing.</p>
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ وَالَّذِينَ كَفَرُوا أَوْلِيَاؤُهُمُ الطَّاغُوتُ يُخْرِجُونَهُم مِّنَ النُّورِ إِلَى الظُّلُمَاتِ أُولَٰئِكَ أَصْحَابُ النَّارِ هُمْ فِيهَا خَالِدُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٧﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>اللَّهُ وَلِيُّ الَّذِينَ آمَنُوا يُخْرِجُهُم مِّنَ الظُّلُمَاتِ إِلَى النُّورِ وَالَّذِينَ كَفَرُوا أَوْلِيَاؤُهُمُ الطَّاغُوتُ يُخْرِجُونَهُم مِّنَ النُّورِ إِلَى الظُّلُمَاتِ أُولَٰئِكَ أَصْحَابُ النَّارِ هُمْ فِيهَا خَالِدُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٥٧﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Allahu waliyyul-lazeena amanoo yukhrijuhum minaz-zulumati ilan-noor, wallazeena kafaroo awliya'uhumut-taghootu yukhrijoonahum minan-noori ilaz-zulumat, ula-ika as-habun-nar, hum feeha khalidoon</p>
         <p class="text-base text-gray-700">Allah is the ally of those who believe. He brings them out from darknesses into the light. And those who disbelieve - their allies are Taghut. They take them out of the light into darknesses. Those are the companions of the Fire; they will abide eternally therein.</p>
       </div>
@@ -164,7 +164,7 @@ export const manzilVerses = [
     audioFile: 'Al-Baqarah-284.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٤﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>لِّلَّهِ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ وَإِن تُبْدُوا مَا فِي أَنفُسِكُمْ أَوْ تُخْفُوهُ يُحَاسِبْكُم بِهِ اللَّهُ فَيَغْفِرُ لِمَن يَشَاءُ وَيُعَذِّبُ مَن يَشَاءُ وَاللَّهُ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٤﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Lillahi ma fis-samawati wa ma fil-ard, wa in tubdoo ma fee anfusikum aw tukhfoohu yuhasibkum bihillah, fa yaghfiru liman yashaa'u wa yu'adhdhibu man yashaa', wallahu 'ala kulli shay'in qadeer</p>
         <p class="text-base text-gray-700">To Allah belongs whatever is in the heavens and whatever is on the earth. Whether you show what is within yourselves or conceal it, Allah will bring you to account for it. Then He will forgive whom He wills and punish whom He wills, and Allah is over all things competent.</p>
       </div>
@@ -176,7 +176,7 @@ export const manzilVerses = [
     audioFile: 'Al-Baqarah-285.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُوا سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٥﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>آمَنَ الرَّسُولُ بِمَا أُنزِلَ إِلَيْهِ مِن رَّبِّهِ وَالْمُؤْمِنُونَ كُلٌّ آمَنَ بِاللَّهِ وَمَلَائِكَتِهِ وَكُتُبِهِ وَرُسُلِهِ لَا نُفَرِّقُ بَيْنَ أَحَدٍ مِّن رُّسُلِهِ وَقَالُوا سَمِعْنَا وَأَطَعْنَا غُفْرَانَكَ رَبَّنَا وَإِلَيْكَ الْمَصِيرُ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٥﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Amanar-rasoolu bima unzila ilayhi mir-rabbihi wal-mu'minoon, kullun amana billahi wa mala'ikatihi wa kutubihi wa rusulih, la nufarriqu bayna ahadim mir-rusulih, wa qaloo sami'na wa ata'na ghufranaka rabbana wa ilaykal-maseer</p>
         <p class="text-base text-gray-700">The Messenger has believed in what was revealed to him from his Lord, and [so have] the believers. All of them have believed in Allah and His angels and His books and His messengers, [saying], "We make no distinction between any of His messengers." And they say, "We hear and we obey. [We seek] Your forgiveness, our Lord, and to You is the [final] destination."</p>
       </div>
@@ -188,7 +188,7 @@ export const manzilVerses = [
     audioFile: 'Al-Baqarah-286.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٦﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>لَا يُكَلِّفُ اللَّهُ نَفْسًا إِلَّا وُسْعَهَا لَهَا مَا كَسَبَتْ وَعَلَيْهَا مَا اكْتَسَبَتْ رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا أَنتَ مَوْلَانَا فَانصُرْنَا عَلَى الْقَوْمِ الْكَافِرِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٨٦﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">La yukallifullahu nafsan illa wus'aha, laha ma kasabat wa 'alayha ma aktasabat, rabbana la tu'akhidhna in naseena aw akhta'na, rabbana wa la tahmil 'alayna isran kama hamaltahu 'alal-lazeena min qablina, rabbana wa la tuhammilna ma la taqata lana bih, wa'fu 'anna waghfir lana warhamna, anta mawlana fansurna 'alal-qawmil-kafireen</p>
         <p class="text-base text-gray-700">Allah does not charge a soul except [with that within] its capacity. It will have [the consequence of] what [good] it has gained, and it will bear [the consequence of] what [evil] it has earned. "Our Lord, do not impose blame upon us if we have forgotten or erred. Our Lord, and lay not upon us a burden like that which You laid upon those before us. Our Lord, and burden us not with that which we have no ability to bear. And pardon us; and forgive us; and have mercy upon us. You are our protector, so give us victory over the disbelieving people."</p>
       </div>
@@ -200,7 +200,7 @@ export const manzilVerses = [
     audioFile: 'Ali-Imran-18.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>شَهِدَ اللَّهُ أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَٰهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٨﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>شَهِدَ اللَّهُ أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَٰهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٨﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Shahidallahu annahu la ilaha illa huwa wal-mala'ikatu wa ulul-'ilmi qa-imam bil-qist, la ilaha illa huwa al-'azizul-hakeem</p>
         <p class="text-base text-gray-700">Allah witnesses that there is no deity except Him, and [so do] the angels and those of knowledge - [that He is] maintaining [creation] in justice. There is no deity except Him, the Exalted in Might, the Wise.</p>
       </div>
@@ -214,13 +214,13 @@ export const manzilVerses = [
     audioFile: 'Ali-Imran-26-27.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٦﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>قُلِ اللَّهُمَّ مَالِكَ الْمُلْكِ تُؤْتِي الْمُلْكَ مَن تَشَاءُ وَتَنزِعُ الْمُلْكَ مِمَّن تَشَاءُ وَتُعِزُّ مَن تَشَاءُ وَتُذِلُّ مَن تَشَاءُ بِيَدِكَ الْخَيْرُ إِنَّكَ عَلَىٰ كُلِّ شَيْءٍ قَدِيرٌ</span><span class="text-sm text-gray-500 ml-4">﴿٢٦﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Qulil-lahumma malikal-mulki tu'til-mulka man tashaa'u wa tanzi'ul-mulka mimman tashaa', wa tu'izzu man tashaa' wa tuzillu man tashaa', biyadikal-khayr, innaka 'ala kulli shay'in qadeer</p>
         <p class="text-base text-gray-700">Say, "O Allah, Owner of Sovereignty, You give sovereignty to whom You will and You take sovereignty away from whom You will. You honor whom You will and You humble whom You will. In Your hand is [all] good. Indeed, You are over all things competent."</p>
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>تُولِجُ اللَّيْلَ فِي النَّهَارِ وَتُولِجُ النَّهَارَ فِي اللَّيْلِ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَتَرْزُقُ مَن تَشَاءُ بِغَيْرِ حِسَابٍ</span><span class="text-sm text-gray-500 ml-4">﴿٢٧﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>تُولِجُ اللَّيْلَ فِي النَّهَارِ وَتُولِجُ النَّهَارَ فِي اللَّيْلِ وَتُخْرِجُ الْحَيَّ مِنَ الْمَيِّتِ وَتُخْرِجُ الْمَيِّتَ مِنَ الْحَيِّ وَتَرْزُقُ مَن تَشَاءُ بِغَيْرِ حِسَابٍ</span><span class="text-sm text-gray-500 ml-4">﴿٢٧﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Tulijul-layla fin-nahari wa tulijun-nahara fil-layl, wa tukhrijul-hayya minal-mayyiti wa tukhrijul-mayyita minal-hayy, wa tarzuqu man tashaa'u bighayri hisab</p>
         <p class="text-base text-gray-700">You cause the night to enter the day, and You cause the day to enter the night; and You bring the living out of the dead, and You bring the dead out of the living. And You give provision to whom You will without account.</p>
       </div>
@@ -232,7 +232,7 @@ export const manzilVerses = [
     audioFile: 'Al-Araf-54-56.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>إِنَّ رَبَّكُمُ اللَّهُ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ فِي سِتَّةِ أَيَّامٍ ثُمَّ اسْتَوَىٰ عَلَى الْعَرْشِ يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا وَالشَّمْسَ وَالْقَمَرَ وَالنُّجُومَ مُسَخَّرَاتٍ بِأَمْرِهِ أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٤﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>إِنَّ رَبَّكُمُ اللَّهُ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ فِي سِتَّةِ أَيَّامٍ ثُمَّ اسْتَوَىٰ عَلَى الْعَرْشِ يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا وَالشَّمْسَ وَالْقَمَرَ وَالنُّجُومَ مُسَخَّرَاتٍ بِأَمْرِهِ أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٤﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Inna rabbakumul-lahul-lazi khalaqas-samawati wal-arda fee sittati ayyamin thummas-tawa 'alal-'arsh, yughshil-laylan-nahara yatlubuhu hatheethan wash-shamsa wal-qamara wan-nujoom musakh-kharatim bi-amrih, ala lahul-khalqu wal-amr, tabarakal-lahu rabbul-'alameen</p>
         <p class="text-base text-gray-700">Indeed, your Lord is Allah, who created the heavens and earth in six days and then established Himself above the Throne. He covers the night with the day, [another night] chasing it rapidly; and [He created] the sun, the moon, and the stars, subjected by His command. Unquestionably, His is the creation and the command; blessed is Allah, Lord of the worlds.</p>
       </div>
@@ -244,7 +244,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>وَلَا تُفْسِدُوا فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا وَادْعُوهُ خَوْفًا وَطَمَعًا إِنَّ رَحْمَتَ اللَّهِ قَرِيبٌ مِّنَ الْمُحْسِنِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٦﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>وَلَا تُفْسِدُوا فِي الْأَرْضِ بَعْدَ إِصْلَاحِهَا وَادْعُوهُ خَوْفًا وَطَمَعًا إِنَّ رَحْمَتَ اللَّهِ قَرِيبٌ مِّنَ الْمُحْسِنِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٦﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Wa la tufsidoo fil-ardi ba'da islahiha wad'oohu khawfan wa tama'a, inna rahmatallahi qareebum minal-muhsineen</p>
         <p class="text-base text-gray-700">And do not cause corruption upon the earth after its reformation. And invoke Him in fear and aspiration. Indeed, the mercy of Allah is near to the doers of good.</p>
       </div>
@@ -256,13 +256,13 @@ export const manzilVerses = [
     audioFile: 'Al-Isra-110-111.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>قُلِ ادْعُوا اللَّهَ أَوِ ادْعُوا الرَّحْمَٰنَ أَيًّا مَا تَدْعُوا فَلَهُ الْأَسْمَاءُ الْحُسْنَىٰ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَابْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًا</span><span class="text-sm text-gray-500 ml-4">﴿١١٠﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>قُلِ ادْعُوا اللَّهَ أَوِ ادْعُوا الرَّحْمَٰنَ أَيًّا مَا تَدْعُوا فَلَهُ الْأَسْمَاءُ الْحُسْنَىٰ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَابْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًا</span><span class="text-sm text-gray-500 ml-4">﴿١١٠﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Qulid'oo Allaha awid'oor-Rahman, ayyan ma tad'oo falahul-asma'ul-husna, wa la tajhar bi-salataka wa la tukhafit biha wabtaghi bayna thalika sabeela</p>
         <p class="text-base text-gray-700">Say, "Call upon Allah or call upon the Most Merciful. Whichever [name] you call - to Him belong the best names." And do not recite [too] loudly in your prayer or [too] quietly but seek between that an [intermediate] way.</p>
       </div>
       
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>وَقُلِ الْحَمْدُ لِلَّهِ الَّذِي لَمْ يَتَّخِذْ وَلَدًا وَلَمْ يَكُن لَّهُ شَرِيكٌ فِي الْمُلْكِ وَلَمْ يَكُن لَّهُ وَلِيٌّ مِّنَ الذُّلِّ وَكَبِّرْهُ تَكْبِيرًا</span><span class="text-sm text-gray-500 ml-4">﴿١١١﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>وَقُلِ الْحَمْدُ لِلَّهِ الَّذِي لَمْ يَتَّخِذْ وَلَدًا وَلَمْ يَكُن لَّهُ شَرِيكٌ فِي الْمُلْكِ وَلَمْ يَكُن لَّهُ وَلِيٌّ مِّنَ الذُّلِّ وَكَبِّرْهُ تَكْبِيرًا</span><span class="text-sm text-gray-500 ml-4">﴿١١١﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Wa qulil-hamdu lillahil-lazi lam yattakhiz waladan wa lam yakun lahu shareekun fil-mulki wa lam yakun lahu waliyyum minadh-dhulli wa kabbirhu takbeera</p>
         <p class="text-base text-gray-700">And say, "Praise to Allah, who has not taken a son and has had no partner in [His] dominion and has no [need of a] protector out of weakness; and glorify Him with [great] glorification."</p>
       </div>
@@ -284,7 +284,7 @@ export const manzilVerses = [
         <p class="text-base text-gray-700">So exalted is Allah, the Sovereign, the Truth; there is no deity except Him, Lord of the Noble Throne.</p>
       </div>
       <div class="mb-6">
-        <p class="flex justify-between mb-2"><span>وَمَن يَدْعُ مَعَ اللَّهِ إِلَٰهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِندَ رَبِّهِ إِنَّهُ لَا يُفْلِحُ الْكَافِرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٧﴾</span></p>
+        <p class="flex justify-between mb-2" style="line-height: 2.2"><span>وَمَن يَدْعُ مَعَ اللَّهِ إِلَٰهًا آخَرَ لَا بُرْهَانَ لَهُ بِهِ فَإِنَّمَا حِسَابُهُ عِندَ رَبِّهِ إِنَّهُ لَا يُفْلِحُ الْكَافِرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٧﴾</span></p>
         <p class="text-base text-gray-600 italic mb-1">Wa man yad'u ma'allahi ilahan akhara la burhana lahu bihi fa-innama hisabuhu 'inda rabbihi innahu la yuflihu al-kafirun</p>
         <p class="text-base text-gray-700">And whoever invokes besides Allah another deity for which he has no proof - then his account is only with his Lord. Indeed, the disbelievers will not succeed.</p>
       </div>
@@ -349,7 +349,7 @@ export const manzilVerses = [
     audioFile: 'Ar-Rahman-33-40.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="text-center mb-2">يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Ya ma'shar al-jinni wal-ins, ini istata'tum an tanfudhu min aqtar as-samawati wal-ardi fanfudhu, la tanfudhuna illa bi-sultan</p>
         <p class="text-base text-gray-700 text-center">O company of jinn and mankind, if you are able to pass beyond the regions of the heavens and the earth, then pass. You will not pass except by authority [from Allah]</p>
       </div>
@@ -405,25 +405,25 @@ export const manzilVerses = [
     audioFile: 'Al-Hashr-21-24.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="text-center mb-2">لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Law anzalna hatha al-qur'ana 'ala jabalin lara'aytahu khashi'an mutasaddi'an min khashyatillahi wa tilka al-amthalu nadribuha li-nnasi la'allahum yatafakkarun</p>
         <p class="text-base text-gray-700 text-center">If We had sent down this Qur'an upon a mountain, you would have seen it humbled and coming apart from fear of Allah. And these examples We present to the people that perhaps they will give thought.</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَٰنُ الرَّحِيمُ ﴿٢٢﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ عَالِمُ الْغَيْبِ وَالشَّهَادَةِ هُوَ الرَّحْمَٰنُ الرَّحِيمُ ﴿٢٢﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Huwa Allahu alladhi la ilaha illa huwa 'alim al-ghaybi wash-shahadati huwa ar-Rahman ar-Raheem</p>
         <p class="text-base text-gray-700 text-center">He is Allah, other than whom there is no deity, Knower of the unseen and the witnessed. He is the Entirely Merciful, the Especially Merciful.</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ ﴿٢٣﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">هُوَ اللَّهُ الَّذِي لَا إِلَٰهَ إِلَّا هُوَ الْمَلِكُ الْقُدُّوسُ السَّلَامُ الْمُؤْمِنُ الْمُهَيْمِنُ الْعَزِيزُ الْجَبَّارُ الْمُتَكَبِّرُ سُبْحَانَ اللَّهِ عَمَّا يُشْرِكُونَ ﴿٢٣﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Huwa Allahu alladhi la ilaha illa huwa al-Malik al-Quddus as-Salam al-Mu'min al-Muhaymin al-'Aziz al-Jabbar al-Mutakabbir, subhan Allahi 'amma yushrikun</p>
         <p class="text-base text-gray-700 text-center">He is Allah, other than whom there is no deity, the Sovereign, the Pure, the Perfection, the Bestower of Faith, the Overseer, the Exalted in Might, the Compeller, the Superior. Exalted is Allah above whatever they associate with Him.</p>
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ ﴿٢٤﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">هُوَ اللَّهُ الْخَالِقُ الْبَارِئُ الْمُصَوِّرُ لَهُ الْأَسْمَاءُ الْحُسْنَىٰ يُسَبِّحُ لَهُ مَا فِي السَّمَاوَاتِ وَالْأَرْضِ وَهُوَ الْعَزِيزُ الْحَكِيمُ ﴿٢٤﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Huwa Allahu al-Khaliq al-Bari' al-Musawwir, lahu al-asma' al-husna, yusabbihu lahu ma fi as-samawati wal-ard, wa huwa al-'Aziz al-Hakeem</p>
         <p class="text-base text-gray-700 text-center">He is Allah, the Creator, the Inventor, the Fashioner; to Him belong the best names. Whatever is in the heavens and earth is exalting Him. And He is the Exalted in Might, the Wise.</p>
       </div>
@@ -435,7 +435,7 @@ export const manzilVerses = [
     audioFile: 'Al-Jinn-1-4.mp3',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900">
       <div class="mb-6">
-        <p class="text-center mb-2">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ﴿١﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ﴿١﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul oohiya ilayya annahu istama'a nafarun min al-jinni faqaloo inna sami'na qur'anan 'ajaba</p>
         <p class="text-base text-gray-700 text-center">Say, [O Muhammad], "It has been revealed to me that a group of the jinn listened and said, 'Indeed, we have heard an amazing Qur'an.'</p>
       </div>
@@ -447,7 +447,7 @@ export const manzilVerses = [
       </div>
       
       <div class="mb-6">
-        <p class="text-center mb-2">وَأَنَّهُ تَعَالَىٰ جَدُّ رَبِّنَا مَا اتَّخَذَ صَاحِبَةً وَلَا وَلَدًا ﴿٣﴾ وَأَنَّهُ كَانَ يَقُولُ سَفِيهُنَا عَلَى اللَّهِ شَطَطًا ﴿٤﴾</p>
+        <p class="text-center mb-2" style="line-height: 2.2">وَأَنَّهُ تَعَالَىٰ جَدُّ رَبِّنَا مَا اتَّخَذَ صَاحِبَةً وَلَا وَلَدًا ﴿٣﴾ وَأَنَّهُ كَانَ يَقُولُ سَفِيهُنَا عَلَى اللَّهِ شَطَطًا ﴿٤﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Wa annahu ta'ala jaddu rabbina ma ittakhatha sahibatan wa la walada, wa annahu kana yaqulu safeehuna 'ala Allahi shatata</p>
         <p class="text-base text-gray-700 text-center">And [we believe] that exalted is the nobleness of our Lord; He has not taken a wife or a son. And that our foolish one has been saying about Allah an excessive transgression.</p>
       </div>
