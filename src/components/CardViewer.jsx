@@ -533,7 +533,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     if (categoryTitle === 'Diagnosis and Help' && currentCard === 8) {
       return (
         <div className="absolute inset-0 bg-white">
-          <div ref={bookScrollRef} className="h-full overflow-y-auto p-4">
+          <div ref={bookScrollRef} className="h-full overflow-y-auto p-4" style={{ overscrollBehavior: 'contain' }}>
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
                 <div className="mb-6">
@@ -761,7 +761,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
 
     // Regular card rendering for all other cards
     return (
-      <div ref={cardContentRef} className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full">
+      <div ref={cardContentRef} className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{ overscrollBehavior: 'contain' }}>
         <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-gray-800"
             dangerouslySetInnerHTML={{ __html: card.title }} />
         
@@ -776,7 +776,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
   const shouldShowCounting = categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'Manzil'
 
   return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">
+    <div className="min-h-screen bg-red-500 flex items-center justify-center p-4" style={{ touchAction: 'none' }}>
       
       {/* Test scroll to bottom button - next to title */}
       {/* {showScrollDown && categoryTitle !== 'Complete Ruqyah Verses' && (
@@ -869,7 +869,6 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           onTouchStart={handleTouchStart}
           onTouchMove={handleTouchMove}
           onTouchEnd={handleTouchEnd}
-          style={{ touchAction: 'pan-y' }}
         >
           {/* Current Card */}
           <div 
@@ -928,7 +927,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               <div style={{color: 'red', fontSize: '30px', zIndex: 1000, position: 'absolute', top: '50px'}}>
                 slideDirection: {slideDirection}
               </div>
-              <div className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{scrollTop: 0}}>
+              <div className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{scrollTop: 0, overscrollBehavior: 'contain'}}>
                 {cards[nextCardIndex - 1] && (
                   <>
                     <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-gray-800"
