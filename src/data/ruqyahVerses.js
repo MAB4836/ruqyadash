@@ -117,7 +117,7 @@ export const ruqyahVerses = [
   {
   id: 4,
   title: 'Al-Baqarah (<span style="color: red;">6</span> - <span style="color: red;">10</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٦﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Inna allatheena kafaroo sawaa'un 'alayhim a'anthartahum am lam tunthirhum la yu'minoon</p>
@@ -152,7 +152,7 @@ export const ruqyahVerses = [
   {
   id: 5,
   title: 'Al-Baqarah (<span style="color: red;">102</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>وَاتَّبَعُوا مَا تَتْلُو الشَّيَاطِينُ عَلَىٰ مُلْكِ سُلَيْمَانَ وَمَا كَفَرَ سُلَيْمَانُ وَلَٰكِنَّ الشَّيَاطِينَ كَفَرُوا يُعَلِّمُونَ النَّاسَ السِّحْرَ وَمَا أُنزِلَ عَلَى الْمَلَكَيْنِ بِبَابِلَ هَارُوتَ وَمَارُوتَ وَمَا يُعَلِّمَانِ مِنْ أَحَدٍ حَتَّىٰ يَقُولَا إِنَّمَا نَحْنُ فِتْنَةٌ فَلَا تَكْفُرْ فَيَتَعَلَّمُونَ مِنْهُمَا مَا يُفَرِّقُونَ بِهِ بَيْنَ الْمَرْءِ وَزَوْجِهِ وَمَا هُم بِضَارِّينَ بِهِ مِنْ أَحَدٍ إِلَّا بِإِذْنِ اللَّهِ وَيَتَعَلَّمُونَ مَا يَضُرُّهُمْ وَلَا يَنفَعُهُمْ وَلَقَدْ عَلِمُوا لَمَنِ اشْتَرَاهُ مَا لَهُ فِي الْآخِرَةِ مِنْ خَلَاقٍ وَلَبِئْسَ مَا شَرَوْا بِهِ أَنفُسَهُمْ لَوْ كَانُوا يَعْلَمُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١٠٢﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Wattaba'oo ma tatlu ash-shayateenu 'ala mulki Sulaymana wa ma kafara Sulaymanu wa lakinna ash-shayateena kafaroo yu'allimoona an-nasa as-sihra wa ma unzila 'ala al-malakayni bi-Babila Haroota wa Maroota, wa ma yu'allimani min ahadin hatta yaqoola innama nahnu fitnatun fala takfur, fa yata'allamoona minhuma ma yufarriqoona bihi baynal-mar'i wa zawjih, wa ma hum bi-darreena bihi min ahadin illa bi-iznillah, wa yata'allamoona ma yadurruhum wa la yanfa'uhum, wa laqad 'alimoo lamani ishtarahu ma lahu fil-akhirati min khalaq, wa la bi'sa ma sharaw bihi anfusahum law kanoo ya'lamoon</p>
@@ -163,7 +163,7 @@ export const ruqyahVerses = [
 {
   id: 6,
   title: 'Al-Baqarah (<span style="color: blue;">137</span> & <span style="color: red;">148</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>فَإِنْ آمَنُوا بِمِثْلِ مَا آمَنْتُمْ بِهِ فَقَدِ اهْتَدَوْا ۖ وَإِنْ تَوَلَّوْا فَإِنَّمَا هُمْ فِي شِقَاقٍ ۖ فَسَيَكْفِيكَهُمُ اللَّهُ ۚ وَهُوَ السَّمِيعُ الْعَلِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٣٧﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Fa-in amanoo bi-mithli ma amantum bihi faqadi ihtadaw, wa in tawallaw fa-innama hum fee shiqaq, fa-sayakfeekahumullah, wa huwa as-Samee' al-'Aleem</p>
@@ -275,7 +275,7 @@ export const ruqyahVerses = [
   {
   id: 14,
   title: 'Al-An\'am (<span style="color: green;">103</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>لَا تُدْرِكُهُ الْأَبْصَارُ وَهُوَ يُدْرِكُ الْأَبْصَارَ وَهُوَ اللَّطِيفُ الْخَبِيرُ</span><span class="text-sm text-gray-500 ml-4">﴿١٠٣﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">La tudrikuhul-absaru wa huwa yudrikul-absar, wa huwal-Lateeful-Khabeer</p>
@@ -286,7 +286,7 @@ export const ruqyahVerses = [
 {
   id: 15,
   title: 'Al-A\'raf (54 - 56)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>إِنَّ رَبَّكُمُ اللَّهُ الَّذِي خَلَقَ السَّمَاوَاتِ وَالْأَرْضَ فِي سِتَّةِ أَيَّامٍ ثُمَّ اسْتَوَىٰ عَلَى الْعَرْشِ يُغْشِي اللَّيْلَ النَّهَارَ يَطْلُبُهُ حَثِيثًا وَالشَّمْسَ وَالْقَمَرَ وَالنُّجُومَ مُسَخَّرَاتٍ بِأَمْرِهِ أَلَا لَهُ الْخَلْقُ وَالْأَمْرُ تَبَارَكَ اللَّهُ رَبُّ الْعَالَمِينَ</span><span class="text-sm text-gray-500 ml-4">﴿٥٤﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Inna rabbakumul-lahul-ladhi khalaqas-samawati wal-arda fi sittati ayyamin thummas-tawa 'alal-'arsh, yughshil-laylan-nahara yatlubuhu hatheethan wash-shamsa wal-qamara wan-nujoom musakh-kharatim bi-amrih, ala lahul-khalqu wal-amr, tabarakal-lahu rabbul-'alameen</p>
@@ -309,7 +309,7 @@ export const ruqyahVerses = [
   {
   id: 16,
   title: 'Al-A\'raf (<span style="color: green;">117</span> - <span style="color: green;">122</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنْ أَلْقِ عَصَاكَ فَإِذَا هِيَ تَلْقَفُ مَا يَأْفِكُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٧﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Wa awhayna ila Musa an alqi 'asaka fa-itha hiya talqafu ma ya'fikoon</p>
@@ -350,7 +350,7 @@ export const ruqyahVerses = [
 {
   id: 17,
   title: 'Al-Anfal (<span style="color: green;">17</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>فَلَمْ تَقْتُلُوهُمْ وَلَٰكِنَّ اللَّهَ قَتَلَهُمْ وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلَٰكِنَّ اللَّهَ رَمَىٰ وَلِيُبْلِيَ الْمُؤْمِنِينَ بَلَاءً حَسَنًا إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ</span><span class="text-sm text-gray-500 ml-4">﴿١٧﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Falam taqtuloohum wa lakinnal-laha qatalahum, wa ma ramayta ith ramayta wa lakinnal-laha rama, wa liyubliyal-mu'mineena bala'an hasanan, innallaha samee'un 'aleem</p>
@@ -361,7 +361,7 @@ export const ruqyahVerses = [
   {
   id: 18,
   title: 'Yunus (<span style="color: green;">79</span> - <span style="color: green;">82</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>وَقَالَ فِرْعَوْنُ ائْتُونِي بِكُلِّ سَاحِرٍ عَلِيمٍ</span><span class="text-sm text-gray-500 ml-4">﴿٧٩﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Wa qala fir'awnu itooni bikulli sahirin 'aleem</p>
@@ -390,7 +390,7 @@ export const ruqyahVerses = [
 {
   id: 19,
   title: 'Hud (<span style="color: green;">56</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>إِنِّي تَوَكَّلْتُ عَلَى اللَّهِ رَبِّي وَرَبِّكُم مَا مِن دَابَّةٍ إِلَّا هُوَ آخِذٌ بِنَاصِيَتِهَا إِنَّ رَبِّي عَلَىٰ صِرَاطٍ مُسْتَقِيمٍ</span><span class="text-sm text-gray-500 ml-4">﴿٥٦﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Innee tawakkaltu 'alallahi rabbee wa rabbikum, ma min dabbatin illa huwa akhithun binasiyatiha, inna rabbee 'ala siratin mustaqeem</p>
@@ -401,7 +401,7 @@ export const ruqyahVerses = [
 {
   id: 20,
   title: 'An-Nahl (<span style="color: green;">26</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>قَدْ مَكَرَ الَّذِينَ مِن قَبْلِهِمْ فَأَتَى اللَّهُ بُنْيَانَهُم مِّنَ الْقَوَاعِدِ فَخَرَّ عَلَيْهِمُ السَّقْفُ مِن فَوْقِهِمْ وَأَتَاهُمُ الْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٦﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Qad makaral-latheena min qablihim fa-ata Allahu bunyanahum min al-qawa'idi fakharra 'alayhimus-saqfu min fawqihim wa ataahumul-'adhabu min haithu la yash'uroon</p>
@@ -412,7 +412,7 @@ export const ruqyahVerses = [
 {
   id: 21,
   title: 'Taha (<span style="color: green;">65 - 69</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>قَالُوا يَا مُوسَىٰ إِمَّا أَن تُلْقِيَ وَإِمَّا أَن نَكُونَ أَوَّلَ مَنْ أَلْقَىٰ</span><span class="text-sm text-gray-500 ml-4">﴿٦٥﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Qaloo ya Musa imma an tulqiya wa-imma an nakoona awwala man alqa</p>
@@ -447,7 +447,7 @@ export const ruqyahVerses = [
   {
   id: 22,
   title: 'Al-Isra (110 - 111)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>قُلِ ادْعُوا اللَّهَ أَوِ ادْعُوا الرَّحْمَٰنَ أَيًّا مَا تَدْعُوا فَلَهُ الْأَسْمَاءُ الْحُسْنَىٰ وَلَا تَجْهَرْ بِصَلَاتِكَ وَلَا تُخَافِتْ بِهَا وَابْتَغِ بَيْنَ ذَٰلِكَ سَبِيلًا</span><span class="text-sm text-gray-500 ml-4">﴿١١٠﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Qulid'oo Allaha awid'oor-Rahman, ayyan ma tad'oo falahul-asma'ul-husna, wa la tajhar bi-salataka wa la tukhafit biha wabtaghi bayna thalika sabeela</p>
@@ -464,7 +464,7 @@ export const ruqyahVerses = [
 {
   id: 23,
   title: 'Al-Mu\'minoon (115 - 118)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>أَفَحَسِبْتُمْ أَنَّمَا خَلَقْنَاكُمْ عَبَثًا وَأَنَّكُمْ إِلَيْنَا لَا تُرْجَعُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٥﴾</span></p>
       <p class="text-base text-gray-600 italic mb-1">Afahasibtum annama khalaqnakum 'abathan wa annakum ilayna la turja'un</p>
@@ -493,7 +493,7 @@ export const ruqyahVerses = [
 {
   id: 24,
   title: 'Yasin (<span style="color: green;">9</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ ﴿٩﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Wa ja'alna min bayni aydeehim saddan wa min khalfihim saddan, fa-aghshaynahum fahum la yubsiroon</p>
@@ -504,7 +504,7 @@ export const ruqyahVerses = [
 {
   id: 25,
   title: 'As-Safaat (1 - 11)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">وَالصَّافَّاتِ صَفًّا ﴿١﴾ فَالزَّاجِرَاتِ زَجْرًا ﴿٢﴾ فَالتَّالِيَاتِ ذِكْرًا ﴿٣﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Was-saffati saffa, faz-zajirati zajra, fat-taliyati dhikra</p>
@@ -551,7 +551,7 @@ export const ruqyahVerses = [
 {
   id: 26,
   title: 'Al-Ahqaf (<span style="color: red;">29</span> - <span style="color: red;">32</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">وَإِذْ صَرَفْنَا إِلَيْكَ نَفَرًا مِّنَ الْجِنِّ يَسْتَمِعُونَ الْقُرْآنَ فَلَمَّا حَضَرُوهُ قَالُوا أَنصِتُوا فَلَمَّا قُضِيَ وَلَّوْا إِلَىٰ قَوْمِهِم مُّنذِرِينَ ﴿٢٩﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Wa ith sarafna ilayka nafaram minal-jinni yastami'unal-qur'ana, falamma hadaroohu qaloo ansitu, falamma qudiya wallaw ila qawmihim mundhireen</p>
@@ -581,7 +581,7 @@ export const ruqyahVerses = [
   id: 27,
   title: 'Ar-Rahman (33 - 40)',
   audioFile: 'Ar-Rahman-33-40.mp3',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
         <p class="text-center mb-2">يَا مَعْشَرَ الْجِنِّ وَالْإِنسِ إِنِ اسْتَطَعْتُمْ أَن تَنفُذُوا مِنْ أَقْطَارِ السَّمَاوَاتِ وَالْأَرْضِ فَانفُذُوا لَا تَنفُذُونَ إِلَّا بِسُلْطَانٍ ﴿٣٣﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Ya ma'shar al-jinni wal-ins, ini istata'tum an tanfudhu min aqtar as-samawati wal-ardi fanfudhu, la tanfudhuna illa bi-sultan</p>
@@ -634,7 +634,7 @@ export const ruqyahVerses = [
 {
   id: 28,
   title: 'Al-Hashr (21 - 24)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">لَوْ أَنزَلْنَا هَٰذَا الْقُرْآنَ عَلَىٰ جَبَلٍ لَّرَأَيْتَهُ خَاشِعًا مُّتَصَدِّعًا مِّنْ خَشْيَةِ اللَّهِ وَتِلْكَ الْأَمْثَالُ نَضْرِبُهَا لِلنَّاسِ لَعَلَّهُمْ يَتَفَكَّرُونَ ﴿٢١﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Law anzalna hathal-qur'ana 'ala jabalin lara'aytahu khashi'an mutasaddi'an min khashyatillahi wa tilkal-amthalu nadribuha lin-nasi la'allahum yatafakkaroon</p>
@@ -663,7 +663,7 @@ export const ruqyahVerses = [
 {
   id: 29,
   title: 'Al-Jinn (1 - 4, <span style="color: red;">5</span> - <span style="color: red;">9</span>)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ﴿١﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Qul oohiya ilayya annahu istama'a nafarun minal-jinni faqaloo inna sami'na qur'anan 'ajaba</p>
@@ -716,7 +716,13 @@ export const ruqyahVerses = [
   {
   id: 30,
   title: 'Al-Fil (The Elephant)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
+    <div class="mb-6">
+      <p class="text-center mb-2">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+      <p class="text-base text-gray-600 italic mb-1 text-center">Bismilla - hir-Rahma nirr Ra heem</p>
+      <p class="text-base text-gray-700 text-center">In the name of Allah, the Most Gracious, the Most Merciful</p>
+    </div>
+    
     <div class="mb-6">
       <p class="text-center mb-2">أَلَمْ تَرَ كَيْفَ فَعَلَ رَبُّكَ بِأَصْحَابِ الْفِيلِ ﴿١﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Alam tara kayfa fa'ala rabbuka bi-asḥabil-fil</p>
@@ -751,7 +757,13 @@ export const ruqyahVerses = [
 {
   id: 31,
   title: 'Al-Kafiroon (The Disbelievers)',
-  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="font-family: 'KSARegular_B';">
+  content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
+    <div class="mb-6">
+      <p class="text-center mb-2">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+      <p class="text-base text-gray-600 italic mb-1 text-center">Bismilla - hir-Rahma nirr Ra heem</p>
+      <p class="text-base text-gray-700 text-center">In the name of Allah, the Most Gracious, the Most Merciful</p>
+    </div>
+    
     <div class="mb-6">
       <p class="text-center mb-2">قُلْ يَا أَيُّهَا الْكَافِرُونَ ﴿١﴾</p>
       <p class="text-base text-gray-600 italic mb-1 text-center">Qul yā ayyuhal-kāfiroon</p>
@@ -794,6 +806,12 @@ export const ruqyahVerses = [
     title: 'Al-Ikhlas (The Sincerity)',
     content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-5 sm:space-y-6 text-gray-900" style="line-height: 2.2">
       <div class="mb-6">
+        <p class="text-center mb-2">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Bismilla - hir-Rahma nirr Ra heem</p>
+        <p class="text-base text-gray-700 text-center">In the name of Allah, the Most Gracious, the Most Merciful</p>
+      </div>
+      
+      <div class="mb-6">
         <p class="text-center mb-2">قُلْ هُوَ اللَّهُ أَحَدٌ ﴿١﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul huwa Allahu ahad</p>
         <p class="text-base text-gray-700 text-center">Say: He is Allah, the One</p>
@@ -819,6 +837,12 @@ export const ruqyahVerses = [
     id: 33,
     title: 'Al-Falaq (The Daybreak)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
+      <div class="mb-6">
+        <p class="text-center mb-2">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Bismilla - hir-Rahma nirr Ra heem</p>
+        <p class="text-base text-gray-700 text-center">In the name of Allah, the Most Gracious, the Most Merciful</p>
+      </div>
+      
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ ﴿١﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul a'udhu bi-rabbil-falaq</p>
@@ -850,6 +874,12 @@ export const ruqyahVerses = [
     id: 34,
     title: 'An-Nas (Mankind)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-4 sm:space-y-5 text-gray-900" style="line-height: 2.0">
+      <div class="mb-6">
+        <p class="text-center mb-2">بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ</p>
+        <p class="text-base text-gray-600 italic mb-1 text-center">Bismilla - hir-Rahma nirr Ra heem</p>
+        <p class="text-base text-gray-700 text-center">In the name of Allah, the Most Gracious, the Most Merciful</p>
+      </div>
+      
       <div class="mb-6">
         <p class="text-center mb-2">قُلْ أَعُوذُ بِرَبِّ النَّاسِ ﴿١﴾</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Qul a'udhu bi-rabbin-nas</p>
