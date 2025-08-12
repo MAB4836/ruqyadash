@@ -73,6 +73,25 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
   }, [])
 
+  // Keep screen awake for text reading sessions
+  useEffect(() => {
+    const shouldKeepAwake = categoryTitle === 'Complete Ruqyah Verses' || 
+                           categoryTitle === 'Manzil' ||
+                           categoryTitle === 'Short Ruqyah'
+    
+    if (shouldKeepAwake) {
+      keepScreenOn()
+      console.log('Screen wake lock activated for text reading:', categoryTitle)
+    }
+
+    return () => {
+      if (shouldKeepAwake) {
+        allowScreenOff()
+        console.log('Screen wake lock released for text reading:', categoryTitle)
+      }
+    }
+  }, [categoryTitle])
+
   // Show scroll-down button when scroll-to-top is pressed
   const handleScrollToTop = () => {
     setShowScrollDown(true)
@@ -148,6 +167,17 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     }
     // Turn off auto-play if it was enabled
     setAutoPlay(false)
+    
+    // Release screen wake lock for text reading sessions
+    const shouldKeepAwake = categoryTitle === 'Complete Ruqyah Verses' || 
+                           categoryTitle === 'Manzil' ||
+                           categoryTitle === 'Short Ruqyah'
+    
+    if (shouldKeepAwake) {
+      allowScreenOff()
+      console.log('Screen wake lock released on back navigation:', categoryTitle)
+    }
+    
     // Call the original onBack function
     onBack()
   }
