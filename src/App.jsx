@@ -31,6 +31,7 @@ import { spiritualRemedies } from './data/spiritualRemedies'
 import { manzilVerses } from './data/manzilVerses'
 import { selfDiagnosis } from './data/selfDiagnosis'
 import { spiritualAfflictionsGuide } from './data/spiritualAfflictionsGuide'
+import { raqiGuide } from './data/raqiGuide'
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('menu')
@@ -274,9 +275,7 @@ function App() {
     },
     raqi: {
       title: 'Raqi - Visiting Ruqyah Practitioners',
-      cards: [
-        { id: 1, title: 'Coming Soon', content: '<div class="text-lg text-center text-gray-900">Raqi guidance coming soon</div>' }
-      ]
+      cards: raqiGuide
     },
     spiritualAfflictionsGuide: {
       title: 'Spiritual Afflictions Guide',
