@@ -731,10 +731,6 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     
                     <div className="border-l-4 border-red-500 pl-6 bg-red-50 py-4 pr-4 rounded-r-lg">
                       <h2 className="text-lg font-bold text-red-900 mb-4">3. When to Seek Professional Help</h2>
-                      <div className="bg-red-100 border-l-4 border-red-500 p-4 mb-4">
-                        <p className="text-red-800 font-semibold mb-2">Warning:</p>
-                        <p className="text-red-700">From experience unfortunately the Raqis could actually be black magicians themselves. Please check the RAQI menu item [Link] for ways to spot a false raqi who if they are skilled will solve one problem and cause many more so that you keep on going back. Or they will try to get you to commit shirk or major sins in return for "curing" you e.g. sacrifice a black chicken whilst saying some incoherent words. IF A "RAQI" AGREES TO SEE A WOMAN NOT RELATED TO HIM ON A ONE TO ONE SESSION BE AWARE HE IS 100% FALSE THOUGH HE MIGHT LOOK PIOUS. And of course asking for a date of birth or mothers name - most of them ask this and it is a sure fire indicator this person is a magician and not a raqi [LINK]</p>
-                      </div>
                       <ul className="space-y-3 text-red-700">
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
