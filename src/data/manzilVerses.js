@@ -18,14 +18,14 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
         <h4 class="text-lg font-semibold text-green-900 mb-3 text-center">Salawat upon the Prophet ﷺ</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma ṣalli ʿalā Muḥammad wa ʿalā āli Muḥammad</p>
         <p class="text-base text-gray-700 mb-4 text-center">Ya Allah, send Your blessings upon Muhammad and upon the family of Muhammad</p>
       </div>
       
       <div class="mb-6 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
         <h4 class="text-lg font-semibold text-purple-900 mb-3 text-center">Intention & Acknowledgement of Allah as the Only Healer</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ اشْفِ أَنْتَ الشَّافِي، لاَ شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لاَ يُغَادِرُ سَقَمًا</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ اشْفِ أَنْتَ الشَّافِي، لاَ شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لاَ يُغَادِرُ سَقَمًا</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma ishfi anta al-shāfī, lā shifā'a illā shifā'uk, shifā'an lā yughadiru saqaman</p>
         <p class="text-base text-gray-700 mb-2 text-center">Ya Allah, heal — You are the Healer. There is no healing except Your healing; a healing that leaves no illness</p>
         <p class="text-base text-gray-600 italic text-center">(Bukhari 5743, Muslim 2191)</p>
@@ -33,7 +33,7 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
         <h4 class="text-lg font-semibold text-yellow-900 mb-3 text-center">Seeking Refuge</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Aʿūdhu bikalimāti Allāhi al-tāmmāti min sharri mā khalaq</p>
         <p class="text-base text-gray-700 mb-2 text-center">I seek refuge in the Perfect Words of Allah from the evil of what He has created</p>
         <p class="text-base text-gray-600 italic text-center">(Muslim 2708)</p>
@@ -41,7 +41,7 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
         <h4 class="text-lg font-semibold text-indigo-900 mb-3 text-center">Focus Supplication</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ اجْعَلْ هَذَا القُرْآنَ شِفَاءً وَنُورًا، وَاكْشِفْ بِهِ كُلَّ أَذًى وَضُرٍّ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ اجْعَلْ هَذَا القُرْآنَ شِفَاءً وَنُورًا، وَاكْشِفْ بِهِ كُلَّ أَذًى وَضُرٍّ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma ajʿal hādhā al-Qur'āna shifā'an wa nūran, wa-kshif bihi kulla adhan wa ḍurrin</p>
         <p class="text-base text-gray-700 text-center">Ya Allah, make this Qur'an a healing and a light, and by it remove all harm and affliction</p>
       </div>
@@ -648,7 +648,7 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-green-50 rounded-lg border-l-4 border-green-400">
         <h4 class="text-lg font-semibold text-green-900 mb-3 text-center">Affirmation of Tawheed & Protection</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">حَسْبِيَ اللهُ لَا إِلٰهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">حَسْبِيَ اللهُ لَا إِلٰهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ، وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Ḥasbiyallāhu lā ilāha illā huwa, ʿalayhi tawakkaltu, wa-huwa rabbul-ʿarshi al-ʿaẓīm</p>
         <p class="text-base text-gray-700 mb-2 text-center">Sufficient for me is Allah; there is no deity except Him. I rely upon Him, and He is the Lord of the Mighty Throne</p>
         <p class="text-base text-gray-600 italic text-center">(Qur'an 9:129)</p>
@@ -656,7 +656,7 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-purple-50 rounded-lg border-l-4 border-purple-400">
         <h4 class="text-lg font-semibold text-purple-900 mb-3 text-center">Du'a for Steadfastness</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">يَا مُقَلِّبَ الْقُلُوبِ، ثَبِّتْ قَلْبِي عَلَى دِينِكَ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">يَا مُقَلِّبَ الْقُلُوبِ، ثَبِّتْ قَلْبِي عَلَى دِينِكَ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Yā muqalliba al-qulūb, thabbit qalbī ʿalā dīnik</p>
         <p class="text-base text-gray-700 mb-2 text-center">O Turner of hearts, make my heart firm upon Your religion</p>
         <p class="text-base text-gray-600 italic text-center">(Tirmidhi 2140, authentic)</p>
@@ -664,21 +664,21 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-yellow-50 rounded-lg border-l-4 border-yellow-400">
         <h4 class="text-lg font-semibold text-yellow-900 mb-3 text-center">General Protection Du'a</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ احْفَظْنِي بِحِفْظِكَ، وَثَبِّتْنِي عَلَى دِينِكَ، وَاكْفِنِي شَرَّ كُلِّ ذِي شَرٍّ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ احْفَظْنِي بِحِفْظِكَ، وَثَبِّتْنِي عَلَى دِينِكَ، وَاكْفِنِي شَرَّ كُلِّ ذِي شَرٍّ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma iḥfaẓnī bi-ḥifẓik, wa-thabbitnī ʿalā dīnik, wa-kfinī sharra kulli dhī sharrin</p>
         <p class="text-base text-gray-700 text-center">Ya Allah, protect me with Your protection, keep me firm upon Your religion, and suffice me against every possessor of evil</p>
       </div>
       
       <div class="mb-6 p-4 bg-indigo-50 rounded-lg border-l-4 border-indigo-400">
         <h4 class="text-lg font-semibold text-indigo-900 mb-3 text-center">Du'a for Complete Healing & Well-being</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ تَمِّمْ لَنَا الشِّفَاءَ وَالْعَافِيَةَ، وَارْزُقْنَا صِدْقَ التَّوَكُّلِ عَلَيْكَ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ تَمِّمْ لَنَا الشِّفَاءَ وَالْعَافِيَةَ، وَارْزُقْنَا صِدْقَ التَّوَكُّلِ عَلَيْكَ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma tammim lanā al-shifā'a wa-al-ʿāfiyah, wa-rzuqnā ṣidqa al-tawakkuli ʿalayk</p>
         <p class="text-base text-gray-700 text-center">Ya Allah, complete for us healing and well-being, and grant us true reliance upon You</p>
       </div>
       
       <div class="mb-6 p-4 bg-rose-50 rounded-lg border-l-4 border-rose-400">
         <h4 class="text-lg font-semibold text-rose-900 mb-3 text-center">Du'a for Healing</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma rabba al-nāsi, adhhib al-ba's, ishfi anta al-shāfī, lā shifā'a illā shifā'uk, shifā'an lā yughadiru saqaman</p>
         <p class="text-base text-gray-700 mb-2 text-center">Ya Allah, Lord of mankind, remove the harm and heal — You are the Healer; there is no healing except Your healing; a healing that leaves no illness</p>
         <p class="text-base text-gray-600 italic text-center">(Bukhari 5743, Muslim 2191)</p>
@@ -686,7 +686,7 @@ export const manzilVerses = [
       
       <div class="mb-6 p-4 bg-teal-50 rounded-lg border-l-4 border-teal-400">
         <h4 class="text-lg font-semibold text-teal-900 mb-3 text-center">Salawat to Seal the Session</h4>
-        <p class="text-xl mb-2 text-green-800 font-semibold text-center">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
+        <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma ṣalli ʿalā Muḥammad wa ʿalā āli Muḥammad</p>
         <p class="text-base text-gray-700 text-center">Ya Allah, send Your blessings upon Muhammad and upon the family of Muhammad</p>
       </div>
