@@ -731,6 +731,10 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     
                     <div className="border-l-4 border-red-500 pl-6 bg-red-50 py-4 pr-4 rounded-r-lg">
                       <h2 className="text-lg font-bold text-red-900 mb-4">3. When to Seek Professional Help</h2>
+                      <div className="bg-red-100 border-l-4 border-red-500 p-4 mb-4">
+                        <p className="text-red-800 font-semibold mb-2">Warning:</p>
+                        <p className="text-red-700">From experience unfortunately the Raqis could actually be black magicians themselves. Please check the RAQI menu item [Link] for ways to spot a false raqi who if they are skilled will solve one problem and cause many more so that you keep on going back. Or they will try to get you to commit shirk or major sins in return for "curing" you e.g. sacrifice a black chicken whilst saying some incoherent words. IF A "RAQI" AGREES TO SEE A WOMAN NOT RELATED TO HIM ON A ONE TO ONE SESSION BE AWARE HE IS 100% FALSE THOUGH HE MIGHT LOOK PIOUS. And of course asking for a date of birth or mothers name - most of them ask this and it is a sure fire indicator this person is a magician and not a raqi [LINK]</p>
+                      </div>
                       <ul className="space-y-3 text-red-700">
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
@@ -912,26 +916,29 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               {currentCard} / {cards.length}
             </div>
             
-            {/* Arrow Overlays */}
+            {/* Left Click Zone - Always functional */}
             {currentCard > 1 && (
               <div 
-                className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer z-10"
                 onClick={prevCard}
               >
-                <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Visible Arrow - Desktop only */}
+                <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
                 </div>
               </div>
             )}
+            {/* Right Click Zone - Always functional */}
             {currentCard < cards.length && (
               <div 
-                className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer z-10"
                 onClick={nextCard}
               >
-                <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
-                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                {/* Visible Arrow - Desktop only */}
+                <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
                 </div>
@@ -957,26 +964,29 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 {nextCardIndex} / {cards.length}
               </div>
               
-              {/* Arrow Overlays for next card */}
+              {/* Left Click Zone for next card - Always functional */}
               {nextCardIndex > 1 && (
                 <div 
-                  className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                  className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer z-10"
                   onClick={prevCard}
                 >
-                  <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {/* Visible Arrow - Desktop only */}
+                  <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
                   </div>
                 </div>
               )}
+              {/* Right Click Zone for next card - Always functional */}
               {nextCardIndex < cards.length && (
                 <div 
-                  className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                  className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer z-10"
                   onClick={nextCard}
                 >
-                  <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
-                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {/* Visible Arrow - Desktop only */}
+                  <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                    <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </div>
