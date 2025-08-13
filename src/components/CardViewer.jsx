@@ -731,6 +731,10 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     
                     <div className="border-l-4 border-red-500 pl-6 bg-red-50 py-4 pr-4 rounded-r-lg">
                       <h2 className="text-lg font-bold text-red-900 mb-4">3. When to Seek Professional Help</h2>
+                      <div className="bg-red-100 border-l-4 border-red-500 p-4 mb-4">
+                        <p className="text-red-800 font-semibold mb-2">Warning:</p>
+                        <p className="text-red-700">From experience unfortunately the Raqis could actually be black magicians themselves. Please check the RAQI menu item for ways to spot a false raqi who if they are skilled will solve one problem and cause many more so that you keep on going back. Or they will try to get you to commit shirk and/or major sins in return for "curing" you e.g. sacrifice a black chicken whilst saying some incoherent words. IF A "RAQI" AGREES TO SEE A WOMAN NOT RELATED TO HIM ON A ONE TO ONE SESSION OR "NEEDS" TO TOUCH THE WOMEN AT ANY POINT EVEN WITH OTHERS PRESENT BE AWARE HE IS 100% FALSE THOUGH HE MIGHT LOOK OLD AND PIOUS (I came across one who was an Imam at a local mosque and what he did was sheer kufr although he did not see it that way even though he openly claimed he had controlled a jinn like is father and grandfather before him by secluding himself for forty days - now google how a magician conjures up a jinn by this method). And of course asking for a date of birth or mothers name - if anyone ask this it is a sure fire indicator this person is a magician and not a raqi. See further in the RAQI menu item.</p>
+                      </div>
                       <ul className="space-y-3 text-red-700">
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
