@@ -912,17 +912,32 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               {currentCard} / {cards.length}
             </div>
             
-            {/* Swipe indicators */}
+            {/* Arrow Overlays */}
             {currentCard > 1 && (
-              <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
-                ←
+              <div 
+                className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                onClick={prevCard}
+              >
+                <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                  </svg>
+                </div>
               </div>
             )}
             {currentCard < cards.length && (
-              <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
-                →
+              <div 
+                className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                onClick={nextCard}
+              >
+                <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </div>
               </div>
             )}
+
             
             {renderCardContent(currentCardData)}
           </div>
@@ -942,17 +957,32 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 {nextCardIndex} / {cards.length}
               </div>
               
-              {/* Swipe indicators for next card */}
+              {/* Arrow Overlays for next card */}
               {nextCardIndex > 1 && (
-                <div className="absolute left-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
-                  ←
+                <div 
+                  className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                  onClick={prevCard}
+                >
+                  <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </div>
                 </div>
               )}
               {nextCardIndex < cards.length && (
-                <div className="absolute right-2 top-1/2 transform -translate-y-1/2 text-gray-400 text-xs opacity-50 pointer-events-none">
-                  →
+                <div 
+                  className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer opacity-30 hover:opacity-60 transition-opacity duration-200 z-10"
+                  onClick={nextCard}
+                >
+                  <div className="bg-black/20 rounded-full w-10 h-10 sm:w-12 sm:h-12 flex items-center justify-center backdrop-blur-sm">
+                    <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </div>
                 </div>
               )}
+
               
               <div style={{color: 'red', fontSize: '30px', zIndex: 1000, position: 'absolute', top: '50px'}}>
                 slideDirection: {slideDirection}
