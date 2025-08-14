@@ -27,6 +27,16 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
   const [isAnimating, setIsAnimating] = useState(false)
   const [slideDirection, setSlideDirection] = useState(null) // 'left' or 'right'
   const [nextCardIndex, setNextCardIndex] = useState(currentCard)
+  
+  // Note popup state
+  const [showNotePopup, setShowNotePopup] = useState(false)
+  
+  // Check if current card should show the Note pill
+  const shouldShowNotePill = (card) => {
+    const isSpecialCategory = categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'Manzil'
+    const isSpecialCard = card && (card.id === 1 || card.id === 35)
+    return isSpecialCategory && isSpecialCard
+  }
 
   // Expose stopAudio function to parent component via ref
   useImperativeHandle(ref, () => ({
@@ -796,8 +806,19 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     // Regular card rendering for all other cards
     return (
       <div ref={cardContentRef} className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{ overscrollBehavior: 'contain' }}>
-        <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-gray-800"
+        <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
             dangerouslySetInnerHTML={{ __html: card.title }} />
+        
+        {shouldShowNotePill(card) && (
+          <div className="flex justify-center mb-4 sm:mb-6">
+            <button 
+              onClick={() => setShowNotePopup(true)}
+              className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full hover:bg-blue-200 transition-colors opacity-70"
+            >
+              Note
+            </button>
+          </div>
+        )}
         
         <div dangerouslySetInnerHTML={{ __html: card.content }} />
       </div>
@@ -1000,8 +1021,20 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               <div className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{scrollTop: 0, overscrollBehavior: 'contain'}}>
                 {cards[nextCardIndex - 1] && (
                   <>
-                    <h2 className="text-base sm:text-lg md:text-xl font-bold mb-4 sm:mb-6 text-gray-800"
+                    <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
                         dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].title }} />
+                    
+                    {shouldShowNotePill(cards[nextCardIndex - 1]) && (
+                      <div className="flex justify-center mb-4 sm:mb-6">
+                        <button 
+                          onClick={() => setShowNotePopup(true)}
+                          className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full hover:bg-blue-200 transition-colors opacity-70"
+                        >
+                          Note
+                        </button>
+                      </div>
+                    )}
+                    
                     <div dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].content }} />
                   </>
                 )}
@@ -1026,6 +1059,28 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           onScrollToTop={handleScrollToTop}
           isFullPageVisible={isFullPageVisible}
         />
+        
+        {/* Note Popup Modal */}
+        {showNotePopup && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={() => setShowNotePopup(false)}>
+            <div className="bg-white rounded-lg p-6 m-4 max-w-sm w-full shadow-lg" onClick={(e) => e.stopPropagation()}>
+              <div className="flex justify-between items-start mb-4">
+                <h3 className="text-lg font-semibold text-gray-900">Note</h3>
+                <button 
+                  onClick={() => setShowNotePopup(false)}
+                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                >
+                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                  </svg>
+                </button>
+              </div>
+              <p className="text-gray-700 leading-relaxed">
+                The Qur'an must be recited in Arabic but the following du'as can be recited in Arabic or in your own language.
+              </p>
+            </div>
+          </div>
+        )}
       </div>
     </div>
   )
