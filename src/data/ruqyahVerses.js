@@ -137,7 +137,7 @@ export const ruqyahVerses = [
   },
   {
   id: 4,
-  title: 'Al-Baqarah (<span style="color: red;">6</span> - <span style="color: red;">10</span>)',
+  title: 'Al-Baqarah (<span>6</span> - <span>10</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>إِنَّ الَّذِينَ كَفَرُوا سَوَاءٌ عَلَيْهِمْ أَأَنذَرْتَهُمْ أَمْ لَمْ تُنذِرْهُمْ لَا يُؤْمِنُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٦﴾</span></p>
@@ -183,7 +183,7 @@ export const ruqyahVerses = [
 },
 {
   id: 6,
-  title: 'Al-Baqarah (<span style="color: blue;">137</span> & <span style="color: red;">148</span>)',
+  title: 'Al-Baqarah (<span>137</span> & <span>148</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>فَإِنْ آمَنُوا بِمِثْلِ مَا آمَنْتُمْ بِهِ فَقَدِ اهْتَدَوْا ۖ وَإِنْ تَوَلَّوْا فَإِنَّمَا هُمْ فِي شِقَاقٍ ۖ فَسَيَكْفِيكَهُمُ اللَّهُ ۚ وَهُوَ السَّمِيعُ الْعَلِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٣٧﴾</span></p>
@@ -261,7 +261,7 @@ export const ruqyahVerses = [
   },
   {
     id: 12,
-    title: 'Ali Imran (18 - <span style="color: red;">19</span>)',
+    title: 'Ali Imran (18 - <span>19</span>)',
     content: `<div class="arabic-text text-lg sm:text-xl md:text-2xl space-y-6 sm:space-y-7 md:space-y-8 text-gray-900" style="line-height: 2.5">
       <div class="mb-6">
         <p class="flex justify-between mb-2"><span>شَهِدَ اللَّهُ أَنَّهُ لَا إِلَٰهَ إِلَّا هُوَ وَالْمَلَائِكَةُ وَأُولُو الْعِلْمِ قَائِمًا بِالْقِسْطِ لَا إِلَٰهَ إِلَّا هُوَ الْعَزِيزُ الْحَكِيمُ</span><span class="text-sm text-gray-500 ml-4">﴿١٨﴾</span></p>
@@ -295,7 +295,7 @@ export const ruqyahVerses = [
   },
   {
   id: 14,
-  title: 'Al-An\'am (<span style="color: green;">103</span>)',
+  title: 'Al-An\'am (<span>103</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>لَا تُدْرِكُهُ الْأَبْصَارُ وَهُوَ يُدْرِكُ الْأَبْصَارَ وَهُوَ اللَّطِيفُ الْخَبِيرُ</span><span class="text-sm text-gray-500 ml-4">﴿١٠٣﴾</span></p>
@@ -329,7 +329,7 @@ export const ruqyahVerses = [
 },
   {
   id: 16,
-  title: 'Al-A\'raf (<span style="color: green;">117</span> - <span style="color: green;">122</span>)',
+  title: 'Al-A\'raf (<span>117</span> - <span>122</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" >
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>وَأَوْحَيْنَا إِلَىٰ مُوسَىٰ أَنْ أَلْقِ عَصَاكَ فَإِذَا هِيَ تَلْقَفُ مَا يَأْفِكُونَ</span><span class="text-sm text-gray-500 ml-4">﴿١١٧﴾</span></p>
@@ -370,7 +370,7 @@ export const ruqyahVerses = [
 },
 {
   id: 17,
-  title: 'Al-Anfal (<span style="color: green;">17</span>)',
+  title: 'Al-Anfal (<span>17</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>فَلَمْ تَقْتُلُوهُمْ وَلَٰكِنَّ اللَّهَ قَتَلَهُمْ وَمَا رَمَيْتَ إِذْ رَمَيْتَ وَلَٰكِنَّ اللَّهَ رَمَىٰ وَلِيُبْلِيَ الْمُؤْمِنِينَ بَلَاءً حَسَنًا إِنَّ اللَّهَ سَمِيعٌ عَلِيمٌ</span><span class="text-sm text-gray-500 ml-4">﴿١٧﴾</span></p>
@@ -381,7 +381,7 @@ export const ruqyahVerses = [
 },
   {
   id: 18,
-  title: 'Yunus (<span style="color: green;">79</span> - <span style="color: green;">82</span>)',
+  title: 'Yunus (<span>79</span> - <span>82</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>وَقَالَ فِرْعَوْنُ ائْتُونِي بِكُلِّ سَاحِرٍ عَلِيمٍ</span><span class="text-sm text-gray-500 ml-4">﴿٧٩﴾</span></p>
@@ -410,7 +410,7 @@ export const ruqyahVerses = [
 },
 {
   id: 19,
-  title: 'Hud (<span style="color: green;">56</span>)',
+  title: 'Hud (<span>56</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>إِنِّي تَوَكَّلْتُ عَلَى اللَّهِ رَبِّي وَرَبِّكُم مَا مِن دَابَّةٍ إِلَّا هُوَ آخِذٌ بِنَاصِيَتِهَا إِنَّ رَبِّي عَلَىٰ صِرَاطٍ مُسْتَقِيمٍ</span><span class="text-sm text-gray-500 ml-4">﴿٥٦﴾</span></p>
@@ -421,7 +421,7 @@ export const ruqyahVerses = [
 },
 {
   id: 20,
-  title: 'An-Nahl (<span style="color: green;">26</span>)',
+  title: 'An-Nahl (<span>26</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>قَدْ مَكَرَ الَّذِينَ مِن قَبْلِهِمْ فَأَتَى اللَّهُ بُنْيَانَهُم مِّنَ الْقَوَاعِدِ فَخَرَّ عَلَيْهِمُ السَّقْفُ مِن فَوْقِهِمْ وَأَتَاهُمُ الْعَذَابُ مِنْ حَيْثُ لَا يَشْعُرُونَ</span><span class="text-sm text-gray-500 ml-4">﴿٢٦﴾</span></p>
@@ -432,7 +432,7 @@ export const ruqyahVerses = [
 },
 {
   id: 21,
-  title: 'Taha (<span style="color: green;">65 - 69</span>)',
+  title: 'Taha (<span>65 - 69</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="flex justify-between mb-2"><span>قَالُوا يَا مُوسَىٰ إِمَّا أَن تُلْقِيَ وَإِمَّا أَن نَكُونَ أَوَّلَ مَنْ أَلْقَىٰ</span><span class="text-sm text-gray-500 ml-4">﴿٦٥﴾</span></p>
@@ -513,7 +513,7 @@ export const ruqyahVerses = [
 },
 {
   id: 24,
-  title: 'Yasin (<span style="color: green;">9</span>)',
+  title: 'Yasin (<span>9</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">وَجَعَلْنَا مِن بَيْنِ أَيْدِيهِمْ سَدًّا وَمِنْ خَلْفِهِمْ سَدًّا فَأَغْشَيْنَاهُمْ فَهُمْ لَا يُبْصِرُونَ ﴿٩﴾</p>
@@ -571,7 +571,7 @@ export const ruqyahVerses = [
 },
 {
   id: 26,
-  title: 'Al-Ahqaf (<span style="color: red;">29</span> - <span style="color: red;">32</span>)',
+  title: 'Al-Ahqaf (<span>29</span> - <span>32</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">وَإِذْ صَرَفْنَا إِلَيْكَ نَفَرًا مِّنَ الْجِنِّ يَسْتَمِعُونَ الْقُرْآنَ فَلَمَّا حَضَرُوهُ قَالُوا أَنصِتُوا فَلَمَّا قُضِيَ وَلَّوْا إِلَىٰ قَوْمِهِم مُّنذِرِينَ ﴿٢٩﴾</p>
@@ -683,7 +683,7 @@ export const ruqyahVerses = [
 },
 {
   id: 29,
-  title: 'Al-Jinn (1 - 4, <span style="color: red;">5</span> - <span style="color: red;">9</span>)',
+  title: 'Al-Jinn (1 - 4, <span>5</span> - <span>9</span>)',
   content: `<div class="arabic-text text-xl sm:text-2xl md:text-3xl space-y-6 text-gray-900" style="line-height: 2.2">
     <div class="mb-6">
       <p class="text-center mb-2">قُلْ أُوحِيَ إِلَيَّ أَنَّهُ اسْتَمَعَ نَفَرٌ مِّنَ الْجِنِّ فَقَالُوا إِنَّا سَمِعْنَا قُرْآنًا عَجَبًا ﴿١﴾</p>
