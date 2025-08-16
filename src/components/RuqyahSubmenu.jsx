@@ -74,7 +74,7 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
             </div>
             
             {/* Start Here Guide Pill - now has full width */}
-            <div className="flex justify-center mb-6">
+            <div className="flex justify-center mb-4">
               <button
                 onClick={onOpenGuide}
                 className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
