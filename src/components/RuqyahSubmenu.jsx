@@ -32,12 +32,8 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
             Ruqyah Options
           </h1>
           <div className="text-center">
-            <p className="text-white text-sm opacity-75 mb-4">
-              بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
-            </p>
-            
-            {/* Start Here Guide Pill with toggles on sides */}
-            <div className="flex justify-between items-center mb-6">
+            {/* Bismillah with toggles on sides */}
+            <div className="flex justify-between items-center mb-4">
               {/* Left toggles */}
               <div className="flex items-center gap-2">
                 {/* Translation toggle */}
@@ -50,14 +46,10 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
                 </button>
               </div>
               
-              {/* Center - Start Here Pill */}
-              <button
-                onClick={onOpenGuide}
-                className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
-                style={{ marginLeft: '20px' }}
-              >
-                Start Here - Understanding These Ruqyah Collections
-              </button>
+              {/* Center - Bismillah */}
+              <p className="text-white text-sm opacity-75">
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+              </p>
               
               {/* Right toggles */}
               <div className="flex items-center gap-2">
@@ -79,6 +71,16 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
                   <span className="text-xs">{isDarkMode ? '☀' : '🌙'}</span>
                 </button>
               </div>
+            </div>
+            
+            {/* Start Here Guide Pill - now has full width */}
+            <div className="flex justify-center mb-6">
+              <button
+                onClick={onOpenGuide}
+                className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
+              >
+                Start Here - Understanding These Ruqyah Collections
+              </button>
             </div>
           </div>
         </div>
