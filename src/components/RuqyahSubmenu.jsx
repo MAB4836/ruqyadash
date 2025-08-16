@@ -9,8 +9,8 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
     },
     {
       id: 'shortRuqyah',
-      title: 'Short Ruqyah',
-      description: 'Essential verses for quick spiritual protection'
+      title: 'Prophetic Ruqyah',
+      description: 'Ruqyah verses proven from Sunnah'
     },
     {
       id: 'manzil',
@@ -19,8 +19,8 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
     },
     {
       id: 'completeRuqyah',
-      title: 'Complete Ruqyah Verses',
-      description: 'All 34 ruqyah verses for comprehensive protection'
+      title: 'Additional Ruqyah Verses',
+      description: 'Includes additional verses commonly recited by scholars and practitioners'
     }
   ]
 
