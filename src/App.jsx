@@ -7,6 +7,7 @@ import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
 import ImmediateHelpSubmenu from './components/ImmediateHelpSubmenu'
 import CardViewer from './components/CardViewer'
+import PageViewer from './components/PageViewer'
 import SpiritualAfflictionsGuide from './components/SpiritualAfflictionsGuide'
 import SettingsPopup from './components/SettingsPopup'
 import { ruqyahVerses } from './data/ruqyahVerses'
@@ -49,6 +50,9 @@ function App() {
   })
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem('ruqyahDarkMode') === 'true'
+  })
+  const [isPageView, setIsPageView] = useState(() => {
+    return localStorage.getItem('ruqyahPageView') === 'true'
   })
   
   // Ref to access CardViewer audio control functions
@@ -311,6 +315,12 @@ function App() {
     localStorage.setItem('ruqyahDarkMode', newDarkMode.toString())
   }
 
+  const handleTogglePageView = () => {
+    const newPageView = !isPageView
+    setIsPageView(newPageView)
+    localStorage.setItem('ruqyahPageView', newPageView.toString())
+  }
+
   const handleSelectEvilEyeOption = (optionId) => {
     setSelectedEvilEyeOption(optionId)
     setSelectedCategory(optionId)
@@ -461,6 +471,8 @@ function App() {
         showReturnButton={navigationHistory.length > 0}
         isDarkMode={isDarkMode}
         onToggleDarkMode={handleToggleDarkMode}
+        isPageView={isPageView}
+        onTogglePageView={handleTogglePageView}
       />
     )
   }
@@ -528,6 +540,18 @@ function App() {
       onBackFunction = handleBackToJinnAttacksSubmenu
     } else if (selectedImmediateHelpOption) {
       onBackFunction = handleBackToImmediateHelpSubmenu
+    }
+    
+    // Check if this is Complete Ruqyah Verses and page view is enabled
+    if (selectedCategory === 'completeRuqyah' && isPageView) {
+      return (
+        <PageViewer
+          cards={category.cards}
+          categoryTitle={category.title}
+          onBack={onBackFunction}
+          isDarkMode={isDarkMode}
+        />
+      )
     }
     
     return (
