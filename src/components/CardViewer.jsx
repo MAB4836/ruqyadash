@@ -18,10 +18,6 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
   const [autoPlay, setAutoPlay] = useState(false)
   const audioRef = useRef(null)
   
-  // Swipe gesture state
-  const [touchStart, setTouchStart] = useState(null)
-  const [touchEnd, setTouchEnd] = useState(null)
-  const [isSwipping, setIsSwipping] = useState(false)
   
   // Animation state
   const [isAnimating, setIsAnimating] = useState(false)
@@ -331,38 +327,40 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     }
   }, [currentCard, autoPlay, isAnimating])
 
-  // Swipe gesture handlers
-  const minSwipeDistance = 50
-
-  const handleTouchStart = (e) => {
-    setTouchEnd(null)
-    setTouchStart(e.targetTouches[0].clientX)
-    setIsSwipping(true)
-  }
-
-  const handleTouchMove = (e) => {
-    setTouchEnd(e.targetTouches[0].clientX)
-  }
-
-  const handleTouchEnd = () => {
-    if (!touchStart || !touchEnd) {
-      setIsSwipping(false)
-      return
+  // Enhanced scroll sensitivity
+  useEffect(() => {
+    const handleWheel = (e) => {
+      // Only enhance wheel scrolling, not touch scrolling
+      if (e.deltaY !== 0) {
+        e.preventDefault()
+        const scrollContainer = cardContentRef.current || bookScrollRef.current
+        if (scrollContainer) {
+          // Multiply scroll distance by 1.5 for better sensitivity
+          scrollContainer.scrollTop += e.deltaY * 1.5
+        }
+      }
     }
-    
-    const distance = touchStart - touchEnd
-    const isLeftSwipe = distance > minSwipeDistance
-    const isRightSwipe = distance < -minSwipeDistance
 
-    if (isLeftSwipe && currentCard < cards.length) {
-      nextCard()
+    const handleTouchMove = (e) => {
+      // Enable momentum scrolling for touch devices
+      const scrollContainer = cardContentRef.current || bookScrollRef.current
+      if (scrollContainer) {
+        scrollContainer.style.webkitOverflowScrolling = 'touch'
+        scrollContainer.style.overflowBehavior = 'contain'
+      }
     }
-    if (isRightSwipe && currentCard > 1) {
-      prevCard()
+
+    const currentContainer = cardContentRef.current || bookScrollRef.current
+    if (currentContainer) {
+      currentContainer.addEventListener('wheel', handleWheel, { passive: false })
+      currentContainer.addEventListener('touchmove', handleTouchMove, { passive: true })
+      
+      return () => {
+        currentContainer.removeEventListener('wheel', handleWheel)
+        currentContainer.removeEventListener('touchmove', handleTouchMove)
+      }
     }
-    
-    setIsSwipping(false)
-  }
+  }, [currentCard])
 
   // Situation-based quick access buttons for different categories
   const getSituationButtons = () => {
@@ -573,7 +571,11 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     if (categoryTitle === 'Diagnosis and Help' && currentCard === 8) {
       return (
         <div className="absolute inset-0 bg-white">
-          <div ref={bookScrollRef} className="h-full overflow-y-auto p-4" style={{ overscrollBehavior: 'contain' }}>
+          <div ref={bookScrollRef} className="h-full overflow-y-auto p-4" style={{ 
+            overscrollBehavior: 'contain',
+            WebkitOverflowScrolling: 'touch',
+            scrollBehavior: 'smooth'
+          }}>
             <div className="max-w-4xl mx-auto">
               <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
                 <div className="mb-6">
@@ -810,7 +812,11 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
           (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
         }`} 
-        style={{ overscrollBehavior: 'contain' }}
+        style={{ 
+          overscrollBehavior: 'contain',
+          WebkitOverflowScrolling: 'touch',
+          scrollBehavior: 'smooth'
+        }}
       >
         <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
             dangerouslySetInnerHTML={{ __html: card.title }} />
@@ -954,12 +960,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         {/* Card display */}
         <div 
           ref={cardContainerRef}
-          className={`relative w-full h-[80vh] sm:h-96 md:h-[500px] rounded-lg shadow-xl overflow-hidden select-none ${
-            isSwipping ? 'cursor-grabbing' : 'cursor-grab'
-          }`}
-          onTouchStart={handleTouchStart}
-          onTouchMove={handleTouchMove}
-          onTouchEnd={handleTouchEnd}
+          className="relative w-full h-[80vh] sm:h-96 md:h-[500px] rounded-lg shadow-xl overflow-hidden select-none"
         >
           {/* Current Card */}
           <div 
@@ -982,7 +983,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
             {/* Left Click Zone - Always functional */}
             {currentCard > 1 && (
               <div 
-                className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer z-10"
+                className="absolute left-0 top-0 w-[15%] h-full flex items-center justify-start pl-4 cursor-pointer z-10"
                 onClick={prevCard}
               >
                 {/* Visible Arrow - Desktop only */}
@@ -996,7 +997,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
             {/* Right Click Zone - Always functional */}
             {currentCard < cards.length && (
               <div 
-                className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer z-10"
+                className="absolute right-0 top-0 w-[15%] h-full flex items-center justify-end pr-4 cursor-pointer z-10"
                 onClick={nextCard}
               >
                 {/* Visible Arrow - Desktop only */}
@@ -1032,7 +1033,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               {/* Left Click Zone for next card - Always functional */}
               {nextCardIndex > 1 && (
                 <div 
-                  className="absolute left-0 top-0 w-1/4 h-full flex items-center justify-start pl-4 cursor-pointer z-10"
+                  className="absolute left-0 top-0 w-[15%] h-full flex items-center justify-start pl-4 cursor-pointer z-10"
                   onClick={prevCard}
                 >
                   {/* Visible Arrow - Desktop only */}
@@ -1046,7 +1047,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               {/* Right Click Zone for next card - Always functional */}
               {nextCardIndex < cards.length && (
                 <div 
-                  className="absolute right-0 top-0 w-1/4 h-full flex items-center justify-end pr-4 cursor-pointer z-10"
+                  className="absolute right-0 top-0 w-[15%] h-full flex items-center justify-end pr-4 cursor-pointer z-10"
                   onClick={nextCard}
                 >
                   {/* Visible Arrow - Desktop only */}
@@ -1066,7 +1067,12 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
                   (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
                 }`} 
-                style={{scrollTop: 0, overscrollBehavior: 'contain'}}
+                style={{
+                  scrollTop: 0, 
+                  overscrollBehavior: 'contain',
+                  WebkitOverflowScrolling: 'touch',
+                  scrollBehavior: 'smooth'
+                }}
               >
                 {cards[nextCardIndex - 1] && (
                   <>
