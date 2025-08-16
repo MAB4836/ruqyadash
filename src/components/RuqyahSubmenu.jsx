@@ -31,58 +31,54 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
             Ruqyah Options
           </h1>
-          <div className="text-center relative">
-            <p className="text-white text-sm opacity-75">
+          <div className="text-center">
+            <p className="text-white text-sm opacity-75 mb-4">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
-            <div className="absolute -top-1 right-0 flex items-center gap-2">
-              <span className="text-white text-xs opacity-60 mr-2">Guide</span>
+            
+            {/* Start Here Guide Pill with toggles on sides */}
+            <div className="flex justify-between items-center mb-6">
+              {/* Left toggles */}
+              <div className="flex items-center gap-2">
+                {/* Translation toggle */}
+                <button
+                  onClick={onToggleTranslations}
+                  className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
+                  title={showTranslations ? "Hide translations" : "Show translations"}
+                >
+                  <span className="text-xs">{showTranslations ? 'أ' : 'A'}</span>
+                </button>
+              </div>
+              
+              {/* Center - Start Here Pill */}
               <button
                 onClick={onOpenGuide}
-                className="bg-white bg-opacity-20 hover:bg-opacity-30 rounded-full p-2 transition-all duration-200"
-                aria-label="Ruqyah Selection Guide"
+                className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
+                style={{ marginLeft: '20px' }}
               >
-                <svg 
-                  className="w-4 h-4 text-white opacity-60" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
+                Start Here - Understanding These Ruqyah Collections
+              </button>
+              
+              {/* Right toggles */}
+              <div className="flex items-center gap-2">
+                {/* Page View toggle */}
+                <button
+                  onClick={onTogglePageView}
+                  className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
+                  title={isPageView ? "Card view" : "Page view"}
                 >
-                  <path 
-                    strokeLinecap="round" 
-                    strokeLinejoin="round" 
-                    strokeWidth={2} 
-                    d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
-                  />
-                </svg>
-              </button>
-              
-              {/* Translation toggle */}
-              <button
-                onClick={onToggleTranslations}
-                className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
-                title={showTranslations ? "Hide translations" : "Show translations"}
-              >
-                <span className="text-xs">{showTranslations ? 'أ' : 'A'}</span>
-              </button>
-              
-              {/* Page View toggle */}
-              <button
-                onClick={onTogglePageView}
-                className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
-                title={isPageView ? "Card view" : "Page view"}
-              >
-                <span className="text-xs">{isPageView ? '📄' : '🔢'}</span>
-              </button>
-              
-              {/* Dark mode toggle */}
-              <button
-                onClick={onToggleDarkMode}
-                className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
-                title={isDarkMode ? "Light mode" : "Dark mode"}
-              >
-                <span className="text-xs">{isDarkMode ? '☀' : '🌙'}</span>
-              </button>
+                  <span className="text-xs">{isPageView ? '📄' : '🔢'}</span>
+                </button>
+                
+                {/* Dark mode toggle */}
+                <button
+                  onClick={onToggleDarkMode}
+                  className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
+                  title={isDarkMode ? "Light mode" : "Dark mode"}
+                >
+                  <span className="text-xs">{isDarkMode ? '☀' : '🌙'}</span>
+                </button>
+              </div>
             </div>
           </div>
         </div>
