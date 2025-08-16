@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } f
 import Navigation from './Navigation'
 import { KeepAwake } from '@capacitor-community/keep-awake'
 
-const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath }, ref) => {
+const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath, isDarkMode = false }, ref) => {
   const [currentCard, setCurrentCard] = useState(1)
   const [repetitionCounts, setRepetitionCounts] = useState({})
   const [showScrollDown, setShowScrollDown] = useState(false)
@@ -805,7 +805,13 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
 
     // Regular card rendering for all other cards
     return (
-      <div ref={cardContentRef} className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{ overscrollBehavior: 'contain' }}>
+      <div 
+        ref={cardContentRef} 
+        className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
+          (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
+        }`} 
+        style={{ overscrollBehavior: 'contain' }}
+      >
         <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
             dangerouslySetInnerHTML={{ __html: card.title }} />
         
@@ -821,6 +827,32 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         )}
         
         <div dangerouslySetInnerHTML={{ __html: card.content }} />
+        
+        {/* Dark mode styles for Ruqyah categories */}
+        {(categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode && (
+          <style>{`
+            .ruqyah-dark-mode,
+            .ruqyah-dark-mode * {
+              color: white !important;
+              background-color: black !important;
+              border-color: #666 !important;
+            }
+            .ruqyah-dark-mode h2 {
+              color: white !important;
+            }
+            .ruqyah-dark-mode .bg-gradient-to-r {
+              background: black !important;
+            }
+            .ruqyah-dark-mode .border-amber-300,
+            .ruqyah-dark-mode .border-blue-400,
+            .ruqyah-dark-mode .border-green-400,
+            .ruqyah-dark-mode .border-purple-400,
+            .ruqyah-dark-mode .border-yellow-400,
+            .ruqyah-dark-mode .border-indigo-400 {
+              border-color: #666 !important;
+            }
+          `}</style>
+        )}
       </div>
     )
   }
@@ -884,36 +916,40 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           </div>
         )}
 
-        {/* Audio controls - positioned outside card */}
-        {currentCardData && currentCardData.audioFile && (
-          <div className="flex justify-center items-center gap-6 mb-2">
-            {/* Play/Pause button */}
-            <button
-              onClick={toggleAudio}
-              className={`rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg ${
-                isPlaying 
-                  ? 'bg-green-500 hover:bg-green-600 text-white' 
-                  : 'bg-white/30 hover:bg-white/40 text-white'
-              }`}
-              title={isPlaying ? "Pause audio" : "Play audio"}
-            >
-              {isPlaying ? <span style={{fontSize: '0.5em'}}>||</span> : '▶'}
-            </button>
-            
-            {/* Auto-continue toggle */}
-            <button
-              onClick={() => setAutoPlay(!autoPlay)}
-              className={`rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg ${
-                autoPlay 
-                  ? 'bg-green-500 hover:bg-green-600 text-white' 
-                  : 'bg-white/30 hover:bg-white/40 text-white'
-              }`}
-              title={autoPlay ? "Auto-continue ON" : "Auto-continue OFF"}
-            >
-              ↻
-            </button>
-          </div>
-        )}
+        {/* Audio controls and dark mode toggle - positioned outside card */}
+        <div className="flex justify-center items-center gap-6 mb-2">
+          {/* Audio controls */}
+          {currentCardData && currentCardData.audioFile && (
+            <>
+              {/* Play/Pause button */}
+              <button
+                onClick={toggleAudio}
+                className={`rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg ${
+                  isPlaying 
+                    ? 'bg-green-500 hover:bg-green-600 text-white' 
+                    : 'bg-white/30 hover:bg-white/40 text-white'
+                }`}
+                title={isPlaying ? "Pause audio" : "Play audio"}
+              >
+                {isPlaying ? <span style={{fontSize: '0.5em'}}>||</span> : '▶'}
+              </button>
+              
+              {/* Auto-continue toggle */}
+              <button
+                onClick={() => setAutoPlay(!autoPlay)}
+                className={`rounded-full w-10 h-10 flex items-center justify-center transition-colors duration-200 shadow-lg ${
+                  autoPlay 
+                    ? 'bg-green-500 hover:bg-green-600 text-white' 
+                    : 'bg-white/30 hover:bg-white/40 text-white'
+                }`}
+                title={autoPlay ? "Auto-continue ON" : "Auto-continue OFF"}
+              >
+                ↻
+              </button>
+            </>
+          )}
+          
+        </div>
 
         {/* Card display */}
         <div 
@@ -927,10 +963,16 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         >
           {/* Current Card */}
           <div 
-            className={`absolute inset-0 w-full h-full bg-white flex items-center justify-center transition-transform duration-300 ease-out ${
+            className={`absolute inset-0 w-full h-full flex items-center justify-center transition-transform duration-300 ease-out ${
               !isAnimating ? 'translate-x-0' : 
               slideDirection === 'left' ? '-translate-x-full' : 'translate-x-full'
+            } ${
+              (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'bg-black' : 'bg-white'
             }`}
+            style={categoryTitle === 'Manzil' && isDarkMode ? {
+              '--text-color': 'white',
+              '--bg-color': 'black'
+            } : {}}
           >
             {/* Card counter badge */}
             <div className="absolute top-3 right-3 bg-gray-800/20 text-white text-xs px-2 py-1 rounded-full font-medium z-10">
@@ -973,7 +1015,9 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           {/* Next Card (only visible during animation) */}
           {isAnimating && (
             <div 
-              className="absolute inset-0 w-full h-full bg-white flex items-center justify-center transition-transform duration-300 ease-out"
+              className={`absolute inset-0 w-full h-full flex items-center justify-center transition-transform duration-300 ease-out ${
+                (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'bg-black' : 'bg-white'
+              }`}
               style={{
                 transform: slideDirection === 'left' ? 
                   'translateX(0%)' : 'translateX(0%)',
@@ -1018,7 +1062,12 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               <div style={{color: 'red', fontSize: '30px', zIndex: 1000, position: 'absolute', top: '50px'}}>
                 slideDirection: {slideDirection}
               </div>
-              <div className="text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full" style={{scrollTop: 0, overscrollBehavior: 'contain'}}>
+              <div 
+                className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
+                  (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
+                }`} 
+                style={{scrollTop: 0, overscrollBehavior: 'contain'}}
+              >
                 {cards[nextCardIndex - 1] && (
                   <>
                     <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
@@ -1036,6 +1085,32 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     )}
                     
                     <div dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].content }} />
+                    
+                    {/* Dark mode styles for animated card */}
+                    {(categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode && (
+                      <style>{`
+                        .ruqyah-dark-mode,
+                        .ruqyah-dark-mode * {
+                          color: white !important;
+                          background-color: black !important;
+                          border-color: #666 !important;
+                        }
+                        .ruqyah-dark-mode h2 {
+                          color: white !important;
+                        }
+                        .ruqyah-dark-mode .bg-gradient-to-r {
+                          background: black !important;
+                        }
+                        .ruqyah-dark-mode .border-amber-300,
+                        .ruqyah-dark-mode .border-blue-400,
+                        .ruqyah-dark-mode .border-green-400,
+                        .ruqyah-dark-mode .border-purple-400,
+                        .ruqyah-dark-mode .border-yellow-400,
+                        .ruqyah-dark-mode .border-indigo-400 {
+                          border-color: #666 !important;
+                        }
+                      `}</style>
+                    )}
                   </>
                 )}
               </div>

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton }) => {
+const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, isDarkMode, onToggleDarkMode }) => {
   const submenuOptions = [
     {
       id: 'whatIsRuqyah',
@@ -35,7 +35,7 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton }
             <p className="text-white text-sm opacity-75">
               بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
             </p>
-            <div className="absolute -top-1 right-0 flex items-center">
+            <div className="absolute -top-1 right-0 flex items-center gap-2">
               <span className="text-white text-xs opacity-60 mr-2">Guide</span>
               <button
                 onClick={onOpenGuide}
@@ -55,6 +55,15 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton }
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
                   />
                 </svg>
+              </button>
+              
+              {/* Dark mode toggle */}
+              <button
+                onClick={onToggleDarkMode}
+                className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
+                title={isDarkMode ? "Light mode" : "Dark mode"}
+              >
+                <span className="text-xs">{isDarkMode ? '☀' : '🌙'}</span>
               </button>
             </div>
           </div>

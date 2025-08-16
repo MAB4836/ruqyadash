@@ -47,6 +47,9 @@ function App() {
   const [selectedFont, setSelectedFont] = useState(() => {
     return localStorage.getItem('arabicFont') || 'KSARegular_B'
   })
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('ruqyahDarkMode') === 'true'
+  })
   
   // Ref to access CardViewer audio control functions
   const cardViewerRef = useRef(null)
@@ -302,6 +305,12 @@ function App() {
     setCurrentScreen('cards')
   }
 
+  const handleToggleDarkMode = () => {
+    const newDarkMode = !isDarkMode
+    setIsDarkMode(newDarkMode)
+    localStorage.setItem('ruqyahDarkMode', newDarkMode.toString())
+  }
+
   const handleSelectEvilEyeOption = (optionId) => {
     setSelectedEvilEyeOption(optionId)
     setSelectedCategory(optionId)
@@ -450,6 +459,8 @@ function App() {
         onBack={navigationHistory.length > 0 ? navigateBack : handleBackToMenu}
         onOpenGuide={handleOpenRuqyahGuide}
         showReturnButton={navigationHistory.length > 0}
+        isDarkMode={isDarkMode}
+        onToggleDarkMode={handleToggleDarkMode}
       />
     )
   }
@@ -528,6 +539,7 @@ function App() {
         navigateToSection={navigateToSection}
         navigateBack={navigateBack}
         hasReturnPath={navigationHistory.length > 0}
+        isDarkMode={isDarkMode}
       />
     )
   }
