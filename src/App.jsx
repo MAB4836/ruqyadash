@@ -542,8 +542,8 @@ function App() {
       onBackFunction = handleBackToImmediateHelpSubmenu
     }
     
-    // Check if this is Complete Ruqyah Verses and page view is enabled
-    if (selectedCategory === 'completeRuqyah' && isPageView) {
+    // Check if this is Complete Ruqyah Verses, Manzil, or Short Ruqyah and page view is enabled
+    if ((selectedCategory === 'completeRuqyah' || selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah') && isPageView) {
       return (
         <PageViewer
           cards={category.cards}
