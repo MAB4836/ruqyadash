@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, isDarkMode, onToggleDarkMode, isPageView, onTogglePageView }) => {
+const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, isDarkMode, onToggleDarkMode, isPageView, onTogglePageView, showTranslations, onToggleTranslations }) => {
   const submenuOptions = [
     {
       id: 'whatIsRuqyah',
@@ -15,11 +15,11 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
     {
       id: 'manzil',
       title: 'Manzil',
-      description: 'The Manzil is a well-known collection of proven Quranic verses for protection and healing'
+      description: 'The Manzil is a well-known collection of Quranic verses for protection and healing'
     },
     {
       id: 'completeRuqyah',
-      title: 'Additional Ruqyah Verses',
+      title: 'Ruqyah Plus',
       description: 'Includes additional verses commonly recited by scholars and practitioners'
     }
   ]
@@ -55,6 +55,15 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
                     d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" 
                   />
                 </svg>
+              </button>
+              
+              {/* Translation toggle */}
+              <button
+                onClick={onToggleTranslations}
+                className="rounded-full w-8 h-8 flex items-center justify-center transition-colors duration-200 bg-white/20 hover:bg-white/30 text-white"
+                title={showTranslations ? "Hide translations" : "Show translations"}
+              >
+                <span className="text-xs">{showTranslations ? 'أ' : 'A'}</span>
               </button>
               
               {/* Page View toggle */}

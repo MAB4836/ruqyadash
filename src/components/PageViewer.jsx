@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react'
 
-const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false }) => {
+const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTranslations = true }) => {
   const pageContentRef = useRef(null)
 
   // Start at the top of the page
@@ -51,6 +51,16 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false }) => {
                 />
               </div>
             ))}
+            
+            {/* Translation visibility styles for Ruqyah decks */}
+            {(categoryTitle.includes('Manzil') || categoryTitle.includes('Prophetic Ruqyah') || categoryTitle.includes('Ruqyah Plus')) && !showTranslations && (
+              <style>{`
+                .text-gray-600.italic,
+                .text-base.text-gray-700:not(.font-semibold):not(.font-bold) {
+                  display: none !important;
+                }
+              `}</style>
+            )}
             
             {/* Dark mode styles */}
             {isDarkMode && (

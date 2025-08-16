@@ -54,6 +54,9 @@ function App() {
   const [isPageView, setIsPageView] = useState(() => {
     return localStorage.getItem('ruqyahPageView') === 'true'
   })
+  const [showTranslations, setShowTranslations] = useState(() => {
+    return localStorage.getItem('ruqyahShowTranslations') !== 'false'
+  })
   
   // Ref to access CardViewer audio control functions
   const cardViewerRef = useRef(null)
@@ -189,7 +192,7 @@ function App() {
       cards: whatIsRuqyah
     },
     shortRuqyah: {
-      title: 'Short Ruqyah',
+      title: 'Prophetic Ruqyah',
       cards: shortRuqyah
     },
     manzil: {
@@ -197,7 +200,7 @@ function App() {
       cards: manzilVerses
     },
     completeRuqyah: {
-      title: 'Complete Ruqyah Verses',
+      title: 'Ruqyah Plus',
       cards: ruqyahVerses
     },
     suspectHouse: {
@@ -319,6 +322,12 @@ function App() {
     const newPageView = !isPageView
     setIsPageView(newPageView)
     localStorage.setItem('ruqyahPageView', newPageView.toString())
+  }
+
+  const handleToggleTranslations = () => {
+    const newShowTranslations = !showTranslations
+    setShowTranslations(newShowTranslations)
+    localStorage.setItem('ruqyahShowTranslations', newShowTranslations.toString())
   }
 
   const handleSelectEvilEyeOption = (optionId) => {
@@ -473,6 +482,8 @@ function App() {
         onToggleDarkMode={handleToggleDarkMode}
         isPageView={isPageView}
         onTogglePageView={handleTogglePageView}
+        showTranslations={showTranslations}
+        onToggleTranslations={handleToggleTranslations}
       />
     )
   }
@@ -550,6 +561,7 @@ function App() {
           categoryTitle={category.title}
           onBack={onBackFunction}
           isDarkMode={isDarkMode}
+          showTranslations={(selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah' || selectedCategory === 'completeRuqyah') ? showTranslations : true}
         />
       )
     }
@@ -564,6 +576,7 @@ function App() {
         navigateBack={navigateBack}
         hasReturnPath={navigationHistory.length > 0}
         isDarkMode={isDarkMode}
+        showTranslations={(selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah' || selectedCategory === 'completeRuqyah') ? showTranslations : true}
       />
     )
   }

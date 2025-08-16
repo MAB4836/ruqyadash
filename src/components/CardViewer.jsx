@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } f
 import Navigation from './Navigation'
 import { KeepAwake } from '@capacitor-community/keep-awake'
 
-const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath, isDarkMode = false }, ref) => {
+const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection, navigateBack, hasReturnPath, isDarkMode = false, showTranslations = true }, ref) => {
   const [currentCard, setCurrentCard] = useState(1)
   const [repetitionCounts, setRepetitionCounts] = useState({})
   const [showScrollDown, setShowScrollDown] = useState(false)
@@ -833,6 +833,16 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         )}
         
         <div dangerouslySetInnerHTML={{ __html: card.content }} />
+        
+        {/* Translation visibility styles for Ruqyah decks */}
+        {(categoryTitle === 'Manzil' || categoryTitle === 'Prophetic Ruqyah' || categoryTitle === 'Ruqyah Plus') && !showTranslations && (
+          <style>{`
+            .text-gray-600.italic,
+            .text-base.text-gray-700:not(.font-semibold):not(.font-bold) {
+              display: none !important;
+            }
+          `}</style>
+        )}
         
         {/* Dark mode styles for Ruqyah categories */}
         {(categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode && (

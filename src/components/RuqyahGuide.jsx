@@ -7,14 +7,14 @@ const RuqyahGuide = ({ onBack }) => {
         <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8 md:p-10">
           <div className="mb-6">
             <h1 className="text-2xl sm:text-3xl font-bold text-gray-900 text-center mb-4">
-              Choosing the Right Ruqyah Set
+              Ruqyah Verses
             </h1>
             <div className="w-16 h-1 bg-blue-500 mx-auto mb-6"></div>
           </div>
 
           <div className="prose prose-gray max-w-none">
             <p className="text-gray-700 leading-relaxed mb-4">
-              In this app, you'll find three collections of Quranic verses — each with its own purpose and ideal use. All are authentic, rooted in well-known Islamic practice, and can be read aloud for protection and healing.
+              In this app, you'll find three collections of Quranic verses — each with its own purpose and ideal use. All are authentic, either proven in Sunnah or rooted in well-known Islamic practice, for protection and healing.
             </p>
 
             <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6 rounded-r-lg">
@@ -29,7 +29,7 @@ const RuqyahGuide = ({ onBack }) => {
             <div className="space-y-8">
               <div className="border-l-4 border-blue-500 pl-6 bg-blue-50 py-4 pr-4 rounded-r-lg">
                 <h2 className="text-xl font-bold text-blue-900 mb-4">
-                  1. Short Ruqyah
+                  1. Prophetic Ruqyah
                 </h2>
                 
                 <div className="space-y-4">
@@ -44,7 +44,17 @@ const RuqyahGuide = ({ onBack }) => {
                   
                   <div>
                     <h4 className="font-semibold text-blue-800 mb-2">Why:</h4>
-                    <p className="text-gray-700">Short but powerful set covering key verses like Al-Fatiha, Ayat al-Kursi, and the last verses of Al-Baqarah.</p>
+                    <p className="text-gray-700 mb-3">Short but powerful set covering key verses like Al-Fatiha, Ayat al-Kursi, and the last verses of Al-Baqarah.</p>
+                    
+                    <div className="bg-blue-100 p-4 rounded-lg">
+                      <h5 className="font-semibold text-blue-800 mb-2">Explicitly Proven in Sunnah (used or taught by the Prophet ﷺ for ruqyah/protection):</h5>
+                      <ul className="text-gray-700 space-y-2 text-sm">
+                        <li><strong>Al-Fātiḥah</strong> – Used as ruqyah by the companions; the Prophet ﷺ approved it and said: "How did you know it is a ruqyah?" (Ṣaḥīḥ al-Bukhārī, Muslim).</li>
+                        <li><strong>Āyat al-Kursī (2:255)</strong> – Reported in authentic hadith that reciting it at night protects one from shayṭān until morning (Ṣaḥīḥ al-Bukhārī).</li>
+                        <li><strong>Al-Baqarah 285–286 (last two verses)</strong> – Prophet ﷺ said: "Whoever recites the last two verses of Surah al-Baqarah at night, they will suffice him." (Ṣaḥīḥ al-Bukhārī, Muslim).</li>
+                        <li><strong>Al-Ikhlāṣ, Al-Falaq, An-Nās</strong> – The Mu'awwidhat (three surahs of protection). The Prophet ﷺ recited them regularly for ruqyah, before sleeping, and for protection of himself and others (Ṣaḥīḥ al-Bukhārī, Muslim).</li>
+                      </ul>
+                    </div>
                   </div>
                   
                   <div>
@@ -84,7 +94,7 @@ const RuqyahGuide = ({ onBack }) => {
 
               <div className="border-l-4 border-purple-500 pl-6 bg-purple-50 py-4 pr-4 rounded-r-lg">
                 <h2 className="text-xl font-bold text-purple-900 mb-4">
-                  3. Full Ruqyah Verses <span className="text-sm font-normal text-purple-700">(Comprehensive healing set – 32 cards)</span>
+                  3. Ruqyah Plus
                 </h2>
                 
                 <div className="space-y-4">
@@ -126,7 +136,7 @@ const RuqyahGuide = ({ onBack }) => {
                     </thead>
                     <tbody className="space-y-2">
                       <tr className="border-b border-gray-200">
-                        <td className="py-3 font-medium text-blue-700">Short Ruqyah</td>
+                        <td className="py-3 font-medium text-blue-700">Prophetic Ruqyah</td>
                         <td className="py-3 text-gray-700">Quick daily protection, emergencies, and regular spiritual upkeep. Ideal as a daily practice. Recite these in the self-diagnosis section – aversion to these verses is a major sign of an affliction.</td>
                       </tr>
                       <tr className="border-b border-gray-200">
@@ -134,7 +144,7 @@ const RuqyahGuide = ({ onBack }) => {
                         <td className="py-3 text-gray-700">Ongoing protection and healing. Suitable for prevention, early symptoms, and as a complete ruqyah. Very powerful – proven on more than one occasion by myself.</td>
                       </tr>
                       <tr>
-                        <td className="py-3 font-medium text-purple-700">Full Ruqyah</td>
+                        <td className="py-3 font-medium text-purple-700">Ruqyah Plus</td>
                         <td className="py-3 text-gray-700">Intensive healing for severe or persistent affliction. Ideal as a "step up" from Manzil if symptoms do not improve, or for comprehensive treatment.</td>
                       </tr>
                     </tbody>
