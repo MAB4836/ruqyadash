@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react'
 import MenuScreen from './components/MenuScreen'
+import MorningAdhkar from './components/MorningAdhkar'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
 import RuqyahGuide from './components/RuqyahGuide'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
@@ -121,7 +122,8 @@ function App() {
           currentScreen === 'evilEyeSubmenu' || 
           currentScreen === 'personalProtectionSubmenu' || 
           currentScreen === 'jinnAttacksSubmenu' ||
-          currentScreen === 'immediateHelpSubmenu') {
+          currentScreen === 'immediateHelpSubmenu' ||
+          currentScreen === 'morningAdhkar') {
         handleBackToMenu();
       } 
       else if (currentScreen === 'ruqyahGuide') {
@@ -306,6 +308,18 @@ function App() {
     }
   }
 
+  const handleSelectMorning = () => {
+    setCurrentScreen('morningAdhkar')
+  }
+
+  const handleSelectEvening = () => {
+    setCurrentScreen('morningAdhkar')
+  }
+
+  const handleBackFromMorningAdhkar = () => {
+    setCurrentScreen('menu')
+  }
+
   const handleSelectRuqyahOption = (optionId) => {
     setSelectedRuqyahOption(optionId)
     setSelectedCategory(optionId)
@@ -459,7 +473,7 @@ function App() {
   if (currentScreen === 'menu') {
     return (
       <>
-        <MenuScreen onSelectCategory={handleSelectCategory} onOpenSettings={handleOpenSettings} />
+        <MenuScreen onSelectCategory={handleSelectCategory} onOpenSettings={handleOpenSettings} onSelectMorning={handleSelectMorning} onSelectEvening={handleSelectEvening} />
         {showExitDialog && <ExitDialog />}
         <SettingsPopup 
           isOpen={showSettingsPopup}
@@ -468,6 +482,12 @@ function App() {
           onFontChange={handleFontChange}
         />
       </>
+    )
+  }
+
+  if (currentScreen === 'morningAdhkar') {
+    return (
+      <MorningAdhkar onBack={handleBackFromMorningAdhkar} selectedFont={selectedFont} />
     )
   }
 

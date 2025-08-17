@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
+const MenuScreen = ({ onSelectCategory, onOpenSettings, onSelectMorning, onSelectEvening }) => {
   
   const menuOptions = [
     {
@@ -26,8 +26,8 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
   ]
 
   return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">
-      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl">
+    <div className="min-h-screen bg-red-500 flex flex-col p-4">
+      <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl mx-auto pt-8">
         <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-2">
           Islamic Protection App
         </h1>
@@ -63,7 +63,7 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
           </button>
         </div>
         
-        <div className="space-y-4">
+        <div className="space-y-4 mb-6">
           {menuOptions.map((option) => (
             <button
               key={option.id}
@@ -76,6 +76,24 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings }) => {
               </div>
             </button>
           ))}
+        </div>
+        
+        <div className="flex justify-center space-x-4">
+          <button 
+            onClick={onSelectMorning}
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+          >
+            <span className="text-sm font-semibold">Morning</span>
+          </button>
+          <button className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24">
+            <span className="text-sm font-semibold">Shifa</span>
+          </button>
+          <button 
+            onClick={onSelectEvening}
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+          >
+            <span className="text-sm font-semibold">Evening</span>
+          </button>
         </div>
       </div>
     </div>
