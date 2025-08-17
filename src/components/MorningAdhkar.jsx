@@ -31,7 +31,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
           <div className="p-4 md:p-8 space-y-6 md:space-y-8">
             
             {/* Āyah al-Kursī */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Āyah al-Kursī [Surah al-Baqarah 2:255]</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
@@ -59,7 +59,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* Last Three Surahs */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Last Three Surahs of The Quran</h3>
               <div className="bg-gray-50 rounded-lg p-6 mb-3 text-center">
                 <p className="text-gray-700 font-semibold mb-2">Surah Ikhlas (112) — 3× times</p>
@@ -75,7 +75,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* Bismillāhilladhī lā yaḍurru... */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Protection from Harm</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
@@ -103,7 +103,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* A'ūdhu bi-kalimātillāhi... */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Seeking Refuge in Allah's Words</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
@@ -131,7 +131,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* Radītu billāhi rabban... */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Declaration of Contentment</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
@@ -159,7 +159,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* Sayyidul Istighfār */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Sayyidul Istighfār (Master of Seeking Forgiveness)</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
@@ -187,7 +187,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
             </div>
 
             {/* Lā ilāha illallāh waḥdahu... */}
-            <div className="border-l-4 border-blue-400 pl-6">
+            <div className="md:border-l-4 md:border-blue-400 md:pl-6">
               <h3 className="text-xl font-bold text-gray-800 mb-3">Du'ā' of Praise and Protection</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">

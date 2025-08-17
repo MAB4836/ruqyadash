@@ -17,7 +17,7 @@ const RuqyahGuide = ({ onBack }) => {
               In this app, you'll find three collections of Quranic verses — each with its own purpose and ideal use. All are authentic, either proven in Sunnah or rooted in well-known Islamic practice, for protection and healing.
             </p>
 
-            <div className="bg-yellow-50 border-l-4 border-yellow-500 p-4 mb-6 rounded-r-lg">
+            <div className="bg-yellow-50 md:border-l-4 md:border-yellow-500 p-4 mb-6 md:rounded-r-lg rounded-lg">
               <h3 className="font-bold text-yellow-800 mb-3">For all of these recitations the following is vital:</h3>
               <ul className="text-yellow-700 space-y-2">
                 <li>• <strong>Full and complete reliance upon Allah s.w.t.</strong> – very firmly believe Allah s.w.t. will cure you and these verses are means to a cure.</li>
@@ -27,7 +27,7 @@ const RuqyahGuide = ({ onBack }) => {
             </div>
 
             <div className="space-y-8">
-              <div className="border-l-4 border-blue-500 pl-6 bg-blue-50 py-4 pr-4 rounded-r-lg">
+              <div className="md:border-l-4 md:border-blue-500 md:pl-6 bg-blue-50 py-4 md:pr-4 p-4 md:rounded-r-lg rounded-lg">
                 <h2 className="text-xl font-bold text-blue-900 mb-4">
                   1. Prophetic Ruqyah
                 </h2>
@@ -64,7 +64,7 @@ const RuqyahGuide = ({ onBack }) => {
                 </div>
               </div>
 
-              <div className="border-l-4 border-green-500 pl-6 bg-green-50 py-4 pr-4 rounded-r-lg">
+              <div className="md:border-l-4 md:border-green-500 md:pl-6 bg-green-50 py-4 md:pr-4 p-4 md:rounded-r-lg rounded-lg">
                 <h2 className="text-xl font-bold text-green-900 mb-4">
                   2. Manzil Verses
                 </h2>
@@ -92,7 +92,7 @@ const RuqyahGuide = ({ onBack }) => {
                 </div>
               </div>
 
-              <div className="border-l-4 border-purple-500 pl-6 bg-purple-50 py-4 pr-4 rounded-r-lg">
+              <div className="md:border-l-4 md:border-purple-500 md:pl-6 bg-purple-50 py-4 md:pr-4 p-4 md:rounded-r-lg rounded-lg">
                 <h2 className="text-xl font-bold text-purple-900 mb-4">
                   3. Ruqyah Plus
                 </h2>
