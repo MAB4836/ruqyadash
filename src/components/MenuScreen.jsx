@@ -1,6 +1,6 @@
 import React from 'react'
 
-const MenuScreen = ({ onSelectCategory, onOpenSettings, onSelectMorning, onSelectEvening, onSelectShifa }) => {
+const MenuScreen = ({ onSelectCategory, onOpenSettings, onSelectMorning, onSelectEvening, onSelectShifa, onSelectChild }) => {
   
   const menuOptions = [
     {
@@ -90,6 +90,12 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings, onSelectMorning, onSelec
             className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
           >
             <span className="text-sm font-semibold">Shifa</span>
+          </button>
+          <button 
+            onClick={onSelectChild}
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+          >
+            <span className="text-sm font-semibold">Child</span>
           </button>
           <button 
             onClick={onSelectEvening}

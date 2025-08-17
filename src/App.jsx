@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback, useRef } from 'react'
 import MenuScreen from './components/MenuScreen'
 import MorningAdhkar from './components/MorningAdhkar'
 import ShifaPage from './components/ShifaPage'
+import ChildPage from './components/ChildPage'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
 import RuqyahGuide from './components/RuqyahGuide'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
@@ -125,7 +126,8 @@ function App() {
           currentScreen === 'jinnAttacksSubmenu' ||
           currentScreen === 'immediateHelpSubmenu' ||
           currentScreen === 'morningAdhkar' ||
-          currentScreen === 'shifaPage') {
+          currentScreen === 'shifaPage' ||
+          currentScreen === 'childPage') {
         handleBackToMenu();
       } 
       else if (currentScreen === 'ruqyahGuide') {
@@ -322,11 +324,19 @@ function App() {
     setCurrentScreen('shifaPage')
   }
 
+  const handleSelectChild = () => {
+    setCurrentScreen('childPage')
+  }
+
   const handleBackFromMorningAdhkar = () => {
     setCurrentScreen('menu')
   }
 
   const handleBackFromShifaPage = () => {
+    setCurrentScreen('menu')
+  }
+
+  const handleBackFromChildPage = () => {
     setCurrentScreen('menu')
   }
 
@@ -483,7 +493,7 @@ function App() {
   if (currentScreen === 'menu') {
     return (
       <>
-        <MenuScreen onSelectCategory={handleSelectCategory} onOpenSettings={handleOpenSettings} onSelectMorning={handleSelectMorning} onSelectEvening={handleSelectEvening} onSelectShifa={handleSelectShifa} />
+        <MenuScreen onSelectCategory={handleSelectCategory} onOpenSettings={handleOpenSettings} onSelectMorning={handleSelectMorning} onSelectEvening={handleSelectEvening} onSelectShifa={handleSelectShifa} onSelectChild={handleSelectChild} />
         {showExitDialog && <ExitDialog />}
         <SettingsPopup 
           isOpen={showSettingsPopup}
@@ -504,6 +514,12 @@ function App() {
   if (currentScreen === 'shifaPage') {
     return (
       <ShifaPage onBack={handleBackFromShifaPage} selectedFont={selectedFont} isDarkMode={isDarkMode} />
+    )
+  }
+
+  if (currentScreen === 'childPage') {
+    return (
+      <ChildPage onBack={handleBackFromChildPage} selectedFont={selectedFont} isDarkMode={isDarkMode} />
     )
   }
 
