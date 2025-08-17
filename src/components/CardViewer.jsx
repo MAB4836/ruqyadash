@@ -570,14 +570,14 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     // Special book page rendering for card 8 of "Diagnosis and Help"
     if (categoryTitle === 'Diagnosis and Help' && currentCard === 8) {
       return (
-        <div className="absolute inset-0 bg-white">
+        <div className={`absolute inset-0 ${isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-white'}`}>
           <div ref={bookScrollRef} className="h-full overflow-y-auto p-4" style={{ 
             overscrollBehavior: 'contain',
             WebkitOverflowScrolling: 'touch',
             scrollBehavior: 'smooth'
           }}>
             <div className="max-w-4xl mx-auto">
-              <div className="bg-white rounded-lg shadow-xl p-6 sm:p-8">
+              <div className={`rounded-lg shadow-xl p-6 sm:p-8 ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-600' : 'bg-white'}`}>
                 <div className="mb-6">
                   <h1 className="text-xl sm:text-2xl font-bold text-gray-900 text-center mb-4">
                     How to Safely Check for Possible Spiritual Affliction and What to Do Next
@@ -623,22 +623,22 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     </div>
                   </div>
 
-                  <div className="bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
-                    <h4 className="font-bold text-blue-800 mb-3">Before you begin:</h4>
-                    <div className="text-blue-700 space-y-2">
+                  <div className={`border-l-4 p-4 rounded-r-lg ${isDarkMode ? 'bg-blue-900 border-blue-400' : 'bg-blue-50 border-blue-500'}`}>
+                    <h4 className={`font-bold mb-3 ${isDarkMode ? 'text-blue-200' : 'text-blue-800'}`}>Before you begin:</h4>
+                    <div className={`space-y-2 ${isDarkMode ? 'text-blue-200' : 'text-blue-700'}`}>
                       <p>If you haven't already, please consult a qualified doctor or mental health professional to rule out medical causes.</p>
                       <p>Ruqyah is safe to do whether or not you have spiritual affliction, but it should not replace medical treatment.</p>
                     </div>
                   </div>
 
                   <div className="space-y-8">
-                    <div className="border-l-4 border-green-500 pl-6 bg-green-50 py-4 pr-4 rounded-r-lg">
-                      <h2 className="text-lg font-bold text-green-900 mb-4">1. Safe Self-Testing Options</h2>
+                    <div className={`border-l-4 pl-6 py-4 pr-4 rounded-r-lg ${isDarkMode ? 'border-green-400 bg-green-900' : 'border-green-500 bg-green-50'}`}>
+                      <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-green-200' : 'text-green-900'}`}>1. Safe Self-Testing Options</h2>
                       
                       <div className="space-y-6">
-                        <div className="bg-green-100 p-4 rounded-lg">
-                          <h5 className="font-bold text-green-800 mb-3">Option A: Recitation Test</h5>
-                          <div className="text-green-700 space-y-3">
+                        <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-green-800' : 'bg-green-100'}`}>
+                          <h5 className={`font-bold mb-3 ${isDarkMode ? 'text-green-200' : 'text-green-800'}`}>Option A: Recitation Test</h5>
+                          <div className={`space-y-3 ${isDarkMode ? 'text-green-200' : 'text-green-700'}`}>
                             <p>• Sit in a clean place, make wudu if possible, face the qiblah.</p>
                             <p><strong>Read aloud with focus:</strong></p>
                             <ul className="space-y-1 ml-4">
@@ -656,15 +656,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                               <li>- Body jerks, nausea, or urge to stop reading</li>
                             </ul>
                             <p className="italic">No reaction doesn't guarantee absence of affliction.</p>
-                            <div className="mt-3 p-3 bg-green-200 rounded italic text-green-800 text-sm">
+                            <div className={`mt-3 p-3 rounded italic text-sm ${isDarkMode ? 'bg-green-700 text-green-200' : 'bg-green-200 text-green-800'}`}>
                               <p><strong>Personal Note:</strong> For me this was the key one. I read the Quran on most days, however, at the start of this affliction I stopped reading it every day and for a while stop reading altogether but I didn't think this was due to anything sinister. When I read it my mind would argue against it - I can't repeat the thoughts that used to occur. Again in hindsight, for me, it could not have been clearer that something sinister was happening to me.</p>
                             </div>
                           </div>
                         </div>
                         
-                        <div className="bg-blue-100 p-4 rounded-lg">
-                          <h5 className="font-bold text-blue-800 mb-3">Option B: Listening Test</h5>
-                          <div className="text-blue-700 space-y-3">
+                        <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-blue-800' : 'bg-blue-100'}`}>
+                          <h5 className={`font-bold mb-3 ${isDarkMode ? 'text-blue-200' : 'text-blue-800'}`}>Option B: Listening Test</h5>
+                          <div className={`space-y-3 ${isDarkMode ? 'text-blue-200' : 'text-blue-700'}`}>
                             <p>Play a trusted ruqyah recitation quietly through headphones at a comfortable volume.</p>
                             <p><strong>Suggested choices include:</strong></p>
                             <ul className="space-y-1 ml-4">
@@ -675,15 +675,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                               <li>- Surah Al-Ikhlas (112)</li>
                             </ul>
                             <p>Notice sudden physical or emotional reactions (anxiety, chest tightness, dizziness).</p>
-                            <div className="mt-3 p-3 bg-blue-200 rounded italic text-blue-800 text-sm">
+                            <div className={`mt-3 p-3 rounded italic text-sm ${isDarkMode ? 'bg-blue-700 text-blue-200' : 'bg-blue-200 text-blue-800'}`}>
                               <p><strong>Note:</strong> Surah Al-Baqarah is the longest in the Quran, however, you don't need to wait till the end to notice reactions. Initially you will feel reluctant to even approach the Quran - so many excuses so much procrastination and irritation and even anger.</p>
                             </div>
                           </div>
                         </div>
                         
-                        <div className="bg-purple-100 p-4 rounded-lg">
-                          <h5 className="font-bold text-purple-800 mb-3">Option C: Water Ruqyah Test</h5>
-                          <div className="text-purple-700 space-y-3">
+                        <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-purple-800' : 'bg-purple-100'}`}>
+                          <h5 className={`font-bold mb-3 ${isDarkMode ? 'text-purple-200' : 'text-purple-800'}`}>Option C: Water Ruqyah Test</h5>
+                          <div className={`space-y-3 ${isDarkMode ? 'text-purple-200' : 'text-purple-700'}`}>
                             <p>Recite these verses slowly and clearly over a cup of clean water. Then blow gently once at the end before giving it to drink or drinking it yourself:</p>
                             <ul className="space-y-1 ml-4">
                               <li>- Surah Al-Fatiha (1)</li>
@@ -694,18 +694,18 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                           </div>
                         </div>
                         
-                        <div className="bg-orange-100 p-4 rounded-lg">
-                          <h5 className="font-bold text-orange-800 mb-3">Option D: Oil Application Test</h5>
-                          <div className="text-orange-700 space-y-2">
+                        <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-orange-800' : 'bg-orange-100'}`}>
+                          <h5 className={`font-bold mb-3 ${isDarkMode ? 'text-orange-200' : 'text-orange-800'}`}>Option D: Oil Application Test</h5>
+                          <div className={`space-y-2 ${isDarkMode ? 'text-orange-200' : 'text-orange-700'}`}>
                             <p>Recite the same verses listed above over olive oil.</p>
                             <p>Rub lightly on forehead, chest, and soles of feet before sleeping.</p>
                             <p>Observe for nightmares, restlessness, or unusual fear.</p>
                           </div>
                         </div>
                         
-                        <div className="bg-teal-100 p-4 rounded-lg">
-                          <h5 className="font-bold text-teal-800 mb-3">Option E: Dream Observation Test</h5>
-                          <div className="text-teal-700 space-y-2">
+                        <div className={`p-4 rounded-lg ${isDarkMode ? 'bg-teal-800' : 'bg-teal-100'}`}>
+                          <h5 className={`font-bold mb-3 ${isDarkMode ? 'text-teal-200' : 'text-teal-800'}`}>Option E: Dream Observation Test</h5>
+                          <div className={`space-y-2 ${isDarkMode ? 'text-teal-200' : 'text-teal-700'}`}>
                             <p>Increase Qur'an recitation and dhikr before sleeping for a few nights.</p>
                             <p>Watch for repeated disturbing dreams involving snakes, falling, or dark figures.</p>
                           </div>
@@ -713,9 +713,9 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                       </div>
                     </div>
                     
-                    <div className="border-l-4 border-yellow-500 pl-6 bg-yellow-50 py-4 pr-4 rounded-r-lg">
-                      <h2 className="text-lg font-bold text-yellow-900 mb-4">2. Professional Help Guidelines</h2>
-                      <ul className="space-y-3 text-yellow-700">
+                    <div className={`border-l-4 pl-6 py-4 pr-4 rounded-r-lg ${isDarkMode ? 'border-yellow-400 bg-yellow-900' : 'border-yellow-500 bg-yellow-50'}`}>
+                      <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-yellow-200' : 'text-yellow-900'}`}>2. Professional Help Guidelines</h2>
+                      <ul className={`space-y-3 ${isDarkMode ? 'text-yellow-200' : 'text-yellow-700'}`}>
                         <li className="flex items-start">
                           <span className="mr-2 font-bold">•</span>
                           <span>If any of the above tests indicate that sihr is involved, after reading the rest of this page, go to the the Ruqyah Toolkit and click on the Guide icon which will which give instructions on what to do next ( <button 
@@ -741,13 +741,13 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                       </ul>
                     </div>
                     
-                    <div className="border-l-4 border-red-500 pl-6 bg-red-50 py-4 pr-4 rounded-r-lg">
-                      <h2 className="text-lg font-bold text-red-900 mb-4">3. When to Seek Professional Help</h2>
-                      <div className="bg-red-100 border-l-4 border-red-500 p-4 mb-4">
-                        <p className="text-red-800 font-semibold mb-2">Warning:</p>
-                        <p className="text-red-700">From experience unfortunately the Raqis could actually be black magicians themselves. Please check the RAQI menu item for ways to spot a false raqi who if they are skilled will solve one problem and cause many more so that you keep on going back. Or they will try to get you to commit shirk and/or major sins in return for "curing" you e.g. sacrifice a black chicken whilst saying some incoherent words. IF A "RAQI" AGREES TO SEE A WOMAN NOT RELATED TO HIM ON A ONE TO ONE SESSION OR "NEEDS" TO TOUCH THE WOMEN AT ANY POINT EVEN WITH OTHERS PRESENT BE AWARE HE IS 100% FALSE THOUGH HE MIGHT LOOK OLD AND PIOUS (I came across one who was an Imam at a local mosque and what he did was sheer kufr although he did not see it that way even though he openly claimed he had controlled a jinn like is father and grandfather before him by secluding himself for forty days - now google how a magician conjures up a jinn by this method). And of course asking for a date of birth or mothers name - if anyone ask this it is a sure fire indicator this person is a magician and not a raqi. See further in the RAQI menu item.</p>
+                    <div className={`border-l-4 pl-6 py-4 pr-4 rounded-r-lg ${isDarkMode ? 'border-red-400 bg-red-900' : 'border-red-500 bg-red-50'}`}>
+                      <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-red-200' : 'text-red-900'}`}>3. When to Seek Professional Help</h2>
+                      <div className={`border-l-4 p-4 mb-4 ${isDarkMode ? 'bg-red-800 border-red-400' : 'bg-red-100 border-red-500'}`}>
+                        <p className={`font-semibold mb-2 ${isDarkMode ? 'text-red-200' : 'text-red-800'}`}>Warning:</p>
+                        <p className={isDarkMode ? 'text-red-200' : 'text-red-700'}>From experience unfortunately the Raqis could actually be black magicians themselves. Please check the RAQI menu item for ways to spot a false raqi who if they are skilled will solve one problem and cause many more so that you keep on going back. Or they will try to get you to commit shirk and/or major sins in return for "curing" you e.g. sacrifice a black chicken whilst saying some incoherent words. IF A "RAQI" AGREES TO SEE A WOMAN NOT RELATED TO HIM ON A ONE TO ONE SESSION OR "NEEDS" TO TOUCH THE WOMEN AT ANY POINT EVEN WITH OTHERS PRESENT BE AWARE HE IS 100% FALSE THOUGH HE MIGHT LOOK OLD AND PIOUS (I came across one who was an Imam at a local mosque and what he did was sheer kufr although he did not see it that way even though he openly claimed he had controlled a jinn like is father and grandfather before him by secluding himself for forty days - now google how a magician conjures up a jinn by this method). And of course asking for a date of birth or mothers name - if anyone ask this it is a sure fire indicator this person is a magician and not a raqi. See further in the RAQI menu item.</p>
                       </div>
-                      <ul className="space-y-3 text-red-700">
+                      <ul className={`space-y-3 ${isDarkMode ? 'text-red-200' : 'text-red-700'}`}>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you experience thoughts of self-harm or harming others.</span></li>
                         <li className="flex items-start"><span className="mr-2 font-bold">•</span><span>If you cannot consistently perform ruqyah or maintain your routine.</span></li>
@@ -756,9 +756,9 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                       </ul>
                     </div>
                     
-                    <div className="border-l-4 border-gray-500 pl-6 bg-gray-50 py-4 pr-4 rounded-r-lg">
-                      <h2 className="text-lg font-bold text-gray-900 mb-4">4. Cross-references to other app sections</h2>
-                      <div className="space-y-3 text-gray-700">
+                    <div className={`border-l-4 pl-6 py-4 pr-4 rounded-r-lg ${isDarkMode ? 'border-gray-400 bg-gray-800' : 'border-gray-500 bg-gray-50'}`}>
+                      <h2 className={`text-lg font-bold mb-4 ${isDarkMode ? 'text-gray-200' : 'text-gray-900'}`}>4. Cross-references to other app sections</h2>
+                      <div className={`space-y-3 ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                         <button
                           onClick={() => {
                             const scrollPosition = bookScrollRef.current ? bookScrollRef.current.scrollTop : 0
@@ -770,26 +770,26 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                               scrollPosition: scrollPosition
                             })
                           }}
-                          className="w-full text-left bg-white p-3 rounded border-l-4 border-blue-400 hover:bg-blue-50 transition-colors duration-200"
+                          className={`w-full text-left p-3 rounded border-l-4 transition-colors duration-200 ${isDarkMode ? 'bg-gray-700 border-blue-400 hover:bg-blue-800 text-gray-200' : 'bg-white border-blue-400 hover:bg-blue-50'}`}
                         >
-                          <h5 className="font-semibold text-blue-800">Ruqyah Toolkit</h5>
-                          <p className="text-gray-600 text-sm">Essential daily protection verses for regular practice</p>
+                          <h5 className={`font-semibold ${isDarkMode ? 'text-blue-300' : 'text-blue-800'}`}>Ruqyah Toolkit</h5>
+                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>Essential daily protection verses for regular practice</p>
                         </button>
-                        <div className="w-full bg-white p-3 rounded border-l-4 border-purple-400">
-                          <h5 className="font-semibold text-purple-800">Sihr/Magic</h5>
-                          <p className="text-gray-600 text-sm">For a detailed explanation of the different types of sihr and how they are carried out</p>
+                        <div className={`w-full p-3 rounded border-l-4 border-purple-400 ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+                          <h5 className={`font-semibold ${isDarkMode ? 'text-purple-300' : 'text-purple-800'}`}>Sihr/Magic</h5>
+                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>For a detailed explanation of the different types of sihr and how they are carried out</p>
                         </div>
-                        <div className="w-full bg-white p-3 rounded border-l-4 border-green-400">
-                          <h5 className="font-semibold text-green-800">Raqi</h5>
-                          <p className="text-gray-600 text-sm">For guidance on choosing a trustworthy and knowledgeable ruqyah practitioner</p>
+                        <div className={`w-full p-3 rounded border-l-4 border-green-400 ${isDarkMode ? 'bg-gray-700' : 'bg-white'}`}>
+                          <h5 className={`font-semibold ${isDarkMode ? 'text-green-300' : 'text-green-800'}`}>Raqi</h5>
+                          <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>For guidance on choosing a trustworthy and knowledgeable ruqyah practitioner</p>
                         </div>
                       </div>
                       
                       {hasReturnPath && (
-                        <div className="mt-6 pt-4 border-t border-gray-300">
+                        <div className={`mt-6 pt-4 border-t ${isDarkMode ? 'border-gray-600' : 'border-gray-300'}`}>
                           <button
                             onClick={() => navigateBack && navigateBack()}
-                            className="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg transition-colors duration-200"
+                            className={`px-4 py-2 rounded-lg transition-colors duration-200 text-white ${isDarkMode ? 'bg-blue-600 hover:bg-blue-700' : 'bg-blue-500 hover:bg-blue-600'}`}
                           >
                             ← Return to Previous Section
                           </button>
@@ -810,7 +810,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
       <div 
         ref={cardContentRef} 
         className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
-          (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
+          isDarkMode ? 'ruqyah-dark-mode' : ''
         }`} 
         style={{ 
           overscrollBehavior: 'contain',
@@ -818,14 +818,14 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           scrollBehavior: 'smooth'
         }}
       >
-        <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
+        <h2 className={`text-base sm:text-lg md:text-xl font-bold mb-2 ${isDarkMode ? 'text-gray-100' : 'text-gray-800'}`}
             dangerouslySetInnerHTML={{ __html: card.title }} />
         
         {shouldShowNotePill(card) && (
           <div className="flex justify-center mb-4 sm:mb-6">
             <button 
               onClick={() => setShowNotePopup(true)}
-              className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full hover:bg-blue-200 transition-colors opacity-70"
+              className={`text-xs font-semibold px-3 py-1 rounded-full transition-colors opacity-70 ${isDarkMode ? 'bg-blue-700 text-blue-200 hover:bg-blue-600' : 'bg-blue-100 text-blue-800 hover:bg-blue-200'}`}
             >
               Note
             </button>
@@ -844,28 +844,115 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           `}</style>
         )}
         
-        {/* Dark mode styles for Ruqyah categories */}
-        {(categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode && (
+        {/* Dark mode styles for all categories */}
+        {isDarkMode && (
           <style>{`
-            .ruqyah-dark-mode,
-            .ruqyah-dark-mode * {
-              color: white !important;
-              background-color: black !important;
-              border-color: #666 !important;
+            .ruqyah-dark-mode {
+              background: linear-gradient(135deg, rgb(17, 24, 39) 0%, rgb(30, 58, 138) 100%) !important;
+              color: rgb(243, 244, 246) !important;
             }
-            .ruqyah-dark-mode h2 {
-              color: white !important;
+            .ruqyah-dark-mode h2,
+            .ruqyah-dark-mode h3,
+            .ruqyah-dark-mode h4 {
+              color: rgb(243, 244, 246) !important;
+            }
+            .ruqyah-dark-mode p {
+              color: rgb(209, 213, 219) !important;
+            }
+            .ruqyah-dark-mode .arabic-text {
+              color: rgb(243, 244, 246) !important;
+            }
+            
+            /* Override all hardcoded text colors */
+            .ruqyah-dark-mode .text-gray-600,
+            .ruqyah-dark-mode .text-gray-700,
+            .ruqyah-dark-mode .text-gray-800,
+            .ruqyah-dark-mode .text-gray-900 {
+              color: rgb(209, 213, 219) !important;
+            }
+            .ruqyah-dark-mode .text-amber-800,
+            .ruqyah-dark-mode .text-amber-900 {
+              color: rgb(251, 191, 36) !important;
+            }
+            .ruqyah-dark-mode .text-blue-800,
+            .ruqyah-dark-mode .text-blue-900 {
+              color: rgb(147, 197, 253) !important;
+            }
+            .ruqyah-dark-mode .text-green-800,
+            .ruqyah-dark-mode .text-green-900 {
+              color: rgb(134, 239, 172) !important;
+            }
+            .ruqyah-dark-mode .text-purple-800,
+            .ruqyah-dark-mode .text-purple-900 {
+              color: rgb(196, 181, 253) !important;
+            }
+            .ruqyah-dark-mode .text-yellow-800,
+            .ruqyah-dark-mode .text-yellow-900 {
+              color: rgb(254, 240, 138) !important;
+            }
+            .ruqyah-dark-mode .text-indigo-800,
+            .ruqyah-dark-mode .text-indigo-900 {
+              color: rgb(165, 180, 252) !important;
+            }
+            
+            /* Override all hardcoded background colors */
+            .ruqyah-dark-mode .bg-white {
+              background: rgba(55, 65, 81, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-gray-50 {
+              background: rgba(55, 65, 81, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-amber-50 {
+              background: rgba(120, 53, 15, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-blue-50 {
+              background: rgba(30, 58, 138, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-green-50 {
+              background: rgba(20, 83, 45, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-purple-50 {
+              background: rgba(76, 29, 149, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-yellow-50 {
+              background: rgba(133, 77, 14, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-indigo-50 {
+              background: rgba(49, 46, 129, 0.3) !important;
             }
             .ruqyah-dark-mode .bg-gradient-to-r {
-              background: black !important;
+              background: linear-gradient(135deg, rgb(55, 65, 81) 0%, rgb(59, 130, 246) 100%) !important;
             }
+            
+            /* Override all hardcoded border colors */
             .ruqyah-dark-mode .border-amber-300,
-            .ruqyah-dark-mode .border-blue-400,
-            .ruqyah-dark-mode .border-green-400,
-            .ruqyah-dark-mode .border-purple-400,
-            .ruqyah-dark-mode .border-yellow-400,
+            .ruqyah-dark-mode .border-amber-400 {
+              border-color: rgba(251, 191, 36, 0.5) !important;
+            }
+            .ruqyah-dark-mode .border-blue-300,
+            .ruqyah-dark-mode .border-blue-400 {
+              border-color: rgba(147, 197, 253, 0.5) !important;
+            }
+            .ruqyah-dark-mode .border-green-300,
+            .ruqyah-dark-mode .border-green-400 {
+              border-color: rgba(134, 239, 172, 0.5) !important;
+            }
+            .ruqyah-dark-mode .border-purple-300,
+            .ruqyah-dark-mode .border-purple-400 {
+              border-color: rgba(196, 181, 253, 0.5) !important;
+            }
+            .ruqyah-dark-mode .border-yellow-300,
+            .ruqyah-dark-mode .border-yellow-400 {
+              border-color: rgba(254, 240, 138, 0.5) !important;
+            }
+            .ruqyah-dark-mode .border-indigo-300,
             .ruqyah-dark-mode .border-indigo-400 {
-              border-color: #666 !important;
+              border-color: rgba(165, 180, 252, 0.5) !important;
+            }
+            
+            /* Enhanced shadow for dark mode */
+            .ruqyah-dark-mode .shadow-lg {
+              box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
             }
           `}</style>
         )}
@@ -895,7 +982,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         {/* Category title */}
         <div className="text-center mb-4">
           <div className="flex items-center justify-center gap-4">
-            <h1 className="text-white font-bold text-xl sm:text-2xl">
+            <h1 className={`font-bold text-xl sm:text-2xl ${isDarkMode ? 'text-gray-100' : 'text-white'}`}>
               {categoryTitle}
             </h1>
             
@@ -921,8 +1008,8 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                   onClick={() => jumpToCard(button.cardId)}
                   className={`px-3 py-2 text-xs rounded-lg transition-all duration-200 ${
                     currentCard === button.cardId
-                      ? 'bg-yellow-400 text-gray-800 font-semibold'
-                      : 'bg-white/20 text-white hover:bg-white/30'
+                      ? isDarkMode ? 'bg-blue-400 text-gray-900 font-semibold' : 'bg-yellow-400 text-gray-800 font-semibold'
+                      : isDarkMode ? 'bg-gray-700/50 text-gray-200 hover:bg-gray-600/60' : 'bg-white/20 text-white hover:bg-white/30'
                   }`}
                 >
                   {button.label}
@@ -978,15 +1065,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               !isAnimating ? 'translate-x-0' : 
               slideDirection === 'left' ? '-translate-x-full' : 'translate-x-full'
             } ${
-              (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'bg-black' : 'bg-white'
+              isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-white'
             }`}
             style={categoryTitle === 'Manzil' && isDarkMode ? {
               '--text-color': 'white',
-              '--bg-color': 'black'
+              '--bg-color': 'transparent'
             } : {}}
           >
             {/* Card counter badge */}
-            <div className="absolute top-3 right-3 bg-gray-800/20 text-white text-xs px-2 py-1 rounded-full font-medium z-10">
+            <div className={`absolute top-3 right-3 text-xs px-2 py-1 rounded-full font-medium z-10 ${isDarkMode ? 'bg-gray-700/60 text-gray-200' : 'bg-gray-800/20 text-white'}`}>
               {currentCard} / {cards.length}
             </div>
             
@@ -997,7 +1084,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 onClick={prevCard}
               >
                 {/* Visible Arrow - Desktop only */}
-                <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                <div className={`hidden md:flex rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-40 hover:opacity-70 transition-opacity duration-200 ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-800/40'}`}>
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                   </svg>
@@ -1011,7 +1098,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 onClick={nextCard}
               >
                 {/* Visible Arrow - Desktop only */}
-                <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                <div className={`hidden md:flex rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-40 hover:opacity-70 transition-opacity duration-200 ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-800/40'}`}>
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                   </svg>
@@ -1027,7 +1114,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           {isAnimating && (
             <div 
               className={`absolute inset-0 w-full h-full flex items-center justify-center transition-transform duration-300 ease-out ${
-                (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'bg-black' : 'bg-white'
+                isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-white'
               }`}
               style={{
                 transform: slideDirection === 'left' ? 
@@ -1036,7 +1123,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               }}
             >
               {/* Card counter badge for next card */}
-              <div className="absolute top-3 right-3 bg-gray-800/20 text-white text-xs px-2 py-1 rounded-full font-medium z-10">
+              <div className={`absolute top-3 right-3 text-xs px-2 py-1 rounded-full font-medium z-10 ${isDarkMode ? 'bg-gray-700/60 text-gray-200' : 'bg-gray-800/20 text-white'}`}>
                 {nextCardIndex} / {cards.length}
               </div>
               
@@ -1047,7 +1134,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                   onClick={prevCard}
                 >
                   {/* Visible Arrow - Desktop only */}
-                  <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                  <div className={`hidden md:flex rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-40 hover:opacity-70 transition-opacity duration-200 ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-800/40'}`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
                     </svg>
@@ -1061,7 +1148,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                   onClick={nextCard}
                 >
                   {/* Visible Arrow - Desktop only */}
-                  <div className="hidden md:flex bg-black/20 rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-30 hover:opacity-60 transition-opacity duration-200">
+                  <div className={`hidden md:flex rounded-full w-12 h-12 items-center justify-center backdrop-blur-sm opacity-40 hover:opacity-70 transition-opacity duration-200 ${isDarkMode ? 'bg-gray-600/50' : 'bg-gray-800/40'}`}>
                     <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
@@ -1075,7 +1162,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               </div>
               <div 
                 className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
-                  (categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode ? 'ruqyah-dark-mode' : ''
+                  isDarkMode ? 'ruqyah-dark-mode' : ''
                 }`} 
                 style={{
                   scrollTop: 0, 
@@ -1086,14 +1173,14 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               >
                 {cards[nextCardIndex - 1] && (
                   <>
-                    <h2 className="text-base sm:text-lg md:text-xl font-bold text-gray-800 mb-2"
+                    <h2 className={`text-base sm:text-lg md:text-xl font-bold mb-2 ${isDarkMode ? 'text-gray-100' : 'text-gray-800'}`}
                         dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].title }} />
                     
                     {shouldShowNotePill(cards[nextCardIndex - 1]) && (
                       <div className="flex justify-center mb-4 sm:mb-6">
                         <button 
                           onClick={() => setShowNotePopup(true)}
-                          className="bg-blue-100 text-blue-800 text-xs font-semibold px-3 py-1 rounded-full hover:bg-blue-200 transition-colors opacity-70"
+                          className={`text-xs font-semibold px-3 py-1 rounded-full transition-colors opacity-70 ${isDarkMode ? 'bg-blue-700 text-blue-200 hover:bg-blue-600' : 'bg-blue-100 text-blue-800 hover:bg-blue-200'}`}
                         >
                           Note
                         </button>
@@ -1103,27 +1190,114 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                     <div dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].content }} />
                     
                     {/* Dark mode styles for animated card */}
-                    {(categoryTitle === 'Manzil' || categoryTitle === 'Short Ruqyah' || categoryTitle === 'Complete Ruqyah Verses' || categoryTitle === 'What is Ruqyah?') && isDarkMode && (
+                    {isDarkMode && (
                       <style>{`
-                        .ruqyah-dark-mode,
-                        .ruqyah-dark-mode * {
-                          color: white !important;
-                          background-color: black !important;
-                          border-color: #666 !important;
+                        .ruqyah-dark-mode {
+                          background: linear-gradient(135deg, rgb(17, 24, 39) 0%, rgb(30, 58, 138) 100%) !important;
+                          color: rgb(243, 244, 246) !important;
                         }
-                        .ruqyah-dark-mode h2 {
-                          color: white !important;
+                        .ruqyah-dark-mode h2,
+                        .ruqyah-dark-mode h3,
+                        .ruqyah-dark-mode h4 {
+                          color: rgb(243, 244, 246) !important;
+                        }
+                        .ruqyah-dark-mode p {
+                          color: rgb(209, 213, 219) !important;
+                        }
+                        .ruqyah-dark-mode .arabic-text {
+                          color: rgb(243, 244, 246) !important;
+                        }
+                        
+                        /* Override all hardcoded text colors */
+                        .ruqyah-dark-mode .text-gray-600,
+                        .ruqyah-dark-mode .text-gray-700,
+                        .ruqyah-dark-mode .text-gray-800,
+                        .ruqyah-dark-mode .text-gray-900 {
+                          color: rgb(209, 213, 219) !important;
+                        }
+                        .ruqyah-dark-mode .text-amber-800,
+                        .ruqyah-dark-mode .text-amber-900 {
+                          color: rgb(251, 191, 36) !important;
+                        }
+                        .ruqyah-dark-mode .text-blue-800,
+                        .ruqyah-dark-mode .text-blue-900 {
+                          color: rgb(147, 197, 253) !important;
+                        }
+                        .ruqyah-dark-mode .text-green-800,
+                        .ruqyah-dark-mode .text-green-900 {
+                          color: rgb(134, 239, 172) !important;
+                        }
+                        .ruqyah-dark-mode .text-purple-800,
+                        .ruqyah-dark-mode .text-purple-900 {
+                          color: rgb(196, 181, 253) !important;
+                        }
+                        .ruqyah-dark-mode .text-yellow-800,
+                        .ruqyah-dark-mode .text-yellow-900 {
+                          color: rgb(254, 240, 138) !important;
+                        }
+                        .ruqyah-dark-mode .text-indigo-800,
+                        .ruqyah-dark-mode .text-indigo-900 {
+                          color: rgb(165, 180, 252) !important;
+                        }
+                        
+                        /* Override all hardcoded background colors */
+                        .ruqyah-dark-mode .bg-white {
+                          background: rgba(55, 65, 81, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-gray-50 {
+                          background: rgba(55, 65, 81, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-amber-50 {
+                          background: rgba(120, 53, 15, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-blue-50 {
+                          background: rgba(30, 58, 138, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-green-50 {
+                          background: rgba(20, 83, 45, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-purple-50 {
+                          background: rgba(76, 29, 149, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-yellow-50 {
+                          background: rgba(133, 77, 14, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-indigo-50 {
+                          background: rgba(49, 46, 129, 0.3) !important;
                         }
                         .ruqyah-dark-mode .bg-gradient-to-r {
-                          background: black !important;
+                          background: linear-gradient(135deg, rgb(55, 65, 81) 0%, rgb(59, 130, 246) 100%) !important;
                         }
+                        
+                        /* Override all hardcoded border colors */
                         .ruqyah-dark-mode .border-amber-300,
-                        .ruqyah-dark-mode .border-blue-400,
-                        .ruqyah-dark-mode .border-green-400,
-                        .ruqyah-dark-mode .border-purple-400,
-                        .ruqyah-dark-mode .border-yellow-400,
+                        .ruqyah-dark-mode .border-amber-400 {
+                          border-color: rgba(251, 191, 36, 0.5) !important;
+                        }
+                        .ruqyah-dark-mode .border-blue-300,
+                        .ruqyah-dark-mode .border-blue-400 {
+                          border-color: rgba(147, 197, 253, 0.5) !important;
+                        }
+                        .ruqyah-dark-mode .border-green-300,
+                        .ruqyah-dark-mode .border-green-400 {
+                          border-color: rgba(134, 239, 172, 0.5) !important;
+                        }
+                        .ruqyah-dark-mode .border-purple-300,
+                        .ruqyah-dark-mode .border-purple-400 {
+                          border-color: rgba(196, 181, 253, 0.5) !important;
+                        }
+                        .ruqyah-dark-mode .border-yellow-300,
+                        .ruqyah-dark-mode .border-yellow-400 {
+                          border-color: rgba(254, 240, 138, 0.5) !important;
+                        }
+                        .ruqyah-dark-mode .border-indigo-300,
                         .ruqyah-dark-mode .border-indigo-400 {
-                          border-color: #666 !important;
+                          border-color: rgba(165, 180, 252, 0.5) !important;
+                        }
+                        
+                        /* Enhanced shadow for dark mode */
+                        .ruqyah-dark-mode .shadow-lg {
+                          box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.1) !important;
                         }
                       `}</style>
                     )}
@@ -1153,20 +1327,20 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         
         {/* Note Popup Modal */}
         {showNotePopup && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50" onClick={() => setShowNotePopup(false)}>
-            <div className="bg-white rounded-lg p-6 m-4 max-w-sm w-full shadow-lg" onClick={(e) => e.stopPropagation()}>
+          <div className="fixed inset-0 bg-gray-900 bg-opacity-80 flex items-center justify-center z-50" onClick={() => setShowNotePopup(false)}>
+            <div className={`rounded-lg p-6 m-4 max-w-sm w-full shadow-lg ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-600' : 'bg-white'}`} onClick={(e) => e.stopPropagation()}>
               <div className="flex justify-between items-start mb-4">
-                <h3 className="text-lg font-semibold text-gray-900">Note</h3>
+                <h3 className={`text-lg font-semibold ${isDarkMode ? 'text-gray-100' : 'text-gray-900'}`}>Note</h3>
                 <button 
                   onClick={() => setShowNotePopup(false)}
-                  className="text-gray-400 hover:text-gray-600 transition-colors"
+                  className={`transition-colors ${isDarkMode ? 'text-gray-400 hover:text-gray-200' : 'text-gray-400 hover:text-gray-600'}`}
                 >
                   <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                   </svg>
                 </button>
               </div>
-              <p className="text-gray-700 leading-relaxed">
+              <p className={`leading-relaxed ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                 The Qur'an must be recited in Arabic but the following du'as can be recited in Arabic or in your own language.
               </p>
             </div>
