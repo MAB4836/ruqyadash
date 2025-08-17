@@ -2,8 +2,8 @@ import React from 'react'
 
 const MorningAdhkar = ({ onBack, selectedFont }) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-4">
-      <div className="max-w-4xl mx-auto">
+    <div className="min-h-screen bg-gradient-to-br from-blue-50 to-purple-50 p-2 md:p-4">
+      <div className="w-full md:max-w-4xl md:mx-auto">
         {/* Header */}
         <div className="flex items-center justify-between mb-6">
           <button
@@ -28,7 +28,7 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
           </div>
 
           {/* Content */}
-          <div className="p-6 md:p-8 space-y-8">
+          <div className="p-4 md:p-8 space-y-6 md:space-y-8">
             
             {/* Āyah al-Kursī */}
             <div className="border-l-4 border-blue-400 pl-6">
@@ -55,9 +55,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Sahih al-Bukhari (2311) — Whoever recites it in the morning is protected until evening, and in the evening until morning.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -74,9 +71,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Abu Dawūd 5082, Tirmidhi 3575 — The Prophet ﷺ would recite them for protection.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -105,9 +99,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Abu Dawūd 5088 — Guarantees protection from harm that day/night.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -136,9 +127,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Muslim 2708 — Complete protection from evil.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -167,9 +155,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Abu Dawūd 5072 — Allah will be pleased with whoever says it.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -198,15 +183,12 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Bukhari 6306 — Whoever says it in the morning with conviction and dies that day enters Jannah (and same for evening).
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
             {/* Lā ilāha illallāh waḥdahu... */}
             <div className="border-l-4 border-blue-400 pl-6">
-              <h3 className="text-xl font-bold text-gray-800 mb-3">Du'ā' for Praise and Protection</h3>
+              <h3 className="text-xl font-bold text-gray-800 mb-3">Du'ā' of Praise and Protection</h3>
               
               <div className="bg-gray-50 rounded-lg p-4 mb-3 relative">
                 <p className="text-center text-2xl leading-loose text-gray-800" style={{ fontFamily: selectedFont }}>
@@ -229,9 +211,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                 <p className="text-green-800 text-sm leading-relaxed">
                   <strong>Source:</strong> Muslim 2691 — Heavy reward, protection from shayṭān. Reciting this dhikr 100 times in a single day grants protection from Shayṭān, erases sins, and earns abundant reward (Sahih al-Bukhārī 3293, Sahih Muslim 2691). Scholars also recommend it as spiritual protection for those experiencing harm or influence from siḥr or jinn.
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
 
@@ -259,9 +238,6 @@ const MorningAdhkar = ({ onBack, selectedFont }) => {
                   <span className="text-blue-600 mr-2">•</span>
                   <span>Focus on understanding the meaning and feeling the connection with Allah during recitation.</span>
                 </p>
-                <span className="absolute -bottom-1 left-2 bg-blue-100 text-blue-700 text-xs px-2 py-1 rounded-full font-medium">
-                  Once
-                </span>
               </div>
             </div>
           </div>
