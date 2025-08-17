@@ -52,7 +52,7 @@
 /* CSS Custom Properties for dynamic font switching */
 :root {
   --arabic-font-family: 'KSARegular_B';
-  --arabic-font-size: 100%;
+  --arabic-font-size: 110%;
 }
 
 /* Arabic text optimization */

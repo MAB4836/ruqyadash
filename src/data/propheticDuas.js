@@ -71,8 +71,8 @@ export const propheticDuas = [
         
         <div class="bg-green-50 p-4 rounded-lg border-l-4 border-green-400 mb-4">
           <h4 class="font-semibold text-md mb-2 text-center">Prophetic Practice</h4>
-          <p class="text-gray-700 text-center">The Prophet ﷺ used to recite this over his grandsons Al-Hasan and Al-Husayn.</p>
-          <p class="text-gray-600 text-center text-sm mt-1">He said Ibrahim (as) used to seek protection for Isma'il and Ishaq with these words.</p>
+          <p class="text-gray-700 text-center">The Prophet pbuh used to recite this over his grandsons Al-Hasan and Al-Husayn.</p>
+          <p class="text-gray-700 text-center">He pbuh said Ibrahim (as) used to seek protection for Isma'il and Ishaq with these words.</p>
         </div>
         
         <div class="bg-yellow-50 p-4 rounded-lg border-l-4 border-yellow-400">

@@ -52,7 +52,7 @@ function App() {
     return localStorage.getItem('arabicFont') || 'KSARegular_B'
   })
   const [arabicFontSize, setArabicFontSize] = useState(() => {
-    return parseInt(localStorage.getItem('arabicFontSize')) || 100
+    return parseInt(localStorage.getItem('arabicFontSize')) || 110
   })
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem('ruqyahDarkMode') === 'true'
@@ -537,18 +537,29 @@ function App() {
 
   if (currentScreen === 'ruqyahSubmenu') {
     return (
-      <RuqyahSubmenu
-        onSelectOption={handleSelectRuqyahOption}
-        onBack={navigationHistory.length > 0 ? navigateBack : handleBackToMenu}
-        onOpenGuide={handleOpenRuqyahGuide}
-        showReturnButton={navigationHistory.length > 0}
-        isDarkMode={isDarkMode}
-        onToggleDarkMode={handleToggleDarkMode}
-        isPageView={isPageView}
-        onTogglePageView={handleTogglePageView}
-        showTranslations={showTranslations}
-        onToggleTranslations={handleToggleTranslations}
-      />
+      <>
+        <RuqyahSubmenu
+          onSelectOption={handleSelectRuqyahOption}
+          onBack={navigationHistory.length > 0 ? navigateBack : handleBackToMenu}
+          onOpenGuide={handleOpenRuqyahGuide}
+          showReturnButton={navigationHistory.length > 0}
+          isDarkMode={isDarkMode}
+          onToggleDarkMode={handleToggleDarkMode}
+          isPageView={isPageView}
+          onTogglePageView={handleTogglePageView}
+          showTranslations={showTranslations}
+          onToggleTranslations={handleToggleTranslations}
+          onOpenSettings={handleOpenSettings}
+        />
+        <SettingsPopup 
+          isOpen={showSettingsPopup}
+          onClose={handleCloseSettings}
+          selectedFont={selectedFont}
+          onFontChange={handleFontChange}
+          arabicFontSize={arabicFontSize}
+          onFontSizeChange={handleFontSizeChange}
+        />
+      </>
     )
   }
 

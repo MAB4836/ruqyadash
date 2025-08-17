@@ -809,7 +809,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     return (
       <div 
         ref={cardContentRef} 
-        className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
+        className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto h-full w-full ${
           isDarkMode ? 'ruqyah-dark-mode' : ''
         }`} 
         style={{ 
@@ -832,7 +832,10 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           </div>
         )}
         
-        <div dangerouslySetInnerHTML={{ __html: card.content }} />
+        <div 
+          className="arabic-text text-xl sm:text-2xl md:text-3xl"
+          dangerouslySetInnerHTML={{ __html: card.content }} 
+        />
         
         {/* Translation visibility styles for Ruqyah decks */}
         {(categoryTitle === 'Manzil' || categoryTitle === 'Prophetic Ruqyah' || categoryTitle === 'Ruqyah Plus') && !showTranslations && (
@@ -893,6 +896,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
             .ruqyah-dark-mode .text-indigo-800,
             .ruqyah-dark-mode .text-indigo-900 {
               color: rgb(165, 180, 252) !important;
+            }
+            
+            /* Remove bullet points from paragraphs in colored boxes */
+            .bg-green-50 p,
+            .bg-orange-50 p,
+            .bg-blue-50 p,
+            .bg-yellow-50 p {
+              list-style: none !important;
+              list-style-type: none !important;
             }
             
             /* Enhanced text visibility in light background containers */
@@ -1108,7 +1120,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         {/* Card display */}
         <div 
           ref={cardContainerRef}
-          className="relative w-full h-[80vh] sm:h-96 md:h-[500px] rounded-lg shadow-xl overflow-hidden select-none"
+          className="relative w-full min-h-[400px] max-h-[90vh] rounded-lg shadow-xl overflow-hidden select-none"
         >
           {/* Current Card */}
           <div 
@@ -1207,12 +1219,8 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                 </div>
               )}
 
-              
-              <div style={{color: 'red', fontSize: '30px', zIndex: 1000, position: 'absolute', top: '50px'}}>
-                slideDirection: {slideDirection}
-              </div>
               <div 
-                className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto max-h-full w-full ${
+                className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto h-full w-full ${
                   isDarkMode ? 'ruqyah-dark-mode' : ''
                 }`} 
                 style={{
@@ -1238,7 +1246,10 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                       </div>
                     )}
                     
-                    <div dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].content }} />
+                    <div 
+                      className="arabic-text text-xl sm:text-2xl md:text-3xl"
+                      dangerouslySetInnerHTML={{ __html: cards[nextCardIndex - 1].content }} 
+                    />
                     
                     {/* Dark mode styles for animated card */}
                     {isDarkMode && (
