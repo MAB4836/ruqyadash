@@ -9,10 +9,10 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
   }, [])
 
   return (
-    <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">
-      <div className="relative w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl">
+    <div className="min-h-screen bg-red-500 flex items-center justify-center p-0 md:p-4">
+      <div className="relative w-full md:max-w-2xl lg:max-w-4xl">
         {/* Back button at top */}
-        <div className="flex justify-center mb-4">
+        <div className="flex justify-center mb-4 px-4 md:px-0">
           <button
             onClick={onBack}
             className={`rounded-lg px-6 py-3 transition-all duration-200 font-medium text-white ${isDarkMode ? 'bg-gray-700/50 hover:bg-gray-600/60' : 'bg-white bg-opacity-20 hover:bg-opacity-30'}`}
@@ -22,14 +22,14 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
         </div>
 
         {/* Category title */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-4 px-4 md:px-0">
           <h1 className="text-white font-bold text-xl sm:text-2xl">
             {categoryTitle} - Page View
           </h1>
         </div>
 
         {/* Page content */}
-        <div className={`w-full rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 border border-gray-600' : 'bg-white'}`}>
+        <div className={`w-full md:rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 md:border border-gray-600' : 'bg-white'}`}>
           <div 
             ref={pageContentRef}
             className={`p-4 sm:p-6 md:p-8 space-y-12 ${
@@ -181,7 +181,7 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
         </div>
         
         {/* Back button */}
-        <div className="flex justify-center mt-8">
+        <div className="flex justify-center mt-8 px-4 md:px-0">
           <button
             onClick={onBack}
             className={`rounded-lg px-6 py-3 transition-all duration-200 font-medium text-white ${isDarkMode ? 'bg-gray-700/50 hover:bg-gray-600/60' : 'bg-white bg-opacity-20 hover:bg-opacity-30'}`}
