@@ -868,7 +868,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
             .ruqyah-dark-mode .text-gray-700,
             .ruqyah-dark-mode .text-gray-800,
             .ruqyah-dark-mode .text-gray-900 {
-              color: rgb(209, 213, 219) !important;
+              color: rgb(255, 255, 255) !important;
             }
             .ruqyah-dark-mode .text-amber-800,
             .ruqyah-dark-mode .text-amber-900 {
@@ -895,6 +895,48 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               color: rgb(165, 180, 252) !important;
             }
             
+            /* Enhanced text visibility in light background containers */
+            .ruqyah-dark-mode .bg-orange-50 p,
+            .ruqyah-dark-mode .bg-orange-50 h4,
+            .ruqyah-dark-mode .bg-orange-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-blue-50 p,
+            .ruqyah-dark-mode .bg-blue-50 h4,
+            .ruqyah-dark-mode .bg-blue-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-green-50 p,
+            .ruqyah-dark-mode .bg-green-50 h4,
+            .ruqyah-dark-mode .bg-green-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-purple-50 p,
+            .ruqyah-dark-mode .bg-purple-50 h4,
+            .ruqyah-dark-mode .bg-purple-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-yellow-50 p,
+            .ruqyah-dark-mode .bg-yellow-50 h4,
+            .ruqyah-dark-mode .bg-yellow-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-indigo-50 p,
+            .ruqyah-dark-mode .bg-indigo-50 h4,
+            .ruqyah-dark-mode .bg-indigo-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-red-50 p,
+            .ruqyah-dark-mode .bg-red-50 h4,
+            .ruqyah-dark-mode .bg-red-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            .ruqyah-dark-mode .bg-teal-50 p,
+            .ruqyah-dark-mode .bg-teal-50 h4,
+            .ruqyah-dark-mode .bg-teal-50 span {
+              color: rgb(255, 255, 255) !important;
+            }
+            
             /* Override all hardcoded background colors */
             .ruqyah-dark-mode .bg-white {
               background: rgba(55, 65, 81, 0.3) !important;
@@ -919,6 +961,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
             }
             .ruqyah-dark-mode .bg-indigo-50 {
               background: rgba(49, 46, 129, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-orange-50 {
+              background: rgba(154, 52, 18, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-red-50 {
+              background: rgba(153, 27, 27, 0.3) !important;
+            }
+            .ruqyah-dark-mode .bg-teal-50 {
+              background: rgba(17, 94, 89, 0.3) !important;
             }
             .ruqyah-dark-mode .bg-gradient-to-r {
               background: linear-gradient(135deg, rgb(55, 65, 81) 0%, rgb(59, 130, 246) 100%) !important;
@@ -1213,7 +1264,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                         .ruqyah-dark-mode .text-gray-700,
                         .ruqyah-dark-mode .text-gray-800,
                         .ruqyah-dark-mode .text-gray-900 {
-                          color: rgb(209, 213, 219) !important;
+                          color: rgb(255, 255, 255) !important;
                         }
                         .ruqyah-dark-mode .text-amber-800,
                         .ruqyah-dark-mode .text-amber-900 {
@@ -1240,6 +1291,48 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                           color: rgb(165, 180, 252) !important;
                         }
                         
+                        /* Enhanced text visibility in light background containers */
+                        .ruqyah-dark-mode .bg-orange-50 p,
+                        .ruqyah-dark-mode .bg-orange-50 h4,
+                        .ruqyah-dark-mode .bg-orange-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-blue-50 p,
+                        .ruqyah-dark-mode .bg-blue-50 h4,
+                        .ruqyah-dark-mode .bg-blue-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-green-50 p,
+                        .ruqyah-dark-mode .bg-green-50 h4,
+                        .ruqyah-dark-mode .bg-green-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-purple-50 p,
+                        .ruqyah-dark-mode .bg-purple-50 h4,
+                        .ruqyah-dark-mode .bg-purple-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-yellow-50 p,
+                        .ruqyah-dark-mode .bg-yellow-50 h4,
+                        .ruqyah-dark-mode .bg-yellow-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-indigo-50 p,
+                        .ruqyah-dark-mode .bg-indigo-50 h4,
+                        .ruqyah-dark-mode .bg-indigo-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-red-50 p,
+                        .ruqyah-dark-mode .bg-red-50 h4,
+                        .ruqyah-dark-mode .bg-red-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        .ruqyah-dark-mode .bg-teal-50 p,
+                        .ruqyah-dark-mode .bg-teal-50 h4,
+                        .ruqyah-dark-mode .bg-teal-50 span {
+                          color: rgb(255, 255, 255) !important;
+                        }
+                        
                         /* Override all hardcoded background colors */
                         .ruqyah-dark-mode .bg-white {
                           background: rgba(55, 65, 81, 0.3) !important;
@@ -1264,6 +1357,15 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
                         }
                         .ruqyah-dark-mode .bg-indigo-50 {
                           background: rgba(49, 46, 129, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-orange-50 {
+                          background: rgba(154, 52, 18, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-red-50 {
+                          background: rgba(153, 27, 27, 0.3) !important;
+                        }
+                        .ruqyah-dark-mode .bg-teal-50 {
+                          background: rgba(17, 94, 89, 0.3) !important;
                         }
                         .ruqyah-dark-mode .bg-gradient-to-r {
                           background: linear-gradient(135deg, rgb(55, 65, 81) 0%, rgb(59, 130, 246) 100%) !important;

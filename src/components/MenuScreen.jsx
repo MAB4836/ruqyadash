@@ -78,30 +78,30 @@ const MenuScreen = ({ onSelectCategory, onOpenSettings, onSelectMorning, onSelec
           ))}
         </div>
         
-        <div className="flex justify-center space-x-4">
+        <div className="flex justify-center space-x-2 sm:space-x-4 px-4 sm:px-0">
           <button 
             onClick={onSelectMorning}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-3 sm:px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation flex-1 sm:flex-none sm:min-w-24 max-w-20 sm:max-w-none"
           >
-            <span className="text-sm font-semibold">Morning</span>
+            <span className="text-xs sm:text-sm font-semibold">Morning</span>
           </button>
           <button 
             onClick={onSelectShifa}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-3 sm:px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation flex-1 sm:flex-none sm:min-w-24 max-w-20 sm:max-w-none"
           >
-            <span className="text-sm font-semibold">Shifa</span>
+            <span className="text-xs sm:text-sm font-semibold">Shifa</span>
           </button>
           <button 
             onClick={onSelectChild}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-3 sm:px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation flex-1 sm:flex-none sm:min-w-24 max-w-20 sm:max-w-none"
           >
-            <span className="text-sm font-semibold">Child</span>
+            <span className="text-xs sm:text-sm font-semibold">Child</span>
           </button>
           <button 
             onClick={onSelectEvening}
-            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation min-w-24"
+            className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-2xl px-3 sm:px-6 py-4 transition-all duration-200 transform hover:scale-105 touch-manipulation flex-1 sm:flex-none sm:min-w-24 max-w-20 sm:max-w-none"
           >
-            <span className="text-sm font-semibold">Evening</span>
+            <span className="text-xs sm:text-sm font-semibold">Evening</span>
           </button>
         </div>
       </div>
