@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SettingsPopup = ({ isOpen, onClose, selectedFont, onFontChange }) => {
+const SettingsPopup = ({ isOpen, onClose, selectedFont, onFontChange, arabicFontSize, onFontSizeChange }) => {
   if (!isOpen) return null
 
   const fontOptions = [
@@ -29,6 +29,52 @@ const SettingsPopup = ({ isOpen, onClose, selectedFont, onFontChange }) => {
           </button>
         </div>
         
+        <div className="mb-6">
+          <h3 className="text-lg font-semibold text-gray-800 mb-4">Arabic Font Size</h3>
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <span className="text-sm text-gray-600">Small</span>
+              <span className="text-sm text-gray-600">Large</span>
+            </div>
+            <div className="relative">
+              <input
+                type="range"
+                min="70"
+                max="150"
+                step="10"
+                value={arabicFontSize}
+                onChange={(e) => onFontSizeChange(parseInt(e.target.value))}
+                className="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer slider"
+                style={{
+                  background: `linear-gradient(to right, #3B82F6 0%, #3B82F6 ${((arabicFontSize - 70) / (150 - 70)) * 100}%, #E5E7EB ${((arabicFontSize - 70) / (150 - 70)) * 100}%, #E5E7EB 100%)`
+                }}
+              />
+              <div className="flex justify-between text-xs text-gray-500 mt-1">
+                <span>70%</span>
+                <span>110%</span>
+                <span>150%</span>
+              </div>
+            </div>
+            <div className="text-center">
+              <span className="text-sm text-gray-600">Current: {arabicFontSize}%</span>
+            </div>
+            <div className="bg-gray-50 p-3 rounded-lg text-center">
+              <div 
+                className="arabic-text text-gray-700"
+                style={{ 
+                  fontFamily: `'${selectedFont}', 'Amiri Quran', serif`,
+                  fontSize: `${arabicFontSize}%`
+                }}
+              >
+                بِسْمِ اللَّهِ الرَّحْمَٰنِ الرَّحِيمِ
+              </div>
+              <div className="text-sm text-gray-500 mt-1">
+                Preview at {arabicFontSize}% size
+              </div>
+            </div>
+          </div>
+        </div>
+
         <div className="mb-6">
           <h3 className="text-lg font-semibold text-gray-800 mb-4">Arabic Font</h3>
           <div className="space-y-3">

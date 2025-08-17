@@ -52,11 +52,13 @@
 /* CSS Custom Properties for dynamic font switching */
 :root {
   --arabic-font-family: 'KSARegular_B';
+  --arabic-font-size: 100%;
 }
 
 /* Arabic text optimization */
 .arabic-text {
   font-family: var(--arabic-font-family), 'Amiri Quran', 'UthmanicHafs', 'Noto Sans Arabic', 'Traditional Arabic', serif;
+  font-size: var(--arabic-font-size) !important;
   direction: rtl;
   text-align: right;
   line-height: 1.8;

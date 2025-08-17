@@ -51,6 +51,9 @@ function App() {
   const [selectedFont, setSelectedFont] = useState(() => {
     return localStorage.getItem('arabicFont') || 'KSARegular_B'
   })
+  const [arabicFontSize, setArabicFontSize] = useState(() => {
+    return parseInt(localStorage.getItem('arabicFontSize')) || 100
+  })
   const [isDarkMode, setIsDarkMode] = useState(() => {
     return localStorage.getItem('ruqyahDarkMode') === 'true'
   })
@@ -461,10 +464,17 @@ function App() {
     localStorage.setItem('arabicFont', fontId)
     document.documentElement.style.setProperty('--arabic-font-family', `'${fontId}'`)
   }
+  
+  const handleFontSizeChange = (size) => {
+    setArabicFontSize(size)
+    localStorage.setItem('arabicFontSize', size.toString())
+    document.documentElement.style.setProperty('--arabic-font-size', `${size}%`)
+  }
 
-  // Set initial font on app load
+  // Set initial font and font size on app load
   useEffect(() => {
     document.documentElement.style.setProperty('--arabic-font-family', `'${selectedFont}'`)
+    document.documentElement.style.setProperty('--arabic-font-size', `${arabicFontSize}%`)
   }, [])
 
   const ExitDialog = () => (
@@ -500,6 +510,8 @@ function App() {
           onClose={handleCloseSettings}
           selectedFont={selectedFont}
           onFontChange={handleFontChange}
+          arabicFontSize={arabicFontSize}
+          onFontSizeChange={handleFontSizeChange}
         />
       </>
     )
