@@ -27,7 +27,7 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
   return (
     <div className="min-h-screen bg-red-500 flex items-center justify-center p-4">
       <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl">
-        <div className="mb-8">
+        <div className="mb-6">
           <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white text-center mb-4">
             Ruqyah Options
           </h1>
@@ -72,20 +72,20 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
                 </button>
               </div>
             </div>
-            
-            {/* Start Here Guide Pill - now has full width */}
-            <div className="flex justify-center mb-4">
-              <button
-                onClick={onOpenGuide}
-                className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
-              >
-                Start Here - Understanding These Ruqyah Collections
-              </button>
-            </div>
           </div>
         </div>
         
-        <div className="space-y-4">
+        {/* Start Here Guide Pill */}
+        <div className="flex justify-center mb-6">
+          <button
+            onClick={onOpenGuide}
+            className="bg-blue-400 hover:bg-blue-500 text-white px-6 py-2 rounded-full font-medium text-sm transition-all duration-200 transform hover:scale-105 shadow-lg"
+          >
+            Start Here - Understanding These Ruqyah Collections
+          </button>
+        </div>
+        
+        <div className="space-y-6">
           {submenuOptions.map((option) => (
             <button
               key={option.id}
@@ -100,7 +100,7 @@ const RuqyahSubmenu = ({ onSelectOption, onBack, onOpenGuide, showReturnButton, 
           ))}
         </div>
         
-        <div className="flex justify-center items-center mt-8">
+        <div className="flex justify-center items-center mt-6">
           <button
             onClick={onBack}
             className="bg-white bg-opacity-20 hover:bg-opacity-30 text-white rounded-lg px-4 py-2 transition-all duration-200"

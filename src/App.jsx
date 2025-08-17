@@ -487,7 +487,7 @@ function App() {
 
   if (currentScreen === 'morningAdhkar') {
     return (
-      <MorningAdhkar onBack={handleBackFromMorningAdhkar} selectedFont={selectedFont} />
+      <MorningAdhkar onBack={handleBackFromMorningAdhkar} selectedFont={selectedFont} isDarkMode={isDarkMode} />
     )
   }
 
