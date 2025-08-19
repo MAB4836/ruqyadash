@@ -10,15 +10,8 @@ const Navigation = ({
   count, 
   onIncrement, 
   onClear,
-  showCounting = true,
-  showScrollToTop = true,
-  onScrollToTop,
-  isFullPageVisible = false
+  showCounting = true
 }) => {
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
-    if (onScrollToTop) onScrollToTop()
-  }
   return (
     <>
       {/* Navigation buttons */}
@@ -82,14 +75,6 @@ const Navigation = ({
           <span className="hidden sm:block">Next</span>
         </button>
         
-        {!isFullPageVisible && (
-          <button 
-            onClick={scrollToTop}
-            className="w-8 h-8 sm:w-10 sm:h-10 text-xs sm:text-sm bg-white/30 text-white rounded-full shadow-md hover:bg-white/40 touch-manipulation flex items-center justify-center ml-4"
-          >
-            ↑
-          </button>
-        )}
       </div>
     </>
   )

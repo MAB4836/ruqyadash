@@ -2,13 +2,13 @@ export const selfDiagnosis = [
   {
     id: 1,
     title: 'Start Here: Ruqyah ≠ Medical Diagnosis',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
-      <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
+      <div class="bg-red-50 border-l-4 border-red-500 p-4 mb-6" style="direction: ltr; text-align: left">
         <h3 class="font-bold text-red-800 mb-2">Important Disclaimer</h3>
         <p class="text-red-700">Not every illness or strange experience is caused by sihr (magic), jinn, or evil eye. Many symptoms have medical or psychological causes.</p>
       </div>
       
-      <div class="space-y-3">
+      <div class="space-y-3" style="direction: ltr; text-align: left">
         <p><strong class="text-blue-700">Always consult a qualified doctor or mental health professional first.</strong></p>
         
         <p>Ruqyah can complement professional treatment, but it should not replace it.</p>
@@ -18,12 +18,12 @@ export const selfDiagnosis = [
   {
     id: 2,
     title: 'What Are the Common Effects of Sihr or Jinn?',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Some people affected by sihr, jinn, or evil eye may experience intense or unusual symptoms, especially when hearing or reading the Qur'an.</p>
       
-      <div class="bg-blue-50 p-4 rounded-lg">
-        <h4 class="font-bold text-blue-800 mb-3">Possible Effects:</h4>
-        <ul class="space-y-2 text-blue-700">
+      <div class="bg-gray-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
+        <h4 class="font-bold text-gray-800 mb-3">Possible Effects:</h4>
+        <ul class="space-y-2 text-gray-700" style="direction: ltr; text-align: left">
           <li>• Strong aversion to Qur'an, Adhan, or Salah</li>
           <li>• Feeling irritated or distressed during recitation</li>
           <li>• Feeling heavy, sleepy, or unable to focus when praying</li>
@@ -37,7 +37,7 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-yellow-800 mb-2">Important Caution:</h4>
         <p class="text-yellow-700">One or two signs alone do not confirm sihr or jinn.</p>
         <p class="text-yellow-700 mt-2">Only when multiple symptoms occur together and react strongly to Qur'an should spiritual causes be considered.</p>
@@ -47,10 +47,10 @@ export const selfDiagnosis = [
   {
     id: 3,
     title: 'Mood Swings, Depression, and Emotional Effects',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Some people affected by sihr, jinn, or evil eye may experience sudden or extreme changes in mood. These are sometimes spiritual in origin, especially when they:</p>
       
-      <ul class="space-y-1 text-gray-700 list-none">
+      <ul class="space-y-1 text-gray-700 list-none" style="direction: ltr; text-align: left">
         <li class="flex"><span class="mr-2">•</span><span>Intensify during Qur'anic recitation</span></li>
         <li class="flex"><span class="mr-2">•</span><span>Occur in the presence of certain people (e.g., spouse, family, strangers)</span></li>
         <li class="flex"><span class="mr-2">•</span><span>Are triggered in specific places (e.g., home, bedroom, certain house/area)</span></li>
@@ -58,9 +58,9 @@ export const selfDiagnosis = [
         <li class="flex"><span class="mr-2">•</span><span>Have no clear medical explanation</span></li>
       </ul>
       
-      <div class="bg-purple-50 p-4 rounded-lg">
+      <div class="bg-purple-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-purple-800 mb-3">Possible Emotional Symptoms:</h4>
-        <ul class="space-y-2 text-purple-700 list-none">
+        <ul class="space-y-2 text-purple-700 list-none" style="direction: ltr; text-align: left">
           <li class="flex"><span class="mr-2">•</span><span>Sudden waves of depression or hopelessness</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Irritability, anger, or aggression toward loved ones or Islamic reminders</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Feeling numb, disconnected, or empty</span></li>
@@ -72,9 +72,9 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-red-50 border-l-4 border-red-500 p-4">
+      <div class="bg-red-50 border-l-4 border-red-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-red-800 mb-2">Important Disclaimer:</h4>
-        <div class="text-red-700 space-y-2">
+        <div class="text-red-700 space-y-2" style="direction: ltr; text-align: left">
           <p>These symptoms overlap heavily with mental health conditions such as depression, anxiety, bipolar disorder, or PTSD.</p>
           <p><strong>Always consult a qualified doctor or mental health professional.</strong></p>
           <p>Spiritual and medical causes can occur together.</p>
@@ -85,18 +85,18 @@ export const selfDiagnosis = [
   {
     id: 4,
     title: 'Sleep Problems That May Be Linked to Sihr or Jinn',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Some people affected by sihr, jinn, or evil eye experience unusual sleep issues. These may be spiritual when they:</p>
       
-      <ul class="space-y-1 text-gray-700 list-none">
+      <ul class="space-y-1 text-gray-700 list-none" style="direction: ltr; text-align: left">
         <li class="flex"><span class="mr-2">•</span><span>Involve repeated disturbing dreams (snakes, scorpions, dark figures, graves, falling)</span></li>
         <li class="flex"><span class="mr-2">•</span><span>Occur at the same time every night</span></li>
         <li class="flex"><span class="mr-2">•</span><span>Intensify after Qur'anic recitation or playing ruqyah audio</span></li>
       </ul>
       
-      <div class="bg-indigo-50 p-4 rounded-lg">
+      <div class="bg-indigo-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-indigo-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-indigo-700 list-none">
+        <ul class="space-y-2 text-indigo-700 list-none" style="direction: ltr; text-align: left">
           <li class="flex"><span class="mr-2">•</span><span>Persistent nightmares or night terrors</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Sleep paralysis with frightening visions or sensations</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Waking suddenly in fear or panic</span></li>
@@ -105,9 +105,9 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-yellow-800 mb-2">Important Disclaimer:</h4>
-        <div class="text-yellow-700 space-y-2">
+        <div class="text-yellow-700 space-y-2" style="direction: ltr; text-align: left">
           <p>Many sleep issues are caused by stress, diet, or medical conditions.</p>
           <p><strong>Always consult a doctor to rule out physical or psychological causes.</strong></p>
         </div>
@@ -117,12 +117,12 @@ export const selfDiagnosis = [
   {
     id: 5,
     title: 'Unexplained Physical Symptoms',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Some spiritual afflictions may cause physical effects, especially when there is no medical explanation and symptoms worsen during Qur'an recitation.</p>
       
-      <div class="bg-green-50 p-4 rounded-lg">
+      <div class="bg-green-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-green-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-green-700 list-none">
+        <ul class="space-y-2 text-green-700 list-none" style="direction: ltr; text-align: left">
           <li class="flex"><span class="mr-2">•</span><span>Moving or shifting pains in the body</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Chronic headaches or migraines without medical cause</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Stomach pain, bloating, or nausea — especially during ruqyah</span></li>
@@ -132,9 +132,9 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-red-50 border-l-4 border-red-500 p-4">
+      <div class="bg-red-50 border-l-4 border-red-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-red-800 mb-2">Important Disclaimer:</h4>
-        <div class="text-red-700 space-y-2">
+        <div class="text-red-700 space-y-2" style="direction: ltr; text-align: left">
           <p>These can also come from food intolerances, infections, hormonal issues, or other medical problems.</p>
           <p><strong>Always investigate medical causes with a doctor before assuming spiritual causes.</strong></p>
         </div>
@@ -144,12 +144,12 @@ export const selfDiagnosis = [
   {
     id: 6,
     title: 'Changes in Mind, Memory, and Perception',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Some affected individuals report changes in thinking, memory, or senses. These may be spiritual when they occur suddenly or during Qur'anic recitation.</p>
       
-      <div class="bg-orange-50 p-4 rounded-lg">
+      <div class="bg-orange-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-orange-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-orange-700 list-none">
+        <ul class="space-y-2 text-orange-700 list-none" style="direction: ltr; text-align: left">
           <li class="flex"><span class="mr-2">•</span><span>Sudden, unexplained memory loss or confusion</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Forgetting Qur'anic verses you usually know well</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Hearing whispers, footsteps, or voices when alone</span></li>
@@ -159,9 +159,9 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-red-50 border-l-4 border-red-500 p-4">
+      <div class="bg-red-50 border-l-4 border-red-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-red-800 mb-2">Important Disclaimer:</h4>
-        <div class="text-red-700 space-y-2">
+        <div class="text-red-700 space-y-2" style="direction: ltr; text-align: left">
           <p>These symptoms can result from neurological issues, sensory disorders, or mental health conditions.</p>
           <p><strong>Always seek medical assessment to rule out other causes.</strong></p>
         </div>
@@ -171,12 +171,12 @@ export const selfDiagnosis = [
   {
     id: 7,
     title: 'Unnatural Tension Between People',
-    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed">
+    content: `<div class="text-gray-900 space-y-4 text-base leading-relaxed" style="direction: ltr; text-align: left">
       <p>Sihr — especially sihr of separation — can sometimes cause intense conflict between people.</p>
       
-      <div class="bg-pink-50 p-4 rounded-lg">
+      <div class="bg-pink-50 p-4 rounded-lg" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-pink-800 mb-3">Possible Symptoms:</h4>
-        <ul class="space-y-2 text-pink-700 list-none">
+        <ul class="space-y-2 text-pink-700 list-none" style="direction: ltr; text-align: left">
           <li class="flex"><span class="mr-2">•</span><span>Sudden hatred or tension between spouses or family</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Frequent arguments over small matters</span></li>
           <li class="flex"><span class="mr-2">•</span><span>Avoidance of certain people without reason</span></li>
@@ -185,9 +185,9 @@ export const selfDiagnosis = [
         </ul>
       </div>
       
-      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4">
+      <div class="bg-yellow-50 border-l-4 border-yellow-500 p-4" style="direction: ltr; text-align: left">
         <h4 class="font-bold text-yellow-800 mb-2">Important Disclaimer:</h4>
-        <div class="text-yellow-700 space-y-2">
+        <div class="text-yellow-700 space-y-2" style="direction: ltr; text-align: left">
           <p>Relationship problems can result from communication breakdown, stress, or personal issues.</p>
           <p><strong>Address these factors alongside any spiritual remedies.</strong></p>
         </div>
@@ -196,7 +196,7 @@ export const selfDiagnosis = [
   },
   {
     id: 8,
-    title: 'How to Safely Check for Possible Spiritual Affliction and What to Do Next',
+    title: '<span style="color: lightgray">How to Safely Check for Possible Spiritual Affliction and What to Do Next</span>',
     content: `<div class="text-gray-900 space-y-6 text-base leading-relaxed">
       <div class="bg-blue-50 border-l-4 border-blue-500 p-4">
         <h4 class="font-bold text-blue-800 mb-2">Before you begin:</h4>

@@ -1,16 +1,53 @@
 import React, { useEffect, useRef } from 'react'
+import { KeepAwake } from '@capacitor-community/keep-awake'
 
-const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTranslations = true }) => {
+const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTranslations = true, fullWidth = false }) => {
   const pageContentRef = useRef(null)
+
+  // Screen wake control functions
+  const keepScreenOn = async () => {
+    try {
+      await KeepAwake.keepAwake()
+      console.log('Screen wake lock activated for page view:', categoryTitle)
+    } catch (error) {
+      console.warn('Could not activate screen wake lock:', error)
+    }
+  }
+  
+  const allowScreenOff = async () => {
+    try {
+      await KeepAwake.allowSleep()
+      console.log('Screen wake lock released for page view:', categoryTitle)
+    } catch (error) {
+      console.warn('Could not release screen wake lock:', error)
+    }
+  }
 
   // Start at the top of the page
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }, [])
 
+  // Keep screen awake for text reading sessions
+  useEffect(() => {
+    const shouldKeepAwake = categoryTitle === 'Complete Ruqyah Verses' || 
+                           categoryTitle === 'Manzil' ||
+                           categoryTitle === 'Short Ruqyah'
+    
+    if (shouldKeepAwake) {
+      keepScreenOn()
+    }
+
+    return () => {
+      if (shouldKeepAwake) {
+        allowScreenOff()
+      }
+    }
+  }, [categoryTitle])
+
   return (
     <div className="min-h-screen bg-red-500 flex items-center justify-center p-0 md:p-4">
-      <div className="relative w-full md:max-w-2xl lg:max-w-4xl">
+      <div className={`relative w-full ${fullWidth ? '' : 'md:max-w-2xl lg:max-w-4xl'}`}>
         {/* Back button at top */}
         <div className="flex justify-center mb-4 px-4 md:px-0">
           <button
@@ -29,7 +66,7 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
         </div>
 
         {/* Page content */}
-        <div className={`w-full md:rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 md:border border-gray-600' : 'bg-white'}`}>
+        <div className={`w-full md:rounded-lg shadow-xl overflow-hidden ${isDarkMode ? 'bg-gradient-to-br from-gray-800 to-gray-700 md:border border-gray-600' : 'bg-gray-100'}`}>
           <div 
             ref={pageContentRef}
             className={`p-4 sm:p-6 md:p-8 space-y-12 ${

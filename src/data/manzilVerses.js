@@ -676,16 +676,16 @@ export const manzilVerses = [
         <p class="text-base text-gray-700 text-center">Ya Allah, complete for us healing and well-being, and grant us true reliance upon You</p>
       </div>
       
-      <div class="mb-6 p-4 bg-rose-50 rounded-lg border-l-4 border-rose-400">
-        <h4 class="text-lg font-semibold text-rose-900 mb-3 text-center">Du'a for Healing</h4>
+      <div class="mb-6 p-4 bg-gray-50 rounded-lg border-l-4 border-gray-400">
+        <h4 class="text-lg font-semibold text-gray-900 mb-3 text-center">Du'a for Healing</h4>
         <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma rabba al-nāsi, adhhib al-ba's, ishfi anta al-shāfī, lā shifā'a illā shifā'uk, shifā'an lā yughadiru saqaman</p>
         <p class="text-base text-gray-700 mb-2 text-center">Ya Allah, Lord of mankind, remove the harm and heal — You are the Healer; there is no healing except Your healing; a healing that leaves no illness</p>
         <p class="text-base text-gray-600 italic text-center">(Bukhari 5743, Muslim 2191)</p>
       </div>
       
-      <div class="mb-6 p-4 bg-teal-50 rounded-lg border-l-4 border-teal-400">
-        <h4 class="text-lg font-semibold text-teal-900 mb-3 text-center">Salawat to Seal the Session</h4>
+      <div class="mb-6 p-4 bg-blue-50 rounded-lg border-l-4 border-blue-400">
+        <h4 class="text-lg font-semibold text-blue-900 mb-3 text-center">Salawat to Seal the Session</h4>
         <p class="text-xl mb-2 text-green-800 font-semibold text-center" style="line-height: 2.2">اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ</p>
         <p class="text-base text-gray-600 italic mb-1 text-center">Allāhumma ṣalli ʿalā Muḥammad wa ʿalā āli Muḥammad</p>
         <p class="text-base text-gray-700 text-center">Ya Allah, send Your blessings upon Muhammad and upon the family of Muhammad</p>

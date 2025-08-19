@@ -637,6 +637,7 @@ function App() {
           onBack={onBackFunction}
           isDarkMode={isDarkMode}
           showTranslations={(selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah' || selectedCategory === 'completeRuqyah') ? showTranslations : true}
+          fullWidth={selectedCategory === 'manzil' || selectedCategory === 'completeRuqyah'}
         />
       )
     }

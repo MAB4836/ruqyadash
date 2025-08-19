@@ -75,8 +75,12 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
   }, [])
 
   // Auto-scroll to bottom on component mount to show navigation buttons
+  // Skip auto-scroll for categories that have important quick access buttons at top
   useEffect(() => {
-    window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    const categoriesWithTopButtons = ['What is Ruqyah?']
+    if (!categoriesWithTopButtons.includes(categoryTitle)) {
+      window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    }
   }, [])
 
   // Keep screen awake for text reading sessions
@@ -124,6 +128,17 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
 
   const scrollToBottom = () => {
     window.scrollTo({ top: document.documentElement.scrollHeight, behavior: 'smooth' })
+    
+    // Also scroll card content to bottom
+    const currentCardData = cards[currentCard - 1]
+    const isBookFormat = categoryTitle === 'Diagnosis and Help' && currentCard === 8
+    
+    if (isBookFormat && bookScrollRef.current) {
+      bookScrollRef.current.scrollTop = bookScrollRef.current.scrollHeight
+    } else if (!isBookFormat && cardContentRef.current) {
+      cardContentRef.current.scrollTop = cardContentRef.current.scrollHeight
+    }
+    
     setShowScrollDown(false)
   }
 
@@ -809,7 +824,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     return (
       <div 
         ref={cardContentRef} 
-        className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto h-full w-full ${
+        className={`text-center p-3 sm:p-4 md:p-6 overflow-y-auto h-full w-full ${
           isDarkMode ? 'ruqyah-dark-mode' : ''
         }`} 
         style={{ 
@@ -1044,21 +1059,9 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
       <div className="relative w-full max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl">
         {/* Category title */}
         <div className="text-center mb-4">
-          <div className="flex items-center justify-center gap-4">
-            <h1 className={`font-bold text-xl sm:text-2xl ${isDarkMode ? 'text-gray-100' : 'text-white'}`}>
-              {categoryTitle}
-            </h1>
-            
-            {/* Scroll down button - flows with title */}
-            {isAtTop && !isFullPageVisible && (
-              <button 
-                onClick={scrollToBottom}
-                className="bg-white/20 text-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg touch-manipulation flex-shrink-0"
-              >
-                ↓
-              </button>
-            )}
-          </div>
+          <h1 className={`font-bold text-xl sm:text-2xl ${isDarkMode ? 'text-gray-100' : 'text-white'}`}>
+            {categoryTitle}
+          </h1>
         </div>
 
         {/* Situation-based Quick Access Buttons */}
@@ -1120,7 +1123,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         {/* Card display */}
         <div 
           ref={cardContainerRef}
-          className="relative w-full min-h-[400px] max-h-[90vh] rounded-lg shadow-xl overflow-hidden select-none"
+          className="relative w-full min-h-[600px] max-h-[85vh] rounded-lg shadow-xl overflow-hidden select-none"
         >
           {/* Current Card */}
           <div 
@@ -1128,7 +1131,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               !isAnimating ? 'translate-x-0' : 
               slideDirection === 'left' ? '-translate-x-full' : 'translate-x-full'
             } ${
-              isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-white'
+              isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-gray-100'
             }`}
             style={categoryTitle === 'Manzil' && isDarkMode ? {
               '--text-color': 'white',
@@ -1177,7 +1180,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           {isAnimating && (
             <div 
               className={`absolute inset-0 w-full h-full flex items-center justify-center transition-transform duration-300 ease-out ${
-                isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-white'
+                isDarkMode ? 'bg-gradient-to-br from-gray-900 to-blue-900' : 'bg-gray-100'
               }`}
               style={{
                 transform: slideDirection === 'left' ? 
@@ -1220,7 +1223,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               )}
 
               <div 
-                className={`text-center p-4 sm:p-6 md:p-8 overflow-y-auto h-full w-full ${
+                className={`text-center p-3 sm:p-4 md:p-6 overflow-y-auto h-full w-full ${
                   isDarkMode ? 'ruqyah-dark-mode' : ''
                 }`} 
                 style={{
@@ -1433,9 +1436,6 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
           onIncrement={incrementCount}
           onClear={clearCount}
           showCounting={shouldShowCounting}
-          showScrollToTop={categoryTitle !== 'Complete Ruqyah Verses'}
-          onScrollToTop={handleScrollToTop}
-          isFullPageVisible={isFullPageVisible}
         />
         
         {/* Note Popup Modal */}
@@ -1458,6 +1458,20 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
               </p>
             </div>
           </div>
+        )}
+        
+        {/* Fixed scroll indicator - changes direction based on position */}
+        {!isFullPageVisible && (
+          <button 
+            onClick={isAtTop ? scrollToBottom : () => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+              handleScrollToTop()
+            }}
+            className="fixed bottom-20 left-1/2 transform -translate-x-1/2 z-30 bg-white/15 text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg touch-manipulation hover:bg-white/25 transition-all duration-200"
+            title={isAtTop ? "Scroll to bottom" : "Scroll to top"}
+          >
+            {isAtTop ? '↓' : '↑'}
+          </button>
         )}
       </div>
     </div>
