@@ -5,6 +5,8 @@ import ShifaPage from './components/ShifaPage'
 import ChildPage from './components/ChildPage'
 import RuqyahSubmenu from './components/RuqyahSubmenu'
 import RuqyahGuide from './components/RuqyahGuide'
+import RaqiGuideViewer from './components/RaqiGuideViewer'
+import SelfDiagnosisViewer from './components/SelfDiagnosisViewer'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
 import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
@@ -35,7 +37,7 @@ import { spiritualRemedies } from './data/spiritualRemedies'
 import { manzilVerses } from './data/manzilVerses'
 import { selfDiagnosis } from './data/selfDiagnosis'
 import { spiritualAfflictionsGuide } from './data/spiritualAfflictionsGuide'
-import { raqiGuide } from './data/raqiGuide'
+// import { raqiGuide } from './data/raqiGuide' // Now using HTML file instead
 
 function App() {
   const [currentScreen, setCurrentScreen] = useState('menu')
@@ -294,7 +296,7 @@ function App() {
     },
     raqi: {
       title: 'Raqi - Visiting Ruqyah Practitioners',
-      cards: raqiGuide
+      cards: [] // Will be handled by RaqiGuideViewer component
     },
     spiritualAfflictionsGuide: {
       title: 'Spiritual Afflictions Guide',
@@ -626,6 +628,26 @@ function App() {
       onBackFunction = handleBackToJinnAttacksSubmenu
     } else if (selectedImmediateHelpOption) {
       onBackFunction = handleBackToImmediateHelpSubmenu
+    }
+    
+    // Special handling for raqi guide - use HTML file viewer
+    if (selectedCategory === 'raqi') {
+      return (
+        <RaqiGuideViewer
+          onBack={onBackFunction}
+          isDarkMode={isDarkMode}
+        />
+      )
+    }
+    
+    // Special handling for diagnosis help - use HTML file viewer
+    if (selectedCategory === 'diagnosisHelp') {
+      return (
+        <SelfDiagnosisViewer
+          onBack={onBackFunction}
+          isDarkMode={isDarkMode}
+        />
+      )
     }
     
     // Check if this is Complete Ruqyah Verses, Manzil, or Short Ruqyah and page view is enabled

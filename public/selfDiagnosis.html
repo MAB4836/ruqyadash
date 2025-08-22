@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self-Diagnosis Guide - Spiritual Afflictions</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .guide-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(90deg, #2b6cb0 0%, #4299e1 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .box {
+            margin-bottom: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .warning {
+            background: linear-gradient(90deg, #742a2a 0%, #e53e3e 100%);
+        }
+        .info {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .caution {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+        }
+        .symptoms {
+            background: linear-gradient(90deg, #553c9a 0%, #9f7aea 100%);
+        }
+        .testing {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #cbd5e0;
+            font-size: 0.9rem;
+        }
+        .tip {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .navigation-buttons {
+            background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .nav-button {
+            background: rgba(107, 114, 128, 0.3);
+            color: #e5e7eb;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background: rgba(107, 114, 128, 0.5);
+            transform: translateY(-1px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 16px;
+        }
+        .back-to-top {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+        .back-to-top:hover {
+            background: rgba(59, 130, 246, 0.3);
+            color: #dbeafe;
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px;
+            }
+            .navigation-buttons {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 8px;
+            }
+            .back-to-top {
+                align-self: flex-end;
+                font-size: 0.7rem;
+                padding: 3px 8px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 text-gray-100 min-h-screen">
+    <div id="top" class="guide-container">
+        <div class="header">
+            <h1 class="text-3xl font-bold text-center text-white">Self-Diagnosis Guide for Spiritual Afflictions</h1>
+            <p class="text-center text-blue-100 mt-2">Understanding potential signs of sihr, jinn, or evil eye while emphasizing medical consultation</p>
+        </div>
+
+        <!-- Quick Access Navigation Buttons -->
+        <div class="navigation-buttons">
+            <h3 class="text-lg font-bold text-white mb-3">Quick Access</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                <button class="nav-button" onclick="location.href='#start-here'">Start Here</button>
+                <button class="nav-button" onclick="location.href='#common-effects'">Common Effects</button>
+                <button class="nav-button" onclick="location.href='#mood-emotions'">Mood & Emotions</button>
+                <button class="nav-button" onclick="location.href='#sleep-problems'">Sleep Problems</button>
+                <button class="nav-button" onclick="location.href='#physical-signs'">Physical Signs</button>
+                <button class="nav-button" onclick="location.href='#mind-memory'">Mind & Memory</button>
+                <button class="nav-button" onclick="location.href='#people-tensions'">People Tensions</button>
+                <button class="nav-button" onclick="location.href='#self-check-guide'">Self-Check Guide</button>
+            </div>
+        </div>
+
+        <div class="space-y-0">
+            <!-- Medical Disclaimer -->
+            <div id="start-here" class="bg-gray-800 p-6">
+                <h2 class="text-xl font-bold text-gray-100 mb-4">Start Here: Ruqyah ≠ Medical Diagnosis</h2>
+                
+                <div class="warning p-4 rounded-lg border-l-4 border-red-400 mb-4">
+                    <h5 class="font-bold text-red-200 mb-2">Important Disclaimer</h5>
+                    <p class="text-red-300">Not every illness or strange experience is caused by sihr (magic), jinn, or evil eye. Many symptoms have medical or psychological causes.</p>
+                </div>
+                
+                <div class="space-y-3 text-gray-300">
+                    <p><strong class="text-blue-300">Always consult a qualified doctor or mental health professional first.</strong></p>
+                    <p>Ruqyah can complement professional treatment, but it should not replace it.</p>
+                </div>
+            </div>
+
+            <!-- Common Effects -->
+            <div id="common-effects" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">What Are the Common Effects of Sihr or Jinn?</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Some people affected by sihr, jinn, or evil eye may experience intense or unusual symptoms, especially when hearing or reading the Qur'an.</p>
+                
+                <div class="symptoms p-4 rounded-lg mb-4">
+                    <h5 class="font-bold text-purple-200 mb-3">Possible Effects:</h5>
+                    <ul class="space-y-2 text-purple-300 list-disc ml-5">
+                        <li>Strong aversion to Qur'an, Adhan, or Salah</li>
+                        <li>Feeling irritated or distressed during recitation</li>
+                        <li>Feeling heavy, sleepy, or unable to focus when praying</li>
+                        <li>Evil thoughts and whisperings about Allah or Islam</li>
+                        <li>Inappropriate sexual or blasphemous thoughts</li>
+                        <li>Sudden anxiety, fear, or panic during ruqyah</li>
+                        <li>Yawning, burping, or crying when reading Qur'an</li>
+                        <li>Nausea or vomiting during/after ruqyah</li>
+                        <li>Twitching, jerking, or unusual body movements</li>
+                        <li>A sense of "something inside you" resisting</li>
+                    </ul>
+                </div>
+                
+                <div class="caution p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-bold text-yellow-200 mb-2">Important Caution:</h5>
+                    <p class="text-yellow-300">One or two signs alone do not confirm sihr or jinn.</p>
+                    <p class="text-yellow-300 mt-2">Only when multiple symptoms occur together and react strongly to Qur'an should spiritual causes be considered.</p>
+                </div>
+            </div>
+
+            <!-- Emotional Effects -->
+            <div id="mood-emotions" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Mood Swings, Depression, and Emotional Effects</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Some people affected by sihr, jinn, or evil eye may experience sudden or extreme changes in mood. These are sometimes spiritual in origin, especially when they:</p>
+                
+                <ul class="space-y-2 text-gray-300 list-disc ml-5 mb-4">
+                    <li>Intensify during Qur'anic recitation</li>
+                    <li>Occur in the presence of certain people (e.g., spouse, family, strangers)</li>
+                    <li>Are triggered in specific places (e.g., home, bedroom, certain house/area)</li>
+                    <li>Happen at particular times (e.g., after sunset, at night, during adhan)</li>
+                    <li>Have no clear medical explanation</li>
+                </ul>
+                
+                <div class="symptoms p-4 rounded-lg mb-4">
+                    <h5 class="font-bold text-purple-200 mb-3">Possible Emotional Symptoms:</h5>
+                    <ul class="space-y-2 text-purple-300 list-disc ml-5">
+                        <li>Sudden waves of depression or hopelessness</li>
+                        <li>Irritability, anger, or aggression toward loved ones or Islamic reminders</li>
+                        <li>Feeling numb, disconnected, or empty</li>
+                        <li>Episodes of crying without cause</li>
+                        <li>Extreme anxiety or panic attacks, especially during ruqyah</li>
+                        <li>Unnatural feelings of hatred or suspicion toward certain people</li>
+                        <li>Mood shifts that feel "out of your control"</li>
+                        <li>Feeling like "your emotions are being manipulated"</li>
+                    </ul>
+                </div>
+                
+                <div class="warning p-4 rounded-lg border-l-4 border-red-400">
+                    <h5 class="font-bold text-red-200 mb-2">Important Disclaimer:</h5>
+                    <div class="text-red-300 space-y-2">
+                        <p>These symptoms overlap heavily with mental health conditions such as depression, anxiety, bipolar disorder, or PTSD.</p>
+                        <p><strong>Always consult a qualified doctor or mental health professional.</strong></p>
+                        <p>Spiritual and medical causes can occur together.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sleep Problems -->
+            <div id="sleep-problems" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Sleep Problems That May Be Linked to Sihr or Jinn</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Some people affected by sihr, jinn, or evil eye experience unusual sleep issues. These may be spiritual when they:</p>
+                
+                <ul class="space-y-2 text-gray-300 list-disc ml-5 mb-4">
+                    <li>Involve repeated disturbing dreams (snakes, scorpions, dark figures, graves, falling)</li>
+                    <li>Occur at the same time every night</li>
+                    <li>Intensify after Qur'anic recitation or playing ruqyah audio</li>
+                </ul>
+                
+                <div class="info p-4 rounded-lg mb-4">
+                    <h5 class="font-bold text-blue-200 mb-3">Possible Symptoms:</h5>
+                    <ul class="space-y-2 text-blue-300 list-disc ml-5">
+                        <li>Persistent nightmares or night terrors</li>
+                        <li>Sleep paralysis with frightening visions or sensations</li>
+                        <li>Waking suddenly in fear or panic</li>
+                        <li>Talking, shouting, or crying in sleep</li>
+                        <li>Insomnia or restless, broken sleep</li>
+                    </ul>
+                </div>
+                
+                <div class="caution p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-bold text-yellow-200 mb-2">Important Disclaimer:</h5>
+                    <div class="text-yellow-300 space-y-2">
+                        <p>Many sleep issues are caused by stress, diet, or medical conditions.</p>
+                        <p><strong>Always consult a doctor to rule out physical or psychological causes.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Physical Symptoms -->
+            <div id="physical-signs" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Unexplained Physical Symptoms</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Some spiritual afflictions may cause physical effects, especially when there is no medical explanation and symptoms worsen during Qur'an recitation.</p>
+                
+                <div class="testing p-4 rounded-lg mb-4">
+                    <h5 class="font-bold text-green-200 mb-3">Possible Symptoms:</h5>
+                    <ul class="space-y-2 text-green-300 list-disc ml-5">
+                        <li>Moving or shifting pains in the body</li>
+                        <li>Chronic headaches or migraines without medical cause</li>
+                        <li>Stomach pain, bloating, or nausea - especially during ruqyah</li>
+                        <li>Sensation of something "moving" inside the body</li>
+                        <li>Sudden weakness, dizziness, or collapse without reason</li>
+                        <li>Unexplained rashes, itching, or skin irritation</li>
+                    </ul>
+                </div>
+                
+                <div class="warning p-4 rounded-lg border-l-4 border-red-400">
+                    <h5 class="font-bold text-red-200 mb-2">Important Disclaimer:</h5>
+                    <div class="text-red-300 space-y-2">
+                        <p>These can also come from food intolerances, infections, hormonal issues, or other medical problems.</p>
+                        <p><strong>Always investigate medical causes with a doctor before assuming spiritual causes.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mental and Perceptual Changes -->
+            <div id="mind-memory" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Changes in Mind, Memory, and Perception</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Some affected individuals report changes in thinking, memory, or senses. These may be spiritual when they occur suddenly or during Qur'anic recitation.</p>
+                
+                <div class="symptoms p-4 rounded-lg mb-4">
+                    <h5 class="font-bold text-orange-200 mb-3">Possible Symptoms:</h5>
+                    <ul class="space-y-2 text-orange-300 list-disc ml-5">
+                        <li>Sudden, unexplained memory loss or confusion</li>
+                        <li>Forgetting Qur'anic verses you usually know well</li>
+                        <li>Hearing whispers, footsteps, or voices when alone</li>
+                        <li>Seeing shadows, dark figures, or unexplained movement</li>
+                        <li>Smelling foul odours (rotting, burning) with no source</li>
+                        <li>Feeling watched when no one is there</li>
+                    </ul>
+                </div>
+                
+                <div class="warning p-4 rounded-lg border-l-4 border-red-400">
+                    <h5 class="font-bold text-red-200 mb-2">Important Disclaimer:</h5>
+                    <div class="text-red-300 space-y-2">
+                        <p>These symptoms can result from neurological issues, sensory disorders, or mental health conditions.</p>
+                        <p><strong>Always seek medical assessment to rule out other causes.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Relationship Issues -->
+            <div id="people-tensions" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Unnatural Tension Between People</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <p class="text-gray-300 mb-4">Sihr - especially sihr of separation - can sometimes cause intense conflict between people.</p>
+                
+                <div class="symptoms p-4 rounded-lg mb-4" style="background: linear-gradient(90deg, #702459 0%, #d53f8c 100%);">
+                    <h5 class="font-bold text-pink-200 mb-3">Possible Symptoms:</h5>
+                    <ul class="space-y-2 text-pink-300 list-disc ml-5">
+                        <li>Sudden hatred or tension between spouses or family</li>
+                        <li>Frequent arguments over small matters</li>
+                        <li>Avoidance of certain people without reason</li>
+                        <li>Engagements or marriages repeatedly breaking down</li>
+                        <li>Feeling isolated from loved ones</li>
+                    </ul>
+                </div>
+                
+                <div class="caution p-4 rounded-lg border-l-4 border-yellow-400">
+                    <h5 class="font-bold text-yellow-200 mb-2">Important Disclaimer:</h5>
+                    <div class="text-yellow-300 space-y-2">
+                        <p>Relationship problems can result from communication breakdown, stress, or personal issues.</p>
+                        <p><strong>Address these factors alongside any spiritual remedies.</strong></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testing Methods -->
+            <div id="self-check-guide" class="bg-gray-800 p-6">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">How to Safely Check for Possible Spiritual Affliction</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="info p-4 rounded-lg mb-6 border-l-4 border-blue-400">
+                    <h5 class="font-bold text-blue-200 mb-2">Before you begin:</h5>
+                    <div class="text-blue-300 space-y-2">
+                        <p>If you haven't already, please consult a qualified doctor or mental health professional to rule out medical causes.</p>
+                        <p>Ruqyah is safe to do whether or not you have spiritual affliction, but it should not replace medical treatment.</p>
+                    </div>
+                </div>
+                
+                <div class="space-y-6">
+                    <div>
+                        <h4 class="font-bold text-gray-100 mb-3 text-lg">Safe Self-Testing Options</h4>
+                        
+                        <div class="space-y-4">
+                            <div class="testing p-4 rounded-lg">
+                                <h5 class="font-bold text-green-200 mb-2">Option A: Recitation Test</h5>
+                                <div class="text-green-300 space-y-2">
+                                    <p>• Sit in a clean place, make wudu if possible, face the qiblah.</p>
+                                    <p><strong>Read aloud with focus:</strong></p>
+                                    <ul class="space-y-1 list-disc ml-5">
+                                        <li>Surah Al-Fatiha (1)</li>
+                                        <li>Ayat al-Kursi (2:255)</li>
+                                        <li>The last three Quls (each recited 3 times):
+                                            <ul class="ml-4 list-disc">
+                                                <li>Surah Al-Ikhlas (112)</li>
+                                                <li>Surah Al-Falaq (113)</li>
+                                                <li>Surah An-Nas (114)</li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                    <p><strong>Observe for any unusual sensations such as:</strong></p>
+                                    <ul class="space-y-1 list-disc ml-5">
+                                        <li>Headaches, pressure, or tingling in the head</li>
+                                        <li>Emotional surges like crying, fear, anger without cause</li>
+                                        <li>Body jerks, nausea, or urge to stop reading</li>
+                                    </ul>
+                                    <p class="italic">No reaction doesn't guarantee absence of affliction.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="info p-4 rounded-lg">
+                                <h5 class="font-bold text-blue-200 mb-2">Option B: Listening Test</h5>
+                                <div class="text-blue-300 space-y-2">
+                                    <p>Play a trusted ruqyah recitation quietly through headphones at a comfortable volume.</p>
+                                    <p><strong>Suggested choices include:</strong></p>
+                                    <ul class="space-y-1 list-disc ml-5">
+                                        <li>Full Surah Al-Baqarah (2)</li>
+                                        <li>Ayat al-Kursi (2:255) alone</li>
+                                        <li>Last two verses of Surah Al-Baqarah (2:285-286)</li>
+                                        <li>Surah Al-Falaq (113) and Surah An-Nas (114), three times each</li>
+                                        <li>Surah Al-Ikhlas (112)</li>
+                                    </ul>
+                                    <p>Notice sudden physical or emotional reactions (anxiety, chest tightness, dizziness).</p>
+                                </div>
+                            </div>
+                            
+                            <div class="symptoms p-4 rounded-lg">
+                                <h5 class="font-bold text-purple-200 mb-2">Option C: Water Ruqyah Test</h5>
+                                <div class="text-purple-300 space-y-2">
+                                    <p>Recite these verses slowly and clearly over a cup of clean water. Then blow gently once at the end before drinking:</p>
+                                    <ul class="space-y-1 list-disc ml-5">
+                                        <li>Surah Al-Fatiha (1)</li>
+                                        <li>Ayat al-Kursi (2:255)</li>
+                                        <li>Surah Al-Ikhlas (112), Al-Falaq (113), An-Nas (114) (3 times each)</li>
+                                    </ul>
+                                    <p>Drink some of the water and observe for any unusual nausea, stomach discomfort, or other sensations without medical cause.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-gray-100 mb-3 text-lg">Immediate Actions if You Notice Strong Reactions</h4>
+                        <ul class="space-y-2 text-gray-300 list-disc ml-5">
+                            <li>Start a short daily ruqyah routine (refer to the "Short Ruqyah Routine" section).</li>
+                            <li>Increase Qur'an recitation and dhikr regularly.</li>
+                            <li>Maintain physical cleanliness, wudu, and avoid sinful environments.</li>
+                            <li>Make sincere du'a after each prayer, asking Allah for healing and protection.</li>
+                            <li>Seek help from a trusted and knowledgeable raqi if symptoms persist or worsen.</li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="font-bold text-gray-100 mb-3 text-lg">When to Seek Professional Help</h4>
+                        <ul class="space-y-2 text-gray-300 list-disc ml-5">
+                            <li>If symptoms are severe, worsening, or affecting daily life (sleep, relationships, work).</li>
+                            <li>If you experience thoughts of self-harm or harming others.</li>
+                            <li>If you cannot consistently perform ruqyah or maintain your routine.</li>
+                            <li>If family or relationships are seriously strained.</li>
+                            <li>For guidance on choosing a trustworthy and knowledgeable raqi, see the "Raqi" section of this app.</li>
+                        </ul>
+                        
+                        <div class="bg-gray-700 p-4 rounded-lg mt-4">
+                            <p class="text-gray-400 italic">For a detailed explanation of the different types of sihr and how they are carried out, see the "Sihr/Magic" section of this app.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip">
+            <h3 class="text-xl font-bold text-white mb-3">Remember</h3>
+            <p class="text-blue-100">This guide is for informational purposes only and should not replace professional medical or psychiatric care. Always consult qualified healthcare professionals for persistent symptoms. Spiritual and medical treatment can work together for complete healing.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2023 Islamic Spiritual Care Guide | Based on Quran and Sunnah</p>
+        </div>
+    </div>
+</body>
+</html>
