@@ -81,27 +81,29 @@
             transform: translateY(0);
         }
         html {
-            scroll-behavior: smooth;
+            scroll-behavior: auto;
+            scroll-padding-top: 60px;
         }
         .section-header {
             display: flex;
-            justify-content: space-between;
             align-items: center;
+            gap: 12px;
             margin-bottom: 16px;
-            padding: 0 10px;
+            padding: 16px 20px;
         }
         .back-to-top {
             background: rgba(59, 130, 246, 0.2);
             color: #93c5fd;
             border: 1px solid rgba(59, 130, 246, 0.3);
-            padding: 4px 12px;
+            padding: 6px 8px;
             border-radius: 6px;
-            font-size: 0.75rem;
+            font-size: 0.9rem;
             font-weight: 500;
             cursor: pointer;
             transition: all 0.2s ease;
             text-decoration: none;
             white-space: nowrap;
+            line-height: 1;
         }
         .back-to-top:hover {
             background: rgba(59, 130, 246, 0.3);
@@ -113,7 +115,7 @@
             transform: translateY(0);
         }
         .section-content {
-            padding: 0 10px 20px;
+            padding: 0 20px 20px;
         }
         .content-box {
             padding: 16px;
@@ -131,14 +133,13 @@
                 font-size: 1.5rem;
             }
             .section-header {
-                flex-direction: column;
-                align-items: flex-start;
+                flex-direction: row;
+                align-items: center;
                 gap: 8px;
             }
             .back-to-top {
-                align-self: flex-end;
-                font-size: 0.7rem;
-                padding: 3px 8px;
+                font-size: 0.8rem;
+                padding: 4px 6px;
             }
         }
     </style>
@@ -175,12 +176,12 @@
             </div>
         </div>
 
-        <div class="space-y-6 p-4">
+        <div class="space-y-6 p-0">
             <!-- Sihr of Separation -->
-            <div id="separation" class="bg-gray-800 rounded-lg p-4">
+            <div id="separation" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Separation (Sihr Al-Tafriq)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -212,10 +213,10 @@
             </div>
 
             <!-- Sihr of Love or Attraction -->
-            <div id="love" class="bg-gray-800 rounded-lg p-4">
+            <div id="love" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Love or Attraction (Sihr Al-Mahabbah)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -247,10 +248,10 @@
             </div>
 
             <!-- Sihr of Harm or Destruction -->
-            <div id="harm" class="bg-gray-800 rounded-lg p-4">
+            <div id="harm" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Harm or Destruction (Sihr Al-Adh'a)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -283,10 +284,10 @@
             </div>
 
             <!-- Sihr of Confusion or Madness -->
-            <div id="confusion" class="bg-gray-800 rounded-lg p-4">
+            <div id="confusion" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Confusion or Madness (Sihr Al-Hayal)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -319,10 +320,10 @@
             </div>
 
             <!-- Sihr of Loss or Misplacement -->
-            <div id="loss" class="bg-gray-800 rounded-lg p-4">
+            <div id="loss" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Loss or Misplacement (Sihr Al-Khasf)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -355,10 +356,10 @@
             </div>
 
             <!-- Sihr of Physical Transformation -->
-            <div id="transformation" class="bg-gray-800 rounded-lg p-4">
+            <div id="transformation" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Physical Transformation (Sihr At-Taswir)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -396,10 +397,10 @@
             </div>
 
             <!-- Sihr of Speech or Tongue -->
-            <div id="speech" class="bg-gray-800 rounded-lg p-4">
+            <div id="speech" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Speech or Tongue (Sihr Al-Lisan)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -437,10 +438,10 @@
             </div>
 
             <!-- Sihr of Sleep or Dreams -->
-            <div id="sleep" class="bg-gray-800 rounded-lg p-4">
+            <div id="sleep" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Sleep or Dreams (Sihr An-Naum)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -478,10 +479,10 @@
             </div>
 
             <!-- Sihr of Pregnancy Prevention -->
-            <div id="pregnancy" class="bg-gray-800 rounded-lg p-4">
+            <div id="pregnancy" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Pregnancy Prevention (Sihr Al-Man'i lil-Haml)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -519,10 +520,10 @@
             </div>
 
             <!-- Sihr of Wealth or Prosperity -->
-            <div id="wealth" class="bg-gray-800 rounded-lg p-4">
+            <div id="wealth" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Wealth or Prosperity (Sihr Al-Ghina)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -560,10 +561,10 @@
             </div>
 
             <!-- Sihr of Death -->
-            <div id="death" class="bg-gray-800 rounded-lg p-4">
+            <div id="death" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Death (Sihr Al-Qatl)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -601,10 +602,10 @@
             </div>
 
             <!-- Sihr of Binding -->
-            <div id="binding" class="bg-gray-800 rounded-lg p-4">
+            <div id="binding" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Binding (Sihr Al-'Uqad)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -642,10 +643,10 @@
             </div>
 
             <!-- Sihr of Jinn Summoning or Possession -->
-            <div id="jinn" class="bg-gray-800 rounded-lg p-4">
+            <div id="jinn" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr of Jinn Summoning or Possession (Sihr Al-Jinniyyah)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -684,10 +685,10 @@
             </div>
 
             <!-- Waswas al-Shaytan -->
-            <div id="whispers" class="bg-gray-800 rounded-lg p-4">
+            <div id="whispers" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Waswas al-Shaytan (Waswas [Whispers])</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -725,10 +726,10 @@
             </div>
 
             <!-- Sihr al-Intihār / Sihr al-Huzn -->
-            <div id="depression" class="bg-gray-800 rounded-lg p-4">
+            <div id="depression" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr al-Intihār / Sihr al-Huzn (Self-Harm Magic / Depression)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -766,10 +767,10 @@
             </div>
 
             <!-- Sihr al-Ighra' -->
-            <div id="addiction" class="bg-gray-800 rounded-lg p-4">
+            <div id="addiction" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr al-Ighra' (Addiction or Obsessive Cravings)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -807,10 +808,10 @@
             </div>
 
             <!-- Sihr al-Maradh -->
-            <div id="sickness" class="bg-gray-800 rounded-lg p-4">
+            <div id="sickness" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr al-Maradh (Sihr of Sickness)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">
@@ -848,10 +849,10 @@
             </div>
 
             <!-- Sihr al-Nisyān -->
-            <div id="forgetfulness" class="bg-gray-800 rounded-lg p-4">
+            <div id="forgetfulness" class="bg-gray-800 rounded-lg p-0">
                 <div class="section-header">
                     <h2 class="text-xl font-bold text-gray-100">Sihr al-Nisyān (Sihr of Forgetfulness / Laziness)</h2>
-                    <a href="#top" class="back-to-top">Back to Top</a>
+                    <a href="#top" class="back-to-top">↑</a>
                 </div>
                 
                 <div class="section-content space-y-4">

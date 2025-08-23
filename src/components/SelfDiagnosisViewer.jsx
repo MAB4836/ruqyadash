@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 
-const SelfDiagnosisViewer = ({ onBack, isDarkMode }) => {
+const SelfDiagnosisViewer = ({ onBack, isDarkMode, onNavigateToRuqyah }) => {
   const [htmlContent, setHtmlContent] = useState('')
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState(null)
@@ -24,6 +24,61 @@ const SelfDiagnosisViewer = ({ onBack, isDarkMode }) => {
 
     loadHtmlContent()
   }, [])
+
+  useEffect(() => {
+    // Check for return navigation and scroll to the appropriate section
+    if (htmlContent && !loading) {
+      const returnSection = localStorage.getItem('returnSection')
+      const returnTo = localStorage.getItem('returnTo')
+      if (returnSection && returnTo) {
+        // Wait a bit for the HTML to be fully rendered
+        setTimeout(() => {
+          const element = document.getElementById(returnSection)
+          if (element) {
+            element.scrollIntoView({ behavior: 'auto', block: 'start' })
+            console.log('Scrolled to section:', returnSection)
+          } else {
+            // Fallback to using hash
+            window.location.hash = returnSection
+            console.log('Used hash fallback for section:', returnSection)
+          }
+          
+          // Clear the return navigation after successful scroll
+          localStorage.removeItem('returnTo')
+          localStorage.removeItem('returnSection')
+          console.log('Cleared return navigation from localStorage')
+        }, 300)
+      }
+    }
+  }, [htmlContent, loading])
+
+  useEffect(() => {
+    // Set up message listener for navigation requests from the HTML content
+    const handleMessage = (event) => {
+      if (event.data && event.data.type === 'navigate' && event.data.to === 'shortRuqyah') {
+        if (onNavigateToRuqyah) {
+          onNavigateToRuqyah()
+        }
+      }
+    }
+
+    window.addEventListener('message', handleMessage)
+    
+    // Make the navigation function available globally for direct calls
+    window.navigateToRuqyah = () => {
+      if (onNavigateToRuqyah) {
+        // Store the current location to return to
+        localStorage.setItem('returnTo', 'diagnosisHelp')
+        localStorage.setItem('returnSection', 'self-check-guide')
+        onNavigateToRuqyah()
+      }
+    }
+
+    return () => {
+      window.removeEventListener('message', handleMessage)
+      delete window.navigateToRuqyah
+    }
+  }, [onNavigateToRuqyah])
 
   if (loading) {
     return (

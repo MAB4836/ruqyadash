@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from 'react'
 import { KeepAwake } from '@capacitor-community/keep-awake'
 
-const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTranslations = true, fullWidth = false }) => {
+const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTranslations = true, fullWidth = false, backButtonText }) => {
   const pageContentRef = useRef(null)
 
   // Screen wake control functions
@@ -54,7 +54,7 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
             onClick={onBack}
             className={`rounded-lg px-6 py-3 transition-all duration-200 font-medium text-white ${isDarkMode ? 'bg-gray-700/50 hover:bg-gray-600/60' : 'bg-white bg-opacity-20 hover:bg-opacity-30'}`}
           >
-            ← Back to Ruqyah Options
+            {backButtonText || '← Back to Ruqyah Options'}
           </button>
         </div>
 
@@ -223,7 +223,7 @@ const PageViewer = ({ cards, categoryTitle, onBack, isDarkMode = false, showTran
             onClick={onBack}
             className={`rounded-lg px-6 py-3 transition-all duration-200 font-medium text-white ${isDarkMode ? 'bg-gray-700/50 hover:bg-gray-600/60' : 'bg-white bg-opacity-20 hover:bg-opacity-30'}`}
           >
-            ← Back to Ruqyah Options
+            {backButtonText || '← Back to Ruqyah Options'}
           </button>
         </div>
       </div>

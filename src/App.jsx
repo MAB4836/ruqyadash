@@ -7,6 +7,8 @@ import RuqyahSubmenu from './components/RuqyahSubmenu'
 import RuqyahGuide from './components/RuqyahGuide'
 import RaqiGuideViewer from './components/RaqiGuideViewer'
 import SelfDiagnosisViewer from './components/SelfDiagnosisViewer'
+import SihrTypesViewer from './components/SihrTypesViewer'
+import SpiritualAfflictionsGuideViewer from './components/SpiritualAfflictionsGuideViewer'
 import EvilEyeSubmenu from './components/EvilEyeSubmenu'
 import PersonalProtectionSubmenu from './components/PersonalProtectionSubmenu'
 import JinnAttacksSubmenu from './components/JinnAttacksSubmenu'
@@ -610,7 +612,7 @@ function App() {
 
   if (currentScreen === 'spiritualAfflictionsGuide') {
     return (
-      <SpiritualAfflictionsGuide onBack={handleBackToImmediateHelpSubmenuFromGuide} />
+      <SpiritualAfflictionsGuideViewer onBack={handleBackToImmediateHelpSubmenuFromGuide} isDarkMode={isDarkMode} />
     )
   }
 
@@ -642,8 +644,26 @@ function App() {
     
     // Special handling for diagnosis help - use HTML file viewer
     if (selectedCategory === 'diagnosisHelp') {
+      const handleNavigateToRuqyah = () => {
+        setSelectedImmediateHelpOption(null)
+        setSelectedCategory('shortRuqyah')
+        setSelectedRuqyahOption('shortRuqyah')
+        setCurrentScreen('cards')
+      }
+      
       return (
         <SelfDiagnosisViewer
+          onBack={onBackFunction}
+          isDarkMode={isDarkMode}
+          onNavigateToRuqyah={handleNavigateToRuqyah}
+        />
+      )
+    }
+    
+    // Special handling for sihr types - use HTML file viewer
+    if (selectedCategory === 'sihrMagic') {
+      return (
+        <SihrTypesViewer
           onBack={onBackFunction}
           isDarkMode={isDarkMode}
         />
@@ -652,16 +672,53 @@ function App() {
     
     // Check if this is Complete Ruqyah Verses, Manzil, or Short Ruqyah and page view is enabled
     if ((selectedCategory === 'completeRuqyah' || selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah') && isPageView) {
+      // Check if we need to return to a specific location
+      const returnTo = localStorage.getItem('returnTo')
+      const returnSection = localStorage.getItem('returnSection')
+      let finalOnBackFunction = onBackFunction
+      let backButtonText = undefined
+      
+      if (returnTo && selectedCategory === 'shortRuqyah') {
+        backButtonText = "← Back to Self-Diagnosis"
+        finalOnBackFunction = () => {
+          // Navigate back to the specific location (don't clear localStorage yet)
+          if (returnTo === 'diagnosisHelp') {
+            setSelectedCategory('diagnosisHelp')
+            setSelectedImmediateHelpOption('diagnosisHelp')
+            setCurrentScreen('cards')
+            // Note: scrolling and localStorage clearing is handled by SelfDiagnosisViewer component
+          }
+        }
+      }
+      
       return (
         <PageViewer
           cards={category.cards}
           categoryTitle={category.title}
-          onBack={onBackFunction}
+          onBack={finalOnBackFunction}
           isDarkMode={isDarkMode}
           showTranslations={(selectedCategory === 'manzil' || selectedCategory === 'shortRuqyah' || selectedCategory === 'completeRuqyah') ? showTranslations : true}
           fullWidth={selectedCategory === 'manzil' || selectedCategory === 'completeRuqyah'}
+          backButtonText={backButtonText}
         />
       )
+    }
+    
+    // Check if we need to return to a specific location
+    const returnTo = localStorage.getItem('returnTo')
+    const returnSection = localStorage.getItem('returnSection')
+    let finalOnBackFunction = onBackFunction
+    
+    if (returnTo && selectedCategory === 'shortRuqyah') {
+      finalOnBackFunction = () => {
+        // Navigate back to the specific location (don't clear localStorage yet)
+        if (returnTo === 'diagnosisHelp') {
+          setSelectedCategory('diagnosisHelp')
+          setSelectedImmediateHelpOption('diagnosisHelp')
+          setCurrentScreen('cards')
+          // Note: scrolling and localStorage clearing is handled by SelfDiagnosisViewer component
+        }
+      }
     }
     
     return (
@@ -669,7 +726,7 @@ function App() {
         ref={cardViewerRef}
         cards={category.cards}
         categoryTitle={category.title}
-        onBack={onBackFunction}
+        onBack={finalOnBackFunction}
         navigateToSection={navigateToSection}
         navigateBack={navigateBack}
         hasReturnPath={navigationHistory.length > 0}

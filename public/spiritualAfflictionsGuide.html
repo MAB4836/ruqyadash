@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritual Afflictions Guide - Quick Assessment</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .guide-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(90deg, #2b6cb0 0%, #4299e1 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .box {
+            margin-bottom: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .info {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+            border-radius: 8px;
+        }
+        .warning {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+            border-radius: 8px;
+        }
+        .success {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+            border-radius: 8px;
+        }
+        .danger {
+            background: linear-gradient(90deg, #742a2a 0%, #e53e3e 100%);
+            border-radius: 8px;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #cbd5e0;
+            font-size: 0.9rem;
+        }
+        .tip {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .navigation-buttons {
+            background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .nav-button {
+            background: rgba(107, 114, 128, 0.3);
+            color: #e5e7eb;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nav-button:hover {
+            background: rgba(107, 114, 128, 0.5);
+            transform: translateY(-1px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: auto;
+            scroll-padding-top: 60px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 16px 20px;
+        }
+        .back-to-top {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .back-to-top:hover {
+            background: rgba(59, 130, 246, 0.3);
+            color: #dbeafe;
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+        .section-content {
+            padding: 0 20px 20px;
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px;
+            }
+            .navigation-buttons {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-header {
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+            }
+            .back-to-top {
+                font-size: 0.8rem;
+                padding: 4px 6px;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-gray-900 to-blue-900 text-gray-100 min-h-screen">
+    <div id="top" class="guide-container">
+        <div class="header">
+            <h1 class="text-3xl font-bold text-center text-white">Spiritual Afflictions Guide</h1>
+            <p class="text-center text-blue-100 mt-2">Quick assessment and first steps for spiritual concerns</p>
+        </div>
+
+        <!-- Quick Access Navigation Buttons -->
+        <div class="navigation-buttons">
+            <h3 class="text-lg font-bold text-white mb-3 text-center">Quick Access</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2">
+                <button class="nav-button" onclick="location.href='#quick-guide'">Quick Guide</button>
+                <button class="nav-button" onclick="location.href='#introduction'">Introduction</button>
+                <button class="nav-button" onclick="location.href='#how-to-use'">How to Use</button>
+            </div>
+        </div>
+
+        <div class="space-y-0">
+            <!-- Quick Guide Section -->
+            <div id="quick-guide" class="bg-gray-800 p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Quick Guide: Am I Affected?</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="info p-4">
+                        <h3 class="font-bold text-blue-200 mb-2">If you think you might be affected by sihr (magic), evil eye, or jinn?</h3>
+                        <p class="text-blue-100 font-medium">These cards give you:</p>
+                        <ul class="mt-2 space-y-1 text-blue-100">
+                            <li>• <strong>Key signs to look for</strong></li>
+                            <li>• <strong>Safe first steps you can try today</strong></li>
+                            <li>• <strong>When to seek medical or professional ruqyah help</strong></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning p-4">
+                        <p class="text-yellow-100"><strong>Remember:</strong> many symptoms can also have medical causes — always check with a doctor.</p>
+                        <p class="text-yellow-100 mt-2 font-medium">Start at the Introduction section and follow step-by-step.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Introduction Section -->
+            <div id="introduction" class="bg-gray-800 p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Introduction</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <p class="text-gray-100">Spiritual afflictions such as sihr (magic), the evil eye, and jinn interference are real and mentioned in the Qur'an and Sunnah. However, they can be difficult to recognise because many symptoms overlap with medical or psychological conditions.</p>
+                    </div>
+                    
+                    <div class="success p-4">
+                        <h4 class="font-bold text-green-200 mb-3">This guide is designed to help you:</h4>
+                        <ul class="space-y-2 text-green-100">
+                            <li>• Understand the most common symptoms linked to spiritual affliction</li>
+                            <li>• Avoid jumping to conclusions without proper assessment</li>
+                            <li>• Take safe, immediate steps you can do yourself</li>
+                            <li>• Know when and how to seek further help from a qualified raqi or medical professional</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="danger p-4">
+                        <p class="text-red-100"><strong>Throughout this guide, you will see repeated reminders to rule out medical causes first.</strong> Spiritual and physical health often overlap — Islam encourages us to seek both spiritual remedies and medical treatment where needed.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Use Section -->
+            <div id="how-to-use" class="bg-gray-800 p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">How to Use This Guide</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="info p-4">
+                        <h4 class="font-bold text-blue-200 mb-3">Step-by-Step Process:</h4>
+                        <ol class="space-y-3 text-blue-100">
+                            <li class="flex items-start">
+                                <span class="font-bold text-lg mr-2 text-blue-200">1.</span>
+                                <span>Start with the symptom cards to see if anything matches your experience.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-bold text-lg mr-2 text-blue-200">2.</span>
+                                <span>Read the safety and self-test card to try immediate ruqyah actions.</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="font-bold text-lg mr-2 text-blue-200">3.</span>
+                                <span>Refer to the app's dedicated sections on "Types of Sihr" and "Choosing a Raqi" if you need deeper information.</span>
+                            </li>
+                        </ol>
+                    </div>
+                    
+                    <div class="bg-gray-700 p-4 rounded-lg">
+                        <h4 class="font-bold text-gray-200 mb-2">Related Sections in App:</h4>
+                        <ul class="space-y-1 text-gray-100">
+                            <li>• <strong>Sihr/Magic</strong> - Different types of magic and their effects</li>
+                            <li>• <strong>Diagnosis and Help</strong> - Comprehensive self-assessment guide</li>
+                            <li>• <strong>Ruqyah Verses</strong> - Essential verses for protection and healing</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="warning p-4">
+                        <h4 class="font-bold text-yellow-200 mb-2">Important Note:</h4>
+                        <p class="text-yellow-100">This guide is not a replacement for medical advice or treatment — it is a starting point to help you recognise possible signs and take beneficial action.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip">
+            <h3 class="text-xl font-bold text-white mb-3">Important Reminder</h3>
+            <p class="text-blue-100">This guide provides initial guidance for those experiencing potential spiritual afflictions. Always consult qualified medical professionals for persistent symptoms, and seek knowledgeable Islamic scholars or raqis for spiritual concerns. Spiritual and medical treatment can work together for complete healing.</p>
+        </div>
+
+        <div class="footer">
+            <p>© 2023 Islamic Spiritual Care Guide | Based on Quran and Sunnah</p>
+        </div>
+    </div>
+</body>
+</html>
