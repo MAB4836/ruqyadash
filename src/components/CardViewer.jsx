@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle } from 'react'
+import React, { useState, useEffect, useRef, forwardRef, useImperativeHandle, useCallback } from 'react'
 import Navigation from './Navigation'
 import { KeepAwake } from '@capacitor-community/keep-awake'
 
@@ -241,39 +241,58 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
   }
 
   // Audio control functions
-  const playAudio = (audioFile) => {
+  const playAudio = useCallback((audioFile) => {
     if (currentAudio) {
       currentAudio.pause()
+      // Clean up previous audio event listeners
+      currentAudio.onended = null
+      currentAudio.onerror = null
     }
     
-    const audio = new Audio(`/audio/${audioFile}`)
-    audioRef.current = audio
-    setCurrentAudio(audio)
-    
-    audio.play()
-    setIsPlaying(true)
-    keepScreenOn()
-    
-    audio.onended = () => {
-      setIsPlaying(false)
-      setCurrentAudio(null)
-      allowScreenOff()
+    try {
+      const audio = new Audio(`/audio/${audioFile}`)
+      audioRef.current = audio
+      setCurrentAudio(audio)
       
-      // Auto-continue logic with delay
-      if (autoPlay) {
-        setTimeout(() => {
-          autoAdvanceToNextCard()
-        }, 500)
+      const playPromise = audio.play()
+      if (playPromise !== undefined) {
+        playPromise
+          .then(() => {
+            setIsPlaying(true)
+            keepScreenOn()
+          })
+          .catch(error => {
+            console.error('Error playing audio:', error)
+            setIsPlaying(false)
+            setCurrentAudio(null)
+          })
       }
-    }
-    
-    audio.onerror = () => {
+      
+      audio.onended = () => {
+        setIsPlaying(false)
+        setCurrentAudio(null)
+        allowScreenOff()
+        
+        // Auto-continue logic with delay
+        if (autoPlay) {
+          setTimeout(() => {
+            autoAdvanceToNextCard()
+          }, 500)
+        }
+      }
+      
+      audio.onerror = () => {
+        setIsPlaying(false)
+        setCurrentAudio(null)
+        allowScreenOff()
+        console.error('Error loading audio file:', audioFile)
+      }
+    } catch (error) {
+      console.error('Error creating audio:', error)
       setIsPlaying(false)
       setCurrentAudio(null)
-      allowScreenOff()
-      console.error('Error loading audio file:', audioFile)
     }
-  }
+  }, [currentAudio, autoPlay, allowScreenOff, keepScreenOn, autoAdvanceToNextCard])
   
   const toggleAudio = () => {
     const currentCardData = cards[currentCard - 1]
@@ -324,11 +343,14 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     if (currentAudio && !isAnimating) {
       // Stop current audio when changing cards manually
       currentAudio.pause()
+      // Clean up event listeners
+      currentAudio.onended = null
+      currentAudio.onerror = null
       setIsPlaying(false)
       setCurrentAudio(null)
       allowScreenOff()
     }
-  }, [currentCard])
+  }, [currentCard, isAnimating, currentAudio, allowScreenOff])
   
   // Auto-play audio for new card in auto-continue mode
   useEffect(() => {
@@ -347,11 +369,18 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     const handleWheel = (e) => {
       // Only enhance wheel scrolling, not touch scrolling
       if (e.deltaY !== 0) {
-        e.preventDefault()
         const scrollContainer = cardContentRef.current || bookScrollRef.current
         if (scrollContainer) {
-          // Multiply scroll distance by 1.5 for better sensitivity
-          scrollContainer.scrollTop += e.deltaY * 1.5
+          // Check if we're at the boundaries to prevent default behavior
+          const atTop = scrollContainer.scrollTop === 0
+          const atBottom = scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight - 1
+          
+          // Prevent default only when we need to handle the scroll ourselves
+          if ((e.deltaY < 0 && !atTop) || (e.deltaY > 0 && !atBottom)) {
+            e.preventDefault()
+            // Multiply scroll distance by 1.5 for better sensitivity
+            scrollContainer.scrollTop += e.deltaY * 1.5
+          }
         }
       }
     }
@@ -366,14 +395,18 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     }
 
     const currentContainer = cardContentRef.current || bookScrollRef.current
+    const cleanupFunctions = []
+    
     if (currentContainer) {
       currentContainer.addEventListener('wheel', handleWheel, { passive: false })
-      currentContainer.addEventListener('touchmove', handleTouchMove, { passive: true })
+      cleanupFunctions.push(() => currentContainer.removeEventListener('wheel', handleWheel))
       
-      return () => {
-        currentContainer.removeEventListener('wheel', handleWheel)
-        currentContainer.removeEventListener('touchmove', handleTouchMove)
-      }
+      currentContainer.addEventListener('touchmove', handleTouchMove, { passive: true })
+      cleanupFunctions.push(() => currentContainer.removeEventListener('touchmove', handleTouchMove))
+    }
+    
+    return () => {
+      cleanupFunctions.forEach(cleanup => cleanup())
     }
   }, [currentCard])
 
@@ -569,6 +602,20 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
       setNextCardIndex(currentCard)
     }
   }, [currentCard, isAnimating])
+
+  // Clean up audio on component unmount
+  useEffect(() => {
+    return () => {
+      if (currentAudio) {
+        currentAudio.pause()
+        currentAudio.onended = null
+        currentAudio.onerror = null
+        setIsPlaying(false)
+        setCurrentAudio(null)
+      }
+      allowScreenOff()
+    }
+  }, [currentAudio, allowScreenOff])
 
   // Scroll to top whenever currentCard changes
   useEffect(() => {
