@@ -373,7 +373,7 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         if (scrollContainer) {
           // Check if we're at the boundaries to prevent default behavior
           const atTop = scrollContainer.scrollTop === 0
-          const atBottom = scrollContainer.scrollTop + scrollContainer.clientHeight >= scrollContainer.scrollHeight - 1
+          const atBottom = Math.ceil(scrollContainer.scrollTop + scrollContainer.clientHeight) >= scrollContainer.scrollHeight - 1
           
           // Prevent default only when we need to handle the scroll ourselves
           if ((e.deltaY < 0 && !atTop) || (e.deltaY > 0 && !atBottom)) {
@@ -398,11 +398,21 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
     const cleanupFunctions = []
     
     if (currentContainer) {
+      // Add wheel event listener
       currentContainer.addEventListener('wheel', handleWheel, { passive: false })
-      cleanupFunctions.push(() => currentContainer.removeEventListener('wheel', handleWheel))
+      cleanupFunctions.push(() => {
+        if (currentContainer) {
+          currentContainer.removeEventListener('wheel', handleWheel)
+        }
+      })
       
+      // Add touchmove event listener
       currentContainer.addEventListener('touchmove', handleTouchMove, { passive: true })
-      cleanupFunctions.push(() => currentContainer.removeEventListener('touchmove', handleTouchMove))
+      cleanupFunctions.push(() => {
+        if (currentContainer) {
+          currentContainer.removeEventListener('touchmove', handleTouchMove)
+        }
+      })
     }
     
     return () => {
@@ -613,14 +623,25 @@ const CardViewer = forwardRef(({ cards, categoryTitle, onBack, navigateToSection
         setIsPlaying(false)
         setCurrentAudio(null)
       }
-      allowScreenOff()
+      // Release screen wake lock
+      const releaseScreenLock = async () => {
+        try {
+          await KeepAwake.allowSleep()
+        } catch (error) {
+          console.warn('Could not release screen wake lock:', error)
+        }
+      }
+      releaseScreenLock()
     }
-  }, [currentAudio, allowScreenOff])
+  }, [currentAudio])
 
   // Scroll to top whenever currentCard changes
   useEffect(() => {
     if (cardContentRef.current) {
       cardContentRef.current.scrollTop = 0
+    }
+    if (bookScrollRef.current) {
+      bookScrollRef.current.scrollTop = 0
     }
   }, [currentCard])
 
