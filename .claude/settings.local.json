@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-settings.json",
+  "permissions": {
+    "allow": [
+      "Bash(unzip:*)",
+      "Bash(rm:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(ls:*)",
+      "Bash(grep:*)",
+      "Bash(npm start)",
+      "Bash(npm run:*)",
+      "Bash(npm install)",
+      "Bash(mv:*)",
+      "Bash(npx eslint:*)",
+      "Bash(cp:*)"
+    ],
+    "deny": []
+  }
+}

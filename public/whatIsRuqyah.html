@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>What is Ruqyah? - Islamic Spiritual Healing Guide</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .guide-container {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background: linear-gradient(90deg, #2b6cb0 0%, #4299e1 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .box {
+            margin-bottom: 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .definition {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .purpose {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .foundation {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+        }
+        .lawful {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .unlawful {
+            background: linear-gradient(90deg, #742a2a 0%, #e53e3e 100%);
+        }
+        .valid {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .self-ruqyah {
+            background: linear-gradient(90deg, #553c9a 0%, #9f7aea 100%);
+        }
+        .others {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .timing {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .verses {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+        }
+        .positive {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .reactions {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+        }
+        .strong {
+            background: linear-gradient(90deg, #742a2a 0%, #e53e3e 100%);
+        }
+        .notes {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .evil-eye {
+            background: linear-gradient(90deg, #742a2a 0%, #e53e3e 100%);
+        }
+        .jinn {
+            background: linear-gradient(90deg, #553c9a 0%, #9f7aea 100%);
+        }
+        .sihr {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .reminder {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .morning {
+            background: linear-gradient(90deg, #975a16 0%, #f6ad55 100%);
+        }
+        .evening {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .home {
+            background: linear-gradient(90deg, #22543d 0%, #38a169 100%);
+        }
+        .emergency {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+        }
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #cbd5e0;
+            font-size: 0.9rem;
+        }
+        .tip {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .navigation-buttons {
+            background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .nav-button {
+            background: rgba(107, 114, 128, 0.3);
+            color: #e5e7eb;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .nav-button:hover {
+            background: rgba(107, 114, 128, 0.5);
+            transform: translateY(-1px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: smooth;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        .back-to-top {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .back-to-top:hover {
+            background: rgba(59, 130, 246, 0.3);
+            color: #dbeafe;
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+        .arabic-text {
+            font-family: 'Amiri', 'Times New Roman', serif;
+            direction: rtl;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px;
+            }
+            .navigation-buttons {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-header {
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+            }
+            .back-to-top {
+                font-size: 0.8rem;
+                padding: 4px 6px;
+            }
+        }
+    </style>
+</head>
+<body style="background: linear-gradient(to bottom right, #1a202c, #1e3a8a); color: #f3f4f6; min-height: 100vh;">
+    <div id="top" class="guide-container">
+        <div class="header">
+            <h1 style="font-size: 1.875rem; font-weight: bold; text-align: center; color: white;">What is Ruqyah?</h1>
+            <p style="text-align: center; color: #dbeafe; margin-top: 8px;">Understanding Islamic spiritual healing through Quranic verses and prophetic supplications</p>
+        </div>
+
+        <!-- Quick Access Navigation Buttons -->
+        <div class="navigation-buttons">
+            <h3 style="font-size: 1.125rem; font-weight: bold; color: white; margin-bottom: 12px;">Quick Access</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 8px;">
+                <button class="nav-button" onclick="location.href='#definition'">What is Ruqyah?</button>
+                <button class="nav-button" onclick="location.href='#types'">Types of Ruqyah</button>
+                <button class="nav-button" onclick="location.href='#how-to'">How to Perform</button>
+                <button class="nav-button" onclick="location.href='#reactions'">Signs & Symptoms</button>
+                <button class="nav-button" onclick="location.href='#conditions'">Conditions Treated</button>
+                <button class="nav-button" onclick="location.href='#protection'">Daily Protection</button>
+            </div>
+        </div>
+
+        <div style="padding: 0;">
+            <!-- What is Ruqyah? -->
+            <div id="definition" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">What is Ruqyah?</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <p style="color: #d1d5db; margin-bottom: 16px; padding: 0 16px;">Ruqyah is the Islamic practice of spiritual healing through recitation of Quranic verses and supplications (du'a) from the Sunnah.</p>
+                    
+                    <div class="definition box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">Definition</h5>
+                        <p style="color: #86efac;">Ruqyah comes from the Arabic root meaning "to blow" or "to recite over." It involves reciting specific verses while seeking Allah's protection and healing.</p>
+                    </div>
+                    
+                    <div class="purpose box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Purpose</h5>
+                        <p style="color: #93c5fd;">• Seeking protection from evil eye, jinn, and sihr (magic) • Spiritual healing and purification • Strengthening faith and connection to Allah</p>
+                    </div>
+                    
+                    <div class="foundation box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 8px;">Prophetic Foundation</h5>
+                        <p style="color: #fed7aa; font-size: 0.875rem;">The Prophet ﷺ said: "Whoever among you is able to benefit his brother, let him do so." (Muslim)</p>
+                    </div>
+                    
+                    <div class="foundation box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 8px;">Why This Works</h5>
+                        <p style="color: #fed7aa;">The jinn are extremely sensitive to dhikr and ruqyah — they try to suppress your consciousness to avoid being detected. But when you actively push back, they weaken and flee. Even whispering dhikr inside your heart burns them and disrupts their influence.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Types of Ruqyah -->
+            <div id="types" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">Types of Ruqyah</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <div class="lawful box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">✓ Ruqyah Shar'iyyah (Lawful Ruqyah)</h5>
+                        <p style="color: #86efac; margin-bottom: 8px;">• Uses only Quran and authentic Prophetic du'a • Reciter maintains pure belief in Allah's power • No shirk (associating partners with Allah)</p>
+                        <p style="color: #86efac; font-size: 0.875rem; font-style: italic;">This is the only type of ruqyah Muslims should practice</p>
+                    </div>
+                    
+                    <div class="unlawful box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fecaca; margin-bottom: 8px;">✗ Ruqyah Shirkiyyah (Unlawful Ruqyah)</h5>
+                        <p style="color: #fecaca; margin-bottom: 8px;">• Uses unknown words, talismans, or charms • Involves seeking help from jinn or spirits • Contains elements of shirk or superstition</p>
+                        <p style="color: #fecaca; font-size: 0.875rem; font-style: italic; font-weight: 600;">This type is forbidden and dangerous</p>
+                    </div>
+                    
+                    <div class="valid box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">What Makes Ruqyah Valid?</h5>
+                        <p style="color: #93c5fd;">1. Must be in Arabic or a known language 2. Must not contain shirk or forbidden elements 3. Belief that Allah alone provides the cure</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- How to Perform Ruqyah -->
+            <div id="how-to" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">How to Perform Ruqyah</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <div class="self-ruqyah box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #c4b5fd; margin-bottom: 8px;">Self Ruqyah (Recommended)</h5>
+                        <p style="color: #c4b5fd;">• Be in wudu and face qiblah if possible • Recite with conviction and concentration • Place hand on area of discomfort • Blow gently after recitation</p>
+                    </div>
+                    
+                    <div class="others box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Ruqyah for Others</h5>
+                        <p style="color: #93c5fd;">• Only by trustworthy, knowledgeable Muslims • Patient should be modestly dressed • Avoid inappropriate touching • Family member should be present</p>
+                    </div>
+                    
+                    <div class="timing box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">Best Times</h5>
+                        <p style="color: #86efac;">• After Fajr and before sunrise • Between Maghrib and Isha • After any obligatory prayer • During the last third of the night</p>
+                    </div>
+                    
+                    <div class="verses box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 8px;">Essential Verses</h5>
+                        <p style="color: #fed7aa;">• Al-Fatiha • Ayat al-Kursi (2:255) • Last two verses of Al-Baqarah • Surah Al-Ikhlas, Al-Falaq, An-Nas</p>
+                    </div>
+                    
+                    <div class="verses box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 12px;">Ruqyah Verses</h5>
+                        <p style="color: #fed7aa; margin-bottom: 12px;">A single verse or du'ā can be a valid ruqyah, such as:</p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; margin-bottom: 8px;">• <strong>Surah al-Fātiḥah</strong> (even alone, it's considered a powerful ruqyah)</p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; margin-bottom: 8px;">• <strong>Āyat al-Kursī</strong> (Surah al-Baqarah 2:255)</p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; margin-bottom: 8px;">• <strong>The last two verses of Surah al-Baqarah</strong></p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; margin-bottom: 12px;">• <strong>Surah al-Ikhlāṣ, al-Falaq, and al-Nās</strong></p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; margin-bottom: 8px;">The Prophet ﷺ himself used brief ruqyahs such as:</p>
+                        <p class="arabic-text" style="font-size: 1.25rem; margin-bottom: 8px; text-align: center; color: #fed7aa;">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
+                        <p style="color: #fed7aa; font-size: 0.875rem; font-style: italic; margin-bottom: 4px; text-align: center;">"Aʿūdhu bi kalimātillāhi al-tāmmāti min sharri mā khalaq."</p>
+                        <p style="color: #fed7aa; font-size: 0.75rem; text-align: center;">(I seek refuge in the perfect words of Allah from the evil of what He has created.)</p>
+                        <p style="color: #9ca3af; font-size: 0.75rem; text-align: center;">— Sahih Muslim, Book 26, Hadith 5444</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Signs & Symptoms During Ruqyah -->
+            <div id="reactions" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">Signs & Symptoms During Ruqyah</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <div class="positive box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">Positive Reactions</h5>
+                        <p style="color: #86efac;">• Feeling calm and peaceful • Increased focus during recitation • Relief from anxiety or depression • Better sleep and appetite</p>
+                    </div>
+                    
+                    <div class="reactions box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 8px;">Possible Reactions (Normal)</h5>
+                        <p style="color: #fed7aa;">• Yawning, drowsiness, or crying • Temporary headache or nausea • Feeling heat or cold in body • Emotional release or memories surfacing</p>
+                    </div>
+                    
+                    <div class="strong box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fecaca; margin-bottom: 8px;">Strong Reactions (May Indicate Affliction)</h5>
+                        <p style="color: #fecaca;">• Severe agitation or anger • Fainting or seizure-like movements • Speaking in unknown languages • Aversion to Quranic recitation</p>
+                    </div>
+                    
+                    <div class="notes box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Important Notes</h5>
+                        <p style="color: #93c5fd;">• Reactions don't always indicate jinn possession • Some people are naturally more sensitive • Continue with regular ruqyah regardless of reactions • Seek knowledgeable help for severe cases</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Conditions Treated by Ruqyah -->
+            <div id="conditions" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">Conditions Treated by Ruqyah</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <div class="evil-eye box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fecaca; margin-bottom: 8px;">Evil Eye (Ayn/Hasad)</h5>
+                        <p style="color: #fecaca;">• Sudden illness after praise or admiration • Unexplained fatigue or loss of blessings • Family or business problems • Feeling of being "watched"</p>
+                    </div>
+                    
+                    <div class="jinn box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #c4b5fd; margin-bottom: 8px;">Jinn Possession/Interference</h5>
+                        <p style="color: #c4b5fd;">• Hearing voices or seeing things others don't • Unexplained behavioral changes • Aversion to prayer or Quran • Sleep paralysis or nightmares</p>
+                    </div>
+                    
+                    <div class="sihr box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Sihr (Black Magic/Witchcraft)</h5>
+                        <p style="color: #93c5fd;">• Sudden personality changes • Unexplained hatred between spouses • Chronic unexplained illnesses • Finding strange objects in home</p>
+                    </div>
+                    
+                    <div class="reminder box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">Important Reminder</h5>
+                        <p style="color: #86efac; font-weight: 600;">Always seek medical treatment alongside spiritual healing. Allah has provided both spiritual and physical means of cure.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Protection Through Ruqyah -->
+            <div id="protection" style="background-color: #1f2937; margin-bottom: 32px;">
+                <div style="padding: 24px 0;">
+                    <div class="section-header">
+                        <h2 style="font-size: 1.25rem; font-weight: bold; color: #f3f4f6;">Daily Protection Through Ruqyah</h2>
+                        <a href="#top" class="back-to-top">↑</a>
+                    </div>
+                    
+                    <div class="morning box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #fed7aa; margin-bottom: 8px;">Morning Protection</h5>
+                        <p style="color: #fed7aa;">• Read Ayat al-Kursi after Fajr • Recite the three Quls (3x each) • Morning adhkar and du'a • Blow over palms and wipe over body</p>
+                    </div>
+                    
+                    <div class="evening box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Evening Protection</h5>
+                        <p style="color: #93c5fd;">• Evening adhkar after Maghrib • Recite Surah Al-Baqarah in home • Sleep with recitation of last verses of Al-Baqarah • Keep wudu before sleep</p>
+                    </div>
+                    
+                    <div class="home box p-4 rounded-lg mb-4" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #86efac; margin-bottom: 8px;">Home Protection</h5>
+                        <p style="color: #86efac;">• Play Surah Al-Baqarah regularly • Keep home clean and free of images • Regular dhikr and prayer • Avoid music and inappropriate content</p>
+                    </div>
+                    
+                    <div class="emergency box p-4 rounded-lg" style="margin: 0 16px; padding: 16px; border-radius: 8px;">
+                        <h5 style="font-weight: bold; color: #93c5fd; margin-bottom: 8px;">Emergency Protection</h5>
+                        <p style="color: #93c5fd;">• A'udhu billahi min ash-shaytani'r-rajim • Ayat al-Kursi • Last two verses of Al-Baqarah • Trust in Allah and remain steadfast</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tip">
+            <h3 style="font-size: 1.25rem; font-weight: bold; color: white; margin-bottom: 12px;">Remember</h3>
+            <p style="color: #dbeafe;">Ruqyah is a blessed practice that strengthens your connection with Allah and provides spiritual protection. Practice it regularly as part of your daily routine, and remember that healing comes from Allah alone. Combine spiritual remedies with proper medical care when needed.</p>
+        </div>
+
+        <div class="footer">
+            <p>All ruqyah treatment MUST BE based on Quran and Sunnah</p>
+        </div>
+    </div>
+</body>
+</html>

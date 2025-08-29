@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Protection - Comprehensive Guide</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri+Quran&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;500;600&display=swap">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Import Arabic fonts */
+        @font-face {
+            font-family: 'KSARegular_B';
+            src: url('/KSARegular_B.ttf') format('truetype');
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+        }
+
+        @font-face {
+            font-family: 'MUHAMMADIBold';
+            src: url('/MUHAMMADIBold.ttf') format('truetype');
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+        }
+
+        @font-face {
+            font-family: 'Naskh-Nastaleeq';
+            src: url('/Naskh-Nastaleeq-IndoPak-QWBW.ttf') format('truetype');
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+        }
+
+        @font-face {
+            font-family: 'PDMS_SALEEM';
+            src: url('/PDMS_SALEEM_QURANFONTQESHIP_0.ttf') format('truetype');
+            font-display: swap;
+            unicode-range: U+0600-06FF, U+200C-200E, U+2010-2011, U+204F, U+2E41, U+FB50-FDFF, U+FE80-FEFC;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a202c 0%, #2d3748 100%);
+            min-height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .guide-container {
+            width: 100%;
+            margin: 0 auto;
+        }
+        .header {
+            background: linear-gradient(90deg, #2b6cb0 0%, #4299e1 100%);
+            padding: 25px 20px;
+            margin-bottom: 0;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .section-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        .box {
+            border-radius: 12px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .box:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+        }
+        .purpose-box { background: linear-gradient(90deg, #1e3a8a 0%, #1e40af 100%); }
+        .effects-box { background: linear-gradient(90deg, #7f1d1d 0%, #991b1b 100%); }
+        .final-box { background: linear-gradient(90deg, #22543d 0%, #38a169 100%); }
+        
+        .arabic-text {
+            font-family: 'MUHAMMADIBold', 'Naskh-Nastaleeq', 'KSARegular_B', 'Amiri Quran', 'Noto Sans Arabic', sans-serif;
+            line-height: 2.2;
+            font-weight: 500;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px;
+            color: #cbd5e0;
+            font-size: 0.9rem;
+        }
+        .tip {
+            background: linear-gradient(90deg, #2c5282 0%, #3182ce 100%);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 30px 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+        }
+        .navigation-buttons {
+            background: linear-gradient(90deg, #1a202c 0%, #2d3748 100%);
+            padding: 20px;
+            margin: 0;
+        }
+        .nav-button {
+            background: rgba(107, 114, 128, 0.3);
+            color: #e5e7eb;
+            border: none;
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+            width: 100%;
+        }
+        .nav-button:hover {
+            background: rgba(107, 114, 128, 0.5);
+            transform: translateY(-1px);
+        }
+        .nav-button:active {
+            transform: translateY(0);
+        }
+        html {
+            scroll-behavior: auto;
+            scroll-padding-top: 60px;
+        }
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+            padding: 16px 20px;
+        }
+        .back-to-top {
+            background: rgba(59, 130, 246, 0.2);
+            color: #93c5fd;
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            padding: 6px 8px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        .back-to-top:hover {
+            background: rgba(59, 130, 246, 0.3);
+            color: #dbeafe;
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateY(-1px);
+        }
+        .back-to-top:active {
+            transform: translateY(0);
+        }
+        .section-content {
+            padding: 0 20px 20px;
+        }
+        .content-box {
+            padding: 16px;
+            border-radius: 8px;
+            margin-bottom: 16px;
+        }
+        @media (max-width: 768px) {
+            .header {
+                padding: 15px;
+            }
+            .navigation-buttons {
+                padding: 15px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+            .section-header {
+                flex-direction: row;
+                align-items: center;
+                gap: 8px;
+            }
+            .back-to-top {
+                font-size: 0.8rem;
+                padding: 4px 6px;
+            }
+        }
+    </style>
+</head>
+<body class="text-gray-100">
+    <div id="top" class="guide-container">
+        <div class="header">
+            <h1 class="text-3xl font-bold text-center text-white">Personal Protection - Comprehensive Guide</h1>
+            <p class="text-center text-blue-100 mt-2">Essential du'as and practices for daily spiritual safety and protection</p>
+        </div>
+
+        <!-- Quick Access Navigation Buttons -->
+        <div class="navigation-buttons">
+            <h3 class="text-lg font-bold text-white mb-3 text-center">Quick Access</h3>
+            <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-2">
+                <button class="nav-button" onclick="location.href='#emergency'">Emergency Protection</button>
+                <button class="nav-button" onclick="location.href='#evil-presence'">Evil Presence</button>
+                <button class="nav-button" onclick="location.href='#afflicted'">When Afflicted</button>
+                <button class="nav-button" onclick="location.href='#sleep'">Before Sleep</button>
+                <button class="nav-button" onclick="location.href='#nightmare'">After Nightmare</button>
+                <button class="nav-button" onclick="location.href='#sihr'">Against Sihr</button>
+                <button class="nav-button" onclick="location.href='#enemies'">Hidden Enemies</button>
+                <button class="nav-button" onclick="location.href='#suspect-places'">Suspect Places</button>
+                <button class="nav-button" onclick="location.href='#daily'">Daily Protection</button>
+            </div>
+        </div>
+
+        <div class="space-y-6 p-0">
+            <!-- Emergency Protection -->
+            <div id="emergency" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Emergency Protection (When Under Attack)</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">When Feeling Sudden Sleepiness, Brain Fog, or Heaviness</h4>
+                        <p class="text-green-300">Follow these steps immediately:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">1. Break Immediate Influence</h4>
+                        <div class="bg-gray-500 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-xl sm:text-2xl md:text-3xl mb-3 text-center" style="direction: rtl; text-align: center;">أَعُوذُ بِاللَّهِ مِنْكَ يَا عَدُوَّ اللَّهِ</p>
+                            <p class="text-xs text-gray-300 italic text-center">A'udhu billahi minka ya 'aduww Allah</p>
+                            <p class="text-xs text-gray-200 text-center">(I seek refuge in Allah from you, O enemy of Allah)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">2. Direct Body Protection (3 times)</h4>
+                        <div class="bg-blue-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-200 text-center text-sm mb-1"><strong>Put your hand over heart/head and say:</strong></p>
+                            <p class="arabic-text text-xl sm:text-2xl md:text-3xl mb-4 text-center" style="direction: rtl; text-align: center;">بِسْمِ اللَّهِ أَعُوذُ بِعِزَّةِ اللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ</p>
+                            <p class="text-xs text-gray-300 italic text-center">Bismillah. A'udhu bi 'izzatillahi wa qudratihi min sharri ma ajidu wa uhadhir</p>
+                            <p class="text-xs text-gray-200 text-center">(In the name of Allah. I seek refuge in the might and power of Allah from the evil of what I feel and what I fear.) - Prophetic du'a ﷺ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">3-4. Powerful Expulsion</h4>
+                        <p class="text-gray-300">• Recite Ayat al-Kursi (2:255) silently or aloud<br>• Follow with Surah Al-Falaq and An-Nas</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">5-8. Clear & Exit</h4>
+                        <p class="text-gray-300">• Take 3 deep breaths saying "Bismillah, Allahu Akbar"<br>• Whisper "La hawla wa la quwwata illa billah" continuously<br>• Rub body lightly (head to chest) saying "Bismillah"<br>• Exit for fresh air and recite dhikr audibly</p>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Emergency Tawakkul</h4>
+                        <div class="bg-green-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-3 text-center" style="direction: rtl; text-align: center;">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</p>
+                            <p class="text-xs text-gray-300 italic text-center">Ḥasbunallāhu wa niʿma al-wakīl</p>
+                            <p class="text-xs text-gray-200 text-center">Allah is sufficient for us, and He is the best disposer of affairs.</p>
+                            <p class="text-xs text-blue-300 text-center font-semibold mt-1">- Quran 3:173, powerful against enemies and evil plots</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- When feeling the presence of evil/jinn -->
+            <div id="evil-presence" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">When Feeling the Presence of Evil/Jinn</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">When sensing evil presence</h4>
+                        <p class="text-green-300">Say immediately:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-red-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">أَعُوذُ بِاللَّهِ مِنْكَ، أَلْعَنُكَ بِلَعْنَةِ اللَّهِ</p>
+                            <p class="text-sm text-gray-300 italic text-center">Aʿūdhu billāhi minka, alʿanuka bilaʿnati-llāh</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">I seek refuge in Allah from you. I curse you with the curse of Allah.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">From the sunnah of dealing with Shayṭān when sensing his presence (Ahmad, authenticated by Ibn Taymiyyah).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- When afflicted or frightened -->
+            <div id="afflicted" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">When Afflicted or Frightened</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">General Protection</h4>
+                        <p class="text-green-300">Say with conviction:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-green-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ</p>
+                            <p class="text-sm text-gray-300 italic text-center">Ḥasbunallāhu wa niʿma al-wakīl</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">Allah is sufficient for us, and He is the best disposer of affairs.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">Source: Qur'ān (3:173), powerful against enemies and evil plots.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">1. Du'a for Pain – Place Hand on Area & Recite</h4>
+                        <div class="bg-blue-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">بِسْمِ اللَّهِ<br/>(3 times)</p>
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">أَعُوذُ بِاللَّهِ وَقُدْرَتِهِ مِنْ شَرِّ مَا أَجِدُ وَأُحَاذِرُ<br/>(7 times)</p>
+                            <p class="text-sm text-gray-300 italic text-center">Bismillāh (3x)</p>
+                            <p class="text-sm text-gray-300 italic text-center">Aʿūdhu billāhi wa qudratihi min sharri mā ajidu wa uḥādhir (7x)</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">In the Name of Allah (3x). I seek refuge in Allah and His power from the evil of what I feel and what I fear.</p>
+                            <p class="text-xs text-blue-300 text-center mt-2 font-semibold">Action: Place your right hand on the area of pain. Say "Bismillah" three times, then say the full du'a seven times.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">Source: Ṣaḥīḥ Muslim (Hadith 2202) — Narrated by ʿUthmān ibn Abī al-ʿĀṣ</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">2. Du'a of Jibrīl (ʿalayhis-salām) for Healing</h4>
+                        <div class="bg-purple-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">اللَّهُمَّ رَبَّ النَّاسِ، أَذْهِبِ الْبَأْسَ، اشْفِ أَنْتَ الشَّافِي، لَا شِفَاءَ إِلَّا شِفَاؤُكَ، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
+                            <p class="text-sm text-gray-300 italic text-center">Allāhumma rabba-n-nās, adhhibi-l-baʾsa, ishfi anta ash-shāfī, lā shifāʾa illā shifāʾuka, shifāʾan lā yughadiru saqaman</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">O Allah, Lord of mankind, remove the harm and heal. You are the Healer; there is no healing except Your healing — a healing that leaves no disease behind.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">Source: Ṣaḥīḥ al-Bukhārī and Muslim – Used by the Prophet ﷺ when treating the sick.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">3. General Du'a for Shifāʾ (Can Be Said Anytime)</h4>
+                        <div class="bg-gray-700 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">اللَّهُمَّ اشْفِنِي شِفَاءً تَامًّا، شِفَاءً لَا يُغَادِرُ سَقَمًا</p>
+                            <p class="text-sm text-gray-300 italic text-center">Allāhumma ishfinī shifāʾan tāmmā, shifāʾan lā yughadiru saqaman</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">O Allah, grant me complete healing — a healing that leaves behind no illness.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Before Sleep Protection -->
+            <div id="sleep" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Before Sleep Protection</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">Essential Night Protection</h4>
+                        <p class="text-green-300">• Recite Ayat al-Kursi (2:255) - the greatest verse of protection</p>
+                        <p class="text-green-300">• Recite Surah Al-Falaq and Surah An-Nas, then blow over your entire body starting from your head</p>
+                        <p class="text-xs text-blue-100 mt-2 italic">Ayat al-Kursi before sleep protects you all night. No jinn or shaytan can approach you until morning.</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Spiritual Cleansing Du'a</h4>
+                        <div class="bg-purple-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-200 text-center font-semibold mb-2">Say this every night:</p>
+                            <p class="text-gray-100 text-center italic">"O Allah, if there is anything in me not from You, remove it. If there is anything bound to me through sihr, touch, or evil intention, release it and burn it. I belong to You and You alone."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Truth & Justice Du'a</h4>
+                        <div class="bg-green-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-base sm:text-lg leading-relaxed">O Allah, show me truth as truth and grant me the ability to follow it. Show me falsehood as falsehood and grant me the ability to avoid it. O Allah, whoever has wished harm upon me, turn their plot against themselves, expose them, and return their magic upon them—without harm to me.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Sleep Guidelines</h4>
+                        <p class="text-gray-300">• Maintain wudu before sleep • Keep your heart focused on Allah—not revenge or blame • Remember: "And they plan, and Allah plans. And Allah is the best of planners." (Quran 8:30)</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- If waking from a nightmare or disturbance -->
+            <div id="nightmare" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">If Waking from a Nightmare or Disturbance</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">Protection from Night Disturbances</h4>
+                        <p class="text-green-300">Say immediately:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-indigo-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ غَضَبِهِ وَعِقَابِهِ وَشَرِّ عِبَادِهِ وَمِنْ هَمَزَاتِ الشَّيَاطِينِ وَأَنْ يَحْضُرُونِ</p>
+                            <p class="text-sm text-gray-300 italic text-center">Aʿūdhu bikalimāti-llāhi at-tāmmāti min ghaḍabihī wa ʿiqābihī wa sharri ʿibādihī wa min hamazāti ash-shayāṭīn wa an yaḥḍurūn</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">I seek refuge in the perfect words of Allah from His anger, His punishment, the evil of His slaves, the whisperings of devils, and their coming near me.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">Source: Ibn Mājah</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Against Sihr/Magic -->
+            <div id="sihr" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Against Sihr/Magic</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">Breaking Family/Marriage Sihr</h4>
+                        <p class="text-green-300">Say with conviction:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-red-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-base sm:text-lg">O Allah, nullify every sihr intended to ruin my bond with my family and loved ones.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Destroy & Burn Sihr</h4>
+                        <div class="bg-gray-700 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-base sm:text-lg">O Allah, destroy the sihr, burn the jinn, and remove them with Your power.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Block Sihr Renewal</h4>
+                        <div class="bg-purple-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-base sm:text-lg leading-relaxed mb-3">O Allah, nullify every sihr that is being renewed upon me. Cut every link between me and those who renew it. Lift all harm and affliction from me. And grant me a pure heart that loves You, fears You, and hopes only in You.</p>
+                            <p class="text-xs text-blue-300 text-center font-semibold">Recite after every prayer, especially in sujood and Qiyam al-Layl</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Breaking False Comfort</h4>
+                        <p class="text-gray-300">When intrusive thoughts come, say aloud or mentally: "This is not from me. This is an attack. Ya Allah, I return this to You. I cut this tie for Your sake." Repeat as needed - each time weakens the spiritual chain.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Protection from Hidden Enemies -->
+            <div id="enemies" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Protection from Hidden Enemies</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">When You Suspect Someone Harmed You</h4>
+                        <p class="text-green-300">Say with trust in Allah:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-blue-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-200 text-center italic mb-2">"Ya Allah, if anyone has harmed me, You are Al-Adl (The Just), remove it and return it to them without harming me."</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">General Protection from Enemies</h4>
+                        <div class="bg-red-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">اللَّهُمَّ اكْفِنِيهِمْ بِمَا شِئْتَ</p>
+                            <p class="text-sm text-gray-300 italic text-center">Allāhumma ikfinīhim bimā shiʾta</p>
+                            <p class="text-sm text-gray-200 text-center mt-2">O Allah, protect me from them however You will.</p>
+                            <p class="text-xs text-gray-300 text-center mt-1">- Sahih Muslim, du'a of Prophet ﷺ when threatened</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Divine Justice Du'a</h4>
+                        <div class="bg-purple-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-lg sm:text-xl leading-relaxed">O Allah, show me truth as truth and grant me to follow it. Show me falsehood as falsehood and grant me to avoid it. O Allah, whoever wishes harm upon me, turn their plot against themselves, expose them, and return their magic upon them—without harm to me.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Trust Allah's Perfect Plan</h4>
+                        <p class="text-gray-300"><strong>Quran 8:30:</strong> "And they plan, and Allah plans. And Allah is the best of planners."</p>
+                        <p class="text-gray-300"><strong>Quran 14:42:</strong> "And never think that Allah is unaware of what the wrongdoers do. He only delays them for a Day when eyes will stare in horror."</p>
+                        <p class="text-blue-300 mt-3 font-semibold">Keep your healing focused on Allah—not revenge. He will expose them in due time.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Entering Suspect Places -->
+            <div id="suspect-places" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Entering Suspect Places</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">Entry Du'a (Any House)</h4>
+                        <p class="text-green-300">Say before entering:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-green-50 p-2 rounded text-gray-800">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">اللَّهُمَّ إِنِّي أَسْأَلُكَ خَيْرَ الْمَوْلَجِ وَخَيْرَ الْمَخْرَجِ، بِسْمِ اللَّهِ وَلَجْنَا، وَبِسْمِ اللَّهِ خَرَجْنَا، وَعَلَى اللَّهِ رَبِّنَا تَوَكَّلْنَا</p>
+                            <p class="text-sm text-gray-300 italic text-center">Allahumma inni as'aluka khayr al-mawlaji wa khayr al-makhraji, bismillahi walajna, wa bismillahi kharajna, wa 'ala Allah rabbina tawakkalna</p>
+                            <p class="text-xs text-gray-200 text-center">(O Allah, I ask You for the goodness of entering and the goodness of exiting. In the name of Allah we enter, and in the name of Allah we leave, and upon our Lord we place our trust.) - Sunan Abi Dawood</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Pocket Du'a Card</h4>
+                        <div class="bg-blue-800 p-2 rounded text-gray-100">
+                            <p class="text-gray-100 text-center text-sm font-semibold mb-2">Keep memorized or carry:</p>
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-3 text-center" style="direction: rtl; text-align: center;">بِسْمِ اللهِ تَوَكَّلْتُ عَلَى اللهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللهِ</p>
+                            <p class="text-xs text-gray-300 italic text-center">Bismillahi tawakkaltu 'ala Allah, wa la hawla wa la quwwata illa billah</p>
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-3 text-center mt-2" style="direction: rtl; text-align: center;">أَعُوذُ بِكَلِمَاتِ اللهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
+                            <p class="text-xs text-gray-300 italic text-center">A'udhu bikalimatillahi at-taammati min sharri ma khalaq (3x)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Emergency Response</h4>
+                        <p class="text-gray-300">If you feel sudden symptoms (sleepiness, fog, heaviness):</p>
+                        <div class="bg-gray-700 p-2 rounded text-gray-100 mt-2">
+                            <p class="text-xs text-gray-100 text-center">1. A'udhu billahi minka ya 'aduww Allah<br>
+                            2. A'udhu bi 'izzatillahi... (3x with hand on heart)<br>
+                            3. Ayat al-Kursi + Falaq + Nas<br>
+                            4. Exit for fresh air and dhikr</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Exit & Cleansing</h4>
+                        <p class="text-gray-300">• Leave calmly while reciting dhikr audibly<br>• Take deep breaths of fresh air<br>• Continue protective dhikr until symptoms clear<br>• Break environmental spiritual control</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Daily Morning & Evening Protection -->
+            <div id="daily" class="bg-gray-800 rounded-lg p-0">
+                <div class="section-header">
+                    <h2 class="text-xl font-bold text-gray-100">Daily Morning & Evening Protection</h2>
+                    <a href="#top" class="back-to-top">↑</a>
+                </div>
+                
+                <div class="section-content space-y-4">
+                    <div class="purpose-box content-box">
+                        <h4 class="font-semibold text-blue-200 mb-2">Morning & Evening (Essential)</h4>
+                        <p class="text-green-300">Recite 3 times morning and evening:</p>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <div class="bg-yellow-800 p-2 rounded text-gray-100">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ</p>
+                            <p class="text-sm text-gray-600 italic text-center">Bismillahilladhi la yadurru ma'a ismihi shay'un fil-ardi wa laa fissamaa'i wa huwa as-Sami'ul-'Aleem</p>
+                            <p class="text-sm text-gray-700 text-center mt-2">In the name of Allah, with whose name nothing can cause harm in the earth or the heavens, and He is the All-Hearing, All-Knowing.</p>
+                            <p class="text-xs text-gray-500 text-center mt-1">(Recite 3 times morning and evening)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">Tawakkul Du'a (7 times each)</h4>
+                        <div class="bg-blue-50 p-2 rounded text-gray-800">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">حَسْبِيَ اللَّهُ لَا إِلَٰهَ إِلَّا هُوَ عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ</p>
+                            <p class="text-sm text-gray-600 italic text-center">Hasbiyallahu la ilaha illa Huwa, 'alayhi tawakkaltu wa Huwa Rabb ul-'Arsh il-'Azeem</p>
+                            <p class="text-xs text-gray-500 text-center">(Allah is sufficient for me, there is no god but He; I place my trust in Him, and He is the Lord of the Mighty Throne.)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gray-600 content-box">
+                        <h4 class="font-semibold text-gray-200 mb-2">General Protection</h4>
+                        <div class="bg-green-50 p-2 rounded text-gray-800">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ</p>
+                            <p class="text-sm text-gray-600 italic text-center">A'udhu bikalimatillahi at-taammati min sharri ma khalaq</p>
+                            <p class="text-xs text-gray-500 text-center">(I seek refuge in the perfect words of Allah from the evil of what He created.)</p>
+                        </div>
+                    </div>
+                    
+                    <div class="final-box content-box">
+                        <h4 class="font-semibold text-green-200 mb-2">Against Anxiety & Weakness</h4>
+                        <div class="bg-purple-50 p-2 rounded text-gray-800">
+                            <p class="arabic-text text-lg sm:text-xl md:text-2xl mb-4 text-center" style="direction: rtl; text-align: center;">اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَالْعَجْزِ وَالْكَسَلِ وَالْجُبْنِ وَالْبُخْلِ وَغَلَبَةِ الدَّيْنِ وَقَهْرِ الرِّجَالِ</p>
+                            <p class="text-sm text-gray-600 italic text-center">Allahumma inni a'udhu bika min al-hammi wal-hazan, wal-'ajzi wal-kasal, wal-jubni wal-bukhl, wa ghalabat id-dayni wa qahr ir-rijal</p>
+                            <p class="text-xs text-gray-500 text-center">(O Allah, I seek refuge in You from anxiety and sorrow, weakness and laziness, cowardice and miserliness, and from being overpowered by men and jinn.) - Bukhari</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>© 2023 Ruqya Dashboard - Personal Protection Guide</p>
+            <p class="mt-2 text-sm">May Allah protect you and keep you safe from all harm.</p>
+        </div>
+    </div>
+</body>
+</html>
